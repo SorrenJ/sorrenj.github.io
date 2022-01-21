@@ -41,24 +41,24 @@
 /* background:  rgba(40,40,40, .75); */
 }
 .overlayB {
-    /* background:  rgba(40,40,40, .75); */
-/* background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/ghibliMt.jpeg"); */
-background-image: url("ImgUI/ghibliMt.jpeg");
+background:#849554;
+
+/* background-image: url("ImgUI/ghibliMt.jpeg");
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover; */
+background-size: cover;
 z-index:-2;
 top:0;
-width:100%;
-
-/* height:100%; */
-
-background-size: 105% 100em;
+width:100%; */
 
 
 
-animation: mymove 10s alternate infinite;
+/* background-size: 105% 100em;
+
+
+
+animation: mymove 10s alternate infinite; */
 
 
 }
