@@ -194,13 +194,14 @@ background-color:grey;
 
   <!--<link rel="script" href="./script.js">-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="./navbar.css">
   <link rel="stylesheet" href="./styleNav.css">
   <script src="./script1.js"></script>
 <link rel="stylesheet" href="./newOverlayContentA.css">
 <link rel="stylesheet" href="./newOverlayContentB.css">
   <script src="tooltipsy-master/toolpsy.min.js"></script>
   <script src="./OpenCityScript.js"></script>
+    <!-- <script src="nav-dropdown.js"></script> -->
     <!-- <script src="./overlayContentA.js"></script> -->
 <!-- <script src="./OpenCityScript2.js"></script> -->
 
@@ -302,107 +303,6 @@ stroke-width: 5;
 <!-- mobile navigation -->
 
 <style>
-.wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.header {
-  width: 100%;
-  height: 300px;
-  background: url(https://i.imgur.com/9ewsT3r.jpg) no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header h1 {
-  color: white;
-  font-weight: 200;
-  border: 4px solid white;
-  display: box;
-  padding: 20px;
-  position: relative;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  background: grey;
-  padding: 10px;
-  position: relative;
-  background: linear-gradient(to bottom, #ffffff 0%,#f9f9f9 100%);
-  border-bottom: 1px solid #E0E0E0;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
-}
-
-.fixed {
-  top: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-}
-
-.navigation h2 {
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  color: #242424;
-  font-weight: 200;
-}
-
-.menu h2 {
-  width: 100%;
-  margin: 0;
-  color: #242424;
-  font-weight: 200;
-}
-
-.navigation img {
-  margin: 2px 0 0 4px;
-  display: box;
-}
-
-.content {
-  width: 100%;
-  padding: 20px;
-  background: white;
-  color: #2e2e2e;
-}
-
-.menu {
-  width: 80%;
-  left: -100%;
-  height: 100%;
-  position: fixed;
-  z-index: 2;
-  background: linear-gradient(to bottom, #ffffff 0%,#f9f9f9 100%);
-  border-right: 1px solid #E0E0E0;
-  padding: 20px;
-}
-
-.slidein {
-  animation: slidein 500ms;
-  animation-fill-mode: forwards;
-}
-
-.slideout {
-  animation: slideout 500ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slidein {
-  from{left: -100%;}
-  to{left: 0%;}
-}
-
-@keyframes slideout {
-  from{left: 0%;}
-  to{left: -100%;}
-}
 
 
 
@@ -470,10 +370,305 @@ display:block;
 }
 }
 
+/* sticky nav bar */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
 
+::selection {
+  background: #000;
+  color: #aaf;
+}
+.alternate ::selection {
+  background: #c00;
+  color: #000;
+}
+
+body {
+  /* margin: 0;
+  padding: 0;
+  height: 2000px;
+  font-size: 16px;
+  line-height: 1.5; */
+}
+
+/* ul, li, h1, h2, h3, h4, h5, h6, p, a, .logo {
+  font-family: "Lato","Verdana",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+} */
+
+.inner {
+  width: 800px;
+  position: relative;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  background: #FFF;
+  transition: 0.7s all;
+  z-index: 900;
+}
+
+header.alt-header {
+  background: #fff;
+}
+
+.alt-header a {
+  color: #849554;
+}
+
+body.header-fixed header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  overflow: hidden;
+border: none;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  display: inline;
+  float: left;
+}
+
+nav a {
+  display: inline-block;
+  color: #849554;
+  text-decoration: none;
+  padding: 25px;
+  transition: 0.3s all;
+}
+
+nav a:hover {
+  background: red;
+}
+
+.logo {
+  float: left;
+  color: #849554;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+/* background-image: url("ImgUI/SorrenGoodLogo2.svg") no-repeat; */
+
+
+}
+@media screen and (min-width: 770px) {
+
+  .logo{
+    width:150px;margin-left:-15%;margin-right:50px;
+
+}
+}
+
+
+
+
+
+
+
+/* monile meditate */
+@media screen and (max-width: 770px) {
+
+  .logo{
+    width:35%;margin-left:5%;
+
+}
+}
+
+
+
+
+
+
+
+
+#logo{
+  transition: 0.5s;
+margin-top: -25px
+}
+
+#logo:hover{
+  opacity:0.3;
+}
+
+/* navigation button style */
+.nav-button{
+  float: right;
+/*margin-right:300px;*/
+  display: block;
+  text-align:right;
+  font-family: 'Verdana','Helvetica','Constantia','Georgia', sans-serif;
+  font-weight:500;
+  /*text-transform:uppercase;*/
+  letter-spacing:2px;
+  font-size:1.25em;
+  transition: opacity 0.5s ;
+border: none;
+}
+
+.nav-button:hover, .nav-button:focus{
+  font-family:'Verdana','Helvetica','Constantia','Georgia',sans-serif;
+  opacity: 0.5;
+}
+
+#active{
+  color:#A1CD41;
+  background-size: 100% 100%;
+}
+
+
+
+#toggle{
+  font-size: 1.5em;
+  color:#5A7836;
+}
+
+#toggle:hover{
+  cursor:pointer;
+  transform:rotate(90deg);
+}
+
+.toggle:hover{
+  /* transform:rotate(90deg); */
+
+  background-color:#ace600;
+}
+
+@media (min-width:64.06em){
+
+  }
+
+  #toggle{
+    visibility:hidden;
+  }
+  #logo{
+    z-index:1;
+  }
+  /* .nav-button{
+    display:flex;
+  } */
+
+
+
+
+
+
+
+
+
+.alt-header .logo {
+  color: #000;
+}
+
+body.header-fixed .logo {
+  font-size: 30px;
+}
+
+.alternate {
+  background: #000;
+  color: #fff;
+}
+
+section .inner {
+  padding-top: 60px;
+}
 
 
 </style>
+
+
+
+<script>
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 49) {
+        $('body').addClass('header-fixed');
+    } else {
+        $('body').removeClass('header-fixed');
+    }
+    // change the style of the navbar when the user scrolls into the next zone.
+    // get the distance of the 2nd section from the top of the page - height of header.
+    var topOffset = $('#demosection2').offset().top;
+    var headerHeight = $('#topnav').height();
+    var transitionPoint = topOffset - headerHeight;
+    if (scrollTop > transitionPoint) {
+        $('#topnav').addClass('alt-header');
+    } else {
+        $('#topnav').removeClass('alt-header');
+    }
+  });
+});
+</script>
+
+
+<!-- <header id="topnav" style="display:block;">
+  <div class="inner">
+    <img class="logo" src="imgUI/SorrenGoodLogo2.png" >
+    <nav role='navigation'style="margin-top:2%;margin-left:40%;position:absolute;">
+      <ul style="font-family: Verdana,sans-serif;">
+  <li onclick="javascript:location.reload(true)"><a href="#item1">Intro</a></li>
+        <li><a href="#item2">Bio</a></li>
+        <li><a href="#item3">Projects</a></li>
+        <li><a href="#item5">Mail</a></li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+
+<div class="navbar"  id="topnav">
+  <div class="contaier">
+
+    <div class="navbar-header">
+      <button class="toggle"style="border: none;"><span></span>
+      <span></span>
+      <span></span></button>
+      <a href="" class="navbar-brand"><img class="logo" src="imgUI/SorrenGoodLogo2.png" ></a>
+    </div><!-- navbar-header -->
+
+      <ul class="nav navcollaps">
+        <li onclick="javascript:location.reload(true)"><a href="#item1">Intro</a></li>
+        <li><a href="#item2">Bio</a></li>
+        <li><a href="#item3">Projects</a></li>
+        <li><a href="#item5">Contact</a></li>
+      </ul>
+
+  </div><!-- contaier -->
+</div><!-- navbar -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./navbar.js"></script>
+
+
+
+
+
+
+
+
+
 
   <div class="hero-image" style="width:100%; ">
     <!-- <div class="menu"><h2>Menu</h2><p>Drag/swipe left to close.</p></div>
@@ -494,10 +689,10 @@ display:block;
       <!-- BEGIN Title -->
     <!-- <div class="title"> <b><h1 data-svg>
 こんにちは</h1></b></div> -->
-
+<!-- <h1>< h1 ></h1> -->
 <div class="title"> <b><h1 data-svg>
 Welcome!</h1></b></div>
-
+<!-- <h1>< /h1 ></h1> -->
       <!-- END Title -->
     <br>
 <br>
@@ -574,6 +769,15 @@ Welcome!</h1></b></div>
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   <div id="leftPanelborder" class="tab2"style="   background:transparent; width:30%;height:600px;margin-left:1%;margin-top:-16px;">
   <!-- <h2 style= " color: white; font-family:Verdana, sans-serif;">SORREN</h2> -->
 
@@ -590,7 +794,7 @@ Welcome!</h1></b></div>
 <!-- bio buttons end -->
 
 
-  <span id='outerContent' > <div id="bio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
+  <span id='outerContent' > <div id="bio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
 
 
 After his years of experience with web and mobile development he has gained a basic understanding of everyday functionalities such as the built in apps on your phone, user registration form, saved databases, etc.
@@ -600,11 +804,11 @@ In his free time, Sorren enjoys watching Netflix, playing Nintendo games, or sho
   </p>
 </div>
 <div id="bio2"class="run-animation"style="display:none;">
-  <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> Education </h4><p style="margin-left:50px;font-family:Verdana, sans-serif;">School of Interactive Arts & Technology, Interactive Systems, Bachelor's of Science, Simon Fraser University
+  <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> Education </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">School of Interactive Arts & Technology, Interactive Systems, Bachelor's of Science, Simon Fraser University
   </p>
 </div>
 <div id="bio3"class="run-animation"style="display:none;">
-  <h4 style="margin-left:50px; font-family:Verdana, sans-serif;"> Recent Work Experience </h4><p style="margin-left:50px; font-family:Verdana, sans-serif;">Web designer for SFU GPS
+  <h4 style="margin-left:50px; font-family:Verdana, sans-serif;">Recent Work Experience </h4><br><p style="margin-left:50px; font-family:Verdana, sans-serif;">Design and Marketing Associate for Simon Fraser Universtiy Graduate and Postdoctoctural Studies (GPS).<br><br> I was responsible for updating the various web pages found in the GPS site such as the job page, event page, awards page, and had coded the template for the GPS news bulletin.
   </p>
 </div>
 </span>
@@ -703,7 +907,7 @@ margin-left:0; */
 
 
   <span id='outerContent' >
-    <div id="mbio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
+    <div id="mbio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
 
 
 After his years of experience with web and mobile development he has gained a basic understanding of everyday functionalities such as the built in apps on your phone, user registration form, saved databases, etc. <br><br> In his free time, Sorren enjoys watching Netflix, playing Nintendo games, or shopping on Amazon. He has a strong interest in learning how these major tech corporations build their applications for public use. Sorren hopes that he can contribute his experience towards assisting consumers. For instance, building helpful functionalities in applications, creating a user interface that improves user navigation, or suggesting new ideas that can improve user experience.
@@ -715,18 +919,19 @@ After his years of experience with web and mobile development he has gained a ba
 
 <div id="mbio2" class="run-animation"style="display:none;">
 
-  <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> Education </h4><p style="margin-left:50px;font-family:Verdana, sans-serif;">School of Interactive Arts & Technology, Interactive Systems, Bachelor's of Science, Simon Fraser University
+  <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> Education </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">School of Interactive Arts & Technology, Interactive Systems, Bachelor's of Science, Simon Fraser University
   </p>
 </div>
 
 <div id="mbio3"class="run-animation" style="display:none;">
-  <h4 style="margin-left:50px; font-family:Verdana, sans-serif;"> Recent Work Experience </h4><p style="margin-left:50px; font-family:Verdana, sans-serif;">Web designer for SFU GPS
+  <h4 style="margin-left:50px; font-family:Verdana, sans-serif;">Recent Work Experience </h4><br><p style="margin-left:50px; font-family:Verdana, sans-serif;">Design and Marketing Associate for Simon Fraser Universtiy Graduate and Postdoctoctural Studies (GPS).<br><br> I was responsible for updating the various web pages found in the GPS site such as the job page, event page, awards page, and had coded the template for the GPS news bulletin.
+  </p>
   </p>
 </div>
 
 
 
-
+<br>
 
     <div id="step4" style="display:block;">
   <div class="grid-container run-animation">
@@ -1150,23 +1355,23 @@ background-position: 0px 5px; /* Center the image */
 <br>
 
 
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/Html_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/cssLogo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/javaScript.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/phpLogo_tranparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/jquery_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/sql.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/babylon.svg.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/vega.png"></img></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/Html_logo_transparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">HTML5<br>4yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/cssLogo_transparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">CSS<br>4yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/javaScript.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">JavaScript<br>3yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/phpLogo_tranparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">PHP<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/jquery_logo_transparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">jQuery<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/sql.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">SQL<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/babylon.svg.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Babylon.js<br>3D JavaScripting<br>1yr </span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/vega.png"></img></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Vega & D3<br>Data Vis JavaScript<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
 
 <h4 style="margin-left:5px;font-family:Verdana, sans-serif;color:black"> Programming </h4>
 <br>
 
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/java_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-25%; margin-left:-170%">5yrs experience </br> Notable works: CareTaker App</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/java_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; font-family:Verdana, sans-serif;margin-top:-2%; margin-left:-170%">Java</br>5yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
 
 
-<div class="grid-item"><div><div class="tooltip"><img style= "width:80px; height:50px; margin-top:10px;" src="ImgUI/AndroidStudios.png"></img></img><span class="speech bubble"style="position:absolute; margin-top:-25%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-
+<div class="grid-item"><div><div class="tooltip"><img style= "width:80px; height:50px; margin-top:10px;" src="ImgUI/AndroidStudios.png"></img></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Android Studios</br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/arduino.png"></img></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Arduino<br>3yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
 
 
             </div>
@@ -1180,14 +1385,10 @@ background-position: 0px 5px; /* Center the image */
               <!-- some input text fields -->
 <h4 style="margin-left:50px;font-family:Verdana, sans-serif; color:black"> UX Tools </h4>
 <br>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/Html_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/cssLogo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/javaScript.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/phpLogo_tranparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/jquery_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/sql.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/babylon.svg.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/vega.png"></img></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/illustrator_logo_transparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Adobe Illustrator<br>8yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/inDesignLogo_transparent.png"></img><span class="speech bubble"style="position:absolute; font-family:Verdana, sans-serif;margin-top:-2%; margin-left:-170%">Adobe InDesign<br>4yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/axurerp.png"></img><span class="speech bubble"style="position:absolute; font-family:Verdana, sans-serif;margin-top:-2%; margin-left:-170%">Axure RP<br>3yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/figma.png"></img><span class="speech bubble"style="position:absolute; font-family:Verdana, sans-serif;margin-top:-2%; margin-left:-170%">Figma<br>1yr</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
 
 
             </div>
@@ -1200,15 +1401,12 @@ background-position: 0px 5px; /* Center the image */
               <!-- some input text fields -->
 <h4 style="margin-left:50px;font-family:Verdana, sans-serif; color:black"> Other Tools </h4>
 <br>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/Html_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/cssLogo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/javaScript.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/phpLogo_tranparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/jquery_logo_transparent.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/sql.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/babylon.svg.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Tooltip text2</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/vega.png"></img></img><span class="speech bubble"style="position:absolute; margin-top:-2%; margin-left:-170%">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
-
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/photoshop_logo_transparent.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Adobe Photoshop<br>10yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/Adobe_Premiere_Pro_Logo.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Adobe Premiere Pro<br>8yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/aftereffectsLogo.jpg"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Adobe After Effects<br>5yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/solidworks-logo.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Solidworks<br>5yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/MayaLogo.png"></img><span class="speech bubble"style="position:absolute;font-family:Verdana, sans-serif; margin-top:-2%; margin-left:-170%">Maya<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
+<div class="grid-item"><div><div class="tooltip"><img style= "width:60px; height:50px; margin-top:10px;" src="ImgUI/220px-Rhinoceros3d-logo.png"></img><span class="speech bubble"style="position:absolute; margin-top:-2%;font-family:Verdana, sans-serif; margin-left:-170%">Rhino<br>2yrs</span><b><p style=";margin-top:-5px;font-family:Verdana, sans-serif; ; color:black; font-size:16px"></p></b></div></div></div>
 
 
             </div>
@@ -1837,15 +2035,17 @@ element.addEventListener("click", function(e){
 <br>
 <div class="titlecard">
     <!-- <h1>Here are my projects,</h1> -->
-  <h1>choose a project.</h1>
+  <h1>choose a project.<br>< / ></h1>
 </div>
+
+
 
 
 
 
 </section>
 
-<section id="item4" style=" ">
+<section id="item4" >
 <div>
 <br>
   <!-- <h2 style= "margin-left:33%; margin-top:5%;font-family:Verdana, sans-serif;">Select a Project</h2> -->
@@ -1853,56 +2053,91 @@ element.addEventListener("click", function(e){
 <br><br><br><br>
   <!-- <p style="margin-left:20%;font-family:Verdana, sans-serif;"> Click on the buttons inside the tabbed menu:</p> -->
 <div class="center" style= "position:relative">
-  <div class="tab" style= "margin-top:1%";>
+  <div class="tab" style= "margin-top:1%;">
     <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen" style="border-top: 3.5px solid#849554; border-radius:50px 0px; ">
 
-      <img style= "width:100%; margin-left:25%; " src="ImgUI/metamask-logo-horizontal.svg"></img>
+      <img style= "width:75%; margin-left:25%; " src="ImgUI/SFU_logo.png"></img>
 
 
     </button>
 
 
-    <button class="tablinks" onclick="openCity(event, 'Paris')"><img style= "width:75% ; margin-left:25%;" src="ImgUI/Picture4.png" ></img></button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')"><img style= "width:75%; margin-left:25%;" src="https://i.imgur.com/jLCXNub.png"></img></button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')"><img style= "width:105% ; margin-left:25%;" src="ImgUI/comscijoblogo.png" ></img></button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')"><img style= "width:50%; margin-left:25%;" src="ImgUI/superviseTrans.png"></img></button>
+    <button class="tablinks" onclick="openCity(event, 'gameboard')"><img style= "width:50%; margin-left:25%;" src="ImgUI/Steam_icon_logo.png"></img></button>
 <button class="tablinks"style= "width:75%" ; ></img></button>
 
 <button class="tablinks"></img></button><img style= "width:150%;margin-left:-80%;margin-top:-90%;transform:rotate(90deg);" src="https://i.imgur.com/S0vEe8E.png"><button>
   </div>
-<div class="center2">
+
+<div class="center2" style="">
 <!-- <div class = "center2"> -->
+<!-- <div id="rightPanelborder" class="tab2"style=" background:transparent; height:max-content; "> -->
+<!-- <h2  style= " color: white; font-family:Verdana, sans-serif;"> SKILLS</h2> -->
+
+  <br>
+  &nbsp
+
+
+  <!-- <div id="rightPanel" style="sbackground:transparent;" class="tabcontent2"  > -->
+
   <div id="London" class="tabcontent">
 
   <div class="elementToFadeInAndOut">
+
 <br>
-  <h3 style= "margin-left:10%;font-family:Verdana, sans-serif;">MetaMask Website Redesign</h3>
-  <img class="open-overlay" style= "width:100%; height:100%" src="https://i.imgur.com/jLCXNub.png"><img>
+  <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; background-color:#849554; color:white; font-size:36px;" >Webpage Content Generator</h1>
+  <img class="open-overlay"  onclick="NoHeader()" style= "width:100%; height:100% ;cursor: pointer;" src="ImgUI/gps_laptop.png"><img>
   </div>
 
-    <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">Tap image to learn more!</h4>
 
 
+  <img class="open-overlay" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
 
+
+<h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">Tap image to learn more!</h4>
 
 
 
   </div>
   <div id="Paris" class="tabcontent" style="display:none;">
 <br>
-  <h3 style= "margin-left:10%;font-family:Verdana, sans-serif;">Webpage Content Generator</h3>
+
   <div class="elementToFadeInAndOut">
-  <img class="open-overlayB" style= "width:100%; height:100%"src="https://i.imgur.com/jLCXNub.png"></img>
+    <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; background-color:#849554; color:white; font-size:36px">Job Search Website</h1>
+  <img class="open-overlayB" onclick="NoHeader()" style= "width:100%; height:100%"src="ImgUI/laptop_compsci.png"></img>
   </div>
+  <img class="open-overlayB" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
   <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">Tap image to learn more!</h4>
   </div>
   <div id="Tokyo" class="tabcontent" style="display:none;">
   <div class="elementToFadeInAndOut">
     <br>
-      <h3 style= "margin-left:10%;font-family:Verdana, sans-serif;">Job Search Website</h3>
-  <img style= "width:100%; height:100%" src="https://i.imgur.com/jLCXNub.png"></img>
+      <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; background-color:#849554; color:white; font-size:36px">Elderly Aid App</h1>
+    <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img style= "width:35%; height:35%; margin-left:25%" src="ImgUI/samsungHand2.png"></img></a>
   </div>
+  <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
+
       <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">Tap image to learn more!</h4>
 </div>
 
+
+
+<div id="gameboard" class="tabcontent" style="display:none;">
+<div class="elementToFadeInAndOut">
+  <br>
+    <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; background-color:#849554; color:white; font-size:36px">Mental Health Board Game</h1>
+<a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img style= "width:100%; height:100%" src="ImgUI/laptop_gameboard.png"></img></a>
+</div>
+<a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
+    <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">Tap image to learn more!</h4>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<!-- </div>
+</div> -->
 </section>
 
 
@@ -1920,8 +2155,23 @@ element.addEventListener("click", function(e){
 
 <style>
 
+/* exapandhover */
+
+.expandHover{
 
 
+}
+
+
+
+#expandHover:hover{
+  Transform:scale(1.1);
+}
+
+
+
+
+/* mail air plane animation */
 
 
 
@@ -2172,6 +2422,18 @@ stroke:black;
 </div>
 </a>
 
+
+
+<div class="grid-item">
+  <div class="titlecard">
+        <h1 style=font-size:30px;>Thank you for visiting! <br> :)</h1>
+
+      </div>
+
+
+</div>
+
+
 </div>
 
 
@@ -2260,7 +2522,23 @@ stroke:black;
 </div>
 <!-- end of parallax bg -->
 
-<section class="overlay" aria-hidden="true">
+
+<style>
+
+#project_headers{
+display:block;
+}
+/* mobileheaders*/
+@media screen and (max-width: 1050px) {
+  #project_headers{
+  display:none;
+  }
+}
+</style>
+
+
+
+<section class="overlay" aria-hidden="true" >
 <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> -->
  <!-- <button id ="closeNav" class="close-overlay" style="opacity:1;">x</button> -->
 
@@ -2268,29 +2546,35 @@ stroke:black;
 
 <!-- transparent image -->
 
-  <a href="#item3">  <img src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7" class="close-overlay" style="border:hidden; cursor: pointer; position:absolute;"> </img></a>
-    <div class="tab2"style=" margin-top:-20px; background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(181,212,118,1) 100%, rgba(52,94,17,1) 100%);box-shadow: 2px 2px 1px grey;">
+  <a href="#item4">  <img src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7" class="close-overlay" style="border:hidden; cursor: pointer; position:absolute;" onclick="YesHeader()"> </img></a>
+    <div class="tab2"style=" margin-top:-20px; background:transparent">
 
 
-            <button class="tablinks2" onclick="contentA1()" style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>BRIEF</b></button>
-            <button class="tablinks2" onclick="contentA2()" style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>PROCESS</b></button>
-            <button class="tablinks2" onclick="contentA3()"style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%);color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>FINAL</b></button>
-<button class="tablinks2" onclick="contentA4()"style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>RESULT</b></button>
+            <button class="tablinks2" onclick="contentA1()" style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>BRIEF</b></button>
+            <button class="tablinks2" onclick="contentA2()" style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>PROCESS</b></button>
+            <button class="tablinks2" onclick="contentA3()"style="background:transparent;border-style: solid; border-color:white;;color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>FINAL</b></button>
+<button class="tablinks2" onclick="contentA4()"style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>REFLECT</b></button>
 <!-- <div class="content-container"> -->
-          <div id="a1" class="tabcontent2" style="display:block;  margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
-            <h3>London</h3>
-       <p>My Grandmother has been my caretaker ever since I was born. After many years, her age made her more susceptible to illness. She contracted dementia a mental illness that affects memory loss, and hallucinations. Because of her condition, the roles had been switched. I have become her caretaker. My Grandmother needs constant supervision and this can be a difficult task. With the combination of school, work, and social life it can be very difficult to watch over her when she is alone at home. Medical alert systems can help keep the caretaker alerted if something happens at home. However, these systems can come with a price and may not be available. As you know, phones now have many functionalities not limited to just calling another person. Phones are almost always carried and used by people whenever they go to work, school, or even staying at home. A few of the many functionalities of a modern phone include sensors, GPS, camera, etc. Utilizing the phone’s capabilities, we can combine the functions and create a helpful app to aid our dependent. -->
+
+
+
+          <div id="a1" class="tabcontent2" style="display:block; font-family: Verdana, sans-serif; color:white;margin-left:-2px;margin-top:0px;height:70%;width:100%;
+background:transparent">
+<h1 id="project_headers"style=" position:absolute;font-family: Verdana, sans-serif; color:white;margin-left:-25%;margin-top:0px;height:70%;width:100%;font-size:50px;z-index:-1;">< brief ></h1>
+            <h3>Brief</h3>
+            <br>
+       <p>As a Design and Marketing Associate for Simon Fraser University Graduate and Postdoctoral Studies  one of my responsibilities was to design profile pages using Adobe Experience Manager (AEM). I was also responsible for updating the various web pages found in the GPS site such as the job page, event page, awards page, and had coded the template for the GPS news bulletin.
+Last minute profile submissions have piled up since winter break of 2020. Perhaps Graduate students had more time to submit it over the break. With over 60 profiles to be completed within a short time frame, the volume is overwhelming. My solution for this problem was to create a program to aid with the formatting. This generates a premade template for the profile pages. As a result of my innovation I was able to complete the profile pages at a faster rate with more consistency.
+
           </p>
 
+<br><br>
 
-    <img style= "width:100%; "src="https://i.imgur.com/jLCXNub.png"></img>
+<figure>
+    <img style= "width:100%; "src="https://i.imgur.com/8foTjHi.png"></img>
+    <figcaption>Figure 1: A screenshot of a profile page featured in the SFU Graduate and Postdoctoctural Studies website.</figcaption>
 
+    </figure>
 
 <style>
 
@@ -2302,7 +2586,6 @@ background:#E4F6BA">
 overflow: hidden; // hide vertical
 
 }
-
 
 
 body.noscroll{
@@ -2318,7 +2601,7 @@ body.noscroll{
 img{
 
 }
-
+/* exit x in overlay */
 .close-overlay{
 
 /* z-index:1; */
@@ -2355,24 +2638,92 @@ height:5%;
 
 
 
-          <div id="a2" class="tabcontent2"style="display:none; margin-left:-2px;margin-top:0px;height:70%;width:100%; background: rgb(27,48,10);
-background:#E4F6BA;">
+          <div id="a2" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
+<h1 id="project_headers"style=" position:absolute;font-family: Verdana, sans-serif; color:white;margin-left:-30%;margin-top:0px;height:70%;width:100%;font-size:50px;z-index:-1;">< process ></h1>
             <h3>Process</h3>
-          <span id='outerContent'>  <p>content2
-          </p></span>
-<img style= "width:100%; "src="https://i.imgur.com/jLCXNub.png"></img>
+            <br>
+          <span id='outerContent'>  <p>My supervisor was proud of my innovations in accomplishing this task and required the Profile Helper to continue with operations within the department especially when there were large volumes of profiles requested.  Unfortunately, there was a problem with my prototype Profile Helper. This version was built with the scripting programming language: Hypertext Preprocessor, which deals with web server functionalities and was not accessible to the department.
+I finally decided to use jQuery as an alternative programming language to build the Profile Helper.  jQuery is a JavaScript library that can be used to create dynamic webpages. While using jQuery, I could generate profile templates just like before and accessible for my supervisor.
+This function was perfect for my Profile Helper as it allowed me to change string values by user input without the need of a server environment.
+$(selector).val()
+The method above allowed me to return what the user had inputted.
+$(selector).val(value)
+
+This method above allows the user to to set the value and can be set through the html tag <samp><p>< input ></p></samp><br>
+
+<pre style="width:max-content; background:#363B00"><code>< input type="text" onclick="this.select()" <br><br>id="LinkedIn"></code></pre>
+This snippet of html code above results with an input form. When id=”LinkedIn", whatever the user inputs will be stored in the “LinkedIn” id.
+ After setting the value I can return the value by:
+<br><br>
+ <pre style="width:max-content; background:#363B00"><code>$(‘#LinkedIn’).val()</code></pre>
+ With a combination of <pre style="width:max-content; background:#363B00"><code>< input ></code></pre> with id and return method:
+ <br><br><pre style="width:max-content; background:#363B00"><code> $(selector).val()</code></pre>I can form a concatenation of string values to form a sentence or a body of text.
+<br>
+<br>
+<a href="ImgUI/concatenationSnippet.png" target="blank"><img style= "width:105%; "src="ImgUI/concatenationSnippet.png"></img></a>
+<br>
+<br>
+<pre style="width:max-content; background:#363B00"><code>
+  Result:
+<h5>WHY DID YOU CHOOSE TO COME TO SFU?</h5>
+<p> sfu input here </p>
+</code></pre>
+<br>
+The possibilities are great with input concatenation as it also allows the user to input url links, email addresses and hyperlink them into text.
+<br>
+<br>
+<a href="ImgUI/hyperlinkSnippet.png" target="blank"> <img style= "width:105%; "src="ImgUI/hyperlinkSnippet.png"></img></a>
+<br>
+<br>
+
+I had also improved the user experience within the Profile Helper. This user-friendly version contains color-coded buttons, tabs to separate content, save and download functions, and a text editor to test out the generated html.
+
+
+          </p>
+
+        </span>
+<!-- <img style= "width:100%; "src="https://i.imgur.com/jLCXNub.png"></img> -->
 
           </div>
 
-          <div id="a3" class="tabcontent2"style="display:none;z margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+          <div id="a3" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
+<h1 id="project_headers"style=" position:absolute;font-family: Verdana, sans-serif; color:white;margin-left:-30%;margin-top:0px;height:70%;width:100%;font-size:50px;z-index:-1;">< final ></h1>
+            <h3>Final</h3>
+            <br>
+
+            <p>You can try out my Profile Helper here <a href="https://sorrenj.github.io/Profile_Helper.html"target="_blank"><u>Try me</u>!</a>	</p><br>
+<figure>
+<img style= "width:100%; "src="ImgUI/Picture3.png"></img>
+
+<figcaption>Figure 1:  A screenshot of my Profile Helper. Users can input their details here.</figcaption>
+
+</figure>
+<br><br><br><br>
+<figure>
+<img style= "width:100%; "src="ImgUI/Picture4.png"></img>
+<figcaption>Figure 2:  A screenshot of my Profile Helper. Users can test their HTML code in this page and view how it would look on the profile page.
+</figcaption>
+
+</figure>
           </div>
-          <div id="a4" class="tabcontent2"style="display:none; margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
+
+
+
+
+
+
+
+          <div id="a4" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;background:transparent">
+<h1 id="project_headers"style=" position:absolute;font-family: Verdana, sans-serif; color:white;margin-left:-30%;margin-top:0px;height:70%;width:100%;font-size:50px;z-index:-1;">< reflect ></h1>
             <h3>Reflection</h3>
-            <p>Tokyo is the capital of Japan.</p>
+            <br>
+            <p>As a result of my innovation - a tool to aid with profile creations, my supervisor shared my work with the GPS staff and all was grateful for my innovation. Minor tweaks were made based on her feedback.</p>
+<br>
+<p>Looking back, I realized that if it weren’t for the numerous profile requests, this project would not have existed. The deadlines and the profile requests unexpectedly taught me the fundamentals of Hypertext Preprocessor and jQuery.</p>
+<br>
+<p>I compared my project to the assembly system of McDonald's from the way it seamlessly automates and generates burgers. One might say that this method of automation diminishes the quality of McDonald's food (No offense to McDonalds). However, this method does not diminish the quality of a profile as one may believe, rather it assists users with the process of creating quality content by allowing them to begin with a template.</p>
           </div>
 
 
@@ -2427,30 +2778,31 @@ background:#E4F6BA">
 
 <!-- transparent image -->
 
-  <a href="#item3"><img src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7" class="close-overlayB" style="border:hidden; cursor: pointer; position:absolute;"> </img></a>
-    <div class="tab2"style=" margin-top:-20px; background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(181,212,118,1) 100%, rgba(52,94,17,1) 100%);box-shadow: 2px 2px 1px grey;">
+  <a href="#item4"><img src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7" class="close-overlayB" style="border:hidden; cursor: pointer; position:absolute;" onclick="YesHeader()"> </img></a>
+    <div class="tab2"style=" margin-top:-20px; background:transparent">
 
 
-            <button class="tablinks2" onclick="contentB1()" style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>BRIEF</b></button>
-            <button class="tablinks2" onclick="contentB2()" style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>PROCESS</b></button>
-            <button class="tablinks2" onclick="contentB3()"style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%);color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>FINAL</b></button>
-<button class="tablinks2" onclick="contentB4()"style="background: rgb(23,52,1);
-background: radial-gradient(circle, rgba(23,52,1,1) 0%, rgba(47,65,11,1) 100%, rgba(52,94,17,1) 100%); color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>RESULT</b></button>
+            <button class="tablinks2" onclick="contentB1()" style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>BRIEF</b></button>
+            <button class="tablinks2" onclick="contentB2()" style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>PROCESS</b></button>
+            <button class="tablinks2" onclick="contentB3()"style="background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>FINAL</b></button>
+<button class="tablinks2" onclick="contentB4()"style="
+background:transparent;border-style: solid; border-color:white; color: white;text-align: center;font-family: Verdana, sans-serif;font-size: 12px;"><b>RESULT</b></button>
 <!-- <div class="content-container"> -->
-          <div id="b1" class="tabcontent2" style="display:block;  margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
-            <h3>Paris</h3>
-          <span id='outerContent'>  <p>My Grandmother has been my caretaker ever since I was born. After many years, her age made her more susceptible to illness. She contracted dementia a mental illness that affects memory loss, and hallucinations. Because of her condition, the roles had been switched. I have become her caretaker. My Grandmother needs constant supervision and this can be a difficult task. With the combination of school, work, and social life it can be very difficult to watch over her when she is alone at home. Medical alert systems can help keep the caretaker alerted if something happens at home. However, these systems can come with a price and may not be available. As you know, phones now have many functionalities not limited to just calling another person. Phones are almost always carried and used by people whenever they go to work, school, or even staying at home. A few of the many functionalities of a modern phone include sensors, GPS, camera, etc. Utilizing the phone’s capabilities, we can combine the functions and create a helpful app to aid our dependent.
+          <div id="b1" class="tabcontent2" style=" font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
+            <h3>Brief</h3>
+            <br>
+         <span id='outerContent'>  <p>Computer-related jobs are a major industry in Canada, America, Asia, and around the world. As a School of Interactive Arts & Technology major intending to pursue these types of fields we proposed a minimalistic yet concise job search website that focuses on computer science-related jobs in Canada.
+<br><br>
+Users can search by job title, company, city, province, or by postdate. Company representatives such as hiring managers can also visit our website to post new jobs. Through the comment sections, users will be able to make any inquiries to the hiring manager in regards to the posted job position. Registered users gain an additional feature as they can bookmark any job position to look into later at the home page.
+
           </p></span>
 
+<br>
+    <img style= "width:100%; "src="ImgUI/it-job.jpg"></img>
 
-    <img style= "width:100%; "src="https://i.imgur.com/jLCXNub.png"></img>
-
-
+<br>
+<p>Group members: Sorren Alex Jao & Sebastian Peng</p>
 <style>
 
 body{
@@ -2497,24 +2849,91 @@ height:5%;
 
 
 
-          <div id="b2" class="tabcontent2"style="display:none; margin-left:-2px;margin-top:0px;height:70%;width:100%; background: rgb(27,48,10);
-background:#E4F6BA">
+          <div id="b2" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
             <h3>Process</h3>
-          <span id='outerContent'>  <p>content2
-          </p></span>
-<img style= "width:100%; "src="https://i.imgur.com/jLCXNub.png"></img>
+              <br>
+          <span id='outerContent'>  <p>The data types of our dataset include the posting ID (int), job title (text), company (text), city (text), province (text), salary range (text), postdate (int), summary (text) and the job url (text). We used all the mentioned data types for our website. Users can search by job title, company name, and can filter the city, province, and postdate by radio button. Once the user receives their results the user can then select an item to view the summary of the job.</p>
+
+            <br>
+<h4>Entity Relation Diagram</h4>
+            <br>
+            <a href="ImgUI/entiy_diagram2.png" target="blank"> <img style= "width:100%; "src="ImgUI/entiy_diagram2.png"></img></a>
+
+<p>The Member entity has four attributes: User_ID, email, password, and username. The User_ID is the primary key of each user. The username attribute is also unique to each member as they cannot have more than one account linked to their User_ID. Each user is able to set a password and username as they please. Users can have passwords and usernames that are identical to others’.
+</p>
+<br><br>
+<p>The Job entity has eight attributes: Job_ID, company, province, city, salary, postdate, summary, and joburl. The primary key of the Job entity is the Job_ID. The company attribute is a foreign key that allows the employer to edit that job. All other purely details of the job.
+</p>
+<br><br><h4>Joblist table</h4><br>
+
+<a href="ImgUI/joblist_table.png" target="blank"> <img style= "width:100%; "src="ImgUI/joblist_table.png"></img></a>
+<br>
+<p>Joblist table: This manages the database of Jobs along with the attributes: posting ID (int), job title (text), company (text), city (text), province (text), salary range (text), postdate (int), summary (text) and the job url (text).
+</p>
+<br><br>
+<h4>Back end data processing</h4>
+<br>
+<p>
+
+For the backend of search queries, all the values submitted for search were collected, and tested if they were empty or not. If the values were not empty, the value would be passed into the query string. When this was done, the result was displayed.
+</p>
+<br>
+<a href="ImgUI/backend_query.png" target="_blank"> <img style= "width:100%; "src="ImgUI/backend_query.png"></img></a>
+<br>
+<h4>Description of the front end dynamic support/ajax </h4>
+<br>
+
+<br>
+<p>We used AJAX for two things in our website. For populating the list of search results, and for going through the pages of the search results.
+
+For populating the search results, the PHP code we wrote  collected the search criteria for the  processing page. Then we used string concatenation to assemble the query, with the limit of results set to 10.
+</p>
+<br>
+<a href="ImgUI/ajax1.png" target="_blank"> <img style= "width:100%; "src="ImgUI/ajax1.png"></img></a>
+<br>
+<p>For moving through the pages, the PHP sent the same search criteria, but the result starting value was set to +10, so each time the button is pressed, it will move the page forward.
+</p>
+<br><a href="ImgUI/ajax2.png" target="_blank"> <img style= "width:100%; "src="ImgUI/ajax2.png"></img></a><br>
+<p>You can see the query building here </p>
+<br><a href="ImgUI/ajax3.png" target="_blank"> <img style= "width:100%; "src="ImgUI/ajax3.png"></img></a><br>
+<p>For going backward, it is similar. We reduced the number of the start post, but only if the post was greater than 10, so that the post start would not go into negative, throwing an error.
+</p><br>
+<a href="ImgUI/ajax4.png" target="_blank"> <img style= "width:100%; "src="ImgUI/ajax4.png"></img></a>
+
+          </span>
+
 
           </div>
 
-          <div id="b3" class="tabcontent2"style="display:none; margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+          <div id="b3" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
+<br>
+            <h3>Final look</h3>
+            <br>
+<a href="ImgUI/frontend_filtering.png" target="_blank"> <img style= "width:100%; "src="ImgUI/frontend_filtering.png"></img></a>
+
+            <p> Guest filtering through joblist database.</p>
+<br>
+<a href="ImgUI/frontend_details.png" target="_blank"> <img style= "width:100%; "src="ImgUI/frontend_details.png"></img></a>
+<p> Guest selects a job to view more job summary.</p>
+<br>
+<a href="ImgUI/frontend_login.png" target="_blank"> <img style= "width:100%; "src="ImgUI/frontend_login.png"></img></a>
+<p> User logs in.</p>
+<br>
+<a href="ImgUI/frontend_register.png" target="_blank"> <img style= "width:100%; "src="ImgUI/frontend_register.png"></img></a>
+<p> User registers to be a member.</p>
+<br>
+<a href="ImgUI/frontend_members.png" target="_blank"> <img style= "width:100%; "src="ImgUI/frontend_members.png"></img></a>
+<p> User redirected to member area.</p>
           </div>
-          <div id="b4" class="tabcontent2"style="display:none; margin-left:-2px;margin-top:0px;height:70%;width:100%;background: rgb(27,48,10);
-background:#E4F6BA">
-            <h3>Reflection</h3>
-            <p>Tokyo is the capital of Japan.</p>
+          <div id="b4" class="tabcontent2"style="display:none; font-family: Verdana, sans-serif; margin-left:-2px;margin-top:0px;height:70%;width:100%;color:white;
+background:transparent;">
+<br>
+            <h3>Reflection</h3><br>
+            <p>
+Unfortunately due to time constraints, we were unable to fully implement the functions of creating a new job posting, bookmarking, and commenting. I hope to continue building on this idea to help provide fast and focused results for any user interested in pursuing these types of careers.
+</p>
           </div>
 
 
@@ -2621,6 +3040,23 @@ $("#top-image").mousemove(function(e){
 //   });
 // });
 
+
+
+
+
+
+// disables nav
+function NoHeader() {
+      document.getElementById("topnav").style.display = "none";
+
+}
+
+
+// enables nav
+function YesHeader() {
+      document.getElementById("topnav").style.display = "block";
+
+}
 
 
 
@@ -2744,12 +3180,12 @@ $(document).swipeleft(function(evt){
 
 
 
-<nav>
+<!-- <nav>
  <a href="#item1"></a>
  <a href="#item2"></a>
  <a href="#item3"></a>
  <a href="#item4"></a>
-</nav>
+</nav> -->
 
 </body>
 
