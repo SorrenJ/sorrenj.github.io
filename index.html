@@ -2097,17 +2097,30 @@ element.addEventListener("click", function(e){
 
 
 <style>
-  #mobileTabTitle{
-    display:none;
-  }
+/*aligns tab content*/
+  .center2 {
+  /* margin: auto; */
+margin-top:-50%;
+    margin-left:30%;
+    width: 80%;
+    /* border: 3px solid #73AD21; */
+height:20%;
+display:block;
+}
+#mobileTabTitle{
+  display:none;
+}
 
 
-    @media screen and (max-width: 750px) {
+  @media screen and (max-width: 750px) {
+  .center2 {
+display:none;
+}
 
+#mobileTabTitle{
+  display:block;
+}
 
-  #mobileTabTitle{
-    display:block;
-  }
 }
 </style>
 
