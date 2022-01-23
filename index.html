@@ -2095,6 +2095,24 @@ element.addEventListener("click", function(e){
 
 
 
+
+<style>
+  #mobileTabTitle{
+    display:none;
+  }
+
+
+    @media screen and (max-width: 750px) {
+
+
+  #mobileTabTitle{
+    display:block;
+  }
+}
+</style>
+
+
+
 <!-- start of hoverable tabs. user clicks on tab to go into overlay -->
 <div class="center" style= "position:relative">
   <div class="tab" style= "margin-top:1%;">
@@ -2103,7 +2121,7 @@ element.addEventListener("click", function(e){
     <button class="tablinks" onmouseover="openCity(event, 'London')"  style="border-top: 3.5px solid#849554; border-radius:50px 0px; ">
 
       <img class="open-overlay"onclick="NoHeader()" id="expandHover" style= " width:75%; margin-left:25%; " src="ImgUI/SFU_logo.png"></img>
-<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white">Webpage Content Generator</h4>
+<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white;">Webpage Content Generator</h4>
 
     </button>
 
@@ -2111,14 +2129,15 @@ element.addEventListener("click", function(e){
 
 <!-- compcijob tab -->
    <button class="tablinks"  onmouseover="openCity(event, 'Paris')"><img id="expandHover" class="open-overlayB" onclick="NoHeader()"style= " width:50% ; margin-left:25%;" src="ImgUI/CS.PNG" ></img>
-<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white">Job Search Website</h4></button>
+<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white;">Job Search Website</h4></button>
 <!-- end of compscijob tab -->
 <!-- elder app tab -->
     <button class="tablinks" onmouseover="openCity(event, 'Tokyo')"> <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" style= "width:50%; margin-left:25%;" src="ImgUI/superviseTrans.png"></img></a>
-<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white">Elderly Aid App</h4></button>
+<h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white;">Elderly Aid App</h4></button>
 <!-- end of elder app tab -->
 <!-- boardgame tab -->
-    <button class="tablinks" onmouseover="openCity(event, 'gameboard')"><a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" style= "width:50%; margin-left:25%;" src="ImgUI/Steam_icon_logo.png"></img></a><h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white">Mental Health Board Game</h4></button>
+    <button class="tablinks" onmouseover="openCity(event, 'gameboard')"><a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" style= "width:50%; margin-left:25%;" src="ImgUI/Steam_icon_logo.png"></img></a>
+      <h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:25px;margin-left:25%;background-color:#849554;color:white;">Mental Health Board Game</h4></button>
 <button class="tablinks"style= "width:75%" ; ></img></button>
 
 <!-- end of boardgame tab -->
