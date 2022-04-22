@@ -54,7 +54,7 @@ img{
 
 .hero-image  {
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/secret garden_grayscale.jpg"); */
-  background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/ghibliMt.jpeg");
+  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2)), url("ImgUI/ghibliMt.jpeg");
   /* background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/skyrim.png"); */
 
 /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/secret garden2.jpg"); */
@@ -532,7 +532,7 @@ border: none;
 
 .nav-button:hover, .nav-button:focus{
   font-family:'Verdana','Helvetica','Constantia','Georgia',sans-serif;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 #active{
@@ -681,40 +681,19 @@ $(document).ready(function(){
       <h2>A random page</h2>
     </div> -->
 
-<section id="item1" style="background-color:#849554;opacity: 0.8;">
+<section id="item1" style="background-color:#849554;opacity: 1;">
     <!-- <div class="header-bg"> -->
   <!-- BEGIN Page -->
   <main class="page" id="js-page">
 
 
 
-      <!-- BEGIN Title -->
-    <!-- <div class="title"> <b><h1 data-svg>
-こんにちは</h1></b></div> -->
-<!-- <h1>< h1 ></h1> -->
 <div class="title"> <b><h1 data-svg>
 Welcome!</h1></b></div>
-<!-- <h1>< /h1 ></h1> -->
-      <!-- END Title -->
+
     <br>
 <br>
 
-    <!-- BEGIN Restart animation -->
-    <!-- <button class="restart" onClick="restart()" style="z-index:900;"></button> -->
-    <!-- END Restart animation -->
-
-
-
-    <!-- BEGIN Lines -->
-    <!-- <div class="lines">
-      <div class="lines__inner" id="js-lines"></div>
-    </div> -->
-    <!-- END Lines -->
-
-
-    <!-- BEGIN Vignette -->
-    <!-- <div class="vignette"></div> -->
-    <!-- END Vignette -->
 
 
 
@@ -780,13 +759,13 @@ Welcome!</h1></b></div>
 <br>
 <br>
 <br>
-  <div id="leftPanelborder" class="tab2"style="   background:transparent; width:30%;height:600px;margin-left:1%;margin-top:-16px;">
+  <div id="leftPanelborder" class="tab2"style=" background: rgb(255,255,255,0.7); width:30%;height:600px;margin-left:1%;margin-top:-15px;">
   <!-- <h2 style= " color: white; font-family:Verdana, sans-serif;">SORREN</h2> -->
 
 
   <br>
 
-  <div id="leftPanel" class="tabcontent2" style=" background:transparent;" >
+  <div id="leftPanel" class="tabcontent2" style=" background: transparent;" >
 
 <!-- bio buttons start -->
     <button class="tablinks2" onclick="bio1()" style="width:31%;font-size: 8px;"><b>About</b></button>
@@ -796,7 +775,7 @@ Welcome!</h1></b></div>
 <!-- bio buttons end -->
 
 
-  <span id='outerContent' > <div id="bio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
+  <span id='outerContent' > <div id="bio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a passionate web developer and UX designer who is always learning new things. He loves learning how to code functions used in practical applications.
 
 
 After his years of experience with web and mobile development he has gained a basic understanding of everyday functionalities such as the built in apps on your phone, user registration form, saved databases, etc.
@@ -889,7 +868,7 @@ margin-left:0; */
 <!-- mobile bio panel -->
 
 
-  <div id="mobilePanelborder" class="tab2"style="background:transparent; height:max-content; width:100%;margin-left:0 ;position:relative">
+  <div id="mobilePanelborder" class="tab2"style="background:rgb(255,255,255,0.7); height:max-content; width:100%;margin-left:0 ;position:relative">
   <!-- <h2 style= " color: white; font-family:Verdana, sans-serif;">SORREN</h2> -->
   <!-- bio buttons start -->
 
@@ -898,7 +877,9 @@ margin-left:0; */
 
 #mobilePanelborder{
   margin-top:15%;
+display:none;
 }
+
 
 
 /* monile display */
@@ -906,6 +887,7 @@ margin-left:0; */
 
   #mobilePanelborder{
     margin-top:-65%;
+display:block;
   }
 
 }
@@ -936,7 +918,7 @@ margin-left:0; */
 
 
   <span id='outerContent' >
-    <div id="mbio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is constantly learning new things. He loves learning how to code functions used in practical applications.
+    <div id="mbio1"class="run-animation" style="display:block;"> <h4 style="margin-left:50px;font-family:Verdana, sans-serif;"> About </h4><br><p style="margin-left:50px;font-family:Verdana, sans-serif;">Sorren Jao is a web developer who is always learning. He loves learning how to code functions used in practical applications.
 
 
 After his years of experience with web and mobile development he has gained a basic understanding of everyday functionalities such as the built in apps on your phone, user registration form, saved databases, etc. <br><br> In his free time, Sorren enjoys watching Netflix, playing Nintendo games, or shopping on Amazon. He has a strong interest in learning how these major tech corporations build their applications for public use. Sorren hopes that he can contribute his experience towards assisting consumers. For instance, building helpful functionalities in applications, creating a user interface that improves user navigation, or suggesting new ideas that can improve user experience.
@@ -1353,7 +1335,7 @@ background-position: 0px 5px; /* Center the image */
 <br>
 <br>
 <!-- right panel -->
-<div id="rightPanelborder" class="tab2"style=" background:transparent; width:25%;height:max-content;margin-left:70%; margin-top:-400px; ">
+<div id="rightPanelborder" class="tab2"style=" background:rgb(255,255,255,0.5); width:25%;height:max-content;margin-left:70%; margin-top:-75px; ">
 <!-- <h2  style= " color: white; font-family:Verdana, sans-serif;"> SKILLS</h2> -->
 
   <br>
@@ -1611,7 +1593,7 @@ display:none;
 
 position:absolute;
    align-items: center;
-background-color: #afd275;
+
 box-shadow:
   12px 12px 16px 0 rgba(0, 0, 0, 0.25),
   -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
@@ -1626,7 +1608,7 @@ width: 200px;
 #leftPanel{
 
   display:block;  margin-left:5%;margin-top:-10px;height:100%;width:200%;
-  background: #E4F6BA;color:black;
+  color:black;
 
 }
 
@@ -1701,14 +1683,15 @@ width: 200px;
 #leftPanelborder{
 width:0px;
 height:0%;
-background:transparent;
+display:none;
 box-shadow:none;
+
 }
 
 #leftPanel{
 width:0px;
 height:0%;
-background:transparent;
+display:none;
 box-shadow:none;
 }
 
