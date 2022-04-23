@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ImgUI/downHippoWalk_0.png" />
+    <link rel="icon" href="ImgUI/downHippoWalk_0.png" sizes=96x96/>
 
 
 <style>
@@ -706,22 +706,72 @@ Welcome!</h1></b></div>
 
 
   .titlecard h1 {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-weight: 900;
-    color: #fff;
+    font-family: 'Verdana', Helvetica, Arial, sans-serif;
+    font-weight: 10px;
+    color: white;
     font-size: 500%;
     margin-top: 300px;
     /* margin-bottom: 20px; */
+ /* font-style: italic; */
     text-transform: uppercase;
     text-align: center;
+  }
+
+
+#transparentBG{
+  display:block;
+  /* width:absolute; */
+
+  /* position:relative; */
+  background-color:rgb(132,149,84);
+/* height:absolute;
+position:absolute; */
+   z-index:-3;
+/* opacity:0.1; */
   }
 
 
 
 
 
+  #transBG{
+    display:block;
+    /* width:absolute; */
+
+    /* position:relative; */
+    background-color:rgba(132,149,84,0.1);
+  /* height:absolute;
+  position:absolute; */
+     /* z-index:-3; */
+  /* opacity:0.1; */
+    }
+
+
+    #transBGStart{
+      display:block;
+      /* width:absolute; */
+
+      /* position:relative; */
+      background-color:rgba(132,149,84,0.2);
+    /* height:absolute;
+    position:absolute; */
+       /* z-index:-3; */
+    /* opacity:0.1; */
+      }
+
+
 
   </style>
+
+
+
+
+
+
+
+
+
+
   <!-- <h1 class="titlecard">Projects</h1> -->
 
   <!-- <div class="containerCenter">
@@ -731,14 +781,15 @@ Welcome!</h1></b></div>
 
   <div class="hero-image" style="width:100%; ">
 
-  <section id="item1" style=" opacity: 1;scroll-behavior: smooth;" >
+<div id="transBGStart">
+  <section id="item1" style=" scroll-behavior: smooth; background-color: rgba(132,149,84, 0.7); " >
 
 
 
     <br>
     <div class="titlecard">
         <!-- <h1>Here are my projects,</h1> -->
-      <h1 style="color: #849554;font-size:500%;text-shadow:2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;">welcome!</h1>
+      <h1 style="color: white; ">Welcome!</h1>
     <br>
 
 
@@ -791,11 +842,21 @@ Welcome!</h1></b></div>
 
 
 
+
+<br>
+<br>
+<br>
+
 </section>
-<br>
-<br>
-<br>
-<section id="item2">
+</div>
+<div id="transBG">
+
+<!-- <div id="transparentBG"></div> -->
+<section id="item2" >
+
+
+
+
 <!-- <h1> start of section 2</h1> -->
 <!-- left panel -->
 <br>
@@ -810,7 +871,24 @@ Welcome!</h1></b></div>
 <br>
 <br>
 <br>
-  <div id="leftPanelborder" class="tab2"style=" background: rgb(255,255,255,0.7); width:30%;height:600px;margin-left:1%;margin-top:-15px;">
+
+<script>
+$(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $("#item2").css({
+    opacity: function() {
+      var elementHeight = $(this).height(),
+          opacity = 1;
+
+      return opacity;
+    }
+  });
+});
+
+</script>
+
+  <div id="leftPanelborder" class="tab2"style=" background: rgb(255,255,255,0.7); width:30%;height:600px;margin-left:1%;margin-top:-15px;opacity:1;">
   <!-- <h2 style= " color: white; font-family:Verdana, sans-serif;">SORREN</h2> -->
 
 
@@ -1356,6 +1434,11 @@ background-position: 0px 5px; /* Center the image */
 
 
 
+
+
+
+
+
 </style>
 
 
@@ -1624,6 +1707,14 @@ $('.hover:eq(0) span').tooltipsy();
 
 
 <style>
+
+
+
+
+
+
+
+
 
 #mobilePanelborder{
   width:0;
@@ -2067,30 +2158,20 @@ element.addEventListener("click", function(e){
 <br><br><br><br><br><br><br><br>  <br><br><br><br>  <br><br><br><br>
 <!-- <br><br><br><br><br><br><br><br>  <br><br><br><br>  <br><br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br>  <br><br><br><br> -->
 <!-- mobile friendly returns -->
-<section id="item3" style="background-color:transparent;opacity: 1;scroll-behavior: smooth;"  >
-
-
-<style>
-
-
-
-.titlecard h1 {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-weight: 900;
-  color: #fff;
-  font-size: 300%;
-  margin-top: 300px;
-  /* margin-bottom: 20px; */
-  text-transform: uppercase;
-  text-align: center;
-}
 
 
 
 
 
 
-</style>
+
+
+
+<section id="item3" style="  scroll-behavior: smooth;
+ "  >
+
+
+
 <!-- <h1 class="titlecard">Projects</h1> -->
 
 <!-- <div class="containerCenter">
@@ -2099,7 +2180,7 @@ element.addEventListener("click", function(e){
 
 <style>
 #arrowDown{
-  color:#849554;
+  color:white;
 }
 
 #arrowDown:hover{
@@ -2108,9 +2189,9 @@ element.addEventListener("click", function(e){
 
 </style>
 <br>
-<div class="titlecard">
+<div class="titlecard" >
     <!-- <h1>Here are my projects,</h1> -->
-  <h1 style="font-size:80px;color:#849554;text-shadow:2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;">select a project.<br><a id="arrowDown" href="#item4" style="">↓</a></h1>
+  <h1 style="">select a project.<br><a id="arrowDown" href="#item4" style="">↓</a></h1>
 <br>
 
 
@@ -2139,7 +2220,7 @@ element.addEventListener("click", function(e){
 
 
 
-<section id="item4" style="scroll-behavior: smooth;" >
+<section id="item4" style=" "  >
 <div>
 <br>
   <!-- <h2 style= "margin-left:33%; margin-top:5%;font-family:Verdana, sans-serif;">Select a Project</h2> -->
@@ -2181,7 +2262,7 @@ display:none;
 
 
 <!-- start of hoverable tabs. user clicks on tab to go into overlay -->
-<div class="center" style= "position:relative">
+<div class="center" style= "position:relative;opacity:1 ">
   <div class="tab" style= "margin-top:1%;">
 
 <!-- sfu tab -->
@@ -2199,7 +2280,7 @@ display:none;
 <h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:15px;margin-left:25%;background-color:#849554;color:white;">Job Search Website</h4></button>
 <!-- end of compscijob tab -->
 <!-- elder app tab -->
-    <button class="tablinks" onmouseover="openCity(event, 'Tokyo')"> <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" style= "width:50%; margin-left:25%;" src="ImgUI/superviseTrans.png"></img></a>
+    <button class="tablinks" onmouseover="openCity(event, 'Tokyo')"> <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" style= "width:50%; margin-left:25%;" src="ImgUI/whiteEye.png"></img></a>
 <h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:15px;margin-left:25%;background-color:#849554;color:white;">Elderly Aid App</h4></button>
 <!-- end of elder app tab -->
 <!-- boardgame tab -->
@@ -2223,7 +2304,8 @@ display:none;
 <!-- gps project content -->
   <div id="London" class="tabcontent">
     <br>
-  <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:#849554; text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; font-size:36px;" >Webpage Content Generator</h1>
+  <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white;  font-size:36px;" >Webpage Content Generator</h1>
+<br>
   <div class="elementToFadeInAndOut">
 
 
@@ -2236,7 +2318,7 @@ display:none;
   <img class="open-overlay" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
 
 <!-- project description -->
-<h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">JavaScript jQuery browser used to generate Graduate and Postdoctoral student profile webpages.</h4>
+<h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">JavaScript jQuery browser used to generate Graduate and Postdoctoral student profile webpages.</h4>
 <!-- end project description -->
 
 
@@ -2246,14 +2328,15 @@ display:none;
 <!-- compscijobs content -->
   <div id="Paris" class="tabcontent" style="display:none;">
 <br>
-  <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; color:#849554;text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; font-size:36px">Job Search Website</h1>
+  <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; color:white; font-size:36px">Job Search Website</h1>
+<br>
   <div class="elementToFadeInAndOut">
 
   <img class="open-overlayB" onclick="NoHeader()" style= "width:100%; height:100%"src="ImgUI/laptop_compsci.png"></img>
   </div>
   <img class="open-overlayB" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
 <!-- project description -->
-  <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">A website that searches and filters through computer science related jobs located in Canada.</h4>
+  <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">A website that searches and filters through computer science related jobs located in Canada.</h4>
   <!-- end project description -->
 
   </div>
@@ -2262,14 +2345,15 @@ display:none;
   <!-- elder app content -->
   <div id="Tokyo" class="tabcontent" style="display:none;">
     <br>
-      <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; color:#849554;text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; font-size:36px">Elderly Aid App</h1>
+      <h1 style= "margin-left:10%;font-family:Verdana, sans-serif; color:white; font-size:36px">Elderly Aid App</h1>
+<br>
   <div class="elementToFadeInAndOut">
 
     <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img style= "width:35%; height:35%; margin-left:25%" src="ImgUI/samsungHand2.png"></img></a>
   </div>
   <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
 
-      <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">An app designed to supervise elders or loved ones at home. Alerts caretaker if loved one needs help or assistance.
+      <h4 style= "margin-left:10%;font-family:Verdana, sans-serif; color:white">An app designed to supervise elders or loved ones at home. Alerts caretaker if loved one needs help or assistance.
 Developed using Android Studios (Java & XML).</h4>
 </div>
 
@@ -2278,13 +2362,14 @@ Developed using Android Studios (Java & XML).</h4>
   <!-- game board content -->
 <div id="gameboard" class="tabcontent" style="display:none;">
   <br>
-    <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:#849554; text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; font-size:36px">Mental Health Board Game</h1>
+    <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white;font-size:36px">Mental Health Board Game</h1>
+<br>
 <div class="elementToFadeInAndOut">
 
 <a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img style= "width:100%; height:100%" src="ImgUI/laptop_gameboard.png"></img></a>
 </div>
 <a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
-    <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;">A cooperative game where players work together to understand coping with different stresses in life.</h4>
+    <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">A cooperative game where players work together to understand coping with different stresses in life.</h4>
 </div>
 
   <!-- end game board content -->
@@ -2300,7 +2385,7 @@ Developed using Android Studios (Java & XML).</h4>
 
 
 
-<section id="item5" style="opacity:1">
+<section id="item5" style=" ">
 
 
 <style>
@@ -2357,7 +2442,7 @@ HTML SCSSResult Skip Results Iframe
   top: 0;
   height: 99%;
   width: 99%;
-  border: 8px solid #849554;
+  border: 8px solid white;
 text-shadow:4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000, -4px 0 0 #000;
   animation-fill-mode: none;
 }
@@ -2367,7 +2452,7 @@ text-shadow:4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000, -4px 0 0 #000;
   top: 37%;
   left: 23%;
   stroke-width:8px;
-  stroke: #849554;
+  stroke: white;
 text-shadow:4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000, -4px 0 0 #000;
   stroke-dasharray: 325 325;
   fill: none;
@@ -2436,7 +2521,7 @@ input[type="checkbox"] {
   height: 2.5rem;
 stroke:black;
   background: transparent;
-  color: black;
+  color: white;
   border-radius: 20px;
   text-transform: uppercase;
   font-weight: 600;
@@ -2449,7 +2534,7 @@ stroke:black;
 }
   .btn:hover {
     background: white;
-    color: black;
+    color: white;
   }
 
 
@@ -2525,7 +2610,7 @@ stroke:black;
 <br>
 
 <div class="titlecard">
-      <h1 style="font-size:80px; color:#849554;text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;">Wanna chat? <br>Let's set that up.</h1>
+      <h1 style="font-size:80px; scroll-behavior: smooth;  ">Wanna chat? <br>Let's set that up.</h1>
 
     </div>
 
@@ -2544,7 +2629,7 @@ stroke:black;
 
           <div class="mail-animated">
             <input type="checkbox" id="cb">
-        <label for="cb" style="font-family:Verdana,Sans-serif;color:#849554" class="btn">></label>
+        <label for="cb" style="font-family:Verdana,Sans-serif;color:white" class="btn">></label>
             <label for="cb"style="font-family:Verdana,Sans-serif" class="btn reset">></label>
             <div class="circle" ></div>
             <div class="circle-outer"></div>
@@ -2571,14 +2656,15 @@ stroke:black;
 
 
 </section>
-<section id="item6" style="opacity:1">
+<section id="item6" style=" ">
 <br>
 
 <div class="titlecard">
-      <h1 style="font-size:80px;color:#849554;text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;">Thank you for visiting! <br> :)</h1>
+      <h1 style="font-size:80px;">Thank you for visiting! <br> :)</h1>
 
 </div>
 </section>
+</div>
 <script>
     //
 		// 	var coverTop = document.getElementsByClassName('top')[0];
@@ -3113,11 +3199,51 @@ Unfortunately due to time constraints, we were unable to fully implement the fun
 
 
 
+<script>
 
 
 
 
 
+
+const [red1, green1, blue1,alpha1] = [132,149,84,0.2]
+const transBGStart = document.querySelector('#transBGStart')
+
+window.addEventListener('scroll', () => {
+  const y1 = 1 + (window.scrollY || window.pageYOffset) / 15000
+    const z1 =  0.1+(window.scrollY || window.pageYOffset)
+  const [r1, g1, b1,a1] = [red1, green1, blue1,alpha1-z1]
+  transBGStart.style.backgroundColor = `rgba(${r1}, ${g1}, ${b1},${a1})`
+})
+
+
+
+
+
+
+
+</script>
+
+<script>
+//background scroll transtion
+
+
+
+
+const [red, green, blue,alpha] = [132,149,84,0.00]
+const transBG = document.querySelector('#transBG')
+
+window.addEventListener('scroll', () => {
+  const y = 1 + (window.scrollY || window.pageYOffset) / 15000
+    const z = 0.01+ (window.scrollY || window.pageYOffset) / 5000
+  const [r, g, b,a] = [red/y, green, blue/y,alpha+z]
+  transBG.style.backgroundColor = `rgba(${r}, ${g}, ${b},${a})`
+})
+
+
+
+
+</script>
 
 
 
@@ -3257,6 +3383,35 @@ document.getElementById("b4").style.display = "block";
 
 </script>
 <!-- partial:index.partial.html -->
+
+
+<script>
+
+
+$(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('#transparentBG').css({
+    opacity: function() {
+      var elementHeight = $(this).height(),
+          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
+
+      return opacity;
+    }
+  }
+  );
+
+
+});
+
+
+</script>
+
+
+
+
+
+
 
 
 <script>
