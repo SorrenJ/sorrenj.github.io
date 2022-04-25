@@ -329,7 +329,7 @@ display:none;
   width:60%;
   border-color:yellow;
 
-  margin-left:15%;
+  margin-left:25%;
   margin-top:50px; overflow: hidden;
 
   transform: translatey(0px);
@@ -2233,9 +2233,18 @@ element.addEventListener("click", function(e){
 
 <style>
 /*aligns tab content*/
+
+.tabcontent{
+margin-top:-30%;
+
+}
+
+
+
+
   .center2 {
   /* margin: auto; */
-margin-top:-50%;
+margin-top:10%;
     margin-left:30%;
     width: 80%;
     /* border: 3px solid #73AD21; */
@@ -2265,8 +2274,21 @@ display:none;
 <div class="center" style= "position:relative;opacity:1 ">
   <div class="tab" style= "margin-top:1%;">
 
+
+
+    <!-- healthFood tab -->
+        <button class="tablinks" onmouseover="openCity(event, 'food')"  style="border-top: 3.5px solid#849554; border-radius:50px 0px; ">
+
+    <a href="https://www.figma.com/file/Ot5IbPyGiHsdErx6t95RlC/Health-%26-GO-Website?node-id=0%3A1" target="_blank"><img class="open-overlayC"onclick="NoHeader()" id="expandHover" style= " width:55%; margin-left:25%; " src="ImgUI/HealthGoWhite.png"></img></a>
+    <h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:15px;margin-left:25%;background-color:#849554;color:white;">Healthy Food Service Website Mock-up</h4>
+
+        </button>
+
+    <!-- healthFood tab end -->
+
+
 <!-- sfu tab -->
-    <button class="tablinks" onmouseover="openCity(event, 'London')"  style="border-top: 3.5px solid#849554; border-radius:50px 0px; ">
+    <button class="tablinks" onmouseover="openCity(event, 'London')"  >
 
       <img class="open-overlay"onclick="NoHeader()" id="expandHover" style= " width:75%; margin-left:25%; " src="ImgUI/SFU_logo.png"></img>
 <h4 id="mobileTabTitle" style="font-family:Verdana, sans-serif;font-size:15px;margin-left:25%;background-color:#849554;color:white;">Webpage Content Generator</h4>
@@ -2294,15 +2316,53 @@ display:none;
 <!-- end of hoverable tabs -->
 
 
-<div class="center2" style="">
+<div class="center2" >
 
   <br>
   &nbsp
 
 
 
+
+
+
+
+
+  <!-- healthfood content -->
+    <div id="food" class="tabcontent">
+      <br>
+    <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white;  font-size:36px;" >Healthy Food Service Website Mock-up</h1>
+  <br>
+    <div class="elementToFadeInAndOut">
+
+
+
+  <a href="https://www.figma.com/file/Ot5IbPyGiHsdErx6t95RlC/Health-%26-GO-Website?node-id=0%3A1" target="_blank"><img class="open-overlayC"  onclick="NoHeader()" style= "width:100%; height:100% ;cursor: pointer;" src="ImgUI/HealthGODesktop.png"><img></a>
+    </div>
+
+
+
+    <!-- <img class="open-overlay" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img> -->
+
+  <!-- project description -->
+  <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">A website mock-up of a proposed healthy food delivery service and subscription model. Created in Figma.</h4>
+  <!-- end project description -->
+
+
+    </div>
+
+    <!-- healthfood content end-->
+
+
+
+
+
+
+
+
+
 <!-- gps project content -->
-  <div id="London" class="tabcontent">
+  <div id="London" class="tabcontent"style="display:none;">
     <br>
   <h1 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white;  font-size:36px;" >Webpage Content Generator</h1>
 <br>
@@ -2315,7 +2375,7 @@ display:none;
 
 
 
-  <img class="open-overlay" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
+  <!-- <img class="open-overlay" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img> -->
 
 <!-- project description -->
 <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">JavaScript jQuery browser used to generate Graduate and Postdoctoral student profile webpages.</h4>
@@ -2334,7 +2394,7 @@ display:none;
 
   <img class="open-overlayB" onclick="NoHeader()" style= "width:100%; height:100%"src="ImgUI/laptop_compsci.png"></img>
   </div>
-  <img class="open-overlayB" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img>
+  <!-- <img class="open-overlayB" id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img> -->
 <!-- project description -->
   <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">A website that searches and filters through computer science related jobs located in Canada.</h4>
   <!-- end project description -->
@@ -2351,7 +2411,7 @@ display:none;
 
     <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img style= "width:35%; height:35%; margin-left:25%" src="ImgUI/samsungHand2.png"></img></a>
   </div>
-  <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
+  <!-- <a href="https://www.sfu.ca/~sjao/SorrenPortfolio/SeniorView_App.html" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a> -->
 
       <h4 style= "margin-left:10%;font-family:Verdana, sans-serif; color:white">An app designed to supervise elders or loved ones at home. Alerts caretaker if loved one needs help or assistance.
 Developed using Android Studios (Java & XML).</h4>
@@ -2368,7 +2428,7 @@ Developed using Android Studios (Java & XML).</h4>
 
 <a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img style= "width:100%; height:100%" src="ImgUI/laptop_gameboard.png"></img></a>
 </div>
-<a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a>
+<!-- <a href="https://sites.google.com/view/iat-312-group-2-1/home" target="_blank"><img id="expandHover" onclick="NoHeader()" style= "width:45px;cursor: pointer;" hover="Transform:scale(1.5);" src="ImgUI/greenExpand.png"><img></a> -->
     <h4 style= "margin-left:10%;font-family:Verdana, sans-serif;color:white">A cooperative game where players work together to understand coping with different stresses in life.</h4>
 </div>
 
