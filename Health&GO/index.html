@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ImgUI/downHippoWalk_0.png" sizes=96x96/>
+<link rel="stylesheet" href="./navbar.css">
+    <style>
+
+
+html, body {
+    /* max-width: 100%; */
+    /* overflow-x: hidden; */
+  /* locks horizontal side scroll */
+
+  /* background-image:url("img/takeout2Flipped.png"); */
+/* has some problems */
+scroll-behavior: smooth;
+/* background-image:url("img/bg.png");
+  background-size: 100% 200%; */
+  max-width: 100%;
+  overflow-x: hidden;
+background-repeat:no-repeat;
+
+}
+.hero-image  {
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/secret garden_grayscale.jpg"); */
+  /* background-image:url("img/bg.png"); */
+
+
+  background-image:url("img/bg.png");
+    background-size: 100% 200%;
+    max-width: 100%;
+    overflow-x: hidden;
+  background-repeat:no-repeat;background-repeat:no-repeat
+}
+body{
+
+    position: relative;
+    /* locks horizontal side scroll */
+
+}
+header {
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  background: #FFF;
+  transition: 0.7s all;
+  z-index: 900;
+}
+
+
+.logo {
+  float: left;
+  width:250px;
+  color: #849554;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+/* background-image: url("ImgUI/SorrenGoodLogo2.svg") no-repeat; */
+
+
+}
+
+
+@media screen and (min-width: 770px) {
+
+  .logo{
+    width:250px;margin-left:-15%;margin-right:50px;
+
+}
+}
+
+
+.split {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  /* overflow-x: hidden; */
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  /* background-color: #111; */
+}
+
+.right {
+  right: 0;
+  /* background-color: red; */
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+
+.title{
+  font-family: 'Verdana', 'Arial';
+  /* font-style: normal; */
+  font-weight: 500;
+
+
+  display: flex;
+
+  text-align: center;
+
+  color: white;
+
+}
+
+
+
+label{
+align-items: center;
+text-align: center;
+   font-family: 'Verdana', 'Arial';
+color: white;
+}
+
+
+.button {
+  background-color: #64C207;
+
+  /* border: 2px solid white; */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ font-family: 'Verdana', 'Arial';
+border-radius: 2px;
+}
+
+
+.button:hover{
+  filter:brightness(80%);
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  align-items: center;
+  /* text-align: center; */
+
+font-family: 'Verdana', 'Arial';
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Create three equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  align-items: center;
+  /* text-align: center; */
+
+font-family: 'Verdana', 'Arial';
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.top{
+  height:55%;
+  width:120%;
+}
+
+.bottom{
+  height:55%;
+  width:120%;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+.top{
+    width:400%;
+    height:100%;
+  }
+
+.bottom{
+  width:300%;
+  height:100%;
+  }
+
+  .left {
+    left: 25%;
+
+  }
+
+
+}
+
+
+
+
+.hero{
+  background-image: url("img/newBg.jpg");
+height:100%;
+width:120%;
+z-index:-1;
+position:absolute;
+overflow-y:hidden;
+opacity:0.9;
+filter: brightness(40%);
+animation-name:change;
+ animation-duration: 4s;
+background-repeat:no-repeat;
+
+}
+
+
+
+
+section {
+  height: 75vh;
+}
+
+
+
+
+#cf {
+  /* position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto; */
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#cf img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+/* #cf img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#cf img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#cf img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#cf img:nth-of-type(4) {
+  animation-delay: 0;
+} */
+
+
+</style>
+</head>
+<body>
+  <!-- <div style="background-color:white; z-index:-2"> -->
+<div class="navbar"  id="topnav">
+  <div class="contaier">
+
+    <div class="navbar-header">
+      <button class="toggle"style="border: none;"><span></span>
+      <span></span>
+      <span></span></button>
+      <a href="./index.html" class="navbar-brand"><img class="logo" src="img/Healthgo_logo.png" ></a>
+    </div><!-- navbar-header -->
+
+      <ul class="nav navcollaps">
+        <li ><a href="./menu.html">Menu</a></li>
+        <li><a href="./order.html">Order</a></li>
+
+
+
+
+
+
+      </ul>
+      <style>
+
+      .login2{
+          display:hidden;
+  color:transparent;
+
+        }
+
+
+      @media(min-width:600px){
+        .login2{
+          display:block;
+          margin-left:90%;
+          background-color:#64C207;
+          padding: 15px;
+          color:white;
+          border-radius: 5px;
+position:relative;
+        }
+      }
+      </style>
+<p class="login2" style="">Login</p>
+
+
+
+
+
+
+  </div><!-- contaier -->
+</div><!-- navbar -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./navbar.js"></script>
+<section style="background-color:transparent">
+
+<div class="row" >
+<!-- <div class="hero"> </div> -->
+  <!-- <img src="img/newBg.jpg" alt="Avatar woman" style="height:55%;width:120%; z-index:-1;position:absolute;overflow-y:hidden;opacity:0.9;filter: brightness(40%);animation-name:change; animation-duration: 4s;"> -->
+
+<div id="cf">
+<img class="bottom" src="img/healthy1.png" alt="Avatar woman" style=" z-index:-1;position:absolute;overflow-y:hidden;filter: brightness(40%);">
+<img class="top" src="img/newBg.jpg" alt="Avatar woman" style=" z-index:-1;position:absolute;overflow-y:hidden;filter: brightness(40%);">
+</div>
+
+  <div class="column">
+  </div>
+    <div class="column">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <h1  style="font-size: 55px;font-family: 'Verdana', 'Arial';color:white;font-weight: lighter; ">Let’s eat healthy.</h1>
+  <br>
+      <h2 style="font-size: 25px;font-family: 'Verdana', 'Arial';color:white;font-weight: lighter; ">Personalize your subscription</h2>
+
+      <br>
+
+      <label for="fname" style="font-size: 25px;font-family: 'Verdana', 'Arial';font-weight: lighter; ">Number of people:</label>
+<input type="text" style="font-size: 25px;"id="fname" name="fname";><br><br><br>
+<label for="fname"style="font-size: 25px;font-family: 'Verdana', 'Arial';font-weight: lighter; ">Deliveries per week:</label>
+<input type="text" style="font-size: 25px;"id="fname" name="fname"><br><br><br>
+
+<a href="./menu.html" class="button" style="font-family: 'Verdana', 'Arial';font-size: 25px;">Select a Menu</a>
+
+</div>
+<div class="column">
+
+</div>
+</div>
+</section>
+<section style="background-color:GhostWhite; height: 100%;">
+
+<br>
+<h1 style="font-family: 'Verdana', 'Arial'; text-align:center; color:black;font-weight: lighter; text-decoration: underline solid black 5px;   ">About</h1>
+
+<br>
+<div style="padding: 15px;font-family: 'Verdana', 'Arial'; text-align:center; color:black;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+
+
+</div>
+
+  </section>
+
+
+
+
+  <section style="background-color:white; height: 100%;">
+
+  <hr class="rounded">
+
+    <div class="row2" >
+<br>
+        <h1 style="font-family: 'Verdana', 'Arial'; text-align:center; color:black;font-weight: lighter; text-decoration: underline solid black 5px;   ">Menu Presets</h1>
+        <div class="column2" style="">
+
+
+          <br>
+    <img src="img/signatureCrop.png" style="width:180px; height:120%; margin-left:30%; border-radius: 50%;"alt="Avatar woman">
+  <h2 style="font-weight: lighter;text-align:center">Signature</h2>
+  </div>
+    <div class="column2">
+
+
+      <br>
+      <img src="img/vegetarianCrop.png" style="width:180px; height:100%;margin-left:30%; border-radius: 50%;"alt="Avatar woman">
+  <h2 style=";font-weight: lighter;text-align:center">Vegetarian</h2>
+    </div>
+
+    <div class="column2">
+
+
+      <br>
+    <img src="img/wellnessCrop.png"style="width:180px; height:100%;margin-left:30%; border-radius: 50%;" alt="Avatar woman">
+  <h2 style="font-weight: lighter;text-align:center">Wellness</h2>
+    </div>
+
+    </div>
+
+
+    </section>
+
+
+    <section style="background-color:GhostWhite; height: 100%;">
+  <hr class="rounded">
+      <div class="row1" >
+<br>
+<h1 style="font-family: 'Verdana', 'Arial'; text-align:center; color:black;font-weight: lighter; text-decoration: underline solid black 5px;"> Customer Reviews</h1>
+          <div class="column1">
+
+            <br>
+
+
+        <h2 style="font-size: 55px;font-family:'Times New Roman';font-style: italic; ">"</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+
+    </div>
+      <div class="column1">
+
+        <br>
+        <h2 style="font-size: 55px;font-family:'Times New Roman';font-style: italic; ">"</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+
+      </div>
+      </div>
+
+      </section>
+      <section style="background-color:white; height: 100%;">
+    <hr class="rounded">
+        <div class="row1" >
+<br>
+
+            <div class="column1">
+
+
+          <br>
+
+          <!-- <h2>Column</h2> -->
+          <p>© Health & Go 2022</p>
+
+      </div>
+        <div class="column1">
+
+          <br>
+
+
+          <!-- <h2>Column</h2> -->
+          <p></p>
+
+        </div>
+        </div>
+
+        </section>
+</div>
+  </body>

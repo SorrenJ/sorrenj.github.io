@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ImgUI/downHippoWalk_0.png" sizes=96x96/>
+<link rel="stylesheet" href="./navbar.css">
+    <style>
+
+
+html, body {
+    /* max-width: 100%; */
+    /* overflow-x: hidden; */
+  /* locks horizontal side scroll */
+
+  /* background-image:url("img/takeout2Flipped.png"); */
+/* has some problems */
+scroll-behavior: smooth;
+/* background-image:url("img/bg.png");
+  background-size: 100% 200%; */
+  max-width: 100%;
+  overflow-x: hidden;
+background-repeat:no-repeat;
+
+}
+.hero-image  {
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("ImgUI/secret garden_grayscale.jpg"); */
+  /* background-image:url("img/bg.png"); */
+
+
+  background-image:url("img/bg.png");
+    background-size: 100% 200%;
+    max-width: 100%;
+    overflow-x: hidden;
+  background-repeat:no-repeat;background-repeat:no-repeat
+}
+body{
+
+    position: relative;
+    /* locks horizontal side scroll */
+
+}
+header {
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  background: #FFF;
+  transition: 0.7s all;
+  z-index: 900;
+}
+
+
+.logo {
+  float: left;
+  width:250px;
+  color: #849554;
+  font-size: 50px;
+  line-height: 50px;
+  transition: 0.7s all;
+/* background-image: url("ImgUI/SorrenGoodLogo2.svg") no-repeat; */
+
+
+}
+
+
+@media screen and (min-width: 770px) {
+
+  .logo{
+    width:250px;margin-left:-15%;margin-right:50px;
+
+}
+}
+
+
+.split {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  /* overflow-x: hidden; */
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  /* background-color: #111; */
+}
+
+.right {
+  right: 0;
+  /* background-color: red; */
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+
+.title{
+  font-family: 'Verdana', 'Arial';
+  /* font-style: normal; */
+  font-weight: 500;
+
+
+  display: flex;
+
+  text-align: center;
+
+  color: white;
+
+}
+
+
+
+label{
+align-items: center;
+text-align: center;
+   font-family: 'Verdana', 'Arial';
+color: white;
+}
+
+
+.button {
+  background-color:#64C207;
+
+  /* border: 2px solid white; */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+ font-family: 'Verdana', 'Arial';
+border-radius: 2px;
+}
+
+.button:hover{
+  filter:brightness(80%);
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  align-items: center;
+  /* text-align: center; */
+
+font-family: 'Verdana', 'Arial';
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Create three equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  align-items: center;
+  /* text-align: center; */
+
+font-family: 'Verdana', 'Arial';
+}
+
+
+.column2:hover {
+/* background-color:#64C207; */
+/* color:white; */
+
+}
+
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.top{
+  height:55%;
+  width:120%;
+}
+
+.bottom{
+  height:55%;
+  width:120%;
+}
+
+
+
+#foodSelect1{
+width:80%; height:50vh; margin-left:12%; border-radius: 5%;filter: brightness(50%);
+
+}
+#foodSelect1:hover{
+filter: brightness(100%);
+
+}
+
+#foodSelect1:active #foodSelect1::after{
+filter: brightness(100%);
+
+}
+
+/* mobile layout */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:800px) {
+  .column {
+    width: 100%;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+.top{
+    width:400%;
+    height:100%;
+  }
+
+.bottom{
+  width:300%;
+  height:100%;
+  }
+
+  .left {
+    left: 25%;
+
+  }
+
+
+
+#foodSelect1{
+width:50%; height:50%; margin-left:25%; border-radius: 100%;
+
+}
+
+
+
+
+}
+
+
+
+.hero{
+  background-image: url("img/newBg.jpg");
+height:100%;
+width:120%;
+z-index:-1;
+position:absolute;
+overflow-y:hidden;
+opacity:0.9;
+filter: brightness(40%);
+animation-name:change;
+ animation-duration: 4s;
+background-repeat:no-repeat;
+
+}
+
+
+
+
+section {
+  height: 75vh;
+}
+
+
+
+
+#cf {
+  /* position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto; */
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+0% {
+opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#cf img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+/* #cf img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#cf img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#cf img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#cf img:nth-of-type(4) {
+  animation-delay: 0;
+} */
+
+
+</style>
+</head>
+<body>
+  <!-- <div style="background-color:white; z-index:-2"> -->
+  <div class="navbar"  id="topnav">
+    <div class="contaier">
+
+      <div class="navbar-header">
+        <button class="toggle"style="border: none;"><span></span>
+        <span></span>
+        <span></span></button>
+        <a href="./index.html" class="navbar-brand"><img class="logo" src="img/Healthgo_logo.png" ></a>
+      </div><!-- navbar-header -->
+
+        <ul class="nav navcollaps">
+          <li ><a href="./menu.html">Menu</a></li>
+          <li><a href="./order.html">Order</a></li>
+
+
+
+
+
+
+        </ul>
+        <style>
+
+        .login2{
+            display:hidden;
+    color:transparent;
+
+          }
+
+
+        @media(min-width:600px){
+          .login2{
+            display:block;
+            margin-left:90%;
+            background-color:#64C207;
+            padding: 15px;
+            color:white;
+            border-radius: 5px;
+position:relative;
+          }
+        }
+        </style>
+  <p class="login2" style="">Login</p>
+
+
+
+
+
+
+
+  </div><!-- contaier -->
+</div><!-- navbar -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./navbar.js"></script>
+
+
+
+  <section style="background-color:white; height: 100%;width:75%;margin-left:15%">
+
+  <!-- <hr class="rounded"> -->
+
+    <div class="row2" >
+<br><br><br><br><br><br>
+        <h1 style="font-family: 'Verdana', 'Arial'; text-align:center; color:black;font-weight: lighter; font-size:45px;    ">Select a Menu Preset</h1>
+        <div class="column2" style="">
+
+
+          <br>
+  <a href="#item1"> <img id="foodSelect1" src="img/signature.png" style=""alt="Avatar woman"></a>
+  <h2 style="font-weight: lighter;text-align:center">Signature</h2>
+  </div>
+    <div class="column2">
+
+
+      <br>
+      <a href="#item2"><img id="foodSelect1" src="img/vegetarian.png" style=""alt="Avatar woman"></a>
+  <h2 style=";font-weight: lighter;text-align:center">Vegetarian</h2>
+    </div>
+
+    <div class="column2">
+
+
+      <br>
+      <a href="#item3"><img id="foodSelect1" src="img/wellness.png"style="" alt="Avatar woman"></a>
+  <h2 style="font-weight: lighter;text-align:center">Wellness</h2>
+    </div>
+
+    </div>
+
+<br>
+
+
+<a href="./order.html"><div class="button" style="width:80% ; margin-left: 10%"> Select Plan</div></a>
+
+
+
+
+
+
+    </section>
+<br><br><br><br>
+
+
+      <section style="background-color:white; height: 100%; ">
+    <hr class="rounded">
+        <div class="row1" >
+<br>
+
+            <div class="column1">
+
+
+          <br>
+
+          <!-- <h2>Column</h2> -->
+          <p>© Health & Go 2022</p>
+
+      </div>
+        <div class="column1">
+
+          <br>
+
+
+          <!-- <h2>Column</h2> -->
+          <p></p>
+
+        </div>
+        </div>
+
+        </section>
+</div>
+  </body>
