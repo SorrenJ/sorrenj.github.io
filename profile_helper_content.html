@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sorren Jao - Portfolio</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" href="files/aos.css" > -->
+    <!-- <link rel="stylesheet" href="aos.css" > -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="project.css">
+      <link rel="stylesheet" href="form.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  </head>
+  <body>
+	<script src="index.js"></script>
+  <header>
+
+
+    <div class="nav">
+      <ul>
+<li class="home"><a href="index.html">Home</a></li>
+        <!-- <li class="turorial"><a href="#one">Tutorial</a></li> -->
+        <li ><a href="index.html#bio">
+        Bio</a></li>
+        <li ><a href="index.html#projects">Projects</a></li>
+        <li ><a href="#contact">Contact</a></li>
+
+      </ul>
+    </div>
+
+
+<!-- class="active" -->
+    <div class="topnav"style="z-index:2">
+  <a href="" >Sorren Jao</a>
+      <div id="myLinks" >
+
+        <!-- <a href="#one">Tutorial</a> -->
+        <a href="index.html">Home</a>
+        <a href="index.html#bio">Bio</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="#contact">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+
+
+
+
+
+
+  </header>
+  <br>  <br>  <br>  <br>
+  <a href="index.html#projects" >
+  <button class="button">	← Go Back </button></a>
+
+<div class="projectContainer">
+   <h1>Profile Helper</h1>
+  <!-- <div class="site-title">
+     <h1>Project Container Template</h1>
+   </div> -->
+
+
+   <h2>Skills:</h2>
+             <p>     <div class="tag">HTML</div>
+               <div class="tag"> CSS</div>
+                 <div class="tag">JavaScript</div>
+                 <div class="tag">jQuery</div></p>
+
+   <div class="content">
+
+
+
+ <p>Profile helper is a content generator tool to help with creating graduate student profile pages. It was developed with JavaScript jQuery. It contains save and
+download functions, and a text editor to test out the webpage content. As a result it boosted work productivity
+with graduate student profiles.</p>
+
+     <a href="https://sorrenj.github.io/Profile_Helper.html" target="_blank">
+             <button class="button"> Visit Website → </button></a>
+             <br>   <br>   <br>
+             <video  width="100%" height="50%" loop="1"  src="vids/profileHelper.mp4"  autoplay muted style=" ">
+                <source src="vids/profileHelper.mp4" type="video/mp4"></video>
+ <p> As a Design and Marketing Associate for Simon Fraser University Graduate and Postdoctoral Studies one of my responsibilities was to design profile pages using Adobe Experience Manager (AEM). I was also responsible for updating the various web pages found in the GPS site such as the job page, event page, awards page, and had coded the template for the GPS news bulletin. Last minute profile submissions have piled up since winter break of 2020. Perhaps Graduate students had more time to submit it over the break. With over 60 profiles to be completed within a short time frame, the volume is overwhelming. My solution for this problem was to create a program to aid with the formatting. This generates a premade template for the profile pages. As a result of my innovation I was able to complete the profile pages at a faster rate with more consistency.</p>
+     <p> I learned that the purpose of their business is to teach users how to drive—this thus dictated my design decisions. At my planning stage, I looked into existing websites with similar business practices such as ICBC.com and smartdrivingschool.ca to use as references.
+     </p>
+<h2>Process</h2>
+     <p>My supervisor was proud of my innovations in accomplishing this task and required the Profile Helper to continue with operations within the department especially when there were large volumes of profiles requested.  Unfortunately, there was a problem with my prototype Profile Helper. This version was built with the scripting programming language: Hypertext Preprocessor, which deals with web server functionalities and was not accessible to the department.
+I finally decided to use jQuery as an alternative programming language to build the Profile Helper.  jQuery is a JavaScript library that can be used to create dynamic webpages. While using jQuery, I could generate profile templates just like before and accessible for my supervisor.
+This function was perfect for my Profile Helper as it allowed me to change string values by user input without the need of a server environment.
+$(selector).val()
+The method above allowed me to return what the user had inputted.
+$(selector).val(value)
+
+This method above allows the user to to set the value and can be set through the html tag <samp><p>< input ></p></samp><br>
+
+<pre style="width:max-content; background:#001626"><code>< input type="text" onclick="this.select()" <br><br>id="LinkedIn"></code></pre>
+This snippet of html code above results with an input form. When id=”LinkedIn", whatever the user inputs will be stored in the “LinkedIn” id.
+After setting the value I can return the value by:
+<br><br>
+<pre style="width:max-content; background:#001626"><code>$(‘#LinkedIn’).val()</code></pre>
+With a combination of <pre style="width:max-content; background:#001626"><code>< input ></code></pre> with id and return method:
+<br><br><pre style="width:max-content; background:#001626"><code> $(selector).val()</code></pre>I can form a concatenation of string values to form a sentence or a body of text.
+<br>
+<br>
+<a href="ImgUI/concatenationSnippet.PNG" target="blank"><img style= "width:105%; "src="ImgUI/concatenationSnippet.PNG"></img></a>
+<br>
+<br>
+<pre style="width:max-content; background:#001626"><code>
+ Result:
+<h5>WHY DID YOU CHOOSE TO COME TO SFU?</h5>
+<p> sfu input here </p>
+</code></pre>
+<br>
+The possibilities are great with input concatenation as it also allows the user to input url links, email addresses and hyperlink them into text.
+<br>
+<br>
+<a href="ImgUI/hyperlinkSnippet.PNG" target="blank"> <img style= "width:105%; "src="ImgUI/hyperlinkSnippet.PNG"></img></a>
+<br>
+<br>
+
+I had also improved the user experience within the Profile Helper. This user-friendly version contains color-coded buttons, tabs to separate content, save and download functions, and a text editor to test out the generated html.
+
+
+         </p>
+<h2>Final Product</h2>
+      <img style= "width:100%; "src="ImgUI/Picture3.png"></img>
+
+<figcaption>Figure 1:  A screenshot of my Profile Helper. Users can input their details here.</figcaption>
+
+</figure>
+<br><br><br><br>
+<figure>
+<img style= "width:100%; "src="ImgUI/Picture4.png"></img>
+<figcaption>Figure 2:  A screenshot of my Profile Helper. Users can test their HTML code in this page and view how it would look on the profile page.
+</figcaption>
+   </div>
+
+
+<h2>Reflection</h2>
+
+        <p>As a result of my innovation - a tool to aid with profile creations, my supervisor shared my work with the GPS staff and all was grateful for my innovation. Minor tweaks were made based on her feedback.</p>
+
+      <p>Looking back, I realized that if it weren’t for the numerous profile requests, this project would not have existed. The deadlines and the profile requests unexpectedly taught me the fundamentals of Hypertext Preprocessor and jQuery.</p>
+
+      <p>I compared my project to the assembly system of McDonald's from the way it seamlessly automates and generates burgers. One might say that this method of automation diminishes the quality of McDonald's food (No offense to McDonalds). However, this method does not diminish the quality of a profile as one may believe, rather it assists users with the process of creating quality content by allowing them to begin with a template.</p>
+
+<br>
+
+
+  </div>
+
+
+
+
+
+
+
+
+<br>
+
+
+
+<br>
+
+<!-- <h1 class="title_card" style=""><img style="width:15%" src="imgs/github.png" alt="github"></h1> -->
+<div id="contact" class="flex-container">
+  <div><img style="width:30%" src="imgs/github.png" alt="github"></img></div>
+  <div><br><a href="https://github.com/SorrenJ" target="_blank"><button class="button" style="">See Github for more projects.</button></a>
+
+
+
+</div>
+</div>
+
+
+
+
+<section class="section1">
+
+  <h1 class="title_card">  <br>Let's chat! <br>
+    <svg width="100%" height="59" viewBox="0 0 79 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M78.9481 4.02959V54.8203C78.9482 55.2967 78.8544 55.7686 78.6721 56.2088C78.4898 56.649 78.2226 57.049 77.8857 57.3859C77.5488 57.7228 77.1488 57.99 76.7086 58.1723C76.2684 58.3546 75.7966 58.4483 75.3201 58.4482H4.57592C4.09946 58.4483 3.62765 58.3546 3.18743 58.1723C2.74721 57.99 2.34721 57.7228 2.01031 57.3859C1.6734 57.049 1.4062 56.649 1.22393 56.2088C1.04166 55.7686 0.94792 55.2967 0.94805 54.8203V4.02959C0.945758 3.61455 1.01955 3.20261 1.16588 2.81421C1.38273 2.19441 1.76547 1.64596 2.27239 1.22858C2.77931 0.811194 3.39099 0.540875 4.04088 0.447021C4.21777 0.418045 4.39668 0.402876 4.57592 0.401672H75.3201C75.4994 0.402876 75.6782 0.418044 75.8551 0.447021C76.505 0.540806 77.1168 0.811108 77.6237 1.2285C78.1306 1.64589 78.5133 2.19437 78.7301 2.81421C78.8764 3.2026 78.9503 3.61454 78.9481 4.02959Z" fill="white"/>
+    <path d="M78.7302 2.81422L41.0272 30.8761C40.7167 31.1115 40.3377 31.2389 39.948 31.2389C39.5583 31.2389 39.1793 31.1115 38.8687 30.8761L1.16589 2.81422C1.38274 2.19442 1.76542 1.64597 2.27234 1.22859C2.77926 0.811209 3.391 0.54089 4.04089 0.447037L39.9481 27.1666L75.8551 0.447021C76.505 0.5408 77.1168 0.811106 77.6237 1.2285C78.1307 1.64589 78.5134 2.19438 78.7302 2.81422V2.81422Z" fill="#003358"/>
+    </svg>
+  </h1>
+
+
+<div class="formContainer">
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvonpwkn" method="post">
+    <fieldset id="fs-frm-inputs">
+    <h1><label for="full-name">Full Name</label></h1>
+
+      <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+    <br>
+      <h1><label for="email-address">Email Address</label></h1>
+      <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+<br>
+      <h1><label for="message">Message</label></h1>
+      <textarea rows="5" name="message" id="message" placeholder="Hello." required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+    <br>
+    <input class="button" type="submit" value="Submit"style="margin:auto;">
+  </form>
+
+</div>
+</section>
+
+
+
+
+
+<script>
+
+function bio1() {
+      document.getElementById("bio1").style.display = "block";
+document.getElementById("bio2").style.display = "none";
+document.getElementById("bio3").style.display = "none";
+
+
+}
+function bio2() {
+      document.getElementById("bio1").style.display = "none";
+document.getElementById("bio2").style.display = "block";
+document.getElementById("bio3").style.display = "none";
+
+
+}
+function bio3() {
+      document.getElementById("bio1").style.display = "none";
+document.getElementById("bio2").style.display = "none";
+document.getElementById("bio3").style.display = "block";
+
+
+}
+
+// hamburger menu
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+<script src="../files/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+
+<!-- <canvas class="background"></canvas> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+  </body>
+</html>
