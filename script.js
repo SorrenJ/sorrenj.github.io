@@ -1,244 +1,142 @@
-/**
- * A simple plugin for text animation that can be easily used on any page
- * For better experience open in "Full Page View" - https://cdpn.io/janeRivas/debug/JjjYGQN/VJkxxOaZdQek
- *
- * Thanks for the idea - <vintage.agency>
- * Made with ❤ by janeRivas <solovyev.a@icloud.com>
- */
-class SVG {
-  /**
-   * @param {HTMLElement} element - HTML element with text to be animated
-   * @param {boolean} isStriped - make striped text (play with it ¯\_(ツ)_/¯)
-   * @param {number} rectWidth - rectangle width
-   */
-  constructor(element, rectWidth = 20, isStriped = false) {
-    this.svgStyles = this._getStyles(element);
-    this.rectWidth = rectWidth;
-    this.isStriped = isStriped;
+/* Credit and Thanks:
+Matrix - Particles.js;
+SliderJS - Ettrics;
+Design - Sara Mazal Web;
+Fonts - Google Fonts
+*/
 
-    this._init(element);
-  }
-
-  /**
-   * Initialization
-   */
-  _init(element) {
-    const svg = this._createSVG();
-    const text = this._createText();
-    const { group, rects } = this._createRects();
-    const mask = this._createMask();
-
-    svg.appendChild(text);
-    svg.appendChild(group);
-    svg.appendChild(mask);
-    element.insertAdjacentElement('afterend', svg);
-
-    this._hideElement(element);
-
-    this._initAnimation(text, rects);
-  }
-
-  /**
-   * Starts the animation
-   * @param {function} callback function
-   */
-  animate(fn) {
-    this.animation.eventCallback('onComplete', fn);
-    this.animation.play();
-  }
-
-
-  /**
-   * Restarts the animation
-   * @param {function} callback function
-   */
-  restart(fn) {
-    this.animation.eventCallback('onComplete', fn);
-    this.animation.restart();
-  }
-
-  /**
-   * Gets CSS element properties
-   * @param {HTMLElement} element - HTML element
-   * @return {object} CSS styles
-   */
-  _getStyles(element) {
-    const styles = window.getComputedStyle(element);
-
-    return {
-      text: element.innerText,
-      width: styles.width.match(/\d+/)[0],
-      height: styles.height.match(/\d+/)[0],
-      fontFamily: styles.fontFamily,
-      fontSize: styles.fontSize,
-      fontWeight: styles.fontWeight,
-      textTransform: styles.textTransform,
-      color: styles.color,
-      letterSpacing: styles.letterSpacing };
-
-  }
-
-  /**
-   * Creates an SVG element
-   * @return {HTMLElement} <svg> element
-   */
-  _createSVG() {
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttributeNS(null, 'width', this.svgStyles.width);
-    svg.setAttributeNS(null, 'height', this.svgStyles.height);
-    svg.setAttributeNS(null, 'viewBox', `0 0 ${this.svgStyles.width} ${this.svgStyles.height}`);
-
-    return svg;
-  }
-
-  /**
-   * Creates an SVG text element
-   * @params {boolean} isMask - creates a mask from text
-   * @return {HTMLElement} <text> element
-   */
-  _createText(isMask) {
-    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    text.appendChild(document.createTextNode(this.svgStyles.text));
-    text.setAttributeNS(null, 'x', '50%');
-    text.setAttributeNS(null, 'y', '50%');
-    text.setAttributeNS(null, 'font-family', this.svgStyles.fontFamily);
-    text.setAttributeNS(null, 'font-size', this.svgStyles.fontSize);
-    text.setAttributeNS(null, 'font-weight', this.svgStyles.fontWeight);
-    text.setAttributeNS(null, 'letter-spacing', this.svgStyles.letterSpacing);
-    if (isMask) {
-      text.setAttributeNS(null, 'fill', this.svgStyles.color);
-    } else {
-      text.setAttributeNS(null, 'fill', 'none');
-      text.setAttributeNS(null, 'stroke-dasharray', '1420');
-      text.setAttributeNS(null, 'stroke-dashoffset', '1420');
-      text.setAttributeNS(null, 'stroke-width', '1');
-      text.setAttributeNS(null, 'stroke', this.svgStyles.color);
-    }
-    text.setAttributeNS(null, 'text-rendering', 'optimizeLegibility');
-    text.setAttributeNS(null, 'dominant-baseline', 'middle');
-    text.setAttributeNS(null, 'text-anchor', 'middle');
-
-    return text;
-  }
-
-  /**
-   * Creates an SVG mask element
-   * @return {HTMLElement} <mask> element
-   */
-  _createMask() {
-    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-    const mask = document.createElementNS('http://www.w3.org/2000/svg', 'mask');
-    const text = this._createText(true);
-
-    mask.setAttributeNS(null, 'id', 'mask');
-    mask.appendChild(text);
-    defs.appendChild(mask);
-
-    return defs;
-  }
-
-  /**
-   * Creates a group of SVG rectangles
-   * @return {object} <g> element and list of <rect> elements
-   */
-  _createRects() {
-    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    const numberOfRect = this.svgStyles.width / this.rectWidth + this.svgStyles.height / this.rectWidth / 1.5;
-    const rects = [];
-
-    const rectHeight = parseInt(this.svgStyles.height) + this.rectWidth * 3;
-    const stripe = this.rectWidth / 2;
-
-    for (let i = 0; i < numberOfRect + 1; i++) {
-      const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-      rect.setAttributeNS(null, 'x', i * this.rectWidth);
-      rect.setAttributeNS(null, 'y', -20);
-      /**
-       * Hmmm... striped...
-       */
-      if (this.isStriped) {
-        rect.setAttributeNS(null, 'width', stripe);
-      } else {
-        rect.setAttributeNS(null, 'width', this.rectWidth);
+window.onload = function () {
+  Particles.init({
+    selector: ".background"
+  });
+};
+const particles = Particles.init({
+  selector: ".background",
+  // color: ["#034202", "#034202", "#000000"],
+  color: ["#faebd7", "#03dac6", "#ff0266"],
+  connectParticles: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        color: ["#faebd7", "#03dac6", "#ff0266"],
+        maxParticles: 43,
+      connectParticles: true,
       }
-      rect.setAttributeNS(null, 'height', rectHeight);
-      rect.setAttributeNS(null, 'fill', this.svgStyles.color);
-
-      rects.push(rect);
-      group.appendChild(rect);
     }
-
-    group.setAttributeNS(null, 'mask', 'url(#mask)');
-
-    return { group, rects };
-  }
-
-  /**
-   * Hides an element
-   * @param {HTMLElement}
-   */
-  _hideElement(element) {
-    element.style.display = 'none';
-  }
-
-  /**
-   * Animation initialization
-   * @param {HTMLElement} text - <text> element
-   * @param {HTMLelement[]} rects - <rect> element
-   */
-  _initAnimation(text, rects) {
-    TweenLite.set(rects, { rotation: 45, scaleX: 0 });
-
-    this.animation = new TimelineLite({ paused: true });
-    this.animation.to(text, 4, { strokeDashoffset: 0, ease: Power4.easeInOut });
-    this.animation.to(rects, 1, { scaleX: 1, ease: Power1.easeIn }, 2.1);
-  }}
-
-
-
-/**
- * Line animation
- */
-const tlLines = new TimelineLite();
-tlLines.to('#js-lines', 1, { opacity: 1, ease: Power1.easeOut, delay: 5.6 });
-
-
-/**
- * Init
- */
-const svg = new SVG(document.querySelector('[data-svg]'));
-svg.animate(() => {
-  window.console.log('done');
+  ]
 });
 
+class NavigationPage {
+  constructor() {
+    this.currentId = null;
+    this.currentTab = null;
+    this.tabContainerHeight = 70;
+    this.lastScroll = 0;
+    let self = this;
+    $(".nav-tab").click(function () {
+      self.onTabClick(event, $(this));
+    });
+    $(window).scroll(() => {
+      this.onScroll();
+    });
+    $(window).resize(() => {
+      this.onResize();
+    });
+  }
 
-/**
- * Restart animation
- */
-const restart = () => {
-  svg.restart(() => {
-    window.console.log('done');
-  });
+  onTabClick(event, element) {
+    event.preventDefault();
+    let scrollTop =
+      $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
+    $("html, body").animate({ scrollTop: scrollTop }, 600);
+  }
 
-  tlLines.restart();
-};
+  onScroll() {
+    this.checkHeaderPosition();
+    this.findCurrentTabSelector();
+    this.lastScroll = $(window).scrollTop();
+  }
 
+  onResize() {
+    if (this.currentId) {
+      this.setSliderCss();
+    }
+  }
 
+  checkHeaderPosition() {
+    const headerHeight = 75;
+    if ($(window).scrollTop() > headerHeight) {
+      $(".nav-container").addClass("nav-container--scrolled");
+    } else {
+      $(".nav-container").removeClass("nav-container--scrolled");
+    }
+    let offset =
+      $(".nav").offset().top +
+      $(".nav").height() -
+      this.tabContainerHeight -
+      headerHeight;
+    if (
+      $(window).scrollTop() > this.lastScroll &&
+      $(window).scrollTop() > offset
+    ) {
+      $(".nav-container").addClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-first");
+      $(".nav-container").addClass("nav-container--top-second");
+    } else if (
+      $(window).scrollTop() < this.lastScroll &&
+      $(window).scrollTop() > offset
+    ) {
+      $(".nav-container").removeClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-second");
+      $(".nav-container-container").addClass("nav-container--top-first");
+    } else {
+      $(".nav-container").removeClass("nav-container--move-up");
+      $(".nav-container").removeClass("nav-container--top-first");
+      $(".nav-container").removeClass("nav-container--top-second");
+    }
+  }
 
+  findCurrentTabSelector(element) {
+    let newCurrentId;
+    let newCurrentTab;
+    let self = this;
+    $(".nav-tab").each(function () {
+      let id = $(this).attr("href");
+      let offsetTop = $(id).offset().top - self.tabContainerHeight;
+      let offsetBottom =
+        $(id).offset().top + $(id).height() - self.tabContainerHeight;
+      if (
+        $(window).scrollTop() > offsetTop &&
+        $(window).scrollTop() < offsetBottom
+      ) {
+        newCurrentId = id;
+        newCurrentTab = $(this);
+      }
+    });
+    if (this.currentId != newCurrentId || this.currentId === null) {
+      this.currentId = newCurrentId;
+      this.currentTab = newCurrentTab;
+      this.setSliderCss();
+    }
+  }
 
-/**
- * Just in case of slow internet
- */
-// const img = new Image()
-// img.src = 'https://images.unsplash.com/photo-1544077960-604201fe74bc?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixid=eyJhcHBfaWQiOjF9'
-// img.src = 'https://images.unsplash.com/photo-1525145770691-1eaa1d9a3147?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&ixid=eyJhcHBfaWQiOjF9'
+  setSliderCss() {
+    let width = 0;
+    let left = 0;
+    if (this.currentTab) {
+      width = this.currentTab.css("width");
+      left = this.currentTab.offset().left;
+    }
+    $(".nav-tab-slider").css("width", width);
+    $(".nav-tab-slider").css("left", left);
+  }
+}
 
-// img.onload = function() {
-//   document.getElementById('js-page').style.backgroundImage = `url(${this.src}`
-
-//   svg.animate(() => {
-//     window.console.log('done')
-//   })
-
-//   TweenLite.to('#js-lines', 1, {opacity: 1, ease: Power1.easeOut, delay: 1.6 })
-// }
+new NavigationPage();
+/* Credit and Thanks:
+Matrix - Particles.js;
+SliderJS - Ettrics;
+Design - Sara Mazal Web;
+Fonts - Google Fonts
+*/
