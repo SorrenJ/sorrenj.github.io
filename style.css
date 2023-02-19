@@ -86,6 +86,50 @@ color:#B9D801;
 }
 
 
+.visitorCounter{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+/*start of code snippets*/
+
+pre code {
+
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+
+  /* allows word wrapping for multiple browsers */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+
+pre {
+
+  width: 75%;
+}
+
+code {
+  font-size: 100%;
+  background-color: #003358;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  pre {
+  margin-left:auto;
+  margin-right:auto;
+  }
+code {
+  margin-left:auto;
+  margin-right:auto;
+
+}
+}
+
+/*end of code snippets*/
 
 
 /* sandwich appear only mobile */
