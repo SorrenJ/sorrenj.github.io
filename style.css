@@ -52,7 +52,7 @@ section{
   height: 1em;
   border-bottom: 1px solid #888;
     background-color: #003358;
-color:#B9D801;
+color:#79cc2b;
 }
 .nav a {
   text-decoration: none;
@@ -176,7 +176,7 @@ color:white;
 
 
 .topnav a.icon:active {
-  background: #B9D801;
+  background: #79cc2b;
   display: block;
   position: absolute;
   right: 0;
@@ -189,7 +189,7 @@ color: #FFFFFF;
 
 
 .topnav a:hover {
-  background-color: #B9D801;
+  background-color: #79cc2b;
 
 }
 
