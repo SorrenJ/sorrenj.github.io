@@ -785,37 +785,25 @@ display: none;
 
 /*3 top courses outer box*/
 
-#course1{
-  
-
-  
-        margin-right: auto;
-    margin-left: auto;
-width:75%;
- transform:rotate(0deg);
+#course1 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 55%;
+  transform: rotate(0deg);
   background: radial-gradient(rgb(0 0 0 / 5%),#1553a6);
-  margin-top:-3px;
-  margin-bottom:20px;
-  height:500px;
-  
-  
-  
+  margin-top: -3px;
+  margin-bottom: 20px;
+  height: 296px;
   outline-offset: -8px;
-
-
-Â 
   border-radius: 15px;
-padding: 15px;
-border-radius: 25px;
-/*box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);*/
-
-  	-webkit-box-shadow: 0 8px 6px -6px black;
-	   -moz-box-shadow: 0 8px 6px -6px black;
-	        box-shadow: 0 8px 6px -6px black;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  text-align: center;
   
-  text-align: center;Â 
-
-
 }
 #course1:before{
 box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
