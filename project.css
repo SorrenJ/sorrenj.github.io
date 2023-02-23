@@ -10,9 +10,12 @@
 
 }
 
-
+/* the heading for project pages */
 .projectContainer h1 {
 font-size:5em;
+word-wrap:break-word;
+/* this wraps single words */
+
 }
 .content p {
   line-height: 1.6em;
