@@ -265,12 +265,13 @@ display:none;
 /* very dark green */
   /* background-color: #254b152c; */
   /* width:100vw; */
-padding-left:25px;
+/* padding-left:25px; */
 position:relative;
 /* height:100vh; */
 /* height:100vh; */
 color:white;
 background-color: #1c361054;
+padding-top:5px;
 
 }
 /* title cards */
