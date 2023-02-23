@@ -35,7 +35,7 @@ section{
 .nav{
   position: fixed;
   z-index:4;
-  background-color: #00000099;
+  background-color: #1c361054;
       width: 100%;
 
 }
@@ -353,6 +353,16 @@ animation-iteration-count: infinite;
 background-color: white;
 }
 
+@media only screen and (max-width: 900px) {
+.tab{
+  width:100%;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+  }
+
+
 .title{
 
 font-size:60px;
@@ -360,7 +370,7 @@ text-align:left;
 margin-left:10%;
 /* position: absolute; */
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
   .title{
 text-align: center;
 /* font-size:100%; */
@@ -429,7 +439,7 @@ text-align: center;
   margin:100px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
 /* project container */
 .flex-container-banner {
 text-align:center;
@@ -455,7 +465,7 @@ text-align:center;
 
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
 .title{
  font-size:2em;
 }
@@ -677,7 +687,7 @@ flex-wrap: wrap;
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
 .flex-container {
 flex-wrap: wrap;
 }
@@ -690,6 +700,7 @@ text-align:center;
 
 .flex-container1 {
 flex-wrap: wrap;
+flex-direction:column;
 }
 .flex-container1 > div {
 
