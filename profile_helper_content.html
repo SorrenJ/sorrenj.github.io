@@ -24,6 +24,16 @@
 <!-- font awesome icons -->
 <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
   </head>
+ <style>
+code{
+  background-color: rgb(209, 209, 209);
+  color:rgb(25, 0, 255);
+  font-size:0.8em;
+}
+
+ </style>
+ 
+ 
   <body>
 	<script src="index.js"></script>
   <header>
@@ -87,7 +97,7 @@
 
    <div class="content">
 
-
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tY4R7WL1pVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
  <p>Profile helper is a content generator tool to help with creating graduate student profile pages. It was developed with JavaScript jQuery. It contains save and
 download functions, and a text editor to test out the webpage content. As a result it boosted work productivity
@@ -96,61 +106,75 @@ with graduate student profiles.</p>
      <a href="https://sorrenj.github.io/Profile_Helper.html" target="_blank">
              <button class="button"> Visit Website → </button></a>
              <br>   <br>   <br>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tY4R7WL1pVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- <p> As a Design and Marketing Associate for Simon Fraser University Graduate and Postdoctoral Studies one of my responsibilities was to design profile pages using Adobe Experience Manager (AEM). I was also responsible for updating the various web pages found in the GPS site such as the job page, event page, awards page, and had coded the template for the GPS news bulletin. Last minute profile submissions have piled up since winter break of 2020. Perhaps Graduate students had more time to submit it over the break. With over 60 profiles to be completed within a short time frame, the volume is overwhelming. My solution for this problem was to create a program to aid with the formatting. This generates a premade template for the profile pages. As a result of my innovation I was able to complete the profile pages at a faster rate with more consistency.</p>
-     <p> I learned that the purpose of their business is to teach users how to drive—this thus dictated my design decisions. At my planning stage, I looked into existing websites with similar business practices such as ICBC.com and smartdrivingschool.ca to use as references.
-     </p>
+    
+ <p> As a Design and Marketing Associate for Simon Fraser University Graduate and Postdoctoral Studies 
+  one of my responsibilities was to design profile pages using Adobe Experience Manager (AEM). 
+  I was also responsible for updating the various web pages found in the GPS site such as 
+  the job page, event page, awards page, and had coded the template for the GPS news bulletin. 
+  Last minute profile submissions have piled up since winter break of 2020. 
+  Perhaps Graduate students had more time to submit it over the break. 
+  With over 60 profiles to be completed within a short time frame, the volume is overwhelming. 
+  My solution for this problem was to create a program to aid with the formatting. 
+  This generates a premade template for the profile pages. 
+  As a result of my innovation I was able to complete the profile pages at a faster rate with more consistency.</p>
+     
 <h2>Process</h2>
-     <p>My supervisor was proud of my innovations in accomplishing this task and required the Profile Helper to continue with operations within the department especially when there were large volumes of profiles requested.  Unfortunately, there was a problem with my prototype Profile Helper. This version was built with the scripting programming language: Hypertext Preprocessor, which deals with web server functionalities and was not accessible to the department.
-I finally decided to use jQuery as an alternative programming language to build the Profile Helper.  jQuery is a JavaScript library that can be used to create dynamic webpages. While using jQuery, I could generate profile templates just like before and accessible for my supervisor.
-This function was perfect for my Profile Helper as it allowed me to change string values by user input without the need of a server environment.
-$(selector).val()
-The method above allowed me to return what the user had inputted.
-$(selector).val(value)
-
-This method above allows the user to to set the value and can be set through the html tag <samp><p>< input ></p></samp><br>
-
-<pre style="width:max-content; background:#001626"><code>< input type="text" onclick="this.select()" <br><br>id="LinkedIn"></code></pre>
-This snippet of html code above results with an input form. When id=”LinkedIn", whatever the user inputs will be stored in the “LinkedIn” id.
-After setting the value I can return the value by:
+     <p>My supervisor was proud of my innovations in accomplishing this task and required the 
+      Profile Helper to continue with operations within the department especially when there were 
+      large volumes of profiles requested.  Unfortunately, there was a problem with my prototype Profile Helper. 
+      This version was built with the scripting programming language: Hypertext Preprocessor, 
+      which deals with web server functionalities and was not accessible to the department.
+I finally decided to use 
+jQuery as an alternative programming language to build the Profile Helper.  
+jQuery is a JavaScript library that can be used to create dynamic webpages. 
+While using jQuery, I could generate profile templates just like before and accessible for my supervisor.
+This function was perfect for my Profile Helper as it allowed me to change string values by 
+user input without the need of a server environment.
+<code>$(selector).val()</code> allowed me to return what the user had inputted.
 <br><br>
-<pre style="width:max-content; background:#001626"><code>$(‘#LinkedIn’).val()</code></pre>
-With a combination of <pre style="width:max-content; background:#001626"><code>< input ></code></pre> with id and return method:
-<br><br><pre style="width:max-content; background:#001626"><code> $(selector).val()</code></pre>I can form a concatenation of string values to form a sentence or a body of text.
+<code>$(selector).val(value)</code>
+Placing <code>(value)</code> allows the user to to set the value and can be set through the html tag <code>&#x3C;input&#x3E;</code></p><br>
+
+<pre><code>&#x3C;input type=&#x22;text&#x22; onclick=&#x22;this.select()&#x22; id=&#x22;LinkedIn&#x22;&#x3E;</code></pre>
+<p>This snippet of html code above results with an input form. When I make <code>id=”LinkedIn"</code>, whatever the user inputs in the field, the string will be stored in the <code>“LinkedIn”</code> id.
+After setting the value I can return the value by:
+<code>$(‘#LinkedIn’).val()</code>,
+<code>&#x3C;input&#x3E;</code> with <code>$(selector).val()</code>. I can form a concatenation of string values to form a sentence or a body of text.
 <br>
 <br>
 <a href="ImgUI/concatenationSnippet.PNG" target="blank"><img style= "width:105%; "src="ImgUI/concatenationSnippet.PNG"></img></a>
+<figcaption>Figure 1: Snippet of jQuery concatenation of string values along with the HTML input code. This outputs a heading and a user-created paragraph.</figcaption>
+<br>
+
+
 <br>
 <br>
-<pre style="width:max-content; background:#001626"><code>
- Result:
-<h5>WHY DID YOU CHOOSE TO COME TO SFU?</h5>
-<p> sfu input here </p>
-</code></pre>
-<br>
-The possibilities are great with input concatenation as it also allows the user to input url links, email addresses and hyperlink them into text.
-<br>
+<p>The possibilities are great with input concatenation as it also allows the user to input url links, email addresses and hyperlink them into text.
+</p>
+  <br>
 <br>
 <a href="ImgUI/hyperlinkSnippet.PNG" target="blank"> <img style= "width:105%; "src="ImgUI/hyperlinkSnippet.PNG"></img></a>
+<figcaption>Figure 2: Snippet of jQuery concatenation allowing users to insert their LinkedIn link in a body of text. This outputs a clickable link to their LinkedIn page.</figcaption>
 <br>
 <br>
 
-I had also improved the user experience within the Profile Helper. This user-friendly version contains color-coded buttons, tabs to separate content, save and download functions, and a text editor to test out the generated html.
-
+<p>I had also improved the user experience within the Profile Helper. This user-friendly version contains color-coded buttons, tabs to separate content, save and download functions, and a text editor to test out the generated html.
+</p>
 
          </p>
 <h2>Final Product</h2>
-      <img style= "width:100%; "src="ImgUI/Picture3.png"></img>
+<a href= "ImgUI/Picture3.png"><img style= "width:100%; "src="ImgUI/Picture3.png"></img></a>
 
-<figcaption>Figure 1:  A screenshot of my Profile Helper. Users can input their details here.</figcaption>
+<figcaption>Figure 3:  A screenshot of my Profile Helper. Users can input their details here.</figcaption>
 
-</figure>
-<br><br><br><br>
-<figure>
-<img style= "width:100%; "src="ImgUI/Picture4.png"></img>
-<figcaption>Figure 2:  A screenshot of my Profile Helper. Users can test their HTML code in this page and view how it would look on the profile page.
+
+<br><br>
+
+<a href="ImgUI/Picture4.png"><img style= "width:100%; "src="ImgUI/Picture4.png"></img></a>
+
+<figcaption>Figure 4:  A screenshot of my Profile Helper. Users can test their HTML code in this page and view how it would look on the profile page.
 </figcaption>
-   </div>
+  
 
 
 <h2>Reflection</h2>
@@ -163,7 +187,7 @@ I had also improved the user experience within the Profile Helper. This user-fri
 
 <br>
 
-
+</div>
   </div>
 
 

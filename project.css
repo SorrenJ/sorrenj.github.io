@@ -12,6 +12,7 @@
 .content p {
   line-height: 1.6em;
   margin-bottom: 24px;
+  font-size:1.2em;
 }
 .site-title {
   text-align: center;
@@ -29,6 +30,11 @@ img {
 }
 
 
+figcaption{
+  font-size:1em;
+  line-height: 1.6em;
+
+}
 /* -- Media Queries -- */
 
 @media (max-width: 991px) {
