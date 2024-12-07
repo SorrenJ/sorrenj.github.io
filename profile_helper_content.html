@@ -13,44 +13,48 @@
 <meta name="keywords" content="Simon Fraser University, SFU, School of Interactive Arts & Technology, SIAT, Front-end, Web developer, Graduate, Postdoctural">
 <meta name="author" content="Sorren Jao">
 
+
+
+
+
+
   <link rel="icon" href="assets/logo.svg" sizes=96x96 />
-  <link href="SCSS/grid.css" rel="stylesheet">
-  <link href="SCSS/togglemenu.css" rel="stylesheet">
-  <link href="SCSS/navbar.css" rel="stylesheet">
-
-  <link href="SCSS/inputform.css" rel="stylesheet">
-  <link href="SCSS/containers.css" rel="stylesheet">
-  <link href="SCSS/project.css" rel="stylesheet">
-
-  <link href="SCSS/typing.css" rel="stylesheet">
+  <link href="styles/grid.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
+  <link href="styles/sorren_sdt.css" rel="stylesheet">
 
 
-  <link href="SCSS/card.css" rel="stylesheet">
+  <link href="styles/inputform.css" rel="stylesheet">
+  <link href="styles/containers.css" rel="stylesheet">
+  <link href="styles/project.css" rel="stylesheet">
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/typing.css" rel="stylesheet">
+
+
+  <link href="styles/card.css" rel="stylesheet">
   <!-- font awesome icons -->
   <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6T0EK1NPSL"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3C7G60BQ2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-6T0EK1NPSL');
+  gtag('config', 'G-J3C7G60BQ2');
 </script>
-
 <body>
   <!-- Navbar starts here -->
   <header>
-    <!-- <button class="button" id="menu-toggle" aria-label="Menu" aria-controls="menu" aria-expanded="false">Menu</button> -->
+
     <!-- header -->
     <div class="home_nav">
       <div class="home_nav-item">
         <div class="home_icon"><a href="index.html">
             <img src="assets/logo.svg" alt="logo"></a>
-          <!-- <p class="nav_heading">&nbsp;The Sweet Spot</p> -->
-          <!-- <div class="mobile_cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div> -->
+
           <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
             <i class="fa fa-bars" style="font-size:24pt"></i>
           </a>
@@ -59,15 +63,13 @@
 
       <div class="home_nav-item">
         <div id="myLinks" class="nav">
-          <div class="nav-item"> <a href="index.html#about">About</a></div>
-          <div class="nav-item "><a href="index.html#project">Projects</a></div>
-          <div class="nav-item "><a href="index.html#contact">Contact</a></div>
+          <div class="nav-item special-nav-item"><a href="index.html#project"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
         </div>
       </div>
     </div>
   </header>
 
-  <script src="JS/navbar.js"></script>
+  <script src="javaScript/navbar.js"></script>
 
   <!-- page navigation -->
   <br>
@@ -89,9 +91,17 @@
 
     <br><br>
 
+
+
   </div>
+
   <section>
+
+    <!-- brand identity section, composed of header then container below that is flex for the image and paragraph -->
+
     <div class="style_nav">
+
+
       <a href="index.html#project">
         <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
       </a>
@@ -111,44 +121,47 @@
 
     </div>
 
+    <!-- pop up message button -->
+    <button type="button" class="openReply" onclick="toggle_button()"><i class="fa-solid fa-bars"></i></button>
 
-        <!-- pop up message button -->
-        <button type="button" class="openReply" onclick="toggle_button()"><i class="fa-solid fa-bars"></i></button>
+    <!-- pop up content -->
+    <div class="chat-popup" id="myForm">
 
-        <!-- pop up content -->
-        <div class="chat-popup" id="myForm">
-    
-          <div class="livechat">
-            <button class="button closetoggle" type="button" onclick="toggle_button()">Close</button>
-          </div>
-    
-          <div class="inner">
-            <a href="index.html#project">
-              <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
-            </a>
-            <a href="#1">
-              <div class="button style-nav-item">Abstract</div>
-            </a>
-            <a href="#2">
-              <div class="button style-nav-item">Process</div>
-            </a>
-            <a href="#3">
-              <div class="button style-nav-item">Final Product</div>
-            </a>
-            <a href="#4">
-              <div class="button style-nav-item">Reflection</div>
-            </a>
-          </div>
-    
-        </div>
-        <!-- end of pop up content -->
+      <div class="livechat">
+        <button class="button closetoggle" type="button" onclick="toggle_button()">Close</button>
+      </div>
+
+      <div class="inner">
+        <a href="index.html#project">
+          <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
+        </a>
+        <a href="#1">
+          <div class="button style-nav-item">Abstract</div>
+        </a>
+        <a href="#2">
+          <div class="button style-nav-item">Process</div>
+        </a>
+        <a href="#3">
+          <div class="button style-nav-item">Final Product</div>
+        </a>
+        <a href="#4">
+          <div class="button style-nav-item">Reflection</div>
+        </a>
+      </div>
+
+    </div>
+    <!-- end of pop up content -->
+
+
     <section class="content" id="1">
+
 
       <div class="youtube" style="--aspect-ratio: 3 / 4;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/tY4R7WL1pVg" title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
+
       <h2>
         Abstract
       </h2>
@@ -162,10 +175,8 @@
           productivity
           with graduate student profiles.</p>
         <br>
-        <br>
-
-        <a href="https://sorrenj.github.io/Profile_Helper.html" target="_blank">
-          <div class="button"> Visit Website → </div>
+        <a href="https://www.smartdrivetest.com/" target="_blank">
+          <div class="button">Visit Website → </div>
         </a>
         <br>
         <br>
@@ -180,9 +191,7 @@
           This generates a premade template for the profile pages.
           As a result of my innovation I was able to complete the profile pages at a faster rate with more consistency.
         </p>
-
       </div>
-
       <figure>
         <a href="assets/ImgUI/profilehelper_graph.png"><img style="width:80%; "
             src="assets/ImgUI/profilehelper_graph.png" alt="old_PHP"></a>
@@ -309,9 +318,10 @@
     </section>
   </section>
   <!-- 2nd card -->
+  <!-- 2nd card -->
   <div id="contact" class="start card">
     <div class="card-container-inverse">
-      <div class="card-container-item-left-inverse contact_box" style="background:white">
+      <div class="card-container-item-left-inverse contact_box">
         <div class="wrapper-h1-banner">
           <div class="typing-demo type_medium_size">
             <h1>Contact Me</h1>
@@ -321,11 +331,17 @@
           <h1>Contact Me</h1>
         </div>
         <br>
+
+
       </div>
 
       <div class="card-container-item-right-inverse center_text">
         <div class="formContainer">
           <div class="order-flex-item">
+
+            <!-- order item 0 starts -->
+
+            <!-- <h2>Delivery Information</h2> -->
             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvonpwkn"
               method="post">
               <fieldset id="fs-frm-inputs">
@@ -354,16 +370,24 @@
                 </div>
               </fieldset>
 
+
+
+
               <br>
-            <input class="button next" type="submit" value="Submit" style="margin:auto;">
-              
+              <input class="button next" type="submit" value="Submit" style="margin:auto;">
+
             </form>
+
+
           </div>
         </div>
-    
+   
       </div>
       <div class="triangleTopRight-inverse"></div>
     </div>
+  
+
+  
   </div>
   <!-- end of card 2 -->
   <footer style="background:black">
@@ -379,24 +403,92 @@
           <ul class="social">
     <li><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3);" class="fa-brands fa-github"></span></a></li>
             <li><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); " class="fa-brands fa-linkedin"></span></a></li>
-            <li><a href="styleguide.html" target="_blank" ><span style="font-size:50px;filter: brightness(3); " class="fa-solid fa-palette"></span></a></li>
-            <li><a href="references.html" target="_blank" ><span style="font-size:50px;filter: brightness(3); " class="fa-solid fa-book"></span></a></li>
+            
           </ul>
       
           <p class="copyright">This website was manually coded by Sorren</p>
-          <p class="copyright">&copy; Copyright 2023 Sorren Jao</p>
+          <p class="copyright">&copy; Copyright 2025 Sorren Jao</p>
         </div>
       </div>
     </div>
   </footer>
+  
+  <script>
+    function open1() {
+      document.getElementById("code1").style.display = "block";
+      document.getElementById("openbutton1").style.display = "none";
+      document.getElementById("closebutton1").style.display = "block";
+    }
+
+    function close1() {
+      document.getElementById("code1").style.display = "none";
+      document.getElementById("openbutton1").style.display = "block";
+      document.getElementById("closebutton1").style.display = "none";
+    }
+    function open2() {
+      document.getElementById("code2").style.display = "block";
+      document.getElementById("openbutton2").style.display = "none";
+      document.getElementById("closebutton2").style.display = "block";
+    }
+
+    function close2() {
+      document.getElementById("code2").style.display = "none";
+      document.getElementById("openbutton2").style.display = "block";
+      document.getElementById("closebutton2").style.display = "none";
+    }
+    function open3() {
+      document.getElementById("code3").style.display = "block";
+      document.getElementById("openbutton3").style.display = "none";
+      document.getElementById("closebutton3").style.display = "block";
+
+    }
+
+    function close3() {
+      document.getElementById("code3").style.display = "none";
+      document.getElementById("openbutton3").style.display = "block";
+      document.getElementById("closebutton3").style.display = "none";
+    }
+
+
+
+
+
+    function bio1() {
+      document.getElementById("bio1").style.display = "block";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio2() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "block";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio3() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "block";
+
+
+    }
+
+
+  </script>
+  <!-- scripts to toggle pop up content -->
+  <script>
  
+  </script>
 
   <script src="JS/section_observer.js"></script>
-  <script src="JS/chat_button.js"></script>
+  <script src="javaScript/chat_button.js"></script>
 
 
-  <script src="JS/typing_observer.js"></script>
-  <script src="JS/typing_observer2.js"></script>
+
+  <script src="javaScript/typing_observer.js"></script>
+  <script src="javaScript/typing_observer2.js"></script>
 
 
 
