@@ -13,7 +13,7 @@ body {
 /* Start screen styling */
 #startScreen {
     position: absolute;
-    top: 35px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -31,56 +31,11 @@ body {
     padding: 20px;
 }
 
-
-@keyframes arcadeBlink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .titleBlock {
-    top:-500px;
-  }
-
-  #startScreen h1 {
-    padding-top: 0.5px;
-    padding-bottom: 0.5px;
-    margin-bottom: -5px;
-
-  }
-
-  #startScreen p {
-    font-size: 0.8em;
-    color: #fff;
-    text-align: center;
-    padding-top: 0.5px;
-    padding-bottom: 0.5px;
-  }
-
-  #startScreen p:last-of-type {
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: 0 0 5px #e606c8, 0 0 10px #e606c8, 0 0 20px #ffffff, 0 0 30px #ffffff;
-    animation: arcadeBlink 1s infinite;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-
 /* Canvas styling */
 #treeCanvas {
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px;
-    /* position:absolute; */
 }
 
 /* Flex container for segment circle and list */
@@ -124,15 +79,33 @@ body {
     animation: flicker 1s infinite;
 }
 
-#hoverText {
-    color: #333;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.container{
+    padding: auto;
+    margin-top: 200px;
+}
+.boxContainer {
+    display: flex;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    /* width: 100px;
+    height:100px; */
+padding:50px;
+    gap: 20px;
   }
-  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff00;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color:#ccc;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
 
 /* Flicker animation */
 @keyframes flicker {
@@ -200,7 +173,7 @@ body {
 
 .elements-list h1 {
     color: #ffffff;
-    /* animation: holographicGradient 5s infinite; */
+    animation: holographicGradient 5s infinite;
 }
 
 /* .elements-list a li{
@@ -341,21 +314,7 @@ a {
 
     .special-info-box {
         display: none; /* Hidden by default */
-        position: absolute;
-        left: 100px; /* Positioned to the far left */
-        top: 50%; /* Centered vertically */
-        transform: translateY(-50%);
-        width: 300px;
-        padding: 20px;
-        /* background-color: #1e1e1e;  */
-        color: #ffffff; /* White text */
-        font-size: 1.5em;
-        /* border: 2px solid #9b59b6;  */
-        /* border-radius: 12px;  */
-        /* box-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 30px #9b59b6; Neon glow */
-       text-align:center;
-        z-index: 10;
-        visibility: hidden;
+
     }
 
     .special-info-box p{

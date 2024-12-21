@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main_new2.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sorren Jao</title>
@@ -27,6 +27,22 @@
   
     gtag('config', 'G-489NYV1TJL');
   </script>
+
+
+
+<style>
+  /* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  } */
+
+</style>
+
 
 <body>
     <header>
@@ -63,26 +79,95 @@
   
   <!-- Start Screen -->
   <div id="startScreen" onclick="startGame()">
-    
     <h1>Sorren Jao</h1>
-    <p>Full-Stack Development & User Experience Design</p>
- 
+    <h2>Full-Stack & User experience design</h2>
     <canvas id="treeCanvas" width="800" height="400"></canvas>
-    <p style="position:absolute">Click Anywhere to Start</p>
+    <p>Click Anywhere to Start</p>
     <script src="javaScript/tree.js"></script>
   </div>
 
   <!-- Segment and List Container -->
   <div id="segmentListContainer">
+  <div class ="container">
+    <h1>Howdy I'm Sorren!</h1>
+    <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
+        Sit down, grab a snack, and have a peek at my projects.
+
+    </p>
+
   
 
- 
+
+  <!-- Selector Screen with Segments -->
+  <div id="selectorScreen" style="position: relative; width: 500px; height: 500px;">
+    <!-- Info Box -->
+
+    <div class ="boxContainer">
+      <div id="segment1" class="box segment">Web Apps</div>
+      <div id="segment2" class="box segment">UX Design</div>
+      <div id="segment3" class="box segment">AI/ML</div>
+      <div id="segment4" class="box segment">About Me</div>
+  </div>
+
+
+
+
+  <div id="specialInfoBox1" class="special-info-box">
+    <h3>Web Applications</h3>
+    <p>Check out modern web applications built with full-stack technologies.</p>
+
+    <ul>
+      <li class="list-item-xl">Virtual Pet Web Application</li>
+      <li class="list-item-xl">Map Listing Web Application</li>
+      <a href="profile_helper_content.html">
+      <li class="list-item-xl">SFU Student Webpage Creator</li>
+  </ul>
+</div>
+
+
+<div id="specialInfoBox2" class="special-info-box">
+  <h3>UX Design</h3>
+  <p>Explore user-centered design projects and prototypes.</p>
+            
+  <ul>
+      <li class="list-item-xl">Travel App Figma Prototype</li>
+      <li class="list-item-xl">Bakery Website Redesign</li>
+      <a href="Smart_Drive_Test.html"><li class="list-item-xl">Smart Drive Website
+    </li>
+</a>
+  </ul> 
+
+</div>
+
+<div id="specialInfoBox3" class="special-info-box">
+
+    <h3>AI/ML</h3>
+    <ul>
+        <li class="list-item-xl">Sleep Wellness Chatbot</li>
+        <li class="list-item-xl">Facemask Detection App</li>
+        <li class="list-item-xl">Wildlife and Pest Animal Detection</li>
+    </ul>
+</div>
+
+<div id="specialInfoBox4" class="special-info-box">
+    <h3>Web Applications</h3>
+    <p>Check out modern web applications built with full-stack technologies.</p>
+
+
+
+    <ul>
+        <li class="list-item">Github</li>
+
+    </ul>
+  </div>
+
+  <br/>
     <div id="infoBox" class="info-box">
         <p id="infoBoxText"></p>
     </div>
    
 <!-- Special Info Boxes for Segments -->
-<div id="specialInfoBox1" class="special-info-box">
+<!-- <div id="specialInfoBox1" class="special-info-box">
     <h3>UX Design</h3>
     <p>Explore user-centered design projects and prototypes.</p>
 </div>
@@ -97,36 +182,48 @@
 <div id="specialInfoBox4" class="special-info-box">
     <h3>Web Applications</h3>
     <p>Check out modern web applications built with full-stack technologies.</p>
-</div>
+</div> -->
 
+
+
+
+<!-- <div id="specialInfoBox1" class=""></div>
+<h3>UX Design</h3>
+<p>Explore user-centered design projects and prototypes.</p>
+</div>
+<div id="specialInfoBox2" class="">
+<h3>AI/ML</h3>
+<p>Discover AI-powered solutions and machine learning applications.</p>
+</div>
+<div id="specialInfoBox3" class="">
+<h3>About Sorren</h3>
+<p>Sorren is a full-stack developer with a passion for UX design and AI/ML.</p>
+</div>
+<div id="specialInfoBox4" class="">
+<h3>Web Applications</h3>
+<p>Check out modern web applications built with full-stack technologies.</p>
+</div> -->
 
       <script src="javaScript/navbar.js"></script>
     
 
-      <!-- Selector Screen with Segments -->
-      <div id="selectorScreen" style="position: relative; width: 500px; height: 500px;">
-        <!-- Info Box -->
+    
 
-        <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-          <!-- Segment paths with titles -->
-          <path id="segment1" class="segment" d="M250,70 A180,180 0 0,1 420,250 L380,250 A140,140 0 0,0 250,110 Z" fill="#ffffff">
-            <title>UX Design</title>
-          </path>
-          <path id="segment2" class="segment" d="M420,250 A180,180 0 0,1 250,420 L250,380 A140,140 0 0,0 380,250 Z" fill="#ffffff">
-            <title>AI/ML</title>
-          </path>
-          <path id="segment3" class="segment" d="M250,420 A180,180 0 0,1 80,250 L120,250 A140,140 0 0,0 250,380 Z" fill="#ffffff">
-            <title>About Sorren</title>
-          </path>
-          <path id="segment4" class="segment" d="M80,250 A180,180 0 0,1 250,70 L250,110 A140,140 0 0,0 120,250 Z" fill="#ffffff">
-            <title>Web Applications</title>
-          </path>
-        </svg>
-        
+
+        <!-- <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+       
+          <path id="segment1" class="segment" d="M250,70 A180,180 0 0,1 420,250 L380,250 A140,140 0 0,0 250,110 Z" fill="#ffffff" />
+          <path id="segment2" class="segment" d="M420,250 A180,180 0 0,1 250,420 L250,380 A140,140 0 0,0 380,250 Z" fill="#ffffff" />
+          <path id="segment3" class="segment" d="M250,420 A180,180 0 0,1 80,250 L120,250 A140,140 0 0,0 250,380 Z" fill="#ffffff" />
+          <path id="segment4" class="segment" d="M80,250 A180,180 0 0,1 250,70 L250,110 A140,140 0 0,0 120,250 Z" fill="#ffffff" />
+      </svg>
+     -->
+
+ 
         <!-- Center text overlay for Font Awesome icons and text -->
-        <div id="centerTextOverlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.5em;">
+        <!-- <div id="centerTextOverlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.5em;">
             Hover
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -135,8 +232,8 @@
 
 
 
-      <!-- Lists for each segment (placed beside selector screen) -->
-      <div id="listContainer">
+        <!-- Lists for each segment (placed beside selector screen) -->
+        <div id="listContainer">
 
 
 
@@ -242,7 +339,7 @@
   
 </div>
 
-  <script src="javaScript/main.js"></script>
+  <script src="javaScript/main2.js"></script>
   
 
 </body>

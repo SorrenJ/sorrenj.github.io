@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
    
     
-
+    // Default: Select Segment 3 (About Me) on page load
+    // selectSegment("segment3");
 
 
 });
@@ -102,8 +103,12 @@ function startGame() {
                 segment.style.transform = "translate(0, 0)";
                 segment.style.opacity = 1;
                   mobileButtonContainer.style.display="flex";
+
+                //   gameStarted = true;
+                 
             });
         }, 100); // Delay to trigger the transform and opacity transition
+        selectSegment("segment3");
     }, 1000); // Delay to match the CSS transition duration
 }
 
@@ -128,7 +133,7 @@ function resetCenterText() {
     updateCenterText(text, iconClass);
 }
 
-// Function to handle segment selection and display corresponding list
+// Existing selectSegment function
 function selectSegment(segmentId) {
     const { text, iconClass, listId } = segmentsData[segmentId];
     const specialInfoBox = document.getElementById("specialInfoBox");
@@ -201,6 +206,41 @@ function showMobileList(listId) {
         selectedList.style.display = 'block';
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const segments = document.querySelectorAll(".segment");
+    const selectorScreen = document.getElementById("selectorScreen");
+    const hoverText = document.createElement("div");
+  
+    // Style hover text dynamically
+    hoverText.id = "hoverText";
+    hoverText.style.position = "absolute";
+    hoverText.style.top = "10%";
+    hoverText.style.left = "50%";
+    hoverText.style.transform = "translateX(-50%)";
+    hoverText.style.fontSize = "1.5em";
+    hoverText.style.textAlign = "center";
+    hoverText.style.opacity = 0;
+    hoverText.style.transition = "opacity 0.3s ease";
+    selectorScreen.appendChild(hoverText);
+  
+    // Add hover effect for segments
+    segments.forEach(segment => {
+      segment.addEventListener("mouseover", () => {
+        const title = segment.querySelector("title").textContent;
+        hoverText.textContent = title;
+        hoverText.style.opacity = 1;
+      });
+  
+      segment.addEventListener("mouseout", () => {
+        hoverText.style.opacity = 0;
+      });
+    });
+  });
+  
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const listItems = document.querySelectorAll(".list-item");
     const infoBox = document.getElementById("infoBox");
