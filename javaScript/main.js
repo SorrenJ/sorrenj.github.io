@@ -23,10 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // Function to show the special info box for the selected segment
         function showSpecialInfoBox(segmentId) {
-            Object.values(specialInfoBoxes).forEach(box => box.classList.remove("active")); // Hide all boxes
-            if (specialInfoBoxes[segmentId] && window.innerWidth >= 1080) {
-                specialInfoBoxes[segmentId].classList.add("active"); // Show the active box
-            }
+          // Hide all other info boxes
+    Object.values(specialInfoBoxes).forEach(box => {
+        box.classList.remove("active");
+        box.style.display = "none"; // Ensure other boxes are hidden
+    });
+
+    // Show the specific info box
+    const targetBox = specialInfoBoxes[segmentId];
+    if (targetBox && window.innerWidth >= 1080) {
+        targetBox.classList.add("active");
+        targetBox.style.display = "block"; // Make it visible
+    } else {
+        console.warn(`Info box for ${segmentId} not found or screen width too small.`);
+    }
         }
     
         // Function to hide the special info box
@@ -105,11 +115,20 @@ function startGame() {
                   mobileButtonContainer.style.display="flex";
 
                 //   gameStarted = true;
-                 
+             
             });
+            selectSegment("segment3");
+           
+
+            showSpecialInfoBox("segment3");
+      
         }, 100); // Delay to trigger the transform and opacity transition
-        selectSegment("segment3");
+       
+    
+      
     }, 1000); // Delay to match the CSS transition duration
+
+  
 }
 
 // Function to update center text with optional Font Awesome icon
