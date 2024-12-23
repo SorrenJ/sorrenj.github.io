@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Github": `
             <h3>Github</h3>
             <a href="https://github.com/SorrenJao" target="_blank">
-                <img src="path/to/github-logo.jpg" alt="Github Logo" style="width:50%; display:block; margin:auto;">
+                <div style="font-size:6em; text-align:center"><i class="fa-brands fa-github"></i></div>
             </a>
             <p>Visit Sorren's GitHub profile to view all repositories and projects.</p>
         `,
@@ -356,6 +356,19 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">EJS</div>
 <div class="tag">Git</div>
             `,
+
+
+            "Sorren AI Chatbot": `
+            <div style="font-size:6em; text-align:center"><i class="fa-solid fa-comments fa-bounce"></i></div>
+                <p>A chatbot with the likeness and memories of your's truly!</p>
+            <div class="tag">Node.js</div>
+    <div class="tag">OpenAI</div>
+            <div class="tag">TypeScript</div>
+    <div class="tag">React</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">Express.js</div>
+    <div class="tag">MongoDB</div>
+                `,
         "SFU Student Webpage Creator": `
             
           <div style="font-size:6em; text-align:center"><i class="fa-solid fa-user-graduate fa-bounce"></i></div>
