@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorren Jao - Profile Helper</title>
+
+
+  <meta name="description" content="Profile helper is a content generator tool to help with creating graduate student profile pages. It was
+  developed with JavaScript jQuery.">
+<meta name="keywords" content="Simon Fraser University, SFU, School of Interactive Arts & Technology, SIAT, Front-end, Web developer, Graduate, Postdoctural">
+<meta name="author" content="Sorren Jao">
+
+
+
+
+
+
+  <link rel="icon" href="assets/logo.svg" sizes=96x96 />
+  <link href="styles/grid.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
+  <link href="styles/sorren_sdt.css" rel="stylesheet">
+
+
+  <link href="styles/inputform.css" rel="stylesheet">
+  <link href="styles/containers.css" rel="stylesheet">
+  <link href="styles/project.css" rel="stylesheet">
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/typing.css" rel="stylesheet">
+  <!-- <link href="styles/fade-in-fade-out.css" rel="stylesheet"> -->
+
+  <link href="styles/card.css" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J3C7G60BQ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J3C7G60BQ2');
+</script>
+
+
+<body>
+
+  <style>
+
+  </style>
+  <!-- Navbar starts here -->
+  <header>
+
+    <!-- header -->
+    <div class="home_nav">
+      <div class="home_nav-item">
+        <div class="home_icon"><a href="index.html">
+            <img src="assets/logo.svg" alt="logo"></a>
+
+          <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size:24pt"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="home_nav-item">
+        <div id="myLinks" class="nav">
+          <div class="nav-item special-nav-item"><a href="./chatbot_info.html"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="javaScript/navbar.js"></script>
+  <div id="fade" class="fade"></div>
+  <!-- page navigation -->
+  <br>
+  <br>
+
+  <div class="project_banner">
+    <h1>MaskPass</h1>
+
+    <h2>Stack</h2>
+  </br>
+    <div class="tag">Java</div>
+    <div class="tag">TensorFlow</div>
+    <div class="tag">XML</div>
+    <div class="tag">Android Studios</div>
+
+
+
+
+
+  </div>
+
+  <section>
+
+    <!-- brand identity section, composed of header then container below that is flex for the image and paragraph -->
+
+    <div class="style_nav">
+
+
+      <a href="index.html#project">
+        <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
+      </a>
+      <a href="#1">
+        <div class="button style-nav-item">Abstract</div>
+      </a>
+      <a href="#2">
+        <div class="button style-nav-item">Research</div>
+      </a>
+      <a href="#3">
+        <div class="button style-nav-item">Process</div>
+      </a>
+      <a href="#4">
+        <div class="button style-nav-item">Code Breakdown</div>
+      </a>
+      <a href="#5">
+        <div class="button style-nav-item">Reflection</div>
+      </a>
+      <a href="#6">
+        <div class="button style-nav-item">Reference</div>
+      </a>
+    </div>
+
+    <!-- pop up message button -->
+    <button type="button" class="openReply" onclick="toggle_button()"><i class="fa-solid fa-bars"></i></button>
+
+    <!-- pop up content -->
+    <div class="chat-popup" id="myForm">
+
+      <div class="livechat">
+        <button class="button closetoggle" type="button" onclick="toggle_button()">Close</button>
+      </div>
+
+      <div class="inner">
+        <a href="index.html#project">
+          <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
+        </a>
+        <a href="#1">
+          <div class="button style-nav-item">Abstract</div>
+        </a>
+        <a href="#2">
+          <div class="button style-nav-item">Research</div>
+        </a>
+        <a href="#3">
+          <div class="button style-nav-item">Process</div>
+        </a>
+        <a href="#4">
+          <div class="button style-nav-item">Code Breakdown</div>
+        </a>
+        <a href="#5">
+          <div class="button style-nav-item">Reflection</div>
+          
+        </a>
+        <a href="#6">
+          <div class="button style-nav-item">Reference</div>
+        </a>
+      </div>
+
+    </div>
+    <!-- end of pop up content -->
+
+
+    <section class="content" id="1">
+
+
+      <div class="youtube" style="--aspect-ratio: 3 / 4;">
+        <iframe width="337" height="599" src="https://www.youtube.com/embed/XwBq5pXldic" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <h2>
+        Abstract
+      </h2>
+      <hr>
+      <div>
+
+
+        <p>I developed MaskPass to determine if a person is wearing a non-medical mask using the phone
+          camera, in response to the COVID-19 mandates. My app was developed with Java in Android Studios and implements a
+          TensorFlow machine learning model to improve mask recognition when capturing an image. The learning model was
+          created using Lobe and references a large number of facial images of people wearing masks and non-masked.
+        </p>
+      </br>
+        <p> Imagine an empty office space where visitors are required to wear a mask, and there is no receptionist present
+          to verify. The Face Mask Detection app assists with this mask verification process through the visitor’s phone
+          camera linking to the building’s server. My app would scan a visitor’s face to verify if they were wearing a
+          face mask to proceed. Once scanned, the app would then notify the system if a person were valid to enter and
+          unlock the main door autonomously. My app can be expanded further in the future - to be run on an entrance kiosk
+          instead of a phone.
+        </p>
+      </br>
+        <p>MaskPass demonstrates the potential for how we can optimize future pandemic outbreaks with the use of existing
+          image processing technologies. As a student attending in-person classes and commuting by transit there is always
+          a risk to contract COVID-19 especially if students/passengers choose not to wear a mask. My app can verify if
+          train passengers are wearing a mask before proceeding onboard if there is another serious outbreak that requires
+          masking.
+        </p>
+      </div>
+     
+    </section>
+
+
+
+    <section class="content" id="2">
+
+      <h2>Research</h2>
+      <hr>
+
+      <p>My project is driven by two face mask detection research. Steven King and the research by Mohammed Loey covers
+      face mask detection using deep learning frameworks. </p>
+
+    <p>Steven discusses the development of the Health Greeter Kiosks, stand-up kiosks that can detect if people are
+      wearing masks and are social distancing. Using an RGB-D camera and deep learning algorithm framework, these
+      kiosks can validate if individuals are following the COVID-19 mandates <a href="#a">[1]</a>.</p>
+    
+      </br>  <p>Mohammed discusses detection of medical face masks in real life images using ResNet-50 deep transfer learning
+      model and YOLOv2 object detection algorithm. His detection algorithm is described have a precision percentage of
+      81% <a href="#b">[2]</a>.</p>
+    </br>
+    <p>I discovered that these innovations discussed in these research papers are not widely utilized in western
+      society despite being seemingly resourceful for our time of the pandemic. Steven was able to distribute his
+      health greeter kiosks across his campus, University of North Carolina (UNC) <a href="#c">[3]</a>. However, the project is limited
+      to only this location.</p>
+
+      <figure>
+        <a href="assets/aizooInterface.png"><img style="width:80%; " src="assets/aizooInterface.png" alt="old_PHP"></a>
+
+        <figcaption>Figure 1: The graphical user interface of a Health Greeter Kiosk.
+          Red Circles mean users are violating social distancing measures and green circles means distance is safe.
+          Bounding boxes detect the user’s face and validate if the user is wearing a mask or not.</figcaption>
+      </figure>
+      <br>
+      <p>The face mask detectors discussed in these research papers relies on the
+        approval and funding from the government to setup at large scale.
+        From the mask order being repealed as of March 11, 2022, by the BC government <a href="#d">[4]</a>,
+        face mask detection setups would unlikely be implemented in public places.
+        Despite the repeal, BC COVID cases are still rising and mask wearing has been proven to reduce the risks <a href="#e">[5]</a>.
+      </p>
+      <p>As a potential solution I propose to innovate on the mentioned face mask detectors as an accessible tool
+        without government restrictions. Our phones contain many sensors and capabilities already and implementing the
+        face mask detection algorithm is doable. Using our phones to identify if a person is wearing a mask, can benefit
+        care home, clinics or other organizations that take health validation seriously. With my MaskPass app, the user
+        can scan their face and validate if their wearing a mask before entering a public space. With more production
+        time, MaskPass could potentially ping a receptionist that the visitor is wearing a mask to allow the masked
+        visitor into the premises. </p>
+      <br>
+    </section>
+    <section class="content" id="3">
+      <h2>Process</h2>
+      <hr>
+      <p>The process of developing MaskPass involved
+        troubleshooting key features as separate applications.
+        This involved creating multiple applications such as an app that accesses your image file,
+        taking a picture and displaying on the activity, and processing the image using the TensorFlow Lite Model. </p>
+      </br>
+      <p> I began my process by researching the different learning models that can be used to detect face masks. The
+        YOLOV2 was almost considered to be used as my algorithm of choice, offering accurate rates. I finally opted in
+        using the TensorFlowLite learning model as my preference, since this offers
+       accessibility and easy to learn functions for android and mobile application. </p>
+      </br>
+       <p>TensorFlow.org <a href="#f">[6]</a> was especially resourceful in providing me with setup details
+        such as adding the TensorFlow implementations in the dependencies, creating a learning model directory in
+        android studios,
+        and the methods and libraries available in android studios.</p>
+      </br>
+      <p>Using Lobe.ai I was able to train and export a TensorFlowLite model by labeling through a Kaggle dataset of
+        masked people <a href="#g">[7]</a>.</p>
+      </br>
+      <p>Making sure the Android Studio’s Gradle plugin was up to date was one challenge encountered throughout the
+        development process. I discovered that the TensorFlowLite model was only compatible in the newer Gradle plugins
+        in android studios. I had to ensure all my other code snippets to access the camera and
+        access the file location was also compatible with the newer plugin.</p>
+
+      <p>Once I implemented the TensorFlowLite methods of classifying an image into my Java files, my next step was to
+        create a camera function and a method to initialize classification method. My approach to this was to add one
+        functionality at a
+        time to ensure I can catch any errors or runtime-problems directly.</p>
+
+    </section>
+
+    <br>
+
+    <br>
+    <section class="content">
+      <h2 id="4">Code Breakdown</h2>
+      <hr>
+      <h3>Classifying a face</h3>
+      <p>The TensorFlowmodel was created by lobe.ai and is used as the learning model when classifying a captured image.
+        I placed the model as a .tflite (tensorFlowLite) under my java directories. The implementation for using the
+        Tensorflow model must be located under dependencies in build.gradle. Now I can reference the TensorFlow
+        frameworks in the MainActivity. </p>
+
+      <a href="assets/tensorflowModel.png"><img style="width:25%; " src="assets/tensorflowModel.png"></img></a>
+      <figcaption>Figure 2: A snippet of my tensorFlowLite model viewed in Netron.</figcaption>
+
+
+      <h3>Camera Action</h3>
+      <p>My application features a camera functionality, after pressing a button MaskPass would have access to your
+        device’s camera and open the camera app. This is possible by calling <code>ACTION_IMAGE_CAPTURE</code> in the
+        intent when the user presses the button via the <code>onClick(v)</code> method
+        as seen in Figure 3.</p>
+      <pre><code>
+  camera_open_id.setOnClickListener(new View.OnClickListener() {
+  public void onClick(View v) {
+  Intent camera_intent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+  startActivityForResult(camera_intent, pic_id);
+              }
+          });
+  </code></pre>
+      <figcaption>Figure 3: Code snippet for the camera button.</figcaption>
+      <p>At the end of my code I had implemented the <code>onActivityResult()</code> method to retrieve the captured
+        image result from the <code>camera_open_id.setOnClickListener()</code>.
+        After meeting the if statement conditions of matching the photo id and accessing the camera app, the captured
+        image is then converted into a bitmap type. The pixels from the captured image is retrieved from the camera app
+        by using <code>data.getExtras().get(“data”)</code>.
+        Then the retrieved pixels are displayed on the app layout as a bitmap by using <code>.setImageBitmap()</code>.
+      </p>
+      <pre><code>
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+      if (requestCode == pic_id && resultCode == RESULT_OK) {
+      Bitmap image = (Bitmap) data.getExtras().get("data");
+      click_image_id.setImageBitmap(image);
+      ...      
+
+  </code></pre>
+      <figcaption>Figure 4: Code snippet for onActivityResult().</figcaption>
+      <h3>Implementing Tensorflow Methods</h3>
+      <p>After taking your picture using the camera app, I implemented the method classifyImage which runs when the user
+        selects the scan button. This method initiates the model in the .tflite
+        and scans through the pixel width and height of the taken image using a for loop as seen in Figure 5.</p>
+      <pre><code>
+  image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
+  int pixel = 0;
+  for (int i = 0; i < imageSize; i++) {
+      for (int j = 0; j < imageSize; j++) {
+          int val = intValues[pixel++]; // RGB
+          byteBuffer.putFloat(((val >> 16) & 0xFF) * (1.f /255.f));
+          byteBuffer.putFloat(((val >> 8) & 0xFF) * (1.f /255.f));
+          byteBuffer.putFloat((val & 0xFF) * (1.f / 255.f));
+
+     }
+}
+</code></pre>
+      <figcaption>Figure 5: Code snippet of ClassifyImage() method's for-loop. </figcaption>
+      <p>After the image is processed, an if statement determines the confidence threshold of the likelihood of a mask
+        detected. The confidence level is determined by the .tflite output function. If the output meets the threshold,
+        then a mask is detected and will display a “You may enter” message on the screen.</p>
+      <pre><code>
+  float[] confidences = outputFeature0.getFloatArray();
+float maxPos = 0;
+float maxConfidences = 0;
+for (int i = 0; i < confidences.length; i++) {
+if (confidences[i] > maxConfidences) {
+maxConfidences = confidences[i];
+maxPos = i;
+}
+}
+
+</code></pre>
+<figcaption>Figure 6: Code snippet of ClassifyImage() for determining if a captured image meets confidence
+  threshold.</figcaption>
+      <br>
+
+    </section>
+
+  
+    <section class="content">
+      <h2 id="5">Reflection</h2>
+      <p>Doing this project alone,
+        I had learned much about learning models and image processing in android studios.
+        Working with android studio I had encountered some difficulties adjusting from an Eclipse IDE ,
+        specifically with the <code>bufferedImage image</code> type.
+        I had learned that Android Studios do not have a
+        <code>bufferedImage</code> type and it can be replaced by the <code>Bitmap image</code> type.
+        In many ways <code>Bitmap image</code> behaves like <code>bufferedImage</code> by
+        converting your processed image into pixels and looping through the width and height of the image.
+      </p>
+    </br>
+
+      <p>I also learned that creating and training learning model is simple and there are many resources such as Lobe.ai
+        that can help generate a model without complexities. Overall, I can see potential in MaskPass being used by
+        businesses who are concerned with public safety, prompting clients to use this app as validation. Despite the
+        easing of the mask mandate,
+        I feel that having validation for wearing a mask is still a valuable precaution to take, as cases are still
+        growing today.</p>
+  </section>
+
+<br>
+<section class="content">
+  <h2 id="6">Reference</h2>
+  <p id="a">[1] Steven King, Max Hudnell, "Health Greeter Kiosk: Tech-Enabled Signage to Encourage Face Mask Use and Social
+    Distancing," ACM, 6 August 2021. [Online]. Available:
+   <a target="_blank" href="https://dlnext.acm.org/doi/fullHtml/10.1145/3450550.3465339"> https://dlnext.acm.org/doi/fullHtml/10.1145/3450550.3465339. [Accessed 25 February 2022]</a>.
+  </p>
+
+  <p id="b">[2] Mohammed Loey, et al. "Fighting against COVID-19: A novel deep learning model based on," ELSEVIER, 12
+    November 2020. [Online]. Available: <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7658565/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7658565/</a>. [Accessed 25 February
+    2022].</p>
+
+  <p id="c">[3] E. Tsai, "UNC increases number of health greeter kiosks around campus to encourage mask-wearing," The Daily
+    Tar Heel, 17 March 2021. [Online]. Available:
+    <a target="_blank" href="https://www.dailytarheel.com/article/2021/03/university-health-greeter-kiosks">https://www.dailytarheel.com/article/2021/03/university-health-greeter-kiosks</a>. [Accessed 25 February 2022].</p>
+
+  <p id="d">[4] "B.C. takes next step in balanced plan to lift COVID-19 restrictions | BC Gov News", News.gov.bc.ca, 2022.
+    [Online]. Available: <a target="_blank" href="https://news.gov.bc.ca/releases/2022HLTH0081-000324">https://news.gov.bc.ca/releases/2022HLTH0081-000324</a>. [Accessed: 11 April 2022].</p>
+
+  <p id="e">[5] Wang, Y., Deng, Z. and Shi, D., 2022. How effective is a mask in preventing COVID‐19 infection?. [Online]
+    National Library of Medicine. Available at: <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883189/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7883189/</a>.[Accessed 11
+    April 2022].</p>
+
+  <p id="f">[6] "Android quickstart | TensorFlow Lite", TensorFlow, 2022. [Online]. Available:
+   <a target="_blank" href="https://www.tensorflow.org/lite/guide/android">https://www.tensorflow.org/lite/guide/android</a>. [Accessed: 11 Apr 2022].</p>
+
+  <p id="g">[7] "Face Mask Classification", Kaggle.com, 2022. [Online]. Available:
+    <a target="_blank" href="https://www.kaggle.com/datasets/dhruvmak/face-mask-detection">https://www.kaggle.com/datasets/dhruvmak/face-mask-detection</a>. [Accessed: 11- Apr- 2022].</p>
+
+</section>
+  <!-- 2nd card -->
+  <!-- 2nd card -->
+  <div id="contact" class="start card">
+    <div class="card-container-inverse">
+      <div class="card-container-item-left-inverse contact_box">
+        <div class="wrapper-h1-banner">
+          <div class="typing-demo type_medium_size">
+            <h1>Contact Me</h1>
+          </div>
+        </div>
+        <div class="banner_heading">
+          <h1>Contact Me</h1>
+        </div>
+        <br>
+
+
+      </div>
+
+      <div class="card-container-item-right-inverse center_text">
+        <div class="formContainer">
+          <div class="order-flex-item">
+
+            <!-- order item 0 starts -->
+
+            <!-- <h2>Delivery Information</h2> -->
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvonpwkn"
+              method="post">
+              <fieldset id="fs-frm-inputs">
+
+                <div class="input-container name">
+                  <input type="text" id="full-name" name="name" placeholder=" " required="required">
+                  <label class="placeholder-text" for="full-name">
+                    <span class="placeholder-name">Full name</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <input type="email" id="email-address" name="_replyto" placeholder=" " required="required">
+                  <label class="placeholder-text" for="email-address">
+                    <span class="placeholder-name">Email</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <textarea rows="5" name="message" id="message" placeholder=" " required=""></textarea>
+                  <label class="placeholder-text" for="message">
+                    <span class="placeholder-name">Message</span>
+                  </label>
+                </div>
+              </fieldset>
+
+
+
+
+              <br>
+              <input class="button next" type="submit" value="Submit" style="margin:auto;">
+
+            </form>
+
+
+          </div>
+        </div>
+   
+      </div>
+      <div class="triangleTopRight-inverse"></div>
+    </div>
+  
+
+  
+  </div>
+  <!-- end of card 2 -->
+  <footer style="background:black">
+    <!-- <h1 style="margin-left:-1%; text-align:center">Contact Me</h1> -->
+    <div id="contact" class="footerContainer" >
+  
+  
+  
+  
+  
+      <div class="grid">
+        <div class="column-xs-12">
+          <ul class="social">
+    <li><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3);" class="fa-brands fa-github"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); " class="fa-brands fa-linkedin"></span></a></li>
+            
+          </ul>
+      
+          <p class="copyright">This website was manually coded by Sorren</p>
+          <p class="copyright">&copy; Copyright 2025 Sorren Jao</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function open1() {
+      document.getElementById("code1").style.display = "block";
+      document.getElementById("openbutton1").style.display = "none";
+      document.getElementById("closebutton1").style.display = "block";
+    }
+
+    function close1() {
+      document.getElementById("code1").style.display = "none";
+      document.getElementById("openbutton1").style.display = "block";
+      document.getElementById("closebutton1").style.display = "none";
+    }
+    function open2() {
+      document.getElementById("code2").style.display = "block";
+      document.getElementById("openbutton2").style.display = "none";
+      document.getElementById("closebutton2").style.display = "block";
+    }
+
+    function close2() {
+      document.getElementById("code2").style.display = "none";
+      document.getElementById("openbutton2").style.display = "block";
+      document.getElementById("closebutton2").style.display = "none";
+    }
+    function open3() {
+      document.getElementById("code3").style.display = "block";
+      document.getElementById("openbutton3").style.display = "none";
+      document.getElementById("closebutton3").style.display = "block";
+
+    }
+
+    function close3() {
+      document.getElementById("code3").style.display = "none";
+      document.getElementById("openbutton3").style.display = "block";
+      document.getElementById("closebutton3").style.display = "none";
+    }
+
+
+
+
+
+    function bio1() {
+      document.getElementById("bio1").style.display = "block";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio2() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "block";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio3() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "block";
+
+
+    }
+
+
+  </script>
+  <!-- scripts to toggle pop up content -->
+  <script>
+ 
+  </script>
+
+  <script src="JS/section_observer.js"></script>
+  <script src="javaScript/chat_button.js"></script>
+
+
+
+  <script src="javaScript/typing_observer.js"></script>
+  <script src="javaScript/typing_observer2.js"></script>
+
+  <script src="javaScript/fade-in-fade-out.js"></script>
+
+
+</body>
+
+</html>
