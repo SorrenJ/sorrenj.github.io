@@ -1,5 +1,5 @@
 body {
-    background-color: #090009;
+    background-color: #150015;
     margin: 0;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #090009;
+    background-color: #150015;
     color: #ffffff;
     font-size: 1.5em;
     text-align: center;
