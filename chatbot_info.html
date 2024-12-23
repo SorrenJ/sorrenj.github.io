@@ -31,6 +31,8 @@
   <link href="styles/typing.css" rel="stylesheet">
   <link href="styles/fade-in-fade-out.css" rel="stylesheet">
 
+  <!-- <link href="styles/loading-screen.css" rel="stylesheet"> -->
+  
   <link href="styles/card.css" rel="stylesheet">
   <!-- font awesome icons -->
   <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
@@ -46,6 +48,12 @@
   gtag('config', 'G-J3C7G60BQ2');
 </script>
 <body>
+
+    
+  <div id="fade" class="fade fade-active">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+</div>
   <!-- Navbar starts here -->
   <header>
 
@@ -70,7 +78,9 @@
   </header>
 
   <script src="javaScript/navbar.js"></script>
-  <div id="fade" class="fade"></div>
+  <!-- <div id="fade" class="fade"></div> -->
+
+  
   <!-- page navigation -->
   <br>
   <br>
@@ -91,10 +101,8 @@
     <a href="https://react-typescript-nlp-frontend.onrender.com/" target="_blank">
       <div class="button" style="width:50%; margin-right:25%; margin-left:25%">Chat now! </div>
     </a>
-    <br><br>
-    <a href="https://github.com/SorrenJ/React-Typescript-NLP" target="_blank">
-      <div class="button" style="width:50%; margin-right:25%; margin-left:25%">See my repo! </div>
-    </a>
+   
+   
 
 
   </div>
@@ -206,7 +214,9 @@
         backend server. I'm currently working on finding a solution and trying to find NoSQL alternatives.
       </p>
       <br>
-   
+      <a href="https://github.com/SorrenJ/React-Typescript-NLP" target="_blank">
+        <div class="button" style="width:50%; margin-right:25%; margin-left:25%">See my repo! </div>
+      </a>
       <br>
       <br><br>
 
@@ -387,7 +397,7 @@
 
   <script src="javaScript/fade-in-fade-out.js"></script>
 
-
+  <!-- <script src="javaScript/loading-screen.js"></script> -->
 </body>
 
 </html>
