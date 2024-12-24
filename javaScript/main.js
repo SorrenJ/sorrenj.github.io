@@ -213,18 +213,18 @@ Object.keys(segmentsData).forEach(segmentId => {
 
 
 // Function to show the mobile list based on button click
-function showMobileList(listId) {
-    // Hide all mobile lists
-    document.querySelectorAll('.mobile-elements-list').forEach(list => {
-        list.style.display = 'none';
-    });
+// function showMobileList(listId) {
+//     // Hide all mobile lists
+//     document.querySelectorAll('.mobile-elements-list').forEach(list => {
+//         list.style.display = 'none';
+//     });
 
-    // Show the selected mobile list
-    const selectedList = document.getElementById(listId);
-    if (selectedList) {
-        selectedList.style.display = 'block';
-    }
-}
+//     // Show the selected mobile list
+//     const selectedList = document.getElementById(listId);
+//     if (selectedList) {
+//         selectedList.style.display = 'block';
+//     }
+// }
 
 
 document.addEventListener("DOMContentLoaded", () => {

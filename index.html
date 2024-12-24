@@ -63,7 +63,7 @@
       </header>
     
       <script src="javaScript/navbar.js"></script>
-  
+  <br>
   <!-- Start Screen -->
   <div id="startScreen" onclick="startGame()">
     
@@ -77,7 +77,7 @@
 
   <!-- Segment and List Container -->
   <div id="segmentListContainer">
-  
+ 
 
  
     <div id="infoBox" class="info-box">
@@ -86,8 +86,11 @@
    
 <!-- Special Info Boxes for Segments -->
 <div id="specialInfoBox1" class="special-info-box">
+  
     <h3>UX Design</h3>
     <p>Explore user-centered design projects and prototypes.</p>
+
+   
 </div>
 <div id="specialInfoBox2" class="special-info-box">
     <h3>AI/ML</h3>
@@ -105,11 +108,11 @@
 
       <script src="javaScript/navbar.js"></script>
     
-
+     
       <!-- Selector Screen with Segments -->
       <div id="selectorScreen" style="position: relative; width: 500px; height: 500px;">
         <!-- Info Box -->
-
+      
         <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
           <!-- Segment paths with titles -->
           <path id="segment1" class="segment" d="M250,70 A180,180 0 0,1 420,250 L380,250 A140,140 0 0,0 250,110 Z" fill="#ffffff">
@@ -141,7 +144,7 @@
       <!-- Lists for each segment (placed beside selector screen) -->
       <div id="listContainer">
 
-
+ 
 
           <div id="list1" class="elements-list">
               <h1>UX Design</h1>
@@ -170,16 +173,13 @@
               </ul>
           </div>
           <div id="list3" class="elements-list">
-            <h1>Sorren</h1>
+            <h1>Hi I'm Sorren!</h1>
             <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
                 Sit down, grab a snack, and have a peek at my projects.
 
             </p>
-            <ul>
-              <a href="https://github.com/SorrenJ">
-                <li class="list-item">Github</li>
-              </a>
-            </ul>
+        
+            <h3 style="position: absolute; margin-bottom:-50%">Hover and select the center circle to discover a project!</h3>
           </div>
           <div id="list4" class="elements-list">
               <h1>Web Apps</h1>
@@ -197,53 +197,131 @@
                 
               </ul>
           </div>
-      </div>
+       
  
+        </div>
+
+    
 <!-- Mobile List Container -->
 <div id="mobileListContainer">
-
-    <h1 class="mobileTitle">Choose a project type</h1>
-
-    <div id="mobileList1" class="mobile-elements-list">
-        <h1>UX Design</h1>
-        <ul>
-            <li class="list-item">Travel App Figma Prototype</li>
-            <li class="list-item">Bakery Website Redesign</li>
-            <a href="Smart_Drive_Test.html">
-                <li class="list-item">
-                  Smart Drive Website
-              </li>
-          </a>
-       
-        </ul>
-    </div>
-    <div id="mobileList2" class="mobile-elements-list">
-        <h1>AI/ML</h1>
-        <ul>
-            <li class="list-item">Sleep Wellness Chatbot</li>
-            
-            <li class="list-item">Facemask Detection App</li>
-            <li class="list-item">Wildlife and Pest Animal Detection</li>
-        </ul>
-    </div>
-    <div id="mobileList3" class="mobile-elements-list">
-        <h1>Sorren</h1>
-            <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
-                Sit down, grab a snack, and have a peek at my projects.
-    </div>
-    <div id="mobileList4" class="mobile-elements-list">
-        <h1>Web Apps</h1>
-        <ul>
-            <li class="list-item">Virtual Pet Web Application</li>
-            <li class="list-item">Map Listing Web Application</li>
-            <li class="list-item">SFU Student Webpage Creator</li>
-        </ul>
-    </div>
+<br><br>
+  <h1>Hi I'm Sorren,</h1>
+ <div class="project-list">
+ 
+        <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
+            Sit down, grab a snack, and have a peek at my projects.
+</p>
 </div>
+<h1>Web Apps</h1>
+<ul class="project-list">
+  <a href="./chatbot_info.html">
+  <li class="list-item-xl">
+    <i class="fa-solid fa-comments"></i>
+    <div>
+        <h2>Sorren AI Chatbot</h2>
+        <p>A chatbot with the likeness and memories of your's truly!</p>
+    </div>
+</li>
+</a>
+    <li class="list-item-xl">
+        <i class="fas fa-paw"></i>
+        <div>
+            <h2>Virtual Pet Web Application</h2>
+            <p>Manage a virtual pet's stats and interactions in a fun and interactive way.</p>
+        </div>
+    </li>
+
+    <!-- <li class="list-item-xl">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+          <h2>Map Listing Web Application</h2>
+          <p>A platform to explore and list locations with interactive maps.</p>
+      </div>
+  </li> -->
+
+
+    
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+            <h2>Map Listing Web Application</h2>
+            <p>A platform to explore and list locations with interactive maps.</p>
+        </div>
+    </li> -->
+    <a href="profile_helper_content.html">
+    <li class="list-item-xl">
+        <i class="fas fa-user-graduate"></i>
+        <div>
+            <h2>SFU Student Webpage Creator</h2>
+            <p>A tool for SFU students to build personal web pages effortlessly.</p>
+        </div>
+    </li>
+    </a>
+</ul>
+
+<h1>UX Design</h1>
+<ul class="project-list">
+    <li class="list-item-xl">
+        <i class="fas fa-plane"></i>
+        <div>
+            <h2>Travel App Figma Prototype</h2>
+            <p>Prototype for a travel app focused on itinerary planning and bookings.</p>
+        </div>
+    </li>
+    <li class="list-item-xl">
+        <i class="fas fa-bread-slice"></i>
+        <div>
+            <h2>Bakery Website Redesign</h2>
+            <p>A modern and user-friendly redesign of a bakery's website.</p>
+        </div>
+    </li>
+    <a href="Smart_Drive_Test.html">
+    <li class="list-item-xl">
+    
+            <i class="fas fa-car"></i>
+            <div>
+                <h2>Smart Drive Website</h2>
+                <p>A responsive website prototype for a smart driving platform.</p>
+            </div>
+        
+    </li>
+  </a>
+</ul>
+
+<h1>AI/ML</h1>
+<ul class="project-list">
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-comments"></i>
+        <div>
+            <h2>Sleep Wellness Chatbot</h2>
+            <p>An AI-driven chatbot to provide sleep tips and wellness advice.</p>
+        </div>
+    </li> -->
+    <a href="./MaskPass.html">
+    <li class="list-item-xl">
+        <i class="fas fa-mask"></i>
+        <div>
+            <h2>Facemask Detection App</h2>
+            <p>A computer vision app that detects face mask usage in public spaces.</p>
+        </div>
+    </li>
+    </a>
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-paw"></i>
+        <div>
+            <h2>Wildlife and Pest Animal Detection</h2>
+            <p>AI-based solution for identifying wildlife and pest animals in real-time.</p>
+        </div>
+    </li> -->
+</ul>
+
+</div>
+
+    
 
 <!-- Hardcoded Mobile Button Container -->
 <div class="mobile-button-container" >
-    <div class="mobile-button" onclick="showMobileList('mobileList4')">
+    <!-- <div class="mobile-button" onclick="showMobileList('mobileList4')">
         <i class="fa-solid fa-laptop-code"></i>
     </div>
     <div class="mobile-button" onclick="showMobileList('mobileList1')">
@@ -254,7 +332,7 @@
     </div>
     <div class="mobile-button" onclick="showMobileList('mobileList3')">
         <i class="fa-solid fa-user"></i>
-    </div>
+    </div> -->
   
 </div>
 
