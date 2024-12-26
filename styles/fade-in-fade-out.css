@@ -48,3 +48,17 @@
       transform: rotate(360deg);
   }
 }
+
+/* Mobile view */
+@media (max-width: 1080px) {
+  .fade {
+display:none;
+  }
+  .fade-active {
+      opacity: 0;
+      pointer-events: all;
+  }
+  
+
+
+}
