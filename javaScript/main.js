@@ -258,6 +258,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+// Get references to elements
+const toggleButton = document.getElementById('toggleButton');
+const segmentListContainer = document.getElementById('segmentListContainer');
+const mobileListContainer = document.getElementById('mobileListContainer');
+toggleButton.textContent = 'Switch to Simple View';
+// Function to update display based on screen width
+function handleResize() {
+
+    if (window.innerWidth > 1080) {
+        // Default to showing segmentListContainer when screen is wider than 1080px
+        segmentListContainer.style.display = 'block';
+        mobileListContainer.style.display = 'none';
+    } else {
+        // Show mobileListContainer for screens 1080px or smaller
+        segmentListContainer.style.display = 'none';
+        mobileListContainer.style.display = 'block';
+    }
+}
+
+
+// Function to toggle between the containers
+function toggleView() {
+   
+    if (segmentListContainer.style.display === 'none') {
+        segmentListContainer.style.display = 'block';
+        mobileListContainer.style.display = 'none';
+        toggleButton.textContent = 'Switch to Simple View';
+    } else {
+        segmentListContainer.style.display = 'none';
+        mobileListContainer.style.display = 'block';
+        toggleButton.textContent = 'Switch to Fancy View';
+    }
+}
+
+// Add event listener for the toggle button
+toggleButton.addEventListener('click', function () {
+    if (window.innerWidth >= 1080) {
+        toggleView();
+    }
+});
+
+// Add event listener for window resize to enforce media query behavior
+window.addEventListener('resize', handleResize);
+
+// Initial setup to handle the current screen size
+handleResize();
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
