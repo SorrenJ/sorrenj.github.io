@@ -14,7 +14,7 @@ body {
 /* Start screen styling */
 #startScreen {
     position: absolute;
-    top: 35px;
+    /* top: -15px; */
     left: 0;
     right: 0;
     bottom: 0;
@@ -30,10 +30,8 @@ body {
     opacity: 1;
     transition: opacity 1s ease;
     padding: 20px;
-    height:100%;
-  
-    overflow: hidden;
-    overflow-x: hidden;
+    height:100vh;
+ 
 }
 
 
@@ -349,6 +347,10 @@ a {
 
 @media screen and (min-width: 1080px) {
 
+
+
+
+
     .special-info-box {
         display: none; /* Hidden by default */
         position: absolute;
@@ -418,6 +420,13 @@ a {
 
 /* Mobile adjustments */
 @media (max-width: 1080px) {
+
+
+    #startScreen {
+        display:none;
+             
+            }
+
     body{
         /* max-width:max-content; */
     }
