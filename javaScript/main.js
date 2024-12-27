@@ -260,9 +260,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
 // Get references to elements
 const toggleButton = document.getElementById('toggleButton');
+const switchTooltip = document.getElementById('switchTooltip');
 const segmentListContainer = document.getElementById('segmentListContainer');
 const mobileListContainer = document.getElementById('mobileListContainer');
 toggleButton.textContent = 'Switch to Simple View';
+switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
+
+
 // Function to update display based on screen width
 function handleResize() {
 
@@ -285,10 +289,12 @@ function toggleView() {
         segmentListContainer.style.display = 'block';
         mobileListContainer.style.display = 'none';
         toggleButton.textContent = 'Switch to Simple View';
+        switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
     } else {
         segmentListContainer.style.display = 'none';
         mobileListContainer.style.display = 'block';
         toggleButton.textContent = 'Switch to Fancy View';
+        switchTooltip.textContent = 'Allow fancy visuals for your amusement :)';
     }
 }
 

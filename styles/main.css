@@ -251,6 +251,61 @@ a {
         /* overflow: hidden;
         overflow-x: hidden; */
     }
+
+    .tooltip-container {
+        position: relative;
+        /* display: inline-block; */
+      }
+      
+      .toggle-button {
+        font-size:2.5em;
+        padding: 10px 20px;
+        cursor: pointer;
+        height:100%;
+      }
+
+      .toggle-button:hover {
+        background-color: #ffffffb4;
+      }
+      
+    .tooltip {
+        visibility: hidden;
+        width: 200px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        /* bottom: 125%;  */
+       font-size: 1.6em;
+       font-weight: 100;
+        top:80%;
+        left: 20%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1;
+      }
+      
+      .tooltip::after {
+        content: "";
+        position: absolute;
+        bottom:100% ; /* Arrow pointing down */
+        left: 50%;
+        /* width:100px; */
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #333 transparent; /* Arrow points down */
+      }
+      
+      .tooltip-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+
     #listContainer {
         transform: perspective(500px) rotateX(9deg) rotateY(342deg) skew(2deg, 0deg);
         filter: drop-shadow(0 0 30px #ffffff);
