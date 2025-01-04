@@ -121,7 +121,10 @@ function startGame() {
                 //   gameStarted = true;
              
             });
-   
+            selectSegment("segment3");
+           
+
+            showSpecialInfoBox("segment3");
       
         }, 100); // Delay to trigger the transform and opacity transition
        

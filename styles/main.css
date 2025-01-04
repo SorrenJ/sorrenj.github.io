@@ -437,10 +437,37 @@ a {
         /* border: 2px solid #9b59b6;  */
         /* border-radius: 12px;  */
         /* box-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 30px #9b59b6; Neon glow */
-       text-align:center;
+    
+        text-align:center;
         z-index: 10;
         visibility: hidden;
     }
+
+    .special-info-box.show {
+        display: block;
+        visibility: visible;
+        /* animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate; */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%; /* Adjust based on the content length */
+        }
+    }
+    
+    @keyframes blink {
+        from {
+            border-color: transparent;
+        }
+        to {
+            border-color: #ffffff;
+        }
+    }
+
+    
 
     .special-info-box p{
         text-align:center;

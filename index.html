@@ -23,7 +23,8 @@
   <link href="styles/sorren_sdt.css" rel="stylesheet">
   <link href="styles/petals.css" rel="stylesheet">
   <link href="styles/fade-in-fade-out.css" rel="stylesheet">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
   <!-- Google tag (gtag.js) -->
@@ -82,7 +83,7 @@
   <div id="startScreen" onclick="startGame()">
     
     <h1>Sorren Jao</h1>
-    <p>Full-Stack Development & User Experience Design</p>
+    <p data-aos="fade-up">Full-Stack Development & User Experience Design</p>
  
     <canvas id="treeCanvas" width="800" height="400"></canvas>
     <p style="position:absolute">Click Anywhere to Start</p>
@@ -110,9 +111,9 @@
     <h3>AI/ML</h3>
     <p>Discover AI-powered solutions and machine learning applications.</p>
 </div>
-<div id="specialInfoBox3" class="special-info-box">
-    <h3>About Sorren</h3>
-    <p>Hover and select the circle to discover a project!</p> 
+<div id="specialInfoBox3" class="special-info-box" >
+    <h3 data-aos="fade-up">About Sorren</h3>
+    <p data-aos="fade-up">Hover and select the circle to discover a project!</p> 
     <!-- <p>Sorren is a full-stack developer with a passion for UX design and AI/ML.</p> -->
 <br>
 <p>Have a look at my socials!</p>
@@ -399,7 +400,11 @@
 
   <script src="javaScript/main.js"></script>
   <script src="javaScript/fade-in-fade-out.js"></script>
-  <script src="javaScript/trail-cursor.js"></script>
+  <!-- <script src="javaScript/trail-cursor.js"></script> -->
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 
