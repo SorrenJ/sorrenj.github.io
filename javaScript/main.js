@@ -91,6 +91,8 @@ function startGame() {
     const segments = document.querySelectorAll(".segment");
     const mobileButtonContainer = document.querySelector(".mobile-button-container");
     const infoBoxContainer = document.querySelector(".info-box");
+
+    const introInfoBox = document.getElementById("specialInfoBox3");
     // Set initial offset positions for segments
     segments[0].style.transform = "translate(-70px,-70px)";
     segments[1].style.transform = "translate(70px, -70px)";
@@ -107,6 +109,8 @@ function startGame() {
         selectorScreen.style.opacity = "1"; // Fade in selector screen
         mobileButtonContainer.style.display="flex";
         infoBoxContainer.style.display= "block";
+
+
         // Trigger animation for each segment
         setTimeout(() => {
             segments.forEach(segment => {
@@ -117,14 +121,11 @@ function startGame() {
                 //   gameStarted = true;
              
             });
-            selectSegment("segment3");
-           
-
-            showSpecialInfoBox("segment3");
+   
       
         }, 100); // Delay to trigger the transform and opacity transition
        
-    
+    introInfoBox.style.display="block";
       
     }, 1000); // Delay to match the CSS transition duration
 
@@ -263,6 +264,7 @@ const toggleButton = document.getElementById('toggleButton');
 const switchTooltip = document.getElementById('switchTooltip');
 const segmentListContainer = document.getElementById('segmentListContainer');
 const mobileListContainer = document.getElementById('mobileListContainer');
+const bodyHeight = document.querySelector('body');
 toggleButton.textContent = 'Switch to Simple View';
 switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
 
@@ -288,11 +290,14 @@ function toggleView() {
     if (segmentListContainer.style.display === 'none') {
         segmentListContainer.style.display = 'block';
         mobileListContainer.style.display = 'none';
+        bodyHeight.style.height = '100vh';
         toggleButton.textContent = 'Switch to Simple View';
         switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
     } else {
         segmentListContainer.style.display = 'none';
         mobileListContainer.style.display = 'block';
+        bodyHeight.style.height = '100%';
+       
         toggleButton.textContent = 'Switch to Fancy View';
         switchTooltip.textContent = 'Allow fancy visuals for your amusement :)';
     }

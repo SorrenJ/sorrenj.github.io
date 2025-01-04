@@ -237,7 +237,7 @@ a {
     display:none;
     padding-left: 25%;
     padding-right: 25%;
-    padding-top: 5%;
+    /* padding-top: 5%; */
     top: 50%;
 
 }
@@ -418,6 +418,9 @@ a {
 
 
 
+#specialInfoBox3{
+    visibility: visible;
+}
 
 
     .special-info-box {
@@ -724,6 +727,9 @@ a:hover h2 {
         display: none;
     }
 
+    #myIntro{
+
+    }
 
     /* Show mobile list container */
     #mobileListContainer {
