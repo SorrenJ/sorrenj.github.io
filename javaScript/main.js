@@ -267,7 +267,7 @@ const toggleButton = document.getElementById('toggleButton');
 const switchTooltip = document.getElementById('switchTooltip');
 const segmentListContainer = document.getElementById('segmentListContainer');
 const mobileListContainer = document.getElementById('mobileListContainer');
-const bodyHeight = document.querySelector('body');
+const boBody = document.querySelector('body');
 toggleButton.textContent = 'Switch to Simple View';
 switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
 
@@ -293,13 +293,16 @@ function toggleView() {
     if (segmentListContainer.style.display === 'none') {
         segmentListContainer.style.display = 'block';
         mobileListContainer.style.display = 'none';
-        bodyHeight.style.height = '100vh';
+        boBody.style.height = '100vh';
+        // boBody.style.overflow = 'hidden'; 
         toggleButton.textContent = 'Switch to Simple View';
         switchTooltip.textContent = 'Remove fancy gimmicks and keep it minimal! Recomended for FireFox browsers and mobile displays';
     } else {
         segmentListContainer.style.display = 'none';
         mobileListContainer.style.display = 'block';
-        bodyHeight.style.height = '100%';
+        boBody.style.height = '100%';
+
+        // boBody.style.overflow = 'scroll'; 
        
         toggleButton.textContent = 'Switch to Fancy View';
         switchTooltip.textContent = 'Allow fancy visuals for your amusement :)';

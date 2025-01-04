@@ -6,10 +6,16 @@ body {
     justify-content: center;
   /* height:100vh; */
     /* max-width: 100vw; */
-    overflow: hidden; 
+
     font-family: Verdana, Arial, sans-serif;
     color:white;
+
+    overflow-y: scroll; /* Enable scrolling */
+
+    
 }
+
+
 
 /* Start screen styling */
 #startScreen {
@@ -88,7 +94,7 @@ body {
 }
 
 /* Flex container for segment circle and list */
-#segmentListContainer {
+.segmentListContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +106,35 @@ body {
     /* height:100vh; */
       /* overflow: hidden;
         overflow-x: hidden; */
+
+  /* For Firefox */
+  scrollbar-width: thin; /* Options: auto, thin, none */
+  scrollbar-color: #444 #222; /* Thumb color and track color */
+
 }
+
+
+/* For WebKit Browsers (Chrome, Safari, Edge) */
+.segmentListContainer::-webkit-scrollbar {
+    width: 10px; /* Width of vertical scrollbar */
+    height: 10px; /* Height of horizontal scrollbar */
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: #444 #222; /* Thumb color and track color */
+  }
+  
+  .segmentListContainer::-webkit-scrollbar-thumb {
+    background: #444; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+ .segmentListContainer::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Thumb color on hover */
+  }
+  
+  .segmentListContainer::-webkit-scrollbar-track {
+    background: #222; /* Scrollbar track color */
+    border-radius: 10px; /* Optional: Rounded corners for the track */
+  }
 
 /* Segment circle (selector screen) */
 #selectorScreen {
@@ -251,7 +285,7 @@ a {
         /* height: 100vh; */
         /* overflow: hidden;
         overflow-x: hidden; */
-
+        /* overflow: hidden;  */
         height: 100vh;
     }
 
@@ -515,6 +549,8 @@ a {
 
 .mobileContainer{
     display:none;
+
+
 }
 
 
@@ -603,6 +639,17 @@ a:hover h2 {
 
     .mobileContainer{
         display:block;
+
+    
+        width: 100%; /* Set container size */
+        height: 200px; /* Set container size */
+        
+        /* Hide scrollbar using padding */
+        padding-right: 15px; /* Add space for scrollbar */
+        box-sizing: content-box; /* Ensure padding doesn't affect layout */
+        
+        overflow: hidden;
+        overflow-y: scroll; /* Re-enable vertical scroll *
     }
 
 
