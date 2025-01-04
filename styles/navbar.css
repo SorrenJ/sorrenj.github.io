@@ -84,13 +84,14 @@ header
                                     border-radius: 12px; /* Rounded corners */
                                     background-color: #00000000; 
                                     transition: 0.3s box-shadow ease-in-out, 0.3s font-size ease-in-out; /* Smooth transitions for box-shadow and font-size */
-                                
+                                    cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
                                 }
                                 
                                 .special-nav-item:hover {
                                     
                                  border-color: #9b59b6; 
                                     box-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 30px #9b59b6; 
+                                    cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
                                 }
 
                                 .special-nav-item:hover .fa-robot {
