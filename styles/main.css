@@ -1,3 +1,8 @@
+html{
+    cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
+  
+}
+
 body {
     background-color: #150015;
     margin: 0;
@@ -12,11 +17,17 @@ body {
 
     overflow-y: scroll; /* Enable scrolling */
 
-    
+   cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
+  
 }
 
+a{
+    cursor: url('../assets/cursor/cursor-pointer.svg')20 20, pointer;
+}
 
-
+button{
+    cursor:  url('../assets/cursor/cursor-pointer.svg')20 20, pointer !important;
+}
 /* Start screen styling */
 #startScreen {
     position: absolute;
@@ -38,7 +49,8 @@ body {
     transition: opacity 1s ease;
     padding: 20px;
     /* height:100vh; */
- 
+    cursor: url('../assets/cursor/cursor-pointer.svg')20 20, pointer;
+
 }
 
 
@@ -160,7 +172,7 @@ body {
 .segment:hover {
     filter: drop-shadow(0 0 20px #ffffff);
     animation: flicker 1.5s infinite;
-    cursor: pointer;
+    cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
 }
 .selected {
     filter: drop-shadow(0 0 30px #e606c8);
@@ -291,18 +303,23 @@ a {
 
     .tooltip-container {
         position: relative;
+        cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
         /* display: inline-block; */
       }
       
       .toggle-button {
         font-size:2.5em;
         padding: 10px 20px;
-        cursor: pointer;
+        cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
         height:100%;
       }
 
       .toggle-button:hover {
         background-color: #ffffffb4;
+        cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
+        
+        
+
       }
       
     .tooltip {
@@ -841,4 +858,6 @@ a:hover h2 {
     }
 
 
+
+    }
 }

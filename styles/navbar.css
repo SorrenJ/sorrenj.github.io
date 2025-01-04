@@ -52,7 +52,8 @@ header
                         .nav .nav-item a{text-decoration:none;
                             /* background-image:-webkit-gradient(linear,left top,left bottom,from(#DF62BC),to(#DF62BC)); */
                             /* background-image:linear-gradient(#DF62BC,#DF62BC); */
-                            background-size:0 0.2125rem,auto;background-repeat:no-repeat;background-position:center bottom;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;font-size:0.7em}.nav .nav-item a:focus,.nav .nav-item a:hover{background-size:100% 0.2125rem,auto}a{color:#ffffff}.nav-item:hover{-webkit-transition:0.5s background-color;transition:0.5s background-color}#myLinks{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;margin-top:-25px}.nav_heading{display:none}.initialNav{-webkit-transform:translateX(-500px);transform:translateX(-500px)}.fa-bars:before{display:none!important;color:transparent!important}
+                            background-size:0 0.2125rem,auto;background-repeat:no-repeat;background-position:center bottom;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;font-size:0.7em}.nav .nav-item a:focus,.nav .nav-item a:hover{background-size:100% 0.2125rem,auto}a{color:#ffffff}.nav-item:hover{-webkit-transition:0.5s background-color;transition:0.5s background-color}#myLinks{display:-webkit-box;display:-ms-flexbox;display:flex;float:right;margin-top:-25px}.nav_heading{display:none}.initialNav{-webkit-transform:translateX(-500px);transform:translateX(-500px)}.fa-bars:before{display:none!important;color:transparent!important;
+                                cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;}
                 .hamburger{display:none}
                 @media screen and (min-width:800px){
                     #myLinks{display:-webkit-box!important;
