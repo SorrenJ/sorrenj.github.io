@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorren Jao - Virtual Pet</title>
+
+
+  <meta name="description" content="Profile helper is a content generator tool to help with creating graduate student profile pages. It was
+  developed with JavaScript jQuery.">
+<meta name="keywords" content="Simon Fraser University, SFU, School of Interactive Arts & Technology, SIAT, Front-end, Web developer, Graduate, Postdoctural">
+<meta name="author" content="Sorren Jao">
+
+
+
+
+
+
+  <link rel="icon" href="assets/logo.svg" sizes=96x96 />
+  <link href="styles/grid.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
+  <link href="styles/sorren_sdt.css" rel="stylesheet">
+
+
+  <link href="styles/inputform.css" rel="stylesheet">
+  <link href="styles/containers.css" rel="stylesheet">
+  <link href="styles/project.css" rel="stylesheet">
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/typing.css" rel="stylesheet">
+  <link href="styles/fade-in-fade-out.css" rel="stylesheet">
+  <link href="styles/loading-screen.css" rel="stylesheet">
+  <!-- <link href="styles/loading-screen.css" rel="stylesheet"> -->
+  
+  <link href="styles/card.css" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33541X6RG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33541X6RG3');
+</script>
+<body>
+
+    
+  <div id="fade" class="fade fade-active">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+</div>
+  <!-- Navbar starts here -->
+  <header>
+
+    <!-- header -->
+    <div class="home_nav">
+      <div class="home_nav-item">
+        <div class="home_icon"><a href="index.html">
+            <img src="assets/logo.svg" alt="logo"></a>
+
+          <!-- <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size:24pt"></i>
+          </a> -->
+        </div>
+      </div>
+
+      <div class="home_nav-item">
+        <div id="myLinks" class="nav">
+          <div class="nav-item special-nav-item"><a href="./chatbot_info.html"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="javaScript/navbar.js"></script>
+  <!-- <div id="fade" class="fade"></div> -->
+
+  
+  <!-- page navigation -->
+  <br>
+  <br>
+
+  <div class="project_banner">
+    <h1>Virtual Pet</h1>
+
+    <h2>Stack</h2>
+    <br>
+    <div class="tag">React</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">Express.js</div>
+    <div class="tag">PostgreSQL</div>
+    <div class="tag">AWS RDS</div>
+    <div class="tag">SupaBase</div>
+
+    <br><br>
+    <a href="https://virtual-pet-frontend-y0c7.onrender.com/" target="_blank">
+      <div class="button" style="width:50%; margin-right:25%; margin-left:25%">Play now! </div>
+    </a>
+   
+   
+
+
+  </div>
+
+  <section>
+
+    <!-- brand identity section, composed of header then container below that is flex for the image and paragraph -->
+
+    <div class="style_nav">
+
+
+      <a href="index.html#project">
+        <div class="button style-nav-item" style="background-color:#a01278;;">← Back to projects</div>
+      </a>
+      <!-- <a href="#1">
+        <div class="button style-nav-item">Abstract</div>
+      </a>
+      <a href="#2">
+        <div class="button style-nav-item">Process</div>
+      </a>
+      <a href="#3">
+        <div class="button style-nav-item">Final Product</div>
+      </a>
+    
+      <a href="#4">
+        <div class="button style-nav-item">Reflection</div>
+      </a> -->
+
+    </div>
+
+    <!-- pop up message button -->
+    <!-- <button type="button" class="openReply" onclick="toggle_button()"><i class="fa-solid fa-bars"></i></button>
+
+  
+    <div class="chat-popup" id="myForm">
+
+      <div class="livechat">
+        <button class="button closetoggle" type="button" onclick="toggle_button()">Close</button>
+      </div>
+
+      <div class="inner">
+        <a href="index.html#project">
+          <div class="button style-nav-item" style="background-color:#DF62BC;">← Back to projects</div>
+        </a>
+        <a href="#1">
+          <div class="button style-nav-item">Abstract</div>
+        </a>
+        <a href="#2">
+          <div class="button style-nav-item">Process</div>
+        </a>
+        <a href="#3">
+          <div class="button style-nav-item">Final Product</div>
+        </a>
+        <a href="#4">
+          <div class="button style-nav-item">Reflection</div>
+        </a>
+      </div>
+
+    </div> -->
+    <!-- end of pop up content -->
+
+    <section class="content" id="0">
+      <h2>
+        Team
+      </h2>
+<hr>
+      > <a href="https://www.linkedin.com/in/krisan-manoharan-5428b2b8/" target="_blank"><b>Krisan Manoharan | Developer</b></a>
+<br><br>
+> <a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><b>Sorren Jao | Developer</b></a>
+<br><br>
+> <a href="https://www.linkedin.com/in/noriko-jao/" target="_blank"><b>Noriko Jao | Animator</b></a>
+<br><br>
+> <a href="https://www.linkedin.com/in/abeytha-thuraisingam/" target="_blank"><b>Abeytha Thuraisingam | UI Designer</b></a>
+      </section>
+<br>
+    <section class="content" id="1">
+
+
+      <h2>
+        Abstract
+      </h2>
+      <hr>
+      <div>
+
+
+        <p>Beastly Bonds is a fun little game where users can take care of their virtual pet in real-time. This means, just like a real pet, the player can’t take a break and must attend to their pet (closing the app can’t cheat your way out of responsibility). There are various ways to care for your pet, including feeding them, cleaning them, playing with them, or chatting with them. 
+<br>
+<br>
+          The stack includes React, JavaScript, Node.js, Express.js,  PostgreSQL, Amazon web service RDS, SupaBase, Sentiment AI and Render.
+          </p>
+       
+      
+      </br>
+
+    </section>
+
+
+
+    <section class="content" id="2">
+
+      <h2>Adoption</h2>
+      <hr>
+<p>At the very start of the game, the player can adopt a pet. They can choose a species, and give it a name and a colour.
+</p>
+<br>
+<a href="assets/beast_assets/adopt.gif"><img style="width:100%; "
+  src="assets/beast_assets/adopt.gif" alt="adoptPage"></a>
+
+      
+    </section>
+
+    <br>
+
+
+    <section class="content" id="3">
+
+      <h2>Interactions</h2>
+      <hr>
+<p>Beastly Bonds has a variety of ways to manage their pet. With a cloud database server, each of the pet’s attributes:  hunger, energy, happiness, and cleanliness are constantly being decremented overtime until reaching zero.  It’s up to the player to give their pet the respective items or actions to maintain their stats.
+
+</p>
+
+<br>
+<br>
+<h3>Feeding</h3>
+<p>Click and drag a food item to replenish some hunger.</p>
+
+<br>
+<a href="assets/beast_assets/hungry.gif"><img style="width:100%; "
+  src="assets/beast_assets/hungry.gif" alt="feeding"></a>
+  <br>
+  <br>
+  <h3>Cleaning</h3>
+<p>Click and drag a toiletry item to replenish some cleanliness.</p>
+
+<br>
+<a href="assets/beast_assets/dirty.gif"><img style="width:100%; "
+  src="assets/beast_assets/dirty.gif" alt="feeding"></a>
+  <br>
+  <br>
+  <h3>Chatting</h3>
+  <p>Chat to your pet, and give it your affection. Complimenting your pet will replenish it’s happiness. However, giving it a mean or negative response will make it sad, and losing happiness. Sentiment AI detects whether the response sounds positive or negative by giving it a score.</p>
+  
+  <br>
+  <a href="assets/beast_assets/chat_cheer.gif"><img style="width:100%; "
+    src="assets/beast_assets/chat_cheer.gif" alt="cheer"></a>
+    <br>
+    <br>
+    <h3>Sleeping</h3>
+    <p>Pressing the sleep button will allow the pet to sleep to restore it’s energy.
+    </p>
+    
+    <br>
+    <a href="assets/beast_assets/chat_cheer.gif"><img style="width:100%; "
+      src="assets/beast_assets/chat_cheer.gif" alt="cheer"></a>
+    </section>
+
+
+    <br>
+    <section class="content">
+      <h2 id="4">Shopping</h2>
+      <hr>
+      <p> When your inventory seems to be running low, you can always enter the shop to purchase some more items, with a price. 
+
+      </p>
+      <br>
+      <br>
+      <a href="assets/beast_assets/shop.gif"><img style="width:100%; "
+        src="assets/beast_assets/shop.gif" alt="shop"></a>
+      <br>
+      <br><br>
+
+    </section>
+
+<br>
+
+
+    <section class="content">
+      <h2 id="5">Earning Money</h2>
+      <hr>
+      <p> When money seems a bit low, you can always earn some more by playing the math game. Train with your pet and answer some basic arithmetic questions before the time runs out to earn your cash. The more correct answers reward you with more cash. 
+
+      </p>
+      <br>
+      <br>
+      <a href="assets/beast_assets/math_game_sped.gif"><img style="width:100%; "
+        src="assets/beast_assets/math_game_sped.gif" alt="math"></a>
+      <br>
+      <br><br>
+
+    </section>
+
+
+
+    <br>
+
+
+    <section class="content">
+      <h2 id="6">Development process</h2>
+      <hr>
+      <p> As this was one of my first major react full-stack projects, my team faced various challenges diving in but ultimately persevered.  As I was new to API fetching I had originally fetched the entire database for every set intervals. This was bad practice, and I was eating up memory quickly. I realized that keeping the code clean and only dedicating certain columns and tables to be updated when appropriate was the solution. This more modular approach was key to being more memory efficient, which resulted in less lag and alleviated unexplainable glitchy behaviours.
+        <br><br>
+        This modular approach was taken to my workflow, isolating key pet interactions to certain chunks before merging them together. This ensures that each key function was working properly.
+        <br><br>
+        My role in this project was mainly centred around the backend development and fetching apis from the database to Express.js and communicating it to the React Router. It was also my role to deploy the stacks to Render.com and deploy the database to AWS RDS via Supabase.  Running it through a cloud database ensures that the pet is updated at real-time, with decrementing values as real-time passes. 
+        <br><br>
+        Overall this project taught me practical experience in deploying a full-stack react app and working with API fetching, as well as managing a development workflow with my team, such as using Trello to communicate tasks to be completed as well as merging git contributions.
+        
+        
+      </p>
+    
+    </section>
+<br>
+
+<section class="content">
+  <h2 id="6">Future development</h2>
+  <hr>
+  <p>
+  As I conclude this documentation, I’m currently working on implementing a user registration and sign up, in order to personalize the process of managing pets. I’m also considering to implement an AuthO allowing for an external provider to manage user authentication, this includes having Google, or Facebook manage the sign-up and registration process.
+ <br><br>
+  Another idea was to implement a competitive system where users could compare how well they take care of their pet among the rest of the player base. This could just be a simple high scoreboard where the players with the highest base stats of their pets (which includes energy, hunger, cleanliness, and happiness) for the longest time since adopting the pet will be listed at the top. 
+  
+  </p>
+
+  <br>
+  <br>
+  <a href="https://github.com/SorrenJ/Virtual-Pet" target="_blank">
+    <div class="button" style="width:50%; margin-right:25%; margin-left:25%">Visit the Repo! </div>
+  </a>
+ 
+  </section>
+  </section>
+  <br>
+  <br>
+  <!-- 2nd card -->
+  <!-- 2nd card -->
+  <div id="contact" class="start card">
+    <div class="card-container-inverse">
+      <div class="card-container-item-left-inverse contact_box">
+        <div class="wrapper-h1-banner">
+          <div class="typing-demo type_medium_size">
+            <h1>Contact Me</h1>
+          </div>
+        </div>
+        <div class="banner_heading">
+          <h1>Contact Me</h1>
+        </div>
+        <br>
+
+
+      </div>
+
+      <div class="card-container-item-right-inverse center_text">
+        <div class="formContainer">
+          <div class="order-flex-item">
+
+            <!-- order item 0 starts -->
+
+            <!-- <h2>Delivery Information</h2> -->
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvonpwkn"
+              method="post">
+              <fieldset id="fs-frm-inputs">
+
+                <div class="input-container name">
+                  <input type="text" id="full-name" name="name" placeholder=" " required="required">
+                  <label class="placeholder-text" for="full-name">
+                    <span class="placeholder-name">Full name</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <input type="email" id="email-address" name="_replyto" placeholder=" " required="required">
+                  <label class="placeholder-text" for="email-address">
+                    <span class="placeholder-name">Email</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <textarea rows="5" name="message" id="message" placeholder=" " required=""></textarea>
+                  <label class="placeholder-text" for="message">
+                    <span class="placeholder-name">Message</span>
+                  </label>
+                </div>
+              </fieldset>
+
+
+
+
+              <br>
+              <input class="button next" type="submit" value="Submit" style="margin:auto;">
+
+            </form>
+
+
+          </div>
+        </div>
+   
+      </div>
+      <div class="triangleTopRight-inverse"></div>
+    </div>
+  
+
+  
+  </div>
+  <!-- end of card 2 -->
+  <footer style="background:black">
+    <!-- <h1 style="margin-left:-1%; text-align:center">Contact Me</h1> -->
+    <div id="contact" class="footerContainer" >
+  
+  
+  
+  
+  
+      <div class="grid">
+        <div class="column-xs-12">
+          <ul class="social">
+    <li><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3);" class="fa-brands fa-github"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); " class="fa-brands fa-linkedin"></span></a></li>
+            
+          </ul>
+      
+          <p class="copyright">This website was manually coded by Sorren</p>
+          <p class="copyright">&copy; Copyright 2025 Sorren Jao</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function open1() {
+      document.getElementById("code1").style.display = "block";
+      document.getElementById("openbutton1").style.display = "none";
+      document.getElementById("closebutton1").style.display = "block";
+    }
+
+    function close1() {
+      document.getElementById("code1").style.display = "none";
+      document.getElementById("openbutton1").style.display = "block";
+      document.getElementById("closebutton1").style.display = "none";
+    }
+    function open2() {
+      document.getElementById("code2").style.display = "block";
+      document.getElementById("openbutton2").style.display = "none";
+      document.getElementById("closebutton2").style.display = "block";
+    }
+
+    function close2() {
+      document.getElementById("code2").style.display = "none";
+      document.getElementById("openbutton2").style.display = "block";
+      document.getElementById("closebutton2").style.display = "none";
+    }
+    function open3() {
+      document.getElementById("code3").style.display = "block";
+      document.getElementById("openbutton3").style.display = "none";
+      document.getElementById("closebutton3").style.display = "block";
+
+    }
+
+    function close3() {
+      document.getElementById("code3").style.display = "none";
+      document.getElementById("openbutton3").style.display = "block";
+      document.getElementById("closebutton3").style.display = "none";
+    }
+
+
+
+
+
+    function bio1() {
+      document.getElementById("bio1").style.display = "block";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio2() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "block";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio3() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "block";
+
+
+    }
+
+
+  </script>
+  <!-- scripts to toggle pop up content -->
+  <script>
+ 
+  </script>
+
+  <script src="JS/section_observer.js"></script>
+  <script src="javaScript/chat_button.js"></script>
+
+
+
+  <script src="javaScript/typing_observer.js"></script>
+  <script src="javaScript/typing_observer2.js"></script>
+
+  <script src="javaScript/fade-in-fade-out.js"></script>
+
+  <!-- <script src="javaScript/loading-screen.js"></script> -->
+</body>
+
+</html>

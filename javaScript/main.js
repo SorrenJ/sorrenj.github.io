@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             <p>Visit Sorren's GitHub profile to view all repositories and projects.</p>
         `,
-        "Virtual Pet Web Application": ` 
+        "Virtual Pet App": ` 
           <div style="font-size:6em; text-align:center"><i class="fa-solid fa-cat fa-bounce"></i></div>
             <p>A fun virtual pet app built with modern web technologies. Manage pet stats, mood, and activities!</p>
         <div class="tag">React</div>
@@ -402,7 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">SQL</div>
 <div class="tag">vaderSentiment</div>
 <div class="tag">Sentiment</div>
-<div class="tag">Cloudinary</div>
 <div class="tag">Git</div>
 <div class="tag">Node.js</div>
 <div class="tag">AWS RDS</div>
@@ -433,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="tag">Express.js</div>
     <div class="tag">MongoDB</div>
                 `,
-        "SFU Student Webpage Creator": `
+        "Webpage Creator": `
             
           <div style="font-size:6em; text-align:center"><i class="fa-solid fa-user-graduate fa-bounce"></i></div>
             <p>A web page generator for SFU students, allowing quick and easy personal webpage creation.</p>
