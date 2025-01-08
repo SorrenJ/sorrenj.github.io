@@ -75,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const segmentsData = {
-    segment1: { text: 'UX Design', iconClass:'fa-brands fa-figma', listId: 'list1' },
-    segment2: { text: 'AI/ML', iconClass:'fa-robot', listId: 'list2' },
+    segment1: { text: '<img src="../assets/sjao_faces/sjao-anime-3.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list1' },
+    segment2: { text: '<img src="../assets/sjao_faces/sjao-anime-4.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list2' },
     segment3: { text: '<img src="../assets/sjao_faces/sjao-smile-anime.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', imgClass:'<img src="../assets/sjao_faces/sjao-smile.png" alt="Centered Image" class="centered-image" style="max-width:50%; max-height: 50%;">', listId: 'list3' },
-    segment4: { text: 'Full-Stack', iconClass:'fa-laptop-code', listId: 'list4' }
+    segment4: { text: '<img src="../assets/sjao_faces/sjao-anime-1.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list4' }
 };
 
 // Store selected segment data (text and icon)
