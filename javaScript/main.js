@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const segmentsData = {
     segment1: { text: 'UX Design', iconClass:'fa-brands fa-figma', listId: 'list1' },
     segment2: { text: 'AI/ML', iconClass:'fa-robot', listId: 'list2' },
-    segment3: { text: 'Sorren', iconClass:'fa-user', listId: 'list3' },
+    segment3: { text: '<img src="../assets/sjao_faces/sjao-smile-anime.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', imgClass:'<img src="../assets/sjao_faces/sjao-smile.png" alt="Centered Image" class="centered-image" style="max-width:50%; max-height: 50%;">', listId: 'list3' },
     segment4: { text: 'Full-Stack', iconClass:'fa-laptop-code', listId: 'list4' }
 };
 
@@ -136,7 +136,7 @@ function startGame() {
 }
 
 // Function to update center text with optional Font Awesome icon
-function updateCenterText(newText, iconClass) {
+function updateCenterText(newText, iconClass, imgClass) {
     const centerTextOverlay = document.getElementById('centerTextOverlay');
     centerTextOverlay.style.opacity = 0;
 
@@ -148,6 +148,15 @@ function updateCenterText(newText, iconClass) {
         }
         centerTextOverlay.style.opacity = 1;
     }, 500);
+
+    // setTimeout(() => {
+    //     if (imgClass) {
+    //         centerTextOverlay.innerHTML = `${imgClass}`;
+    //     } else {
+    //         centerTextOverlay.innerHTML = `<p>${newText}</p>`;
+    //     }
+    //     centerTextOverlay.style.opacity = 1;
+    // }, 500);
 }
 
 // Function to reset the center text to the default or selected segment text and icon
