@@ -17,8 +17,8 @@ function tree(levels, length, angle) {
         ctx.save();
         
         // Set branch color, glow, and flicker
-        ctx.strokeStyle = '#FFF'; // White color for branches
-        ctx.shadowColor = '#FFF'; // White glow
+        ctx.strokeStyle = '#000'; // White color for branches
+        // ctx.shadowColor = '#000'; // White glow
         ctx.shadowBlur = Math.random() * 20 + 10; // Flicker effect with random blur
 
         ctx.rotate(angle / 2.5);
@@ -38,8 +38,8 @@ function tree(levels, length, angle) {
         ctx.save();
         
         // Set branch color, glow, and flicker for the second branch
-        ctx.strokeStyle = '#FFF';
-        ctx.shadowColor = '#FFF';
+        ctx.strokeStyle = '#000';
+        // ctx.shadowColor = '#000';
         ctx.shadowBlur = Math.random() * 20 + 10;
 
         ctx.rotate(-angle / 2.5);
@@ -64,7 +64,7 @@ function drawFlowers() {
     // Main flower
     ctx.save();
     ctx.fillStyle = '#db4cb3'; // Main flower color
-    ctx.shadowColor = '#db4cb3'; // Glow color matches the flower
+    // ctx.shadowColor = '#db4cb3'; // Glow color matches the flower
     ctx.shadowBlur = Math.random() * 15 + 10; // Random blur for flicker
     ctx.beginPath();
     ctx.arc(0, 0, 10, 0, Math.PI * 2);
@@ -75,7 +75,7 @@ function drawFlowers() {
     for (let i = 0; i < 5; i++) {
         ctx.save();
         ctx.fillStyle = '#FFB6C1'; // Light pink petal color
-        ctx.shadowColor = '#FFB6C1'; // Glow color matches petal
+        // ctx.shadowColor = '#FFB6C1'; // Glow color matches petal
         ctx.shadowBlur = Math.random() * 15 + 10; // Random blur for flicker
         ctx.beginPath();
         ctx.arc(0, -15, 10, 0, Math.PI * 2);

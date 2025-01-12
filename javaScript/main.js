@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const startScreen = document.getElementById("startScreen");
 
-
-
+    const navBar = document.querySelector(".home_nav");
+    navBar.style.display = "none"; // Hide navbar
     
     // Check if the URL contains the #project anchor
     if (window.location.hash === "#project") {
@@ -75,10 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const segmentsData = {
-    segment1: { text: '<img src="../assets/sjao_faces/sjao-anime-3.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list1' },
-    segment2: { text: '<img src="../assets/sjao_faces/sjao-anime-4.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list2' },
-    segment3: { text: '<img src="../assets/sjao_faces/sjao-smile-anime.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', imgClass:'<img src="../assets/sjao_faces/sjao-smile.png" alt="Centered Image" class="centered-image" style="max-width:50%; max-height: 50%;">', listId: 'list3' },
-    segment4: { text: '<img src="../assets/sjao_faces/sjao-anime-1.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 60px purple); z-index:-10 !important">', listId: 'list4' }
+    segment1: { text: '<img src="../assets/sjao_faces/sjao-anime-3.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%;  z-index:-10 !important">', listId: 'list1' },
+    segment2: { text: '<img src="../assets/sjao_faces/sjao-anime-4.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white) drop-shadow(0 0 12px white) ; z-index:-10 !important">', listId: 'list2' },
+    segment3: { text: '<img src="../assets/sjao_faces/sjao-smile-anime.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white) drop-shadow(0 0 12px white); z-index:-10 !important">', imgClass:'<img src="../assets/sjao_faces/sjao-smile.png" alt="Centered Image" class="centered-image" style="max-width:50%; max-height: 50%;">', listId: 'list3' },
+    segment4: { text: '<img src="../assets/sjao_faces/sjao-anime-1.gif" alt="Centered Image" class="centered-image" style="max-width:90%; max-height: 90%; filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white) drop-shadow(0 0 12px white); z-index:-10 !important">', listId: 'list4' }
 };
 
 // Store selected segment data (text and icon)
@@ -93,6 +93,10 @@ function startGame() {
     const infoBoxContainer = document.querySelector(".info-box");
 
     const introInfoBox = document.getElementById("specialInfoBox3");
+
+    const navBar = document.querySelector(".home_nav");
+
+
     // Set initial offset positions for segments
     segments[0].style.transform = "translate(-70px,-70px)";
     segments[1].style.transform = "translate(70px, -70px)";
@@ -100,9 +104,13 @@ function startGame() {
     segments[3].style.transform = "translate(-70px, 70px)";
 
   
+
+    
     // Fade out the start screen and show the selector screen
     startScreen.style.opacity = "0";
     setTimeout(() => {
+
+        navBar.style.display = "block"; // show navbar
         startScreen.style.display = "none"; // Hide start screen
         selectorScreen.style.display = "block"; // Show selector screen
         selectorScreen.style.display = "block"; // Show selector screen
