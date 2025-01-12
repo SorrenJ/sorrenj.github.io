@@ -170,18 +170,22 @@ button{
 
 /* Segment styling */
 .segment {
-    filter: drop-shadow(0 0 10px white);
+    /* filter: drop-shadow(0 10px 10px white); */
     opacity: 0;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    fill-opacity: 0.01;
 }
 .segment:hover {
     filter: drop-shadow(0 0 20px #ffffff);
-    animation: flicker 1.5s infinite;
+    /* animation: flicker 1.5s infinite; */
     cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer;
 }
 .selected {
-    filter: drop-shadow(0 0 30px #e606c8);
+    /* filter: drop-shadow(80px 0 80px #e606c8); */
+    fill-opacity: 1; /* Ensure full opacity (controlled via rgba) */
+    fill: rgba(224, 65, 245); /* Semi-transparent purple */
     animation: flicker 1s infinite;
+    transition:  fill-opacity 2s ease-in-out;
 }
 
 #hoverText {
@@ -367,7 +371,7 @@ a {
 
     #listContainer {
         transform: perspective(500px) rotateX(9deg) rotateY(342deg) skew(2deg, 0deg);
-        filter: drop-shadow(0 0 30px #ffffff);
+        /* filter: drop-shadow(0 0 30px #ffffff); */
         transition: transform 0.3s ease-in-out;
         margin-right: 10%;
         margin-left: -40%;
@@ -386,11 +390,13 @@ a {
         position: relative; /* Allows positioning of the pseudo-element */
         padding: 40px;
         text-align: center;
-        background-color: rgba(49, 8, 68, 0.007); /* Add transparency */
-        backdrop-filter: blur(10px); /* Creates the glass effect */
-        border: 1px solid rgba(255, 255, 255, 0.3); /* Optional frosted border */
+        /* background-color: rgba(49, 8, 68, 0.007);  */
+        /* backdrop-filter: blur(10px);  */
+        /* border: 1px solid rgba(255, 255, 255, 0.3);  */
+
+        border: 2px solid #fe04fa;  
         border-radius: 10px; /* Slightly rounded corners for a modern look */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
         color: white; /* Adjust text color for readability */
         font-weight: bold; /* Emphasize text */
         overflow: hidden; /* Ensure the shine effect doesn't overflow the borders */
@@ -404,7 +410,7 @@ a {
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0) 70%);
+        /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0) 70%); */
         opacity: 0.6;
         border-radius: 10px; /* Match the parent border-radius */
         pointer-events: none; /* Ensure it doesn't interfere with interactivity */
@@ -447,13 +453,13 @@ a {
     display: none; /* Hidden by default */
     position: fixed;
     left: 50px; /* Positioned to the far left */
-  
+
     transform: translateY(-50%);
     top: 50%;
     padding: 20px;
     /* background-color: #1e1e1e;  */
     color: #ffffff; /* White text */
-    font-size: 1em;
+    font-size: 1.2em;
     /* border: 2px solid #9b59b6;  */
     /* border-radius: 12px;  */
     /* box-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 30px #9b59b6; Neon glow */
