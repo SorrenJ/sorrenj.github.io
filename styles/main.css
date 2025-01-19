@@ -299,8 +299,8 @@ a {
     }
 #mobileListContainer{
     display:none;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 5%;
+    padding-right: 5%;
     /* padding-top: 5%; */
     top: 50%;
 
