@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+
+  <script type="text/javascript" src="JS/js/lib/jquery.min.js"></script>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .svg-container {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+        }
+        
+        #section1 { background-color: #f0f8ff; }
+        #section2 { background-color: #fff0f5; }
+        #section3 { background-color: #f0fff0; }
+        #section4 { background-color: #fff8f0; }
+
+
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically in column direction */
+    align-items: center; /* Centers horizontally in column direction */
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Optional: set a max-width for better control */
+    margin: 0 auto; /* Centers the container itself horizontally */
+}
+        
+        .column {
+            flex: 1; /* Makes columns equal width */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            /* background-color: #f9f9f9; */
+        }
+
+
+
+         .face-column {
+            flex: 1; /* Makes columns equal width */
+        /* Keep your existing styles */
+    text-align: center; /* Add this to center content */
+    margin-left: 0; /* Remove left margin if you want true center */
+        }
+
+
+        .chat-column {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+padding-right: 405px;
+        }
+
+
+
+
+           .column img {
+            max-width: 100%; /* Makes image responsive */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 5px;
+        }
+         
+
+
+        /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+
+        .bouncing-arrow {
+            opacity: 0.4; /* Initial low opacity */
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .bouncing-arrow:hover {
+            opacity: 1 !important; /* Force full opacity on hover */
+        }
+  
+/* Add to your existing CSS */
+        .blossom-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .blossom-anime {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+            transform-origin: center center;
+        }
+        
+
+#section4 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure content stays above blossoms */
+.flex-container {
+    position: relative;
+    z-index: 2;
+}
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+        <section id="section1">
+        <!-- <h1>Welcome to Scroll Animations</h1>
+        <p>Scroll down to see GSAP animations triggered by scroll position</p> -->
+       
+       
+       <div class="flex-container">
+        <div class="chat-column">
+        
+
+                    <div class="svg-container">
+<svg id="svg1" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with light fill for better text visibility -->
+<path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Centered text with animation -->
+    <text x="65%" y="30%" 
+          font-family="Arial, sans-serif" 
+          font-size="60" 
+          fill="#1E1E1E" 
+          text-anchor="middle" 
+          dominant-baseline="middle"
+          opacity="0">
+        <animate attributeName="opacity" 
+                 values="0;1" 
+                 dur="1s" 
+                 fill="freeze" 
+                 begin="0.5s"/>
+        Hello, I'm Sorren!
+    </text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+        </div>
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+    <!-- down arrow -->
+           <a href="#section2" class="arrow-link">
+            <svg class="bouncing-arrow" width="80" height="80" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" fill="#F8A6E6"/>
+            </svg>
+        </a>
+
+
+
+    </section>
+
+
+
+
+        <section id="section2">
+        <!-- <h1>Welcome to Scroll Animations</h1>
+        <p>Scroll down to see GSAP animations triggered by scroll position</p> -->
+       
+       
+       <div class="flex-container">
+        <div class="chat-column">
+        
+
+                    <div class="svg-container">
+<svg id="svg2" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with light fill for better text visibility -->
+<path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Centered text with animation -->
+<text x="65%" y="30%" 
+      font-family="Arial, sans-serif" 
+      font-size="30" 
+      fill="#1E1E1E" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      opacity="0">
+    <tspan x="65%" dy="0">I'm a Full-stack developer</tspan>
+    <tspan x="65%" dy="1.2em">with a background in UX design</tspan>
+    <tspan x="65%" dy="1.2em">and human-computer interaction.</tspan>
+</text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+        </div>
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-3.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+       
+       
+
+    </section>
+
+
+
+
+
+
+        <section id="section3">
+        <!-- <h1>Welcome to Scroll Animations</h1>
+        <p>Scroll down to see GSAP animations triggered by scroll position</p> -->
+       
+       
+       <div class="flex-container">
+        <div class="chat-column">
+        
+
+                    <div class="svg-container">
+<svg id="svg3" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with light fill for better text visibility -->
+<path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Centered text with animation -->
+<text x="65%" y="30%" 
+      font-family="Arial, sans-serif" 
+      font-size="40" 
+      fill="#1E1E1E" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      opacity="0">
+    <tspan x="65%" dy="0">Scroll down</tspan>
+    <tspan x="65%" dy="1.2em">to see what I've been</tspan>
+    <tspan x="65%" dy="1.2em">working on!
+    </tspan>
+</text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+        </div>
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-3.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+       
+       
+
+    </section>
+
+
+
+
+
+
+   <section id="section4">
+        <!-- <h1>Welcome to Scroll Animations</h1>
+        <p>Scroll down to see GSAP animations triggered by scroll position</p> -->
+       
+       
+
+        <!-- <div class="blossom-wrapper">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+       <div class="flex-container">
+        <div class="chat-column">
+        
+
+                    <div class="svg-container">
+<svg id="svg3" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with light fill for better text visibility -->
+<path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Centered text with animation -->
+<text x="65%" y="30%" 
+      font-family="Arial, sans-serif" 
+      font-size="40" 
+      fill="#1E1E1E" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      opacity="0">
+    <tspan x="65%" dy="0">Scroll down</tspan>
+    <tspan x="65%" dy="1.2em">to see what I've been</tspan>
+    <tspan x="65%" dy="1.2em">working on!
+    </tspan>
+</text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+        </div>
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-3.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+       
+       
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="javaScript/Blossom_Transition_responsive.js"></script>
+  
+</body>
+
+  <!-- Load GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+ // Create bouncing animation
+        gsap.to(".bouncing-arrow", {
+            y: -15, // Move up
+            duration: 1,
+            opacity: 0.6, // Slightly more opaque at peak
+            yoyo: true, // Makes the animation reverse
+            repeat: -1, // Infinite repeat
+            ease: "sine.inOut" // Bouncy easing
+        });
+
+        // Optional: Add hover effect via GSAP instead of CSS
+        document.querySelector(".bouncing-arrow").addEventListener("mouseenter", () => {
+            gsap.to(".bouncing-arrow", { opacity: 1, duration: 0.3 });
+        });
+        document.querySelector(".bouncing-arrow").addEventListener("mouseleave", () => {
+            gsap.to(".bouncing-arrow", { opacity: 0.4, duration: 0.3 });
+        });
+
+  
+  // Animation for first section
+  const path1 = document.querySelector("#svg1 path");
+  gsap.set(path1, {
+    strokeDasharray: path1.getTotalLength(),
+    strokeDashoffset: path1.getTotalLength()
+  });
+  
+  gsap.to(path1, {
+    strokeDashoffset: 0,
+    duration: 2,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: "#svg1",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Animation for second section - using timeline for sequenced animations
+  const path2 = document.querySelector("#svg2 path");
+  const text2 = document.querySelector("#svg2 text");
+  
+  // Set initial states
+  gsap.set(path2, {
+    strokeDasharray: path2.getTotalLength(),
+    strokeDashoffset: path2.getTotalLength()
+  });
+  gsap.set(text2, { opacity: 0 }); // Ensure text starts invisible
+  
+  // Create timeline for section 2
+  const section2Timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#section2",
+      start: "top 70%",
+      end: "bottom 30%",
+      toggleActions: "play none none none"
+    }
+  });
+  
+  // Add animations to timeline
+  section2Timeline
+    .to(path2, {
+      strokeDashoffset: 0,
+      duration: 1.5,
+      ease: "power2.inOut"
+    })
+    .to(text2, {
+      opacity: 1,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3"); // Slight overlap with path animation
+
+
+
+  // Animation for second section - using timeline for sequenced animations
+  const path3 = document.querySelector("#svg3 path");
+  const text3 = document.querySelector("#svg3 text");
+  
+  // Set initial states
+  gsap.set(path3, {
+    strokeDasharray: path3.getTotalLength(),
+    strokeDashoffset: path3.getTotalLength()
+  });
+  gsap.set(text3, { opacity: 0 }); // Ensure text starts invisible
+  
+  // Create timeline for section 2
+  const section3Timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#section3",
+      start: "top 70%",
+      end: "bottom 30%",
+      toggleActions: "play none none none"
+    }
+  });
+  
+  // Add animations to timeline
+  section3Timeline
+    .to(path3, {
+      strokeDashoffset: 0,
+      duration: 1.5,
+      ease: "power2.inOut"
+    })
+    .to(text3, {
+      opacity: 1,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3"); // Slight overlap with path animation
+
+
+     
+
+</script>
+  
+
+  </html>

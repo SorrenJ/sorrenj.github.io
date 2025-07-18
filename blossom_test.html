@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Blossom Animation</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff8f0;
+            min-height: 300vh; /* Increased scroll height */
+        }
+        
+        .blossom-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .blossom-anime {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+            transform-origin: center center;
+        }
+        
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            z-index: 100;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 10;
+            margin-top: 100vh;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="blossom-wrapper">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+        <img class="blossom-anime" src="assets/logo.svg" alt="blossom">
+    </div>
+    
+    <div class="instructions">
+        Scroll down to see the blossom animation
+    </div>
+    
+    <div class="content">
+        <h1>Scroll down to see the animation</h1>
+        <p>The blossoms will fly in twirling patterns as you scroll.</p>
+        <div style="height: 2000px;"></div>
+        <p>You've reached the bottom!</p>
+    </div>
+
+    <!-- Load GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Define flight paths with more dramatic curves and twirls
+        const blossomPaths = [
+            // Blossom 1 - Large swooping arc with spins
+            { 
+                x: [-100, 300, 100, 500, 200, 800],
+                y: [100, -200, 150, -100, 200, -300],
+                rotation: [0, 360, 720, 1080, 1440, 1800],
+                scale: [0.8, 1.2, 0.7, 1.3, 0.9, 1.1],
+                opacity: [0.8, 1, 0.7, 0.9, 0.6, 0.8]
+            },
+            // Blossom 2 - Zigzag with fast spins
+            { 
+                x: [1200, 800, 1000, 600, 900, 500],
+                y: [100, -150, 200, -100, 250, -200],
+                rotation: [0, 540, 180, 720, 360, 900],
+                scale: [0.7, 1.3, 0.6, 1.4, 0.8, 1.2],
+                opacity: [0.7, 0.9, 0.6, 0.8, 0.5, 0.7]
+            },
+            // Blossom 3 - Loop-the-loop pattern
+            { 
+                x: [600, 900, 700, 1000, 800, 1100],
+                y: [200, -300, 400, -200, 300, -400],
+                rotation: [0, 180, 360, 540, 720, 900],
+                scale: [0.6, 1.4, 0.5, 1.5, 0.7, 1.3],
+                opacity: [0.6, 0.8, 0.5, 0.7, 0.4, 0.6]
+            },
+            // Blossom 4 - Spiral descent
+            { 
+                x: [1400, 1100, 1300, 1000, 1200, 900],
+                y: [300, -400, 500, -300, 400, -500],
+                rotation: [0, 720, 360, 1080, 540, 1440],
+                scale: [0.5, 1.5, 0.4, 1.6, 0.6, 1.4],
+                opacity: [0.5, 0.7, 0.4, 0.6, 0.3, 0.5]
+            }
+        ];
+
+        // Get all blossom elements
+        const blossoms = gsap.utils.toArray(".blossom-anime");
+
+        // Set initial positions randomly spread out
+        blossoms.forEach((blossom, i) => {
+            gsap.set(blossom, {
+                x: gsap.utils.random(0, window.innerWidth),
+                y: gsap.utils.random(0, window.innerHeight/2),
+                rotation: gsap.utils.random(0, 360),
+                scale: gsap.utils.random(0.5, 1),
+                opacity: gsap.utils.random(0.3, 0.8)
+            });
+        });
+
+        // Create animation for each blossom
+        blossoms.forEach((blossom, i) => {
+            const path = blossomPaths[i % blossomPaths.length]; // Cycle through paths if more blossoms than paths
+            
+            // ScrollTrigger animation with more dynamic easing
+            gsap.to(blossom, {
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    markers: false
+                },
+                x: path.x,
+                y: path.y,
+                rotation: path.rotation,
+                scale: path.scale,
+                opacity: path.opacity,
+                ease: "sine.inOut",
+                duration: 5
+            });
+            
+            // Add subtle wobble for more organic movement
+            gsap.to(blossom, {
+                rotation: "+=30",
+                scale: "+=0.1",
+                yoyo: true,
+                repeat: -1,
+                duration: 1,
+                ease: "sine.inOut"
+            });
+        });
+    </script>
+</body>
+</html>

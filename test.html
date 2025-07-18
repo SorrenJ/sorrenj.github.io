@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Scroll Animations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .svg-container {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+        }
+        
+        #section1 { background-color: #f0f8ff; }
+        #section2 { background-color: #fff0f5; }
+        #section3 { background-color: #f0fff0; }
+        #section4 { background-color: #fff8f0; }
+    </style>
+</head>
+<body>
+    <section id="section1">
+        <h1>Welcome to Scroll Animations</h1>
+        <p>Scroll down to see GSAP animations triggered by scroll position</p>
+        <div class="svg-container">
+<svg id="svg1" width="400" height="500" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with light fill for better text visibility -->
+    <path d="M34.75 418.125C34.75 432.911 40.1408 447.091 49.7364 457.546C59.332 468.001 72.3464 473.875 85.9167 473.875H392.917L495.25 585.375V139.375C495.25 124.589 489.859 110.409 480.264 99.9538C470.668 89.4986 457.654 83.625 444.083 83.625H85.9167C72.3464 83.625 59.332 89.4986 49.7364 99.9538C40.1408 110.409 34.75 124.589 34.75 139.375V418.125Z" 
+          fill="#F8F8F8" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Centered text with animation -->
+    <text x="45%" y="45%" 
+          font-family="Arial, sans-serif" 
+          font-size="48" 
+          fill="#1E1E1E" 
+          text-anchor="middle" 
+          dominant-baseline="middle"
+          opacity="0">
+        <animate attributeName="opacity" 
+                 values="0;1" 
+                 dur="1s" 
+                 fill="freeze" 
+                 begin="0.5s"/>
+        Hello World!
+    </text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+    </section>
+    
+    <section id="section2">
+        <h1>Second Section</h1>
+        <p>This animation will play when you scroll to this section</p>
+        <div class="svg-container">
+            <svg id="svg2" viewBox="0 0 572 669">
+                 <path d="M34.75 418.125C34.75 432.911 40.1408 447.091 49.7364 457.546C59.332 468.001 72.3464 473.875 85.9167 473.875H392.917L495.25 585.375V139.375C495.25 124.589 489.859 110.409 480.264 99.9538C470.668 89.4986 457.654 83.625 444.083 83.625H85.9167C72.3464 83.625 59.332 89.4986 49.7364 99.9538C40.1408 110.409 34.75 124.589 34.75 139.375V418.125Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+    
+    <section id="section3">
+        <h1>Third Section</h1>
+        <p>This animation will play as you scroll through this section</p>
+        <div class="svg-container">
+            <svg id="svg3" viewBox="0 0 100 100">
+                <polygon points="50,10 90,90 10,90" fill="none" stroke="#2ecc71" stroke-width="4"/>
+            </svg>
+        </div>
+    </section>
+    
+    <section id="section4">
+        <h1>Final Section</h1>
+        <p>All animations complete! Scroll back up to see them again.</p>
+        <div class="svg-container">
+            <svg id="svg4" viewBox="0 0 100 100">
+                <line x1="10" y1="10" x2="90" y2="90" stroke="#9b59b6" stroke-width="4"/>
+                <line x1="10" y1="90" x2="90" y2="10" stroke="#9b59b6" stroke-width="4"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Load GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+      // Get the path element
+const path = document.querySelector("#svg1 path");
+
+// Set initial state (invisible)
+gsap.set(path, {
+  strokeDasharray: path.getTotalLength(),
+  strokeDashoffset: path.getTotalLength()
+});
+
+// Create the draw animation
+gsap.to(path, {
+  strokeDashoffset: 0,
+  duration: 2,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: ".svg-container",
+    start: "top 80%", // When top of container hits 80% of viewport
+    end: "bottom 20%",
+    toggleActions: "play none none none"
+  }
+})
+        // Animation for section 2 - scales up when scrolled into view
+        gsap.from("#svg2 rect", {
+            scrollTrigger: {
+                trigger: "#section2",
+                start: "top center",
+                end: "bottom center",
+                toggleActions: "play none none none"
+            },
+            scale: 0,
+            rotation: 180,
+            duration: 1.5,
+            ease: "back.out(1.7)"
+        });
+        
+        // Animation for section 3 - scrubs with scroll position
+        gsap.to("#svg3 polygon", {
+            scrollTrigger: {
+                trigger: "#section3",
+                start: "top center",
+                end: "bottom center",
+                scrub: true
+            },
+            rotation: 360,
+            duration: 1,
+            ease: "none"
+        });
+        
+        // Animation for section 4 - draws the X when scrolled into view
+        const lines = gsap.utils.toArray("#svg4 line");
+        lines.forEach(line => {
+            gsap.from(line, {
+                scrollTrigger: {
+                    trigger: "#section4",
+                    start: "top center",
+                    end: "bottom center",
+                    toggleActions: "play none none none"
+                },
+                strokeDasharray: 113, // length of the diagonal line
+                strokeDashoffset: 113,
+                duration: 1,
+                ease: "power2.inOut"
+            });
+        });
+    </script>
+</body>
+</html>
