@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Column Flexbox with SVGs</title>
+    <style>
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            perspective: 1200px;
+            overflow-x: hidden;
+        }
+        
+#svg1 {
+    position: relative;
+    z-index: 10;
+    background-color: transparent; /* Ensure no background conflicts */
+    margin: 20px; /* Add some spacing */
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically in column direction */
+    align-items: center; /* Centers horizontally in column direction */
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Optional: set a max-width for better control */
+    margin: 0 auto; /* Centers the container itself horizontally */
+}
+        
+        .column {
+            flex: 1; /* Makes columns equal width */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            /* background-color: #f9f9f9; */
+        }
+
+
+
+         .face-column {
+            flex: 1; /* Makes columns equal width */
+        /* Keep your existing styles */
+    text-align: center; /* Add this to center content */
+    margin-left: 0; /* Remove left margin if you want true center */
+        }
+
+
+        .chat-column {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+padding-right: 405px;
+        }
+
+
+
+
+           .column img {
+            max-width: 100%; /* Makes image responsive */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 5px;
+        }
+         
+
+
+        /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+          .container {
+            display: flex;
+            justify-content: space-between;
+            /* padding: 40px 20px;
+            gap: 40px;
+            max-width: 1200px; */
+            margin: 0 auto;
+            transform-style: preserve-3d;
+        }
+        
+    .column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex: 1;
+            transform-style: preserve-3d;
+        }
+
+   /* First row SVGs (angled downward) */
+        .left-column .svg-container:first-child {
+            transform-origin: right bottom;
+            transform: rotateY(-15deg) rotateX(-10deg) rotateZ(20deg) translateY(20px);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .right-column .svg-container:first-child {
+            transform-origin: left bottom;
+            transform: rotateY(15deg) rotateX(-10deg) rotateZ(-20deg) translateY(20px);
+             transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        /* Second row SVGs (angled upward) */
+        .left-column .svg-container:last-child {
+            transform-origin: right top;
+            transform: rotateY(-15deg) rotateX(10deg) rotateZ(-20deg) translateY(-20px);
+             transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .right-column .svg-container:last-child {
+            transform-origin: left top;
+            transform: rotateY(15deg) rotateX(10deg) rotateZ(20deg) translateY(-20px);
+             transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .middle-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .svg-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+             /* Hover effects for first row (downward angled) */
+        .left-column .svg-container:first-child:hover {
+            transform: rotateY(-5deg) rotateX(-5deg) translateZ(30px) scale(1.03) translateY(10px);
+        }
+        
+        .right-column .svg-container:first-child:hover {
+            transform: rotateY(5deg) rotateX(-5deg) translateZ(30px) scale(1.03) translateY(10px);
+        }
+        
+        /* Hover effects for second row (upward angled) */
+        .left-column .svg-container:last-child:hover {
+            transform: rotateY(-5deg) rotateX(5deg) translateZ(30px) scale(1.03) translateY(-10px);
+        }
+        
+        .right-column .svg-container:last-child:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateZ(30px) scale(1.03) translateY(-10px);
+        }
+        
+        
+        .svg-container svg {
+            width: 25em;
+            height: 25em;
+               /* filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); */
+             /* transition: stroke-dashoffset 0.8s ease-out; */
+              
+        }
+
+
+        
+        /* Initially hide SVG paths for animation */
+        svg path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            opacity: 0;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        /* Spacer to enable scrolling */
+        .spacer {
+            height: 100vh;
+        }
+
+       /* Depth indicators */
+        .svg-container::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            /* background: linear-gradient(90deg, 
+                          rgba(100,100,100,0.1), 
+                          rgba(100,100,100,0.3), 
+                          rgba(100,100,100,0.1)); */
+            /* transform: translateZ(-30px); */
+            opacity: 0.7;
+            transition: all 0.6s ease;
+        }
+        
+        .svg-container:hover::before {
+            /* transform: translateZ(-10px);
+            opacity: 0.9; */
+        }
+
+
+  @media (max-width: 1000px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            transform: none;
+        }
+
+   
+    .column,
+    .middle-column {
+        transform: none;
+    }
+
+    /* Reorder: put middle-column on top */
+    .middle-column {
+        order: -1;
+    }
+        .svg-container {
+            transform: none !important;
+        }
+
+        .svg-container:hover {
+            transform: none !important;
+        }
+
+        .left-column .svg-container:first-child,
+        .right-column .svg-container:first-child,
+        .left-column .svg-container:last-child,
+        .right-column .svg-container:last-child {
+            transform: none;
+        }
+
+        .left-column .svg-container:first-child:hover,
+        .right-column .svg-container:first-child:hover,
+        .left-column .svg-container:last-child:hover,
+        .right-column .svg-container:last-child:hover {
+            transform: none;
+        }
+    }
+
+    </style>
+</head>
+<body>
+        <div class="spacer"></div> <!-- Spacer to enable scrolling -->
+    <div class="container" id="animated-section">
+        <!-- Left Column -->
+        <div class="column left-column">
+            <div class="svg-container" data-text="Hello, I'm Sorren!">
+              <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#ff6b6b"/>
+                </svg> 
+             -->
+            
+<svg class="drawable" width="546" height="285" viewBox="0 0 546 285" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.4992 34.6245C29.6509 17.4927 45.5215 2.12504 62.9131 4.20623L525.828 59.602C533.534 60.5242 537.693 68.4062 534.287 75.6308L483.465 183.401C480.631 189.411 474.841 193.727 468.309 194.699L69.9417 253.932C61.8206 255.139 54.7229 249.881 53.8759 242.03L31.4992 34.6245Z" stroke="black" stroke-width="2"/>
+<mask id="path-2-outside-1_64_132" maskUnits="userSpaceOnUse" x="223.909" y="77.9209" width="191.476" height="85.0887" fill="black">
+<rect fill="white" x="223.909" y="77.9209" width="191.476" height="85.0887"/>
+<path d="M234.976 111.948L234.81 82.8579L254.071 82.7479L254.1 87.8189L240.989 87.8937L241.029 94.8254L252.861  141.738L399.237 137.193L412.376 137.118ZM402.19 131.949L408.241 131.914L408.357 152.255C408.36 152.814 408.448 153.249 408.62 153.56C408.792 153.862 409.03 154.074 409.334 154.195C409.647 154.317 410.007 154.376 410.414 154.374C410.698 154.372 410.982 154.347 411.266 154.298C411.55 154.24 411.767 154.196 411.919 154.166L412.896 158.664C412.594 158.76 412.168 158.872 411.62 158.998C411.071 159.133 410.404 159.218 409.618 159.251C408.16 159.316 406.881 159.129 405.78 158.69C404.688 158.251 403.837 157.565 403.225 156.631C402.614 155.697 402.309 154.515 402.31 153.085L402.19 131.949Z"/>
+</mask>
+<path d="M234.976 111.948L232.976 111.96L232.987 113.96L234.987 113.948L234.976 111.948ZM234.81 82.8579L234.798 176.86L150.801 191.525C150.846 192.363 150.412 193.268 149.479 194.045C148.548 194.82 147.189 195.4 145.623 195.536L132.891 196.645C131.325 196.781 129.915 196.443 128.91 195.836C127.901 195.228 127.374 194.407 127.329 193.569L126.537 178.95Z" stroke="black" stroke-width="2"/>
+</svg>
+
+            
+            
+            
+            
+            
+            </div>
+            <div class="svg-container" data-text="Welcome to my website!">
+                <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="16" height="16" fill="#4ecdc4"/>
+                </svg> -->
+
+<svg class="drawable" width="556" height="285" viewBox="0 0 556 285" fill="none" xmlns="http://www.w3.org/2000/svg" >
+<path d="M42.503 34.4387C40.7257 17.9659 55.9858 3.18939 72.7084 5.19054L535.624 60.5862C542.687 61.4316 546.5 68.6566 543.377 75.2791L492.556 183.049C489.879 188.725 484.41 192.802 478.242 193.719L79.8746 252.952C72.2949 254.079 65.6695 249.172 64.879 241.844L42.503 34.4387Z" stroke="black" stroke-width="2"/>
+<g clip-path="url(#clip0_64_140)">
+<path d="M211.953 140.304L209.099 150.839L168.707 153.157C167.352 153.235 166.083 153.848 165.18 154.861C164.276 155.874 163.813 157.205 163.89 158.56C163.968 159.916 164.581 161.184 165.594 162.088C166.608 162.991 167.938 163.455 169.293 163.377L206.282 161.254L204.563 167.599L169.651 169.603C168.296 169.681 167.027 170.294 166.123 171.307C165.22 172.32 164.756 173.651 164.834 175.006C164.912 176.361 165.525 177.63 166.538 178.533C167.551 179.436 168.882 179.9 170.237 179.822L201.738 178.015C200.864 181.055 199.081 183.758 196.622 185.754C194.101 187.8 191 189.001 187.759 189.187L151.272 191.281L148.555 143.942L211.953 140.304ZM128.448 62.5994L145.435 61.6245L146.223 61.5861C154.364 61.2468 162.477 62.8045 169.919 66.1413C177.6 69.5856 184.341 74.8245 189.576 81.417C191.214 83.483 192.996 86.6727 194.855 90.5407C196.706 94.394 198.605 98.8597 200.488 103.442C204.235 112.563 207.937 122.199 211.008 128.151L211.008 128.152C211.311 128.759 211.523 129.405 211.641 130.07L142.982 134.01L83.4288 95.7117C89.9473 77.2755 107.791 63.7849 128.448 62.5994ZM165.097 100.446C163.372 99.8444 161.508 99.7684 159.74 100.227C157.971 100.685 156.378 101.657 155.163 103.021C153.947 104.384 153.164 106.078 152.91 107.887C152.657 109.696 152.946 111.54 153.741 113.185C154.535 114.829 155.8 116.202 157.374 117.128C158.949 118.055 160.763 118.493 162.587 118.388L162.529 117.39L162.589 118.388C165.032 118.243 167.317 117.135 168.946 115.308C170.574 113.481 171.414 111.084 171.279 108.64L171.279 108.638C171.174 106.814 170.531 105.063 169.43 103.605C168.33 102.147 166.822 101.047 165.097 100.446ZM99.3557 149.154L99.0072 148.875C88.1508 140.196 81.0397 127.007 80.7576 111.926C80.7372 110.061 80.8317 108.196 81.0379 106.344L138.256 143.142L141.052 191.868L101.936 194.113L99.3557 149.154Z" stroke="black" stroke-width="2"/>
+</g>
+<mask id="path-4-outside-1_64_140" maskUnits="userSpaceOnUse" x="226.226" y="74.411" width="242.666" height="99.6563" fill="black">
+<rect fill="white" x="226.226" y="74.411" width="242.666" height="99.6563"/>
+<path d="M229.018 111.426L229.257 76.5181L252.37 76.6766L252.329 82.7616L236.596 82.6538L236.539 90.9718L250. 171.509 413.154 172.2L413.924 170.354ZM410.89 167.845L412.577 166.77C412.118 166.05 411.826 165.038 411.845 163.603L409.845 163.576L407.845 163.549C407.818 165.546 408.222 167.379 409.203 168.919L410.89 167.845ZM409.845 163.576L411.845 163.59L412.019 138.227L410.019 138.213L408.019 138.199L407.845 163.562L409.845 163.576Z" fill="black" mask="url(#path-4-outside-1_64_140)"/>
+<defs>
+<clipPath id="clip0_64_140">
+<rect x="77" y="64.5503" width="131.779" height="131.779" transform="rotate(-3.28455 77 64.5503)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+
+
+
+            </div>
+        </div>
+        
+        <!-- Middle Column -->
+        <div class="middle-column">
+            <h2>Main Content Area</h2>
+       <div class="flex-container">
+        <div class="chat-column">
+        
+
+                  
+<svg id="svg1" width="500" height="400" viewBox="0 0 572 669" xmlns="http://www.w3.org/2000/svg">
+    <!-- Speech bubble with fill -->
+    <path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" 
+          fill="#f8f8f8" 
+          stroke="#1E1E1E" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Text -->
+    <text id="svg-text" 
+          x="50%" 
+          y="50%" 
+          font-family="Arial, sans-serif" 
+          font-size="40" 
+          fill="#1E1E1E" 
+          text-anchor="middle" 
+          dominant-baseline="middle"
+          opacity="1">
+        Hover over items to see messages
+    </text>
+</svg>
+        
+
+
+
+
+
+
+</div>
+        </div>
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+        </div>
+    </div>
+        
+        
+        <!-- Right Column -->
+        <div class="column right-column">
+            <div class="svg-container" data-text="How can I help you today?">
+                <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12,2 22,12 12,22 2,12" fill="#ffbe76"/>
+                </svg> -->
+
+                <svg class="drawable" width="561" height="500" viewBox="0 0 561 500" fill="none" xmlns="http://www.w3.org/2000/svg" >
+<path d="M18.4431 198.298C10.6213 199.638 6.2449 209.011 10.2622 215.821L71.3008 319.269C74.098 324.009 79.0369 326.833 84.4973 326.811L522.092 325.079C529.598 325.049 536.07 318.62 536.558 310.707L547.249 137.55C548.224 121.755 535.546 109.74 520.602 112.3L18.4431 198.298Z" stroke="black" stroke-width="2"/>
+<path d="M434.105 164C435.638 164 437.113 164.626 438.205 165.748C439.298 166.871 439.916 168.4 439.916 170V185H464.754C466.855 184.999 468.936 185.424 470.879 186.251C472.821 187.078 474.589 188.29 476.078 189.821C477.568 191.352 478.75 193.172 479.558 195.176C480.365 197.18 480.781 199.329 480.78 201.5V261C480.777 264.455 479.439 267.763 477.069 270.198C474.701 272.632 471.496 273.996 468.158 274H400.054C396.716 273.997 393.51 272.633 391.142 270.198C388.772 267.763 387.435 264.455 387.432 260.999V201.5L387.437 201.093C387.485 199.061 387.897 197.055 388.654 195.176C389.462 193.172 390.644 191.352 392.134 189.821C393.623 188.29 395.39 187.078 397.333 186.251C399.154 185.476 401.098 185.054 403.064 185.005L403.458 185H428.295V170C428.295 168.4 428.914 166.871 430.007 165.748C431.099 164.626 432.574 164 434.105 164ZM405.863 255H421.484V246H405.863V255ZM426.295 255H441.916V246H426.295V255ZM446.727 255H462.349V246H446.727V255ZM495.402 213C496.162 212.999 496.914 213.152 497.617 213.451C498.32 213.75 498.962 214.189 499.503 214.745C500.044 215.301 500.474 215.963 500.768 216.693C501.061 217.424 501.213 218.207 501.212 218.999V247.001C501.213 247.793 501.061 248.576 500.768 249.307C500.474 250.037 500.044 250.699 499.503 251.255C498.962 251.811 498.32 252.25 497.617 252.549C496.914 252.848 496.162 253.001 495.402 253H489.591V213H495.402ZM417.323 209.996C415.582 209.255 413.663 209.06 411.812 209.438C409.962 209.817 408.266 210.75 406.938 212.115C405.609 213.48 404.708 215.217 404.343 217.103C403.978 218.989 404.165 220.944 404.882 222.723C405.599 224.501 406.813 226.025 408.378 227.1C409.845 228.107 411.557 228.676 413.32 228.743L413.674 228.75C414.927 228.75 416.168 228.496 417.324 228.004C418.48 227.512 419.529 226.791 420.411 225.885C421.293 224.978 421.991 223.903 422.467 222.723C422.943 221.542 423.188 220.277 423.188 219L423.181 218.64C423.116 216.843 422.567 215.096 421.591 213.594C420.549 211.991 419.065 210.737 417.323 209.996ZM458.188 209.996C456.446 209.255 454.528 209.06 452.677 209.438C450.826 209.817 449.129 210.75 447.801 212.115C446.473 213.48 445.571 215.217 445.206 217.103C444.841 218.989 445.029 220.944 445.745 222.723C446.462 224.501 447.678 226.025 449.242 227.1C450.709 228.107 452.421 228.676 454.185 228.743L454.537 228.75C455.79 228.75 457.031 228.496 458.188 228.004C459.344 227.512 460.392 226.791 461.274 225.885C462.156 224.978 462.854 223.903 463.33 222.723C463.806 221.542 464.051 220.277 464.051 219L464.044 218.64C463.979 216.843 463.431 215.096 462.454 213.594C461.412 211.991 459.929 210.737 458.188 209.996ZM367 218.999C366.999 218.207 367.151 217.424 367.444 216.693C367.738 215.963 368.168 215.301 368.709 214.745C369.25 214.189 369.891 213.75 370.594 213.451C371.297 213.152 372.05 212.999 372.81 213H378.621V253H372.81C372.05 253.001 371.297 252.848 370.594 252.549C369.891 252.25 369.25 251.811 368.709 251.255C368.168 250.699 367.738 250.037 367.444 249.307C367.151 248.576 366.999 247.793 367 247.001V218.999Z" stroke="black" stroke-width="2"/>
+<mask id="path-3-outside-1_64_136" maskUnits="userSpaceOnUse" x="104.22" y="214.24" width="219.561" height="50.3352" fill="black">
+<rect fill="white" x="104.22" y="214.24" width="219.561" height="50.3352"/>
+<path d="M126.987 235.776C126.792 234.409 126.161 233.367 125.095 232.65C124.029 231.934 122.611 231.614 120.84  215.855L309.964 217.853L311.962 217.767ZM319.336 217.45L317.337 217.536L318.838 252.412L320.837 252.326L322.835 252.24L321.334 217.364L319.336 217.45ZM320.837 252.326L320.751 250.328L313.377 250.646L313.463 252.644L313.549 254.642L320.923 254.324L320.837 252.326ZM313.463 252.644L315.461 252.558L313.96 217.681L311.962 217.767L309.964 217.853L311.465 252.73L313.463 252.644ZM311.962 217.767L312.048 219.765L319.422 219.448L319.336 217.45L319.25 215.451L311.876 215.769L311.962 217.767Z" fill="black" mask="url(#path-3-outside-1_64_136)"/>
+</svg>
+
+            </div>
+            <div class="svg-container" data-text="How can I help you today?">
+                <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2 L2 22 L22 22 Z" fill="#9c88ff"/>
+                </svg> -->
+
+                <svg class="drawable" width="607" height="450" viewBox="0 0 607 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.445 198.298C10.6232 199.638 6.24685 209.011 10.2642 215.821L71.3027 319.269C74.0999 324.009 79.0389 326.833 84.4992 326.811L522.094 325.079C529.6 325.049 536.072 318.62 536.56 310.707L547.251 137.55C548.226 121.755 535.547 109.74 520.604 112.3L18.445 198.298Z" stroke="black" stroke-width="2" />
+<mask id="path-2-outside-1_64_144" maskUnits="userSpaceOnUse" x="86.3258" y="226.271" width="252.655" height="46.1261" fill="black">
+<rect fill="white" x="86.3258" y="226.271" width="252.655" height="46.1261"/>
+<path d="M97.8474 234.306L106.719 260.686L107.042 260.681L115.061 234.023L123.242 233.889L111.782 268.991L102.259.748 315.77 261.168 314.733 262.39C313.708 263.6 312.371 264.554 310.723 265.251C309.086 265.937 307.188 266.298 305.03 266.333ZM335.27 239.141L335.359 244.595L319.594 244.853L319.505 239.399L335.27 239.141ZM322.981 233.069L330.241 232.95L330.642 257.356C330.653 258.026 330.763 258.547 330.974 258.918C331.184 259.279 331.473 259.53 331.839 259.671C332.216 259.813 332.649 259.88 333.138 259.872C333.479 259.866 333.819 259.832 334.159 259.77C334.499 259.696 334.759 259.641 334.94 259.604L336.171 264.987C335.809 265.107 335.3 265.246 334.643 265.405C333.987 265.575 333.188 265.684 332.245 265.734C330.496 265.831 328.959 265.623 327.632 265.11C326.316 264.598 325.286 263.785 324.54 262.672C323.795 261.559 323.414 260.145 323.397 258.429L322.981 233.069Z"/>
+</mask>
+<path d="M97.8474 234.306L99.7431 233.668L99.2769 232.282L97.8146 232.306L97.8474 234.306ZM106.719 260.686L104.258.462L323.397 258.429Z" fill="black" mask="url(#path-2-outside-1_64_144)"/>
+<path d="M391.322 188.667C403.08 188.667 412.621 198.1 412.621 209.667V232.64L414.451 229.922C426.478 212.057 444.826 210.759 450.589 210.674C453.754 224.107 465.976 234.134 480.521 234.134C482.757 234.134 484.894 233.822 486.953 233.359V279.333C486.953 280.794 485.75 282 484.236 282H476.804C475.29 282 474.087 280.794 474.087 279.333V244.35L472.492 " stroke="black" stroke-width="2"/>
+</svg>
+
+            </div>
+        </div>
+    </div>
+
+      <div class="spacer"></div> <!-- Spacer to enable scrolling -->
+
+      
+    <!-- Load GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all SVGs with the 'drawable' class
+            const svgs = document.querySelectorAll('.drawable');
+            
+            // Animate each SVG when scrolled into view
+            svgs.forEach((svg, index) => {
+                // Get all path elements in the SVG
+                const paths = svg.querySelectorAll('path');
+                
+                // Set initial state for all paths
+                gsap.set(paths, {
+                    strokeDasharray: 1000,
+                    strokeDashoffset: 1000,
+                    opacity: 0
+                });
+                
+                // Create a timeline for this SVG
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: svg,
+                        start: "top 80%",
+                        toggleActions: "play none none none",
+                        markers: false // Set to true for debugging
+                    }
+                });
+                
+                // Animate each path in sequence
+                paths.forEach((path, i) => {
+                    tl.to(path, {
+                        strokeDashoffset: 0,
+                        opacity: 1,
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    }, i * 0.2); // Stagger animations
+                });
+            });
+            
+            // Optional: Animate the entire section appearance
+            gsap.from("#animated-section", {
+                scrollTrigger: {
+                    trigger: "#animated-section",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1
+            });
+        });
+
+
+
+
+    </script>
+
+    <script src="javaScript/hover_button.js"></script>
+</body>
+</html>
