@@ -8,12 +8,112 @@
     <title>Document</title>
 </head>
 <body>
-    
 
+       <section id="section1">
+   <div class="flex-container">
+        <div class="chat-column">
+<object id="svg1" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part1.svg" width="500" height="400"></object>
+       
+</div>
+       
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+    <!-- down arrow -->
+<a href="#section2" class="arrow-link" style="display: inline-block;">
+<svg class="bouncing-arrow" 
+     width="80" height="80" 
+     viewBox="0 0 164 164" 
+     preserveAspectRatio="xMidYMid meet"
+     style="display: block; overflow: visible;">
+    <path fill="#F8A6E6" 
+          stroke="#F8A6E6"
+          stroke-width="1"
+          vector-effect="non-scaling-stroke"
+          d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+</svg>
+</a>
+
+</section>
+
+
+
+       <section id="section2">
+   <div class="flex-container">
+        <div class="chat-column">
+<object id="svg2" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part2.svg" width="500" height="400"></object>
+       
+</div>
+       
+        <div class="face-column">
+   
+             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+        </div>
+    </div>
+       
+       
+    <!-- down arrow -->
+<a href="#section3" class="arrow-link" style="display: inline-block;">
+<svg class="bouncing-arrow" 
+     width="80" height="80" 
+     viewBox="0 0 164 164" 
+     preserveAspectRatio="xMidYMid meet"
+     style="display: block; overflow: visible;">
+    <path fill="#F8A6E6" 
+          stroke="#F8A6E6"
+          stroke-width="1"
+          vector-effect="non-scaling-stroke"
+          d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+</svg>
+</a>
+
+</section>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
      <script src="javaScript/comic/comic_speech_bubble.js"></script>
      <script src="javaScript/comic/comic_down_arrow.js"></script>
+
       <script src="javaScript/comic/comic_proj_section.js"></script>
       <script src="javaScript/comic/comic_proj_tooltip.js"></script>
-      
+
+<!-- <script>
+
+  </script>
+       -->
 </body>
+
+<script>
+// document.addEventListener("DOMContentLoaded", function() {
+//   const arrow = document.querySelector(".bouncing-arrow");
+//   console.log("Arrow element:", arrow); // Check browser console
+  
+//   if (!arrow) {
+//     console.error("Arrow element not found!");
+//     return;
+//   }
+
+//   gsap.registerPlugin(ScrollTrigger);
+//   gsap.to(arrow, {
+//     y: -15,
+//     duration: 1,
+//     opacity: 0.6,
+//     yoyo: true,
+//     repeat: -1,
+//     ease: "sine.inOut"
+//   });
+
+//   arrow.addEventListener("mouseenter", () => {
+//     gsap.to(arrow, { opacity: 1, duration: 0.3 });
+//   });
+  
+//   arrow.addEventListener("mouseleave", () => {
+//     gsap.to(arrow, { opacity: 0.4, duration: 0.3 });
+//   });
+// });
+// </script>
 </html>

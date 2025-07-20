@@ -1,19 +1,31 @@
-gsap.registerPlugin(ScrollTrigger);
-
- // Create bouncing animation
-        gsap.to(".bouncing-arrow", {
-            y: -15, // Move up
+document.addEventListener("DOMContentLoaded", function() {
+    const arrow = document.querySelector(".bouncing-arrow");
+    
+    // Debugging checks
+    console.log("SVG Element:", arrow);
+    if (!arrow) {
+        console.error("SVG element not found!");
+        return;
+    }
+    
+    // Visual debug marker
+    arrow.style.border = "2px solid red";
+    console.log("SVG dimensions:", arrow.clientWidth, arrow.clientHeight);
+    
+    // Test basic visibility
+    gsap.set(arrow, { opacity: 1, scale: 1 });
+    
+    // Only proceed if visible
+    if (arrow.clientWidth > 0 && arrow.clientHeight > 0) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(arrow, {
+            y: -15,
             duration: 1,
-            opacity: 0.6, // Slightly more opaque at peak
-            yoyo: true, // Makes the animation reverse
-            repeat: -1, // Infinite repeat
-            ease: "sine.inOut" // Bouncy easing
+            yoyo: true,
+            repeat: -1,
+            ease: "sine.inOut"
         });
-
-        // Optional: Add hover effect via GSAP instead of CSS
-        document.querySelector(".bouncing-arrow").addEventListener("mouseenter", () => {
-            gsap.to(".bouncing-arrow", { opacity: 1, duration: 0.3 });
-        });
-        document.querySelector(".bouncing-arrow").addEventListener("mouseleave", () => {
-            gsap.to(".bouncing-arrow", { opacity: 0.4, duration: 0.3 });
-        });
+    } else {
+        console.warn("SVG has zero dimensions - not animating");
+    }
+});

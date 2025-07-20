@@ -1,16 +1,17 @@
-<svg id="svg2" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg id="svg3" width="500" height="400" viewBox="0 0 572 669" fill="none" xmlns="http://www.w3.org/2000/svg">
     <!-- Speech bubble with light fill for better text visibility -->
 <path d="M634.375 351.25C634.375 363.671 628.01 375.583 616.679 384.366C605.349 393.149 589.982 398.083 573.958 398.083H211.458L90.625 491.75V117.083C90.625 104.662 96.9903 92.7501 108.321 83.9672C119.651 75.1842 135.018 70.25 151.042 70.25H573.958C589.982 70.25 605.349 75.1842 616.679 83.9672C628.01 92.7501 634.375 104.662 634.375 117.083V351.25Z" stroke="#1E1E1E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     <!-- Centered text with animation -->
 <text x="65%" y="30%" 
       font-family="Arial, sans-serif" 
-      font-size="30" 
+      font-size="40" 
       fill="#1E1E1E" 
       text-anchor="middle" 
       dominant-baseline="middle"
       opacity="0">
-    <tspan x="65%" dy="0">I'm a Full-stack developer</tspan>
-    <tspan x="65%" dy="1.2em">with a background in UX design</tspan>
-    <tspan x="65%" dy="1.2em">and human-computer interaction.</tspan>
+    <tspan x="65%" dy="0">Scroll down</tspan>
+    <tspan x="65%" dy="1.2em">to see what I've been</tspan>
+    <tspan x="65%" dy="1.2em">working on!
+    </tspan>
 </text>
 </svg>

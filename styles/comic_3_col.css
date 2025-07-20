@@ -5,64 +5,11 @@
             overflow-x: hidden;
         }
         
-.flex-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    flex-direction: column;
-    justify-content: center; /* Centers vertically in column direction */
-    align-items: center; /* Centers horizontally in column direction */
-    width: 100%; /* Ensure container takes full width */
-    max-width: 1200px; /* Optional: set a max-width for better control */
-    margin: 0 auto; /* Centers the container itself horizontally */
-}
-        
-        .column {
-            flex: 1; /* Makes columns equal width */
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            /* background-color: #f9f9f9; */
-        }
-
-
-
-         .face-column {
-            flex: 1; /* Makes columns equal width */
-        /* Keep your existing styles */
-    text-align: center; /* Add this to center content */
-    margin-left: 0; /* Remove left margin if you want true center */
-        }
-
-
-        .chat-column {
-    width: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* This already centers items horizontally */
-padding-right: 405px;
-        }
-
-
-        .face-column-proj {
-            margin-top:-150px;
-        }
-
-
-           .column img {
-            max-width: 100%; /* Makes image responsive */
-            height: auto; /* Maintains aspect ratio */
-            border-radius: 5px;
-        }
+  
+       
          
 
 
-        /* Optional: Responsive behavior - stack columns on small screens */
-        @media (max-width: 768px) {
-            .flex-container {
-                flex-direction: column;
-            }
-        }
      .container {
             display: flex;
             justify-content: space-between;

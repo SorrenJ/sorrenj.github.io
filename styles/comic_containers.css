@@ -36,6 +36,18 @@
         #section3 { background-color: #f0fff0; }
         #section4 { background-color: #fff8f0; }
 
+.bouncing-arrow {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+.arrow-link path {
+  display: block !important;
+  fill: #F8A6E6 !important;
+  vector-effect: non-scaling-stroke !important;
+}
 
 
 .flex-container {
@@ -65,7 +77,9 @@
         /* Keep your existing styles */
     text-align: center; /* Add this to center content */
     margin-left: 0; /* Remove left margin if you want true center */
-        }
+        margin-top: -180px;   
+
+}
 
 .face-column-proj{
 
@@ -75,7 +89,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* This already centers items horizontally */
-padding-right: 405px;
+/* padding-right: 405px; */
         }
 
 

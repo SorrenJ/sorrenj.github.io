@@ -1,12 +1,22 @@
 // Animation for first section
-  const path1 = document.querySelector("#svg1 path");
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.getElementById('svg1').addEventListener('load', function() {
+  const svgDoc = this.getSVGDocument();
+  const path1 = svgDoc.querySelector('path');
+  
+  // Set initial styles
   gsap.set(path1, {
     strokeDasharray: path1.getTotalLength(),
-    strokeDashoffset: path1.getTotalLength()
+    strokeDashoffset: path1.getTotalLength(),
+    opacity: 0 // Set initial opacity to 0
   });
   
+  // Create the animation
   gsap.to(path1, {
     strokeDashoffset: 0,
+    opacity: 1, // Animate opacity to 1
     duration: 2,
     ease: "power2.inOut",
     scrollTrigger: {
@@ -16,73 +26,89 @@
       toggleActions: "play none none none"
     }
   });
+});
 
-  // Animation for second section - using timeline for sequenced animations
-  const path2 = document.querySelector("#svg2 path");
-  const text2 = document.querySelector("#svg2 text");
-  
-  // Set initial states
+
+
+document.getElementById('svg2').addEventListener('load', function() {
+  const svgDoc = this.getSVGDocument();
+  const path2 = svgDoc.querySelector('path');
+  const textElement2 = svgDoc.querySelector('text');
+
+  // Set initial styles
   gsap.set(path2, {
-    strokeDasharray: path2.getTotalLength(),
-    strokeDashoffset: path2.getTotalLength()
+        strokeDasharray: path2.getTotalLength(),
+    strokeDashoffset: path2.getTotalLength(),
+    opacity: 0 // Start hidden
   });
-  gsap.set(text2, { opacity: 0 }); // Ensure text starts invisible
+
+  gsap.set(textElement2, { opacity: 0 });
   
-  // Create timeline for section 2
-  const section2Timeline = gsap.timeline({
+  // Animate the speech bubble (fade in + optional stroke animation)
+  gsap.to(path2, {
+      strokeDashoffset: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut",
     scrollTrigger: {
-      trigger: "#section2",
+      trigger: "#svg2",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Animate text (delayed slightly after the bubble appears)
+  gsap.to(textElement2, {
+    opacity: 1,
+    duration: 0.8,
+    delay: 0.3, // Short delay after the bubble
+    scrollTrigger: {
+      trigger: "#svg2",
       start: "top 70%",
       end: "bottom 30%",
       toggleActions: "play none none none"
     }
   });
-  
-  // Add animations to timeline
-  section2Timeline
-    .to(path2, {
-      strokeDashoffset: 0,
-      duration: 1.5,
-      ease: "power2.inOut"
-    })
-    .to(text2, {
-      opacity: 1,
-      duration: 0.8,
-      ease: "power2.out"
-    }, "-=0.3"); // Slight overlap with path animation
+});
+document.getElementById('svg3').addEventListener('load', function() {
+  const svgDoc = this.getSVGDocument();
+  const path3 = svgDoc.querySelector('path');
+  const textElement3 = svgDoc.querySelector('text');
 
-
-
-  // Animation for second section - using timeline for sequenced animations
-  const path3 = document.querySelector("#svg3 path");
-  const text3 = document.querySelector("#svg3 text");
-  
-  // Set initial states
+  // Set initial styles
   gsap.set(path3, {
-    strokeDasharray: path3.getTotalLength(),
-    strokeDashoffset: path3.getTotalLength()
+        strokeDasharray: path2.getTotalLength(),
+    strokeDashoffset: path2.getTotalLength(),
+    opacity: 0 // Start hidden
   });
-  gsap.set(text3, { opacity: 0 }); // Ensure text starts invisible
+
+  gsap.set(textElement3, { opacity: 0 });
   
-  // Create timeline for section 2
-  const section3Timeline = gsap.timeline({
+  // Animate the speech bubble (fade in + optional stroke animation)
+  gsap.to(path3, {
+      strokeDashoffset: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut",
     scrollTrigger: {
-      trigger: "#section3",
+      trigger: "#svg2",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Animate text (delayed slightly after the bubble appears)
+  gsap.to(textElement2, {
+    opacity: 1,
+    duration: 0.8,
+    delay: 0.3, // Short delay after the bubble
+    scrollTrigger: {
+      trigger: "#svg2",
       start: "top 70%",
       end: "bottom 30%",
       toggleActions: "play none none none"
     }
   });
-  
-  // Add animations to timeline
-  section3Timeline
-    .to(path3, {
-      strokeDashoffset: 0,
-      duration: 1.5,
-      ease: "power2.inOut"
-    })
-    .to(text3, {
-      opacity: 1,
-      duration: 0.8,
-      ease: "power2.out"
-    }, "-=0.3"); // Slight overlap with path animation
+});
