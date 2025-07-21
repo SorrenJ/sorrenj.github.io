@@ -78,8 +78,8 @@ document.getElementById('svg3').addEventListener('load', function() {
 
   // Set initial styles
   gsap.set(path3, {
-        strokeDasharray: path2.getTotalLength(),
-    strokeDashoffset: path2.getTotalLength(),
+        strokeDasharray: path3.getTotalLength(),
+    strokeDashoffset: path3.getTotalLength(),
     opacity: 0 // Start hidden
   });
 
@@ -92,7 +92,7 @@ document.getElementById('svg3').addEventListener('load', function() {
     duration: 1,
     ease: "power2.inOut",
     scrollTrigger: {
-      trigger: "#svg2",
+      trigger: "#svg3",
       start: "top 80%",
       end: "bottom 20%",
       toggleActions: "play none none none"
@@ -100,12 +100,12 @@ document.getElementById('svg3').addEventListener('load', function() {
   });
 
   // Animate text (delayed slightly after the bubble appears)
-  gsap.to(textElement2, {
+  gsap.to(textElement3, {
     opacity: 1,
     duration: 0.8,
     delay: 0.3, // Short delay after the bubble
     scrollTrigger: {
-      trigger: "#svg2",
+      trigger: "#svg3",
       start: "top 70%",
       end: "bottom 30%",
       toggleActions: "play none none none"
