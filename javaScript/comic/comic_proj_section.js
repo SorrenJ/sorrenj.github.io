@@ -1,52 +1,69 @@
-      // Register ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            // Select all SVGs with the 'drawable' class
-            const svgs = document.querySelectorAll('.drawable');
-            
-            // Animate each SVG when scrolled into view
-            svgs.forEach((svg, index) => {
-                // Get all path elements in the SVG
-                const paths = svg.querySelectorAll('path');
-                
-                // Set initial state for all paths
-                gsap.set(paths, {
-                    strokeDasharray: 1000,
-                    strokeDashoffset: 1000,
-                    opacity: 0
+// svgPathAnimation.js
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Create a master timeline that's paused
+    const masterTL = gsap.timeline({ paused: true });
+    
+    // Only handle object elements with specific IDs (fin, face, sorren, pet)
+    ['fin', 'face', 'sorren', 'pet'].forEach(id => {
+        const obj = document.getElementById(id);
+        if (obj) {
+            if (obj.contentDocument) {
+                setupObjectAnimation(obj, masterTL);
+            } else {
+                obj.addEventListener('load', function() {
+                    setupObjectAnimation(this, masterTL);
                 });
-                
-                // Create a timeline for this SVG
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: svg,
-                        start: "top 80%",
-                        toggleActions: "play none none none",
-                        markers: false // Set to true for debugging
-                    }
-                });
-                
-                // Animate each path in sequence
-                paths.forEach((path, i) => {
-                    tl.to(path, {
-                        strokeDashoffset: 0,
-                        opacity: 1,
-                        duration: 1.5,
-                        ease: "power2.inOut"
-                    }, i * 0.2); // Stagger animations
-                });
-            });
-            
-            // Optional: Animate the entire section appearance
-            gsap.from("#animated-section", {
-                scrollTrigger: {
-                    trigger: "#animated-section",
-                    start: "top 80%",
-                    toggleActions: "play none none none"
-                },
-                opacity: 0,
-                y: 50,
-                duration: 1
-            });
-        });
+            }
+        }
+    });
+    
+    // Play the master timeline when section4 comes into view
+    ScrollTrigger.create({
+        trigger: "#section4",
+        start: "top center",
+        onEnter: () => masterTL.play(),
+        // Optional: Reset if user scrolls back up
+        onLeaveBack: () => masterTL.pause().progress(0)
+    });
+});
+
+function setupObjectAnimation(objectElement, masterTL) {
+    const svgDoc = objectElement.getSVGDocument();
+    if (!svgDoc) return;
+    
+    const path = svgDoc.querySelector('path');
+    const text = svgDoc.querySelector('text');
+    
+    if (!path) return;
+    
+    // Set initial state
+    const length = path.getTotalLength();
+    gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+        opacity: 0
+    });
+    
+    if (text) {
+        gsap.set(text, { opacity: 0 });
+    }
+    
+    // Add animation to master timeline
+    masterTL.to(path, {
+        strokeDashoffset: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.inOut"
+    }, 0); // Start all animations at the same time
+    
+    // Add text animation if exists
+    if (text) {
+        masterTL.to(text, {
+            opacity: 1,
+            duration: 0.8,
+            delay: 0.3
+        }, 0);
+    }
+}
