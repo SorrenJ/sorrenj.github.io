@@ -14,7 +14,7 @@ container.addEventListener('wheel', (e) => {
 
   gsap.to(container, {
     scrollTo: { y: targetScroll },
-    duration: 900,
+    duration: 1,
     ease: "power2.inOut",
     onComplete: () => {
       isScrolling = false;
