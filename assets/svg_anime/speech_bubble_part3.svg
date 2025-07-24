@@ -8,16 +8,16 @@
     stroke-linejoin="round"
     fill="none" 
   />
-<text x="35%" y="30%" 
+<text x="35%" y="20%" 
       font-family="Arial, sans-serif" 
-      font-size="40" 
+      font-size="50" 
       fill="#1E1E1E" 
       text-anchor="middle" 
       dominant-baseline="middle"
       opacity="0">
-    <tspan x="52%" dy="0">Scroll down</tspan>
-    <tspan x="52%" dy="1.2em">to see what I've been</tspan>
-    <tspan x="52%" dy="1.2em">working on!
+    <tspan x="52%" dy="0">As you can see,</tspan>
+    <tspan x="52%" dy="1.2em">I enjoy frontend design,</tspan>
+    <tspan x="52%" dy="1.2em">as well!
     </tspan>
 </text>
 </svg>

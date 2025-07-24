@@ -47,3 +47,6 @@ function animateSpeech(svgId, sectionId) {
 animateSpeech('svg1', 'section1');
 animateSpeech('svg2', 'section2');
 animateSpeech('svg3', 'section3');
+animateSpeech('svgA', 'sectionA');
+animateSpeech('svgB', 'sectionB');
+animateSpeech('svgC', 'sectionC');

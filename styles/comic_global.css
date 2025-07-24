@@ -1,0 +1,28 @@
+/* For WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 22px;
+  height: 22px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey track */
+  border-radius: 0 !important; /* Force rectangular */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000; /* Black thumb */
+  border-radius: 0 !important; /* Force rectangular */
+  border: none !important; /* Remove any borders */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #000 #f1f1f1; /* thumb (black) | track (light grey) */
+}
+
+/* For Edge (Chromium) & Safari (fallback) */
+body {
+  scrollbar-face-color: #000; /* Deprecated but works in older Edge/Safari */
+  scrollbar-track-color: #f1f1f1;
+}
