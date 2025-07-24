@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 0,
                 duration: 0.3,
                 onComplete: function() {
-                    svgText.textContent = "Default Text"; // Reset to default
+                    svgText.textContent = "Hover over a project to see info!"; // ResetHo to default
                     gsap.to(svgText, {
                         opacity: 1,
                         duration: 0.5

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Stack Page</title>
+
+  <!-- Styles -->
+  <link href="styles/comic_containers.css" rel="stylesheet">
+  <link href="styles/comic_3_col.css" rel="stylesheet">
+  <link href="styles/comic_card_stack.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Stack Section Container -->
+  <div class="card-stack-section">
+    <div class="card-stack-container">
+
+      <!-- Section 1 -->
+      <section class="card" id="section1">
+        <div class="flex-container">
+          <div class="chat-column">
+            <object id="svg1" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part1.svg" width="500" height="400"></object>
+          </div>
+          <div class="face-column">
+            <img src="assets/sjao_faces/sjao-anime-2.gif" width="400" alt="Face 1">
+          </div>
+        </div>
+        <a href="#section2" class="arrow-link">
+          <svg class="bouncing-arrow" width="80" height="80" viewBox="0 0 164 164">
+            <path fill="#F8A6E6" d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="card" id="section2">
+        <div class="flex-container">
+          <div class="chat-column">
+            <object id="svg2" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part2.svg" width="500" height="400"></object>
+          </div>
+          <div class="face-column">
+            <img src="assets/sjao_faces/sjao-anime-2.gif" width="400" alt="Face 2">
+          </div>
+        </div>
+        <a href="#section3" class="arrow-link">
+          <svg class="bouncing-arrow" width="80" height="80" viewBox="0 0 164 164">
+            <path fill="#F8A6E6" d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="card" id="section3">
+        <div class="flex-container">
+          <div class="chat-column">
+            <object id="svg3" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part3.svg" width="500" height="400"></object>
+          </div>
+          <div class="face-column">
+            <img src="assets/sjao_faces/sjao-anime-2.gif" width="400" alt="Face 3">
+          </div>
+        </div>
+        <a href="#section4" class="arrow-link">
+          <svg class="bouncing-arrow" width="80" height="80" viewBox="0 0 164 164">
+            <path fill="#F8A6E6" d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- Section 4 (Projects) -->
+      <section class="card" id="section4">
+        <div class="container">
+          <!-- Left Column -->
+          <div class="column left-column">
+            <div class="svg-container" data-text="A LLM developed for the Expense Trend App, to provide financial advice based on the user's calculated expenses and income.">
+              <object id="fin" class="drawable" type="image/svg+xml" data="assets/svg_anime/proj_button_filled_finance.svg" width="500" height="400"></object>
+            </div>
+            <div class="svg-container" data-text="Welcome to my website!">
+              <object id="face" class="drawable" type="image/svg+xml" data="assets/svg_anime/proj_button_filled_facemask.svg" width="500" height="400"></object>
+            </div>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="middle-column">
+            <h2>Choose a project!</h2>
+          </div>
+
+          <!-- Right Column -->
+          <div class="column right-column">
+            <div class="svg-container" data-text="How can I help you today?">
+              <object id="sorren" class="drawable" type="image/svg+xml" data="assets/svg_anime/proj_button_filled_AI.svg" width="500" height="400"></object>
+            </div>
+            <div class="svg-container" data-text="How can I help you today?">
+              <object id="pet" class="drawable" type="image/svg+xml" data="assets/svg_anime/proj_button_filled_pet.svg" width="500" height="400"></object>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj_tattle" id="proj_speech">
+          <text id="svg-text" x="50%" y="50%">Hover over items to see messages</text>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="javaScript/comic/comic_intersection_observer.js"></script>
+  <script src="javaScript/comic/comic_proj_section.js"></script>
+  <script src="javaScript/comic/comic_proj_tooltip.js"></script>
+  <script src="javaScript/comic/comic_speech_bubble.js"></script>
+  <script src="javaScript/comic/comic_down_arrow.js"></script>
+
+  <!-- Scroll to top on load -->
+  <script>
+    window.onload = () => window.scrollTo({ top: 0, behavior: 'auto' });
+  </script>
+</body>
+</html>

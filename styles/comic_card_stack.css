@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.card-stack-section {
+  position: relative;
+  width: 100%;
+}
+
+.card-stack-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Base card style */
+.card {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default: cards are fixed and hidden */
+.card-stack-section.stack-effect .card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px) scale(0.95);
+  transition: all 0.6s ease;
+}
+
+/* Active card is visible and relative */
+.card-stack-section.stack-effect .card.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}

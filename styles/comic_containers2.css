@@ -1,10 +1,30 @@
-  body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-        
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* prevent default body scroll */
+     overflow-x: hidden; /* This prevents horizontal scrolling */
+}
+
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto; /* prevent conflict with GSAP */
+}
+
+
+
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 3rem; */
+}
         section {
+              top:0px;   
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -12,6 +32,11 @@
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
+            /* position: sticky;  */
+            background: floralwhite;
+            border-style: dotted;
+            border-width: 5px;
+             scroll-snap-align: start;
         }
         
         h1 {
@@ -36,15 +61,25 @@
         #section3 { background-color: #f0fff0; }
         #section4 { background-color: #fff8f0; } */
 
-.arrow-link {
-  position: relative;
-  z-index: 10;
-  pointer-events: auto;
+.bouncing-arrow {
+  display: block !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  animation: bounce-and-blink 2s infinite !important;
+margin-top: -50px;
 }
 
-.bouncing-arrow, .bouncing-arrow path {
-  pointer-events: none;
+@keyframes bounce-and-blink {
+  0%, 100% { 
+    /* opacity: 1 !important;  */
+    transform: translateY(0);
+  }
+  50% { 
+    /* opacity: 0.5 !important;  */
+    transform: translateY(-10px); /* Optional: Adds bounce */
+  }
 }
+
 .arrow-link path {
   display: block !important;
   fill: #010101 !important;
@@ -62,6 +97,9 @@
     width: 100%; /* Ensure container takes full width */
     max-width: 1200px; /* Optional: set a max-width for better control */
     margin: 0 auto; /* Centers the container itself horizontally */
+
+
+
 }
         
         .column {
@@ -79,7 +117,8 @@
         /* Keep your existing styles */
     text-align: center; /* Add this to center content */
     margin-left: 0; /* Remove left margin if you want true center */
-        margin-top: -180px;   
+        margin-top: -180px;  
+        
 
 }
 
