@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Scroll Animation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #intro {
+            background-color: #f0f0f0;
+        }
+        
+        #robot-section {
+            background-color: #e0e0e0;
+        }
+        
+        #next {
+            background-color: #d0d0d0;
+        }
+        
+        .svg-container {
+            width: 413px;
+            height: 413px;
+            margin: 20px 0;
+        }
+        
+        .scroll-hint {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <section id="intro">
+        <h1>Scroll Down to See the Robot</h1>
+        <p class="scroll-hint">↓ Keep scrolling ↓</p>
+    </section>
+    
+    <section id="robot-section">
+        <h2>Robot Animation</h2>
+        <div class="svg-container">
+            <object id="robot-svg" type="image/svg+xml" data="assets/svg_anime/robot.svg"></object>
+        </div>
+        <p>The robot will animate when you reach this section</p>
+    </section>
+    
+    <section id="next">
+        <h2>Continue Scrolling</h2>
+        <p>The animation should stay completed</p>
+    </section>
+
+    <!-- Load GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Robot Animation Script -->
+    <script src="javaScript/comic/comic_robot_animation.js"></script>
+</body>
+</html>

@@ -26,3 +26,24 @@ body {
   scrollbar-face-color: #000; /* Deprecated but works in older Edge/Safari */
   scrollbar-track-color: #f1f1f1;
 }
+/* Ensure SVG container is visible and properly sized */
+#robot-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#robot-svg {
+    width: 413px;
+    height: 413px;
+    display: block; /* Remove any inline whitespace issues */
+}
+
+/* Make sure the path is visible */
+#robot-path {
+    stroke: black !important;
+    stroke-width: 5px !important;
+    fill: none !important;
+}

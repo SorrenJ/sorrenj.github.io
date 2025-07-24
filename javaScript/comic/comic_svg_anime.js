@@ -46,6 +46,7 @@ function animateSpeech(svgId, sectionId) {
 // Apply to each section
 animateSpeech('svg1', 'section1');
 animateSpeech('svg2', 'section2');
+animateSpeech('robot-svg', 'robot-section');
 animateSpeech('svg3', 'section3');
 animateSpeech('svgA', 'sectionA');
 animateSpeech('svgB', 'sectionB');
