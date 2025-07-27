@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   height: 100%;
   overflow: hidden; /* prevent default body scroll */
-     overflow-x: hidden; /* This prevents horizontal scrolling */
+     overflow-x: hidden !important; /* This prevents horizontal scrolling */
 }
 
 
@@ -11,6 +11,7 @@ html, body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: auto; /* prevent conflict with GSAP */
+   overflow-x: hidden !important;
 }
 
 
@@ -33,7 +34,7 @@ html, body {
             padding: 20px;
             box-sizing: border-box;
             /* position: sticky;  */
-            background: floralwhite;
+            /* background: floralwhite; */
             border-style: dotted;
             border-width: 5px;
              scroll-snap-align: start;
@@ -97,7 +98,7 @@ margin-top: -50px;
     width: 100%; /* Ensure container takes full width */
     max-width: 1200px; /* Optional: set a max-width for better control */
     margin: 0 auto; /* Centers the container itself horizontally */
-
+position:absolute;
 
 
 }
@@ -142,6 +143,100 @@ margin-top: -50px;
 padding-right: 100px;
 }
 
+.background-section {
+    /* position: fixed;  */
+    /* top: 0;
+    left: 0;  */
+
+  
+    /* z-index: -1; */
+    /* overflow: hidden; */
+
+        /* width: 50%; */
+    height: 50%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#robot-svg {
+    margin-top: -80px;
+    /* object-fit: cover; */
+
+}
+
+
+
+#robot-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+#section2 {
+    position: relative; /* Needed for absolute positioning of children */
+    background-image: url('assets/svg_anime/robot-hand-shake.svg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.flex-container {
+    position: relative;
+    z-index: 2; /* Ensure content stays above animation */
+}
+
+
+#react-section{
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    height: 2000px;
+    z-index: 0;
+}
+
+#react-svg {
+    width: 1800px;
+    height: 1800px;
+    /* object-fit: cover; */
+    margin-top: -440px;
+    margin-left: -38%;
+    /* object-fit: cover; */
+/* position:absolute; */
+ /* z-index: -1;
+object-fit: cover; */
+}
+
+.bg-two-column-container {
+  display: flex;
+  justify-content: space-between; /* Creates maximum space between columns */
+  width: 100%; /* Or set a specific width */
+ gap: 100px; /* Adjust this value for your desired gap size */
+}
+
+.bg-column {
+  /* Adjust width as needed - these values create a large gap */
+  width: 800px; /* Each column takes 30% of container width */
+  
+  /* Optional styling */
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* Optional: Add visual distinction between columns */
+.bg-left-column {
+  background-color: #fc0c0c;
+}
+
+.bg-right-column {
+  background-color: #0804ff;
+}
            .column img {
             max-width: 100%; /* Makes image responsive */
             height: auto; /* Maintains aspect ratio */

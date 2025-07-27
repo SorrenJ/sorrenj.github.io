@@ -18,7 +18,7 @@
 /* For Firefox */
 html {
   scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: #000 #f1f1f1; /* thumb (black) | track (light grey) */
+  /* scrollbar-color: #000 #f1f1f1;  */
 }
 
 /* For Edge (Chromium) & Safari (fallback) */
@@ -27,17 +27,19 @@ body {
   scrollbar-track-color: #f1f1f1;
 }
 /* Ensure SVG container is visible and properly sized */
-#robot-section {
+/* #robot-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-}
+} */
 
 #robot-svg {
-    width: 413px;
-    height: 413px;
+    /* width: 413px;
+    height: 413px; */
+
+    width: 813px;
     display: block; /* Remove any inline whitespace issues */
 }
 

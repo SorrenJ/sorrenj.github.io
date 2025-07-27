@@ -17,10 +17,9 @@
        <section class="snap-section" id="section1">
    <div class="flex-container">
         <div class="chat-column">
-<object id="svg1" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part1.svg" width="300" height="400"></object>
-       
+<embed id="svg1" type="image/svg+xml" src="assets/svg_anime/speech_bubble_part1.svg" width="300" height="400">
 </div>
-       
+     
         <div class="face-column">
    
              <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
@@ -47,76 +46,53 @@
     <!-- End of Section 1 -->
 
     <!-- Start of Section 2 -->
-       <section class="snap-section" id="section2">
- 
-
-
-   <div class="flex-container">
+<section class="snap-section" id="section2">
+    <!-- Add a container for the animated SVG (will overlay the background) -->
+    <div id="robot-animation-container"></div>
+    
+    <div class="flex-container">
         <div class="chat-column">
-<object id="svg2" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part2.svg" width="300" height="400"></object>
-       
-</div>
-       
+            <object id="svg2" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part2.svg" width="300" height="400"></object>
+        </div>
         <div class="face-column">
-   
-             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+            <img style="z-index: 2; position: relative; width: 400px;" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
         </div>
     </div>
-       
-          <div id="robot-section">
-            <!-- External SVG file with specific class -->
-            <object id="robot-svg" type="image/svg+xml" data="assets/svg_anime/robot.svg"></object>
-        </div>
-
-    <!-- down arrow -->
-<a href="#section3" class="arrow-link" style="display: inline-block;">
-<svg class="bouncing-arrow" 
-     width="80" height="80" 
-     viewBox="0 0 164 164" 
-     preserveAspectRatio="xMidYMid meet"
-     style="display: block; overflow: visible;">
-    <path fill="#111111" 
-          stroke="#111111"
-          stroke-width="1"
-          vector-effect="non-scaling-stroke"
-          d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
-</svg>
-</a>
-
 </section>
  <!-- End of Section 2 -->
 
   <!-- Start of Section 3 -->
 
-       <section class="snap-section" id="section3">
-   <div class="flex-container">
-        <div class="chat-column">
-<object id="svg3" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part3.svg" width="300" height="400"></object>
-       
-</div>
-       
-        <div class="face-column">
-   
-             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
-        </div>
+<section class="snap-section" id="section3">
+  <div class="flex-container">
+    <div class="chat-column">
+      <object id="svg3" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part3.svg" width="300" height="400"></object>
     </div>
-       
-       
-    <!-- down arrow -->
-<a href="#section4" class="arrow-link" style="display: inline-block;">
-<svg class="bouncing-arrow" 
-     width="80" height="80" 
-     viewBox="0 0 164 164" 
-     preserveAspectRatio="xMidYMid meet"
-     style="display: block; overflow: visible;">
-    <path fill="#111111" 
-          stroke="#111111"
-          stroke-width="1"
-          vector-effect="non-scaling-stroke"
-          d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
-</svg>
-</a>
+    
+    <div class="face-column">
+      <!-- Image stays above the background -->
+      <img 
+        style="z-index: 2; position: relative; width: 400px;" 
+        src="assets/sjao_faces/sjao-anime-2.gif" 
+        alt="Sample Image"
+      >
+      <!-- Background section (now non-interactive) -->
+      <div class="background-section" id="react-section">
+        <object 
+          id="react-svg" 
+          type="image/svg+xml" 
+          data="assets/svg_anime/react.svg"
+        ></object>
+      </div>
+    </div>
+  </div>
 
+  <!-- Down arrow -->
+  <a href="#section4" class="arrow-link" style="display: inline-block;">
+    <svg class="bouncing-arrow" width="80" height="80" viewBox="0 0 164 164" preserveAspectRatio="xMidYMid meet" style="display: block; overflow: visible;">
+      <path fill="#111111" stroke="#111111" stroke-width="1" vector-effect="non-scaling-stroke" d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z"/>
+    </svg>
+  </a>
 </section>
 
  <!-- End of Section 3 -->
@@ -132,7 +108,42 @@
         <div class="face-column">
    
              <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
-        </div>
+        
+          <div class="background-section" id="">
+       
+       
+       <div class="bg-two-column-container">
+  <div class="bg-column bg-left-column">
+    <!-- Left column content -->
+    <h2>Left Column</h2>
+    <p>This is the left column content.</p>
+  </div>
+  
+  <div class="bg-column bg-right-column">
+    <!-- Right column content -->
+    <h2>Right Column</h2>
+    <p>This is the right column content.</p>
+        <object 
+          id="" 
+          type="image/svg+xml" 
+          data="assets/svg_anime/pen.svg"
+        ></object>
+       <object 
+          id="" 
+          type="image/svg+xml" 
+          data="assets/svg_anime/scribble.svg"
+        ></object>
+ 
+  </div>
+</div>
+       
+       
+       
+       
+     
+      </div>
+        
+            </div>
     </div>
        
        
@@ -334,12 +345,15 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
         
     <!-- <script src="javaScript/comic/comic_robot_animation.js"></script> -->
-   
+      <script src="javaScript/comic/comic_svg_anime.js"></script>
       <script src="javaScript/comic/scroll.js"></script>
+       
+<script src="javaScript/comic/comic_robot_animation.js"></script>
+
    <script src="javaScript/comic/comic_proj_section_fade_in.js"></script>
       <script src="javaScript/comic/comic_proj_tooltip.js"></script>
 
-    <script src="javaScript/comic/comic_svg_anime.js"></script>
+
      <!-- <script src="javaScript/comic/comic_down_arrow.js"></script> -->
 
 

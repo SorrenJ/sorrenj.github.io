@@ -62,8 +62,10 @@
     width: 100%; /* Ensure container takes full width */
     max-width: 1200px; /* Optional: set a max-width for better control */
     margin: 0 auto; /* Centers the container itself horizontally */
+
 }
-        
+
+
         .column {
             flex: 1; /* Makes columns equal width */
             padding: 15px;
@@ -103,7 +105,25 @@
 padding-right: 100px;
 }
 
-           .column img {
+.background-section {
+    position: fixed; /* or absolute depending on your needs */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Makes it non-interactive so clicks pass through */
+    z-index: -1; /* Places it behind all other content */
+    /* overflow: hidden;  */
+}
+
+#robot-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, depending on your preference */
+}       
+
+
+.column img {
             max-width: 100%; /* Makes image responsive */
             height: auto; /* Maintains aspect ratio */
             border-radius: 5px;
