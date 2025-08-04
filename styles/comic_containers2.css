@@ -186,6 +186,45 @@ padding-right: 100px;
 
 }
 
+
+
+
+
+
+#market-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+      z-index: 9999;
+      background: rgba(255, 0, 0, 0.2); /* temp debug */
+}
+
+#market-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#market-path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#sectionA {
+  position: relative;
+  background-image: url('assets/svg_anime/communications_lines_bg.svg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure it scrolls */
+}
+
 .flex-container {
     position: relative;
     z-index: 2; /* Ensure content stays above animation */

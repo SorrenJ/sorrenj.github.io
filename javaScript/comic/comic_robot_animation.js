@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleSvgLoad = () => {
         try {
             const svgDoc = animatedSVG.contentDocument;
-            const robotPath = svgDoc.getElementById('robot-path'); // Ensure this exists in SVG
+            const robotPath = svgDoc.getElementById('robot-svg'); // Ensure this exists in SVG
             
             if (!robotPath) {
                 console.error("Robot path not found in SVG");
