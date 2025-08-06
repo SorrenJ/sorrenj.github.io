@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SVG Scroll Fade In</title>
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-section {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 80%;
+  height: auto;
+}
+
+.fade-el {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+</style>
+<body>
+   <section class="spacer">
+    <h1>Scroll to see SVG animations</h1>
+  </section>
+
+  <!-- Section 1 -->
+  <section class="svg-section" id="section1">
+    <svg viewBox="0 0 400 200">
+      <circle class="fade-el" cx="50" cy="100" r="30" fill="red" />
+      <circle class="fade-el" cx="150" cy="100" r="30" fill="green" />
+      <circle class="fade-el" cx="250" cy="100" r="30" fill="blue" />
+    </svg>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="svg-section" id="section2">
+    <svg viewBox="0 0 400 200">
+      <rect class="fade-el" x="50" y="70" width="60" height="60" fill="orange" />
+      <rect class="fade-el" x="150" y="70" width="60" height="60" fill="purple" />
+      <rect class="fade-el" x="250" y="70" width="60" height="60" fill="teal" />
+    </svg>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="svg-section" id="section3">
+    <svg viewBox="0 0 400 200">
+      <polygon class="fade-el" points="60,100 90,160 30,160" fill="gold" />
+      <polygon class="fade-el" points="160,100 190,160 130,160" fill="brown" />
+      <polygon class="fade-el" points="260,100 290,160 230,160" fill="pink" />
+    </svg>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="svg-section" id="section4">
+    <svg viewBox="0 0 400 200">
+      <ellipse class="fade-el" cx="60" cy="100" rx="30" ry="20" fill="lime" />
+      <ellipse class="fade-el" cx="160" cy="100" rx="30" ry="20" fill="cyan" />
+      <ellipse class="fade-el" cx="260" cy="100" rx="30" ry="20" fill="magenta" />
+    </svg>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="svg-section" id="section5">
+    <svg viewBox="0 0 400 200">
+      <line class="fade-el" x1="50" y1="100" x2="100" y2="100" stroke="black" stroke-width="5"/>
+      <line class="fade-el" x1="150" y1="100" x2="200" y2="100" stroke="gray" stroke-width="5"/>
+      <line class="fade-el" x1="250" y1="100" x2="300" y2="100" stroke="darkblue" stroke-width="5"/>
+    </svg>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Loop through each svg section
+  document.querySelectorAll('.svg-section').forEach(section => {
+    const elements = section.querySelectorAll('.fade-el');
+
+    gsap.to(elements, {
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'power2.out'
+    });
+  });
+});
+
+
+
+  </script>
+</body>
+</html>

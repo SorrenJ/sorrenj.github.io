@@ -7,31 +7,36 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const marketPath = document.getElementById('market-path');
-  const sectionA = document.getElementById('sectionA');
+  const section = document.getElementById('sectionA');
 
-  // Aggressive fallback: delay setup to ensure SVG is fully rendered
-  setTimeout(() => {
-    try {
-      const pathLength = marketPath.getTotalLength();
-
-      marketPath.style.strokeDasharray = pathLength;
-      marketPath.style.strokeDashoffset = pathLength;
-      marketPath.style.opacity = 1;
-
-      gsap.to(marketPath, {
-        strokeDashoffset: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionA,
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-          markers: true
-        }
-      });
-
-    } catch (error) {
-      console.error("Could not initialize SVG path animation:", error);
+  function waitForPathLength(callback, retries = 20) {
+    const pathLength = marketPath.getTotalLength();
+    if (pathLength > 0 || retries <= 0) {
+      callback(pathLength);
+    } else {
+      requestAnimationFrame(() => waitForPathLength(callback, retries - 1));
     }
-  }, 150); // 150ms delay to ensure proper layout
+  }
+
+  waitForPathLength((pathLength) => {
+    console.log("SVG path length:", pathLength);
+
+    // Initialize stroke dash
+    marketPath.style.strokeDasharray = pathLength;
+    marketPath.style.strokeDashoffset = pathLength;
+    marketPath.style.opacity = 1;
+
+    // Create scroll animation
+    gsap.to(marketPath, {
+      strokeDashoffset: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        markers: true
+      }
+    });
+  });
 });
