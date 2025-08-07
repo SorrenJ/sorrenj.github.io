@@ -179,8 +179,8 @@ padding-right: 100px;
     pointer-events: none; /* Allows clicks to pass through */
 }
 
-#section2 {
-    position: relative; /* Needed for absolute positioning of children */
+/* #section2 {
+    position: relative; 
     background-image: url('assets/svg_anime/robot-hand-shake.svg') !important;
     background-size: cover;
     background-position: center;
@@ -188,9 +188,9 @@ padding-right: 100px;
 
     
                       z-index: 9999;
-      background: rgba(83, 255, 44, 0.2); /* temp debug */
+      background: rgba(83, 255, 44, 0.2); 
 
-}
+} */
 
 
 
