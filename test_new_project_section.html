@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Container</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.project-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding-top:150px; */
+}
+
+@media only screen and (max-width: 600px) {
+.project-container {
+  height: 500px;
+  width: 100vw;
+  background-color: #f0f0f0;
+  padding: 40px;
+  /* padding-top:550px; */
+}
+
+
+
+
+
+}
+
+
+.project-image {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    object-fit: cover;   /* 👈 this prevents squishing */
+  object-position: center; /* 👈 optional: keeps crop centered */
+}
+
+@media only screen and (max-width: 600px) {
+
+.project-image {
+  width: 200px;
+  height: 150px;
+}
+
+}
+
+
+
+
+.project-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 600px;
+}
+
+.tech-stack {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+    position:relative;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.tech-stack {
+display: none;
+}
+}
+
+
+.chip {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.chip:hover {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.read-more-button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #f44ee8;
+}
+
+</style>
+
+
+<body>
+  <div class="project-container">
+    <img src="assets/Imgs/expensetrendChat1.png" alt="Project Image" class="project-image">
+    <h1 class="project-title">Expense Trend Chatbot</h1>
+    <p class="project-description">
+     A LLM developed for the Expense Trend App, to provide financial advice.
+    </p>
+  <div class="tech-stack">
+    <span class="chip">JavaScript</span>
+    <span class="chip">Express</span>
+    <span class="chip">Ollama</span>
+    <span class="chip">MySQL</span>
+    <span class="chip">MSSQL</span>
+    <span class="chip">Azure</span>
+    <span class="chip">Docker</span>
+    <span class="chip">Amazon EC2</span>
+  </div>
+<button class="read-more-button">Read More</button>
+  </div>
+
+    <div class="project-container">
+    <img src="assets/chatbotExample1.gif" alt="Project Image" class="project-image">
+    <h1 class="project-title">Personal Chatbot</h1>
+    <p class="project-description">
+      A chatbot with the likeness and memories of your's truly.
+    </p>
+
+      <div class="tech-stack">
+    <span class="chip">React</span>
+    <span class="chip">TypeScript</span>
+    <span class="chip">Express</span>
+    <span class="chip">OpenAI</span>
+    <span class="chip">MongoDB</span>
+    <span class="chip">JSON</span>
+    <span class="chip">Render</span>
+  </div>
+  </div>
+
+
+
+        <div class="project-container">
+    <img src="assets/beast_assets/hungry.gif" alt="Project Image" class="project-image">
+    <h1 class="project-title">React Pet Game</h1>
+    <p class="project-description">
+    A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.
+    </p>
+
+      <div class="tech-stack">
+    <span class="chip">React</span>
+    <span class="chip">Express</span>
+    <span class="chip">PostgreSQL</span>
+    <span class="chip">AWS RDS</span>
+    <span class="chip">Supabase</span>
+    <span class="chip">Render</span>
+  </div>
+  </div>
+</body>
+</html>
