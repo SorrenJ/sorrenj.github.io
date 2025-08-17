@@ -112,3 +112,45 @@ document.getElementById('svg3').addEventListener('load', function() {
     }
   });
 });
+
+document.getElementById('svgD').addEventListener('load', function() {
+  const svgDoc = this.getSVGDocument();
+  const path3 = svgDoc.querySelector('path');
+  const textElement3 = svgDoc.querySelector('text');
+
+  // Set initial styles
+  gsap.set(path3, {
+        strokeDasharray: path3.getTotalLength(),
+    strokeDashoffset: path3.getTotalLength(),
+    opacity: 0 // Start hidden
+  });
+
+  gsap.set(textElement3, { opacity: 0 });
+  
+  // Animate the speech bubble (fade in + optional stroke animation)
+  gsap.to(path3, {
+      strokeDashoffset: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: "#svg3",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none"
+    }
+  });
+
+  // Animate text (delayed slightly after the bubble appears)
+  gsap.to(textElement3, {
+    opacity: 1,
+    duration: 0.8,
+    delay: 0.3, // Short delay after the bubble
+    scrollTrigger: {
+      trigger: "#svg3",
+      start: "top 70%",
+      end: "bottom 30%",
+      toggleActions: "play none none none"
+    }
+  });
+});

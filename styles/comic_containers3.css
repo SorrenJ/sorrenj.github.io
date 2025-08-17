@@ -11,20 +11,21 @@ html, body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: auto; 
-   overflow-x: hidden !important;
-
+  overflow-x: hidden !important;
 }
-
-
 
 .snap-section {
   height: 100vh;
-  /* scroll-snap-align: start; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* font-size: 3rem; */
 }
+
+
+
+
+
+
         section {
               top:0px;   
             min-height: 100vh;
@@ -41,6 +42,28 @@ html, body {
              /* scroll-snap-align: start; */
 
         }
+
+
+
+        /* @media (max-width: 768px) {
+  .scroll-container {
+    height: auto !important;                
+  }
+
+  .snap-section {
+    height: auto !important;              
+  }
+ section {
+     height: auto !important;   
+      min-height: auto !important;  
+ 
+
+        }
+
+
+
+} */
+
         
         h1 {
             font-size: 2.5rem;
