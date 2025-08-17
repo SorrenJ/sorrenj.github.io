@@ -18,7 +18,98 @@
   <title>SVG Scroll Snap Fade-in Paths</title>
   <link rel="stylesheet" href="styles/test_section_anime_2.css" />
 </head>
+<style>
+
+/* Fixed vertical nav */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  /* background: #fff;          */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+  transition: transform 0.3s ease;  /* smooth slide */
+}
+
+.sidebar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 12px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* Toggle button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  /* background: #111; */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+  /* Flip when active */
+    .menu-btn.active {
+      transform: rotate(180deg);
+	  font-size: 5px;
+    }
+
+/* Mobile styles */
+@media (max-width: 800px) {
+  .sidebar {
+    transform: translateX(-100%); /* hide by default */
+  background: #000000b4;   
+      width: 100%;  
+
+}
+
+.sidebar a {
+ color:white;   
+  text-align: center;
+font-size: 30px;
+}
+  .sidebar.active {
+    transform: translateX(0);     /* show when active */
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+
+</style>
+
+
+
 <body>
+	  <!-- Toggle button -->
+<button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
+
+  <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="#section1">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
   <div class="scroll-container">
     <!-- Section 1 -->
     <section class="snap-section" id="section1">
@@ -877,7 +968,7 @@ z"/>
     </section>
 
 
-<section class="snap-section">
+<section class="snap-section" id="projects">
 
 <div class="project-container">
     <img src="assets/Imgs/expensetrendChat1.png" alt="Project Image" class="project-image">
@@ -971,7 +1062,7 @@ z"/>
 
 
 
-<section class="snap-section">
+<section class="snap-section" id="contact">
 
 
 <h3>Have a look at my socials!</h3>
@@ -1115,5 +1206,23 @@ z"/>
     <script src="javaScript/comic/comic_svg_anime.js"></script>
   
   <script src="javaScript/comic/test_section_anime_2.js"></script>
+
+
+
+    <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const btn = document.getElementById("menuBtn");
+
+      sidebar.classList.toggle("active");
+
+      // Change arrow direction based on sidebar state
+      if (sidebar.classList.contains("active")) {
+        btn.textContent = "X"; // arrow left
+      } else {
+        btn.textContent = "☰"; // arrow right
+      }
+    }
+  </script>
 </body>
 </html>
