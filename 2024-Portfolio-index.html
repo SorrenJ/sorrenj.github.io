@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sorren Jao</title>
+  <meta name="description" content="Full-stack Developer & UX Designer">
+<meta name="keywords" content="Simon Fraser University, SFU, School of Interactive Arts & Technology, SIAT, Front-end, Web developer, Full-stack Developer">
+
+  <link rel="icon" href="assets/logo.svg" sizes=96x96 />
+  <link href="styles/grid.css" rel="stylesheet">
+  <link href="styles/inputform.css" rel="stylesheet">
+  <link href="styles/containers.css" rel="stylesheet">
+  <link href="styles/footer.css" rel="stylesheet">
+  <link href="styles/card.css" rel="stylesheet">
+
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
+  <link href="styles/sorren_sdt.css" rel="stylesheet">
+  <link href="styles/petals.css" rel="stylesheet">
+  <link href="styles/fade-in-fade-out.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-489NYV1TJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-489NYV1TJL');
+  </script>
+
+<body>
+ 
+  <header>
+
+    <!-- header -->
+    <div class="home_nav">
+      <div class="home_nav-item">
+        <div class="home_icon"><a href="index.html">
+            <img src="assets/logo.svg" alt="logo"></a>
+
+          <!-- <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size:24pt"></i>
+          </a> -->
+        </div>
+      </div>
+      <div id="fade" class="fade"></div>
+
+      <div class="home_nav-item">
+        <div id="myLinks" class="nav">
+          <div class="tooltip-container">
+          <button class="toggle-button" id="toggleButton" style="cursor: pointer;">Toggle View</button>
+          <div id="switchTooltip" class="tooltip"></div>
+        </div>
+        <div class="tooltip-container">
+          <div class="nav-item special-nav-item"><a href="./chatbot_info.html"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
+          <div class="tooltip">Try out my new personalized chatbot!</div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="petals">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+  </header>
+    
+      <script src="javaScript/navbar.js"></script>
+  <br>
+  <!-- Start Screen -->
+  <div id="startScreen" onclick="startGame()">
+    
+    <h1>Sorren Jao</h1>
+    <p data-aos="fade-up">Full-Stack Development & User Experience Design</p>
+ 
+    <canvas id="treeCanvas" width="800" height="400"></canvas>
+    <p>Click Anywhere to Start</p>
+    <script src="javaScript/tree.js"></script>
+  </div>
+  
+  <!-- Segment and List Container -->
+  <div class="segmentListContainer" id="segmentListContainer">
+ 
+
+ 
+    <div id="infoBox" class="info-box">
+        <p id="infoBoxText"></p>
+    </div>
+   
+<!-- Special Info Boxes for Segments -->
+<div id="specialInfoBox1" class="special-info-box">
+  
+    <h3>UX Design</h3>
+    <p>Explore user-centered design projects and prototypes.</p>
+
+   
+</div>
+<div id="specialInfoBox2" class="special-info-box">
+    <h3>AI/ML</h3>
+    <p>Discover AI-powered solutions and machine learning applications.</p>
+</div>
+<div id="specialInfoBox3" class="special-info-box">
+    <h3>About Sorren</h3>
+    <p>Hover and select the circle to discover a project!</p> 
+    <!-- <p>Sorren is a full-stack developer with a passion for UX design and AI/ML.</p> -->
+<br>
+<p>Have a look at my socials!</p>
+    <ul class="social" style="z-index:2;  width:max-content">
+      <li style ="color:white; background-color: black; padding:4px; border-radius: 5px;
+"><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3); color:white" class="fa-brands fa-github"></span></a></li>
+              <li style ="color:white; background-color: black; padding:4px; border-radius: 5px;
+"><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); color:white" class="fa-brands fa-linkedin"></span></a></li>
+              
+            </ul>
+</div>
+<div id="specialInfoBox4" class="special-info-box">
+    <h3>Web Applications</h3>
+    <p>Check out modern web applications built with full-stack technologies.</p>
+</div>
+
+
+      <script src="javaScript/navbar.js"></script>
+    
+     
+      <!-- Selector Screen with Segments -->
+      <div id="selectorScreen" style="position: relative; width: 500px; height: 500px; top: 80%">
+        <!-- Info Box -->
+      
+        <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <!-- Segment paths with titles -->
+          <path id="segment1" class="segment" d="M250,70 A180,180 0 0,1 420,250 L380,250 A140,140 0 0,0 250,110 Z"   stroke="#000000" 
+          stroke-width="3">
+            <title>UX Design</title>
+          </path>
+          <path id="segment2" class="segment" d="M420,250 A180,180 0 0,1 250,420 L250,380 A140,140 0 0,0 380,250 Z"  stroke="#000000" 
+          stroke-width="3">
+            <title>AI/ML</title>
+          </path>
+          <path id="segment3" class="segment" d="M250,420 A180,180 0 0,1 80,250 L120,250 A140,140 0 0,0 250,380 Z"   stroke="#000000" 
+          stroke-width="3">
+            <title>About Sorren</title>
+          </path>
+          <path id="segment4" class="segment" d="M80,250 A180,180 0 0,1 250,70 L250,110 A140,140 0 0,0 120,250 Z"  stroke="#000000" 
+          stroke-width="3">
+            <title>Web Applications</title>
+          </path>
+        </svg>
+        
+        <!-- Center text overlay for Font Awesome icons and text -->
+        <div id="centerTextOverlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.5em;">
+            <!-- Hover -->
+        </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+      <!-- Lists for each segment (placed beside selector screen) -->
+      <div id="listContainer">
+
+ 
+
+          <div id="list1" class="elements-list">
+              <h1>UX Design</h1>
+            
+              <ul>
+                  <li class="list-item">Travel App Figma Prototype</li>
+                  <li class="list-item">Bakery Website Redesign</li>
+                  <a href="Smart_Drive_Test.html">
+                  <li class="list-item">
+                    Smart Drive Website
+                </li>
+            </a>
+              </ul>
+          </div>
+          <div id="list2" class="elements-list">
+              <h1>AI/ML</h1>
+              <ul>
+                  <!-- <li class="list-item">Sleep Wellness Chatbot</li> -->
+                  
+                  <a href="./MaskPass.html">
+                  <li class="list-item">Facemask Detection App</li>
+                </a>
+                  
+                  
+                  <!-- <li class="list-item">Wildlife and Pest Animal Detection</li> -->
+              </ul>
+          </div>
+          <div id="list3" class="elements-list">
+            <h1>Hi I'm Sorren!</h1>
+            <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
+                Sit down, grab a snack, and have a peek at my projects.
+              
+              
+
+            </p>
+        <br>
+        
+         
+              <!-- <h1 style="margin-left:-1%; text-align:center">Contact Me</h1> -->
+   
+      
+              
+           
+          
+          </div>
+          <div id="list4" class="elements-list">
+              <h1>Web Apps</h1>
+              <ul>
+             
+                <a href="./chatbot_info.html">
+                  <li class="list-item">Sorren AI Chatbot</li>
+                  </a>
+                  <a href="./beast_info.html">
+                  <li class="list-item">Virtual Pet App</li>
+                  </a>
+                  <!-- <li class="list-item">Map Listing Web Application</li> -->
+                  <a href="profile_helper_content.html">
+                  <li class="list-item">Webpage Creator</li>
+                  </a>
+
+                
+              </ul>
+
+                     
+
+          </div>
+
+        </div>
+
+      
+    
+<!-- Mobile List Container -->
+<div id="mobileListContainer">
+</br>
+</br>
+  <h1>Hi I'm Sorren,</h1>
+ <div class="project-list">
+ 
+        <p>I’m a Full-stack developer with a background in UX design and human-computer interaction. It is my passion to combine these skills to develop some cool, user-friendly web apps. I also made some AI/ML-related apps.
+            Sit down, grab a snack, and have a peek at my projects.
+</p>
+
+  <!-- <h1 style="margin-left:-1%; text-align:center">Contact Me</h1> -->
+  <div>
+    <div class="grid">
+      <div class="column-xs-12">
+        <ul class="social">
+  <li><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3);" class="fa-brands fa-github"></span></a></li>
+          <li><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); " class="fa-brands fa-linkedin"></span></a></li>
+          
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<h1>Web Apps</h1>
+<ul class="project-list">
+  <a href="./chatbot_info.html">
+  <li class="list-item-xl">
+    <i class="fa-solid fa-comments"></i>
+    <div>
+        <h2>Sorren AI Chatbot</h2>
+        <p>A chatbot with the likeness and memories of your's truly!</p>
+    </div>
+</li>
+</a>
+<a href="./beast_info.html">
+    <li class="list-item-xl">
+        <i class="fas fa-paw"></i>
+        <div>
+            <h2>Virtual Pet App</h2>
+            <p>Manage a virtual pet's stats and interactions in a fun and interactive way.</p>
+        </div>
+    </li>
+</a>
+    <!-- <li class="list-item-xl">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+          <h2>Map Listing Web Application</h2>
+          <p>A platform to explore and list locations with interactive maps.</p>
+      </div>
+  </li> -->
+
+
+    
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+            <h2>Map Listing Web Application</h2>
+            <p>A platform to explore and list locations with interactive maps.</p>
+        </div>
+    </li> -->
+    <a href="profile_helper_content.html">
+    <li class="list-item-xl">
+        <i class="fas fa-user-graduate"></i>
+        <div>
+            <h2>SFU Student Webpage Creator</h2>
+            <p>A tool for SFU students to build personal web pages effortlessly.</p>
+        </div>
+    </li>
+    </a>
+</ul>
+
+<h1>UX Design</h1>
+<ul class="project-list">
+    <li class="list-item-xl">
+        <i class="fas fa-plane"></i>
+        <div>
+            <h2>Travel App Figma Prototype</h2>
+            <p>Prototype for a travel app focused on itinerary planning and bookings.</p>
+        </div>
+    </li>
+    <li class="list-item-xl">
+        <i class="fas fa-bread-slice"></i>
+        <div>
+            <h2>Bakery Website Redesign</h2>
+            <p>A modern and user-friendly redesign of a bakery's website.</p>
+        </div>
+    </li>
+    <a href="Smart_Drive_Test.html">
+    <li class="list-item-xl">
+    
+            <i class="fas fa-car"></i>
+            <div>
+                <h2>Smart Drive Website</h2>
+                <p>A responsive website prototype for a smart driving platform.</p>
+            </div>
+        
+    </li>
+  </a>
+</ul>
+
+<h1>AI/ML</h1>
+<ul class="project-list">
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-comments"></i>
+        <div>
+            <h2>Sleep Wellness Chatbot</h2>
+            <p>An AI-driven chatbot to provide sleep tips and wellness advice.</p>
+        </div>
+    </li> -->
+    <a href="./MaskPass.html">
+    <li class="list-item-xl">
+        <i class="fas fa-mask"></i>
+        <div>
+            <h2>Facemask Detection App</h2>
+            <p>A computer vision app that detects face mask usage in public spaces.</p>
+        </div>
+    </li>
+    </a>
+    <!-- <li class="list-item-xl">
+        <i class="fas fa-paw"></i>
+        <div>
+            <h2>Wildlife and Pest Animal Detection</h2>
+            <p>AI-based solution for identifying wildlife and pest animals in real-time.</p>
+        </div>
+    </li> -->
+</ul>
+
+<br>
+
+
+</div>
+
+    
+
+<!-- Hardcoded Mobile Button Container -->
+<div class="mobile-button-container" >
+    <!-- <div class="mobile-button" onclick="showMobileList('mobileList4')">
+        <i class="fa-solid fa-laptop-code"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList1')">
+        <i class="fa-brands fa-figma"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList2')">
+        <i class="fa fa-robot"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList3')">
+        <i class="fa-solid fa-user"></i>
+    </div> -->
+  
+</div>
+  <!-- end of card 2 -->
+
+
+
+
+
+  <script src="javaScript/main.js"></script>
+  <!-- <script src="javaScript/fade-in-fade-out.js"></script> -->
+  <!-- <script src="javaScript/trail-cursor.js"></script> -->
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+
+
+
+</html>
