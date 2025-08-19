@@ -1,12 +1,15 @@
 
 @media screen and (min-width: 800px) {
 
+
+
 #petals {
     position: absolute;
-    top: -500px;
+    top: 0px;
     width: 100%;
     text-align: center;
     margin-left: 500px;
+   
 }
 
 #petals i {
@@ -48,11 +51,11 @@
 
 @keyframes falling2 {
     0% {
-        transform: translate3d(0, 0, 0) rotate(150deg);
+        transform: translate3d(0px, 0, 0) rotate(150deg);
         opacity: 1;
     }
     to {
-        transform: translate3d(-400px, 680px, 0) rotate(0deg);
+        transform: translate3d(-1000px, 680px, 0) rotate(0deg);
         opacity: 0;
     }
 }

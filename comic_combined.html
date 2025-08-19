@@ -8,7 +8,7 @@
   <link href="styles/typing.css" rel="stylesheet">
   <link href="styles/fade-in-fade-out.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+ <link href="styles/petals2.css" rel="stylesheet">
       <link href="styles/comic_global.css" rel="stylesheet">
     <link href="styles/comic_containers3.css" rel="stylesheet">
 	<link href="styles/comic_projects.css" rel="stylesheet">
@@ -47,7 +47,7 @@
 }
 
 .sidebar a:hover {
-  background-color: #444;
+   background: #f88bc77e; 
   color: white;
 }
 
@@ -86,7 +86,20 @@
  color:white;   
   text-align: center;
 font-size: 30px;
+ 
 }
+
+.sidebar a:hover {
+  background: #f88bc77e;  
+  color: white;
+}
+
+@media (max-width:800px){
+	
+}
+
+
+
   .sidebar.active {
     transform: translateX(0);     /* show when active */
   }
@@ -100,14 +113,30 @@ font-size: 30px;
 
 
 <body>
+    <div id="petals">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+		        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+
 	  <!-- Toggle button -->
 <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
 
   <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
     <a href="#section1">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#project">Projects</a>
+    <a href="#socials">Github</a>
+	<a href="#contact">Contact</a>
   </div>
 
   <div class="scroll-container">
@@ -721,7 +750,7 @@ M305.500000,188.000000
             <object id="svg2" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part2.svg" width="300" height="400"></object>
         </div>
         <div class="face-column">
-            <img style="z-index: 2; position: relative; width: 400px;" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+            <img style="z-index: 2; position: relative; width: 400px;" src="assets/sjao_faces/sjao-smile-anime.gif" alt="Sample Image">
         </div>
     </div>
 
@@ -888,7 +917,7 @@ z"/>
       <!-- Image stays above the background -->
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-2.gif" 
+        src="assets/sjao_faces/sjao-anime-1.gif" 
         alt="Sample Image">
     </div>
 
@@ -921,7 +950,7 @@ z"/>
       <!-- Image stays above the background -->
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-2.gif" 
+        src="assets/sjao_faces/sjao-anime-4.gif" 
         alt="Sample Image">
     </div>
 
@@ -941,7 +970,7 @@ z"/>
       <!-- Image stays above the background -->
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-2.gif" 
+        src="assets/sjao_faces/sjao-anime-3.gif" 
         alt="Sample Image">
     </div>
 
@@ -968,7 +997,7 @@ z"/>
     </section>
 
 
-<section class="snap-section" id="projects">
+<section class="snap-section" id="project">
 
 <div class="project-container">
     <img src="assets/Imgs/expensetrendChat1.png" alt="Project Image" class="project-image">
@@ -987,10 +1016,11 @@ z"/>
     <span class="chip">Amazon EC2</span>
   </div>
 
+  <a target="blank" href="https://www.expensetrend.com/"><button class="read-more-button">See Expense Trend</button></a>
   </div>
   </section>
 
-  <section class="snap-section">
+  <section class="snap-section" id="projects2">
     <div class="project-container">
     <img src="assets/chatbotExample1.gif" alt="Project Image" class="project-image">
     <h1 class="project-title">Personal Chatbot</h1>
@@ -1007,12 +1037,12 @@ z"/>
     <span class="chip">JSON</span>
     <span class="chip">Render</span>
   </div>
-  <button class="read-more-button">Read More</button>
+<a href="./chatbot_info.html"><button class="read-more-button">Read More</button></a>
   </div>
 
 </section>
 
-<section class="snap-section">
+<section class="snap-section" id="projects3">
         <div class="project-container">
     <img src="assets/beast_assets/hungry.gif" alt="Project Image" class="project-image">
     <h1 class="project-title">React Pet Game</h1>
@@ -1028,7 +1058,8 @@ z"/>
     <span class="chip">Supabase</span>
     <span class="chip">Render</span>
   </div>
-  <button class="read-more-button">Read More</button>
+  <a href="./beast_info.html">
+  <button class="read-more-button">Read More</button></a>
   </div>
 
 </section>
@@ -1046,7 +1077,7 @@ z"/>
       <!-- Image stays above the background -->
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-2.gif" 
+        src="assets/sjao_faces/sjao-anime-3.gif" 
         alt="Sample Image">
     </div>
 
@@ -1062,7 +1093,7 @@ z"/>
 
 
 
-<section class="snap-section" id="contact">
+<section class="snap-section" id="socials">
 
 
 <h3>Have a look at my socials!</h3>
@@ -1101,12 +1132,12 @@ z"/>
 
 
 
-	<section class="snap-section">
+	<section class="snap-section" id="contact">
 
 		  <!-- end of card 2 -->
 
 
-  <div id="contact" class="start card">
+  <div class="start card">
     <div class="card-container-inverse">
       <div class="card-container-item-left-inverse contact_box">
         <div class="wrapper-h1-banner">

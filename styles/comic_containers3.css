@@ -82,11 +82,24 @@ html, body {
             margin: 30px 0;
         }
         
-        /* #section1 { background-color: #f0f8ff; }
-        #section2 { background-color: #fff0f5; }
-        #section3 { background-color: #f0fff0; }
-        #section4 { background-color: #fff8f0; } */
+       #section1 { background-color: #f7e9f5; }
+        #section2 { background-color: #fcdddd; }
+        #section3 { background-color: #f7e9f5; }
+         #sectionA { background-color: #fcdddd; }
+         #sectionB { background-color: #f7e9f5; }
+         #sectionC { background-color: #fcdddd; }
+      #project { background-color: #f7e9f5; }
+#projects2 { background-color: #fcdddd; }
+#projects3 { background-color: #f7e9f5;}
+         #section4 { background-color: #fcdddd; } 
+        
 
+
+
+#sectionD { background-color: #fcdddd;  }
+ #socials { background-color: #fcd9ff; }
+  #contact { background-color: #fcdddd; }
+/* #contact { background-color: #f0fdff; } */
 .bouncing-arrow {
   display: block !important;
   visibility: visible !important;

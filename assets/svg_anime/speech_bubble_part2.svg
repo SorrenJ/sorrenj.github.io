@@ -19,9 +19,9 @@
        fill="#1E1E1E" 
        text-anchor="middle" 
        opacity="0">
-    <tspan x="350" dy="0">I'm a LLM and</tspan>
-    <tspan x="350" dy="1.2em">Backend developer</tspan>
+    <tspan x="350" dy="0">I'm a Backend</tspan>
+    <tspan x="350" dy="1.2em">Web Developer</tspan>
     <tspan x="350" dy="1.2em">with a education in </tspan>
-     <tspan x="350" dy="1.2em">UX design</tspan>
+     <tspan x="350" dy="1.2em">UX design and HCI</tspan>
   </text>
 </svg>
