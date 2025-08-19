@@ -23,6 +23,19 @@ html, body {
 
 
 
+    /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+       .scroll-container {
+ scroll-behavior: auto;
+  scroll-snap-type: none;
+
+}
+       
+          .snap-section {
+ scroll-snap-type: none;
+}
+
+        }
 
 
 
