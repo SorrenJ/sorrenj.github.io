@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 70px;
+      background: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar a:hover {
+    background: #f88bc77e;
+    animation: shake 0.5s;
+  }
+
+  .sidebar a.active {
+    background: #f88bc7;        /* visible active background */
+    border-left: 5px solid white; /* optional: a “side indicator” */
+  }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Just dummy sections to scroll to */
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    #section1 { background: #eee; }
+    #project { background: #ccc; }
+    #socials { background: #aaa; }
+    #contact { background: #888; }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#section1"><i class="fa-solid fa-circle-user" style="font-size: 2.5em; margin-left: 4px;"></i></a>
+    <a href="#project"><i class="fa-solid fa-laptop-code" style="font-size: 2.5em;"></i></a>
+    <a href="#socials"><i class="fa-brands fa-github" style="font-size: 2.5em;"></i></a>
+    <a href="#contact"><i class="fa-solid fa-envelope" style="font-size: 2.5em;"></i></a>
+  </div>
+
+  <section id="section1">Section 1</section>
+  <section id="project">Project</section>
+  <section id="socials">Socials</section>
+  <section id="contact">Contact</section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".sidebar a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Load Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

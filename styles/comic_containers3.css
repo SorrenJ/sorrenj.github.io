@@ -3,7 +3,9 @@ html, body {
   height: 100%;
   /* overflow: hidden;  */
      overflow-x: hidden !important; /* This prevents horizontal scrolling */
-}
+
+scroll-behavior: smooth;
+    }
 
 
 .scroll-container {
