@@ -49,3 +49,18 @@ body {
     stroke-width: 5px !important;
     fill: none !important;
 }
+
+@media (max-width: 800px) {
+::-webkit-scrollbar {
+display:none;
+}
+
+::-webkit-scrollbar-track {
+display:none;
+}
+
+::-webkit-scrollbar-thumb {
+display:none;
+}
+
+}
