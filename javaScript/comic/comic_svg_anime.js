@@ -104,6 +104,7 @@ animateSpeech('svgA', 'sectionA');
 animateSpeech('svgB', 'sectionB');
 animateSpeech('svgC', 'sectionC');
 animateSpeech('svgD', 'sectionD');
+animateSpeech('svgE', 'sectionE');
 
 document.getElementById('svg1').addEventListener('load', function() {
     animateSpeech('svg1', 'section1');
