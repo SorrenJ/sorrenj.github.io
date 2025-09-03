@@ -112,7 +112,7 @@ scroll-behavior: smooth;
 
 
 #sectionD { background-color: #fcdddd;  }
-#sectionE { background-color: #f7e9f5;  }
+#sectionE { background-color: #f3c4ec;  }
  #socials { background-color: #fcd9ff; }
   #contact { background-color: #fcdddd; }
 /* #contact { background-color: #f0fdff; } */
@@ -463,7 +463,17 @@ object-fit: cover; */
             filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
             transform-origin: center center;
         }
-        
+         
+
+.social-buttons a span{
+font-size:50px; filter:brightness(2); color:rgba(0, 0, 0, 0.226);
+ transition: color 0.3s ease;
+}
+
+.social-buttons a span:hover{
+color:rgb(228, 44, 182);
+}
+
 
 #section4 {
     position: relative;

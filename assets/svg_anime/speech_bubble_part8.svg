@@ -11,16 +11,19 @@
     style="stroke-dasharray: 1000; stroke-dashoffset: 1000;" 
      opacity = "0" 
   />
-<text x="35%" y="20%" 
+<text x="35%" y="10%" 
       font-family="Arial, sans-serif" 
       font-size="45" 
       fill="#1E1E1E" 
       text-anchor="middle" 
       dominant-baseline="middle"
       opacity="0">
-    <tspan x="45%" dy="0">I would be happy  </tspan>
-     <tspan x="45%" dy="1.2em">to collaborate or help </tspan>
-     <tspan x="45%" dy="1.2em">with a project. </tspan>
-      <tspan x="45%" dy="1.2em">You may contact me below! </tspan>
+       <tspan x="45%" dy="0">If your looking for a team</tspan>
+      <tspan x="45%" dy="1.2em">member, message me</tspan>
+      <tspan x="45%" dy="1.2em">below ⬇️</tspan>
+    <tspan x="45%" dy="2em">Always happy to collab</tspan>
+     <tspan x="45%" dy="1.2em">on a Web-based project!</tspan>
+     <tspan x="45%" dy="1.2em">😊</tspan>
+     
 </text>
 </svg>
