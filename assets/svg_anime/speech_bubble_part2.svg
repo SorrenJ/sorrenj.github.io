@@ -19,9 +19,9 @@
        fill="#1E1E1E" 
        text-anchor="middle" 
        opacity="0">
-    <tspan x="320" dy="0">I'm a Backend</tspan>
+    <tspan x="320" dy="0">I'm a AI Backend</tspan>
     <tspan x="320" dy="1.2em">Web Developer</tspan>
-    <tspan x="320" dy="1.2em">with a education in </tspan>
-     <tspan x="320" dy="1.2em">UX design and HCI</tspan>
+    <tspan x="320" dy="1.2em">with a BSc from a </tspan>
+     <tspan x="320" dy="1.2em">Mutlimedia program</tspan>
   </text>
 </svg>

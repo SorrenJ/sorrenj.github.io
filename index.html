@@ -52,6 +52,8 @@
         <i></i>
     </div>
 
+
+
 	  <!-- Toggle button -->
 <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
 
@@ -62,6 +64,34 @@
     <a href="#socials"><i class="fa-brands fa-github" style="font-size: 2.5em;"></i><div class="sidebar-text">Github</div></a>
 	<a href="#contact"><i class="fa-solid fa-envelope" style="font-size: 2.5em;"></i><div class="sidebar-text">Contact</div></a>
   </div>
+
+
+<a href="#section1" id="backToTop" class="back-to-top bouncing-arrow">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 220 80"   
+       width="160" height="64"
+       role="img" aria-labelledby="titleDesc">
+    <title id="titleDesc">Back to top</title>
+
+    <!-- Arrow -->
+    <g transform="translate(16,12)" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+      <line x1="40" y1="40" x2="40" y2="10"/>
+      <polyline points="10,30 40,4 70,30"/>
+    </g>
+
+    <!-- Text below arrow -->
+    <text x="55" y="65"  
+          font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
+          font-size="18"
+          font-weight="600"
+          fill="#010101"
+          text-anchor="middle"
+          dominant-baseline="hanging">  <!-- aligns from top -->
+      Go to top
+    </text>
+  </svg>
+</a>
+
 
   <div class="scroll-container">
     <!-- Section 1 -->
@@ -93,10 +123,15 @@
           fill="#F8A6E6"/>
   </svg>
 </a>
+
+
     </section>
 
     <!-- Section 2 -->
     <section class="snap-section" id="section2">
+
+
+
 <svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left;" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <path id="robot-svg" class="draw-path" fill="none" opacity="0.25" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000"
@@ -583,7 +618,202 @@ M305.500000,188.000000
           fill="#F8A6E6"/>
   </svg>
 </a>
+
     </section>
+
+
+    <section class="snap-section" id="sectionB">
+ 
+    <svg class="section-background-svg" width="1576" height="1200" viewBox="0 0 1576 1200">
+       
+     <text  x="5%" y="5%" 
+      font-family='Courier New, monospace'
+      font-size="50" 
+		font-style="italic"
+      fill="#1E1E1E" 
+      text-anchor="left" 
+      dominant-baseline="left"
+	
+      opacity="0.25">
+	   
+    <tspan  x="65%" dy="5.2em">AI developer @ Expense Trend</tspan>
+    <tspan  x="-15%" dy="5.2em">Web developer @ Cybersalt Ltd.</tspan>
+     <tspan  x="65%" dy="5.2em">Web designer @ Simon Fraser University</tspan>
+
+</text>
+	
+     
+      </svg>
+
+ <div class="flex-container">
+    <div class="chat-column">
+      <object id="svgB" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part6.svg" width="300" height="400"></object>
+    </div>
+    
+    <div class="face-column">
+      <!-- Image stays above the background -->
+      <img 
+        style="z-index: 2; position: relative; width: 400px;" 
+        src="assets/sjao_faces/sjao-anime-3.gif" 
+        alt="Sample Image">
+    </div>
+
+		<!-- arrow link -->
+	 <a href="#sectionC" class="arrow-link">
+  <svg class="bouncing-arrow" 
+       width="80" height="80" 
+       viewBox="0 0 164 164" 
+       fill="none" 
+       xmlns="http://www.w3.org/2000/svg"
+       style="display: block;">
+       
+   
+    <rect width="164" height="164" fill="transparent" />
+    
+    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
+          fill="#F8A6E6"/>
+  </svg>
+</a>
+    </section>
+
+
+
+
+
+
+
+<section class="snap-section" id="project">
+
+<div class="project-container">
+    <img src="assets/Imgs/expensetrendChat1.png" alt="Project Image" class="project-image">
+    <h1 class="project-title">Expense Trend Chatbot</h1>
+    <p class="project-description">
+     A LLM developed for the Expense Trend App, to provide financial advice.
+    </p>
+  <div class="tech-stack">
+    <span class="chip">JavaScript</span>
+    <span class="chip">Express</span>
+    <span class="chip">Ollama</span>
+    <span class="chip">MySQL</span>
+    <span class="chip">MSSQL</span>
+    <span class="chip">Azure</span>
+    <span class="chip">Docker</span>
+    <span class="chip">Amazon EC2</span>
+  </div>
+
+  <a target="blank" href="https://www.expensetrend.com/"><button class="read-more-button">See Expense Trend</button></a>
+  </div>
+
+  	<!-- arrow link -->
+	 <a href="#projects2" class="arrow-link">
+  <svg class="bouncing-arrow" 
+       width="80" height="80" 
+       viewBox="0 0 164 164" 
+       fill="none" 
+       xmlns="http://www.w3.org/2000/svg"
+       style="display: block;">
+       
+   
+    <rect width="164" height="164" fill="transparent" />
+    
+    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
+          fill="#F8A6E6"/>
+  </svg>
+</a>
+  </section>
+
+  <section class="snap-section" id="projects2">
+    <div class="project-container">
+    <img src="assets/chatbotExample1.gif" alt="Project Image" class="project-image">
+    <h1 class="project-title">Personal Chatbot</h1>
+    <p class="project-description">
+      A chatbot with the likeness and memories of your's truly.
+    </p>
+
+      <div class="tech-stack">
+    <span class="chip">React</span>
+    <span class="chip">TypeScript</span>
+    <span class="chip">Express</span>
+    <span class="chip">OpenAI</span>
+    <span class="chip">MongoDB</span>
+    <span class="chip">JSON</span>
+    <span class="chip">Render</span>
+  </div>
+<a href="./chatbot_info.html"><button class="read-more-button">Read More</button></a>
+  </div>
+
+    	<!-- arrow link -->
+	 <a href="#projects3" class="arrow-link">
+  <svg class="bouncing-arrow" 
+       width="80" height="80" 
+       viewBox="0 0 164 164" 
+       fill="none" 
+       xmlns="http://www.w3.org/2000/svg"
+       style="display: block;">
+       
+   
+    <rect width="164" height="164" fill="transparent" />
+    
+    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
+          fill="#F8A6E6"/>
+  </svg>
+</a>
+</section>
+
+<section class="snap-section" id="projects3">
+        <div class="project-container">
+    <img src="assets/beast_assets/hungry.gif" alt="Project Image" class="project-image">
+    <h1 class="project-title">React Pet Game</h1>
+    <p class="project-description">
+    A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.
+    </p>
+
+      <div class="tech-stack">
+    <span class="chip">React</span>
+    <span class="chip">Express</span>
+    <span class="chip">PostgreSQL</span>
+    <span class="chip">AWS RDS</span>
+    <span class="chip">Supabase</span>
+    <span class="chip">Render</span>
+  </div>
+  <a href="./beast_info.html">
+  <button class="read-more-button">Read More</button></a>
+  </div>
+
+    	<!-- arrow link -->
+	 <a href="#sectionD" class="arrow-link">
+  <svg class="bouncing-arrow" 
+       width="80" height="80" 
+       viewBox="0 0 164 164" 
+       fill="none" 
+       xmlns="http://www.w3.org/2000/svg"
+       style="display: block;">
+       
+   
+    <rect width="164" height="164" fill="transparent" />
+    
+    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
+          fill="#F8A6E6"/>
+  </svg>
+</a>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Section 3 -->
     <section class="snap-section" id="section3">
@@ -822,7 +1052,7 @@ z"/>
       <!-- Image stays above the background -->
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-4.gif" 
+        src="assets/sjao_faces/sjao-anime-3.gif" 
         alt="Sample Image">
     </div>
 
@@ -845,62 +1075,8 @@ z"/>
     </section>
 
 
-    <section class="snap-section" id="sectionB">
- 
-    <svg class="section-background-svg" width="1576" height="1200" viewBox="0 0 1576 1200">
-       
-     <text  x="5%" y="5%" 
-      font-family='Courier New, monospace'
-      font-size="50" 
-		font-style="italic"
-      fill="#1E1E1E" 
-      text-anchor="left" 
-      dominant-baseline="left"
-	
-      opacity="0.25">
-	   
-    <tspan  x="65%" dy="5.2em">AI developer @ Expense Trend</tspan>
-    <tspan  x="-15%" dy="5.2em">Web developer @ Cybersalt Ltd.</tspan>
-     <tspan  x="65%" dy="5.2em">Web designer @ Simon Fraser University</tspan>
 
-</text>
-	
-     
-      </svg>
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgB" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part5.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-      <!-- Image stays above the background -->
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-3.gif" 
-        alt="Sample Image">
-    </div>
-
-		<!-- arrow link -->
-	 <a href="#sectionC" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section>
-
-
-  <section class="snap-section" id="sectionC">
+  <!-- <section class="snap-section" id="sectionC">
  
 
 
@@ -910,14 +1086,14 @@ z"/>
     </div>
     
     <div class="face-column">
-      <!-- Image stays above the background -->
+     
       <img 
         style="z-index: 2; position: relative; width: 400px;" 
         src="assets/sjao_faces/sjao-anime-2.gif" 
         alt="Sample Image">
     </div>
 
-		<!-- arrow link -->
+	
 	 <a href="#project" class="arrow-link">
   <svg class="bouncing-arrow" 
        width="80" height="80" 
@@ -933,124 +1109,8 @@ z"/>
           fill="#F8A6E6"/>
   </svg>
 </a>
-    </section>
+    </section> -->
 
-
-<section class="snap-section" id="project">
-
-<div class="project-container">
-    <img src="assets/Imgs/expensetrendChat1.png" alt="Project Image" class="project-image">
-    <h1 class="project-title">Expense Trend Chatbot</h1>
-    <p class="project-description">
-     A LLM developed for the Expense Trend App, to provide financial advice.
-    </p>
-  <div class="tech-stack">
-    <span class="chip">JavaScript</span>
-    <span class="chip">Express</span>
-    <span class="chip">Ollama</span>
-    <span class="chip">MySQL</span>
-    <span class="chip">MSSQL</span>
-    <span class="chip">Azure</span>
-    <span class="chip">Docker</span>
-    <span class="chip">Amazon EC2</span>
-  </div>
-
-  <a target="blank" href="https://www.expensetrend.com/"><button class="read-more-button">See Expense Trend</button></a>
-  </div>
-
-  	<!-- arrow link -->
-	 <a href="#projects2" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-  </section>
-
-  <section class="snap-section" id="projects2">
-    <div class="project-container">
-    <img src="assets/chatbotExample1.gif" alt="Project Image" class="project-image">
-    <h1 class="project-title">Personal Chatbot</h1>
-    <p class="project-description">
-      A chatbot with the likeness and memories of your's truly.
-    </p>
-
-      <div class="tech-stack">
-    <span class="chip">React</span>
-    <span class="chip">TypeScript</span>
-    <span class="chip">Express</span>
-    <span class="chip">OpenAI</span>
-    <span class="chip">MongoDB</span>
-    <span class="chip">JSON</span>
-    <span class="chip">Render</span>
-  </div>
-<a href="./chatbot_info.html"><button class="read-more-button">Read More</button></a>
-  </div>
-
-    	<!-- arrow link -->
-	 <a href="#projects3" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-</section>
-
-<section class="snap-section" id="projects3">
-        <div class="project-container">
-    <img src="assets/beast_assets/hungry.gif" alt="Project Image" class="project-image">
-    <h1 class="project-title">React Pet Game</h1>
-    <p class="project-description">
-    A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.
-    </p>
-
-      <div class="tech-stack">
-    <span class="chip">React</span>
-    <span class="chip">Express</span>
-    <span class="chip">PostgreSQL</span>
-    <span class="chip">AWS RDS</span>
-    <span class="chip">Supabase</span>
-    <span class="chip">Render</span>
-  </div>
-  <a href="./beast_info.html">
-  <button class="read-more-button">Read More</button></a>
-  </div>
-
-    	<!-- arrow link -->
-	 <a href="#sectionD" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-</section>
 
   <section class="snap-section" id="sectionD">
  
@@ -1200,19 +1260,12 @@ z"/>
   <div class="start card">
     <div class="card-container-inverse">
       <div class="card-container-item-left-inverse contact_box">
-        <div class="wrapper-h1-banner">
-          <div class="typing-demo type_medium_size">
-            <h1>Contact Me</h1>
-       
-		
-		</div>
-        </div>
+    
         <div class="banner_heading">
           <h1>Contact Me</h1>
 		
         </div>
-		   <p>"Great things in business are never done by one person. They're done by a team of people." -Steve Jobs</p> 
-        <br>
+		
 
       </div>
 
@@ -1304,7 +1357,7 @@ z"/>
   <script src="javaScript/comic/test_section_anime_2.js"></script>
 
 
-
+ <!-- <script src="javaScript/comic/comic_back_to_top.js"></script> -->
     <script>
 
 
@@ -1322,6 +1375,9 @@ z"/>
         btn.textContent = "☰"; // arrow right
       }
     }
+
+
+
   </script>
 </body>
 </html>
