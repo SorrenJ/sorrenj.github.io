@@ -241,6 +241,19 @@ position:absolute;
 
 }
 
+.central-tattle{
+padding:15%; 
+margin-top:20%;
+}
+
+ @media (max-width: 768px) {
+.central-tattle{
+font-size:0.75em;
+  padding:5%; 
+
+}
+ }
+
 .face-column-proj{
 
 }
@@ -466,7 +479,7 @@ object-fit: cover; */
          
 
 .social-buttons a span{
-font-size:50px; filter:brightness(2); color:rgba(0, 0, 0, 0.226);
+font-size:50px; filter:brightness(2); color:rgba(0, 0, 0, 0.5);
  transition: color 0.3s ease;
 }
 
@@ -485,3 +498,127 @@ color:rgb(228, 44, 182);
     position: relative;
     z-index: 2;
 }
+
+
+
+   .social-column {
+            width: 100%;
+            max-width: 800px;
+            /* background: rgba(255, 255, 255, 0.575); */
+            border-radius: 20px;
+            /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); */
+            overflow: hidden;
+        }
+        
+        .central-tattle-social {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .central-tattle-social h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        
+        .central-tattle-social h3 {
+            color: #555;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-buttons:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-buttons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-buttons a:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .github {
+            background: linear-gradient(135deg, #333 0%, #6e5494 100%);
+        }
+        
+        .linkedin {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+        }
+        
+        .resume {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        }
+        
+        .chat {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbcbcb39, transparent);
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .central-tattle-social {
+                padding: 25px;
+            }
+            
+            .central-tattle-social h2 {
+                font-size: 1.5rem;
+            }
+            
+            .social-container {
+                gap: 20px;
+            }
+            
+            .social-buttons a {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .central-tattle-social {
+                padding: 20px;
+            }
+            
+            .social-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .social-buttons {
+                width: 100%;
+            }
+        }

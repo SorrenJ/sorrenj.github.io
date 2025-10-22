@@ -113,3 +113,7 @@ document.getElementById('svg1').addEventListener('load', function() {
 document.getElementById('react-svg').addEventListener('load', function() {
   animateReactLogo('react-svg', 'section3');
 });
+
+document.getElementById('react-svg').addEventListener('load', function() {
+  animateReactLogo('react-svg', 'socials');
+});
