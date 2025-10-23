@@ -6,7 +6,9 @@ html, body {
 
 scroll-behavior: smooth;
     }
-
+section {
+  position: relative;
+}
 
 .scroll-container {
   height: 100vh;
@@ -185,10 +187,15 @@ margin-top: -50px;
 
 .arrow-link {
   display: inline-block;
-  width: 250px;
-  height: 70px;
-  z-index:99;
+  width: 200px; /* Increased from 250px */
+  height: 200px; /* Increased from 70px */
+  z-index: 99;
+  position: absolute;
+  bottom: -100px; 
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .arrow-link svg {
   width: 100%;
   height: 100%;
@@ -604,7 +611,7 @@ color:rgb(228, 44, 182);
             }
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: 180px) {
             .central-tattle-social {
                 padding: 20px;
             }
