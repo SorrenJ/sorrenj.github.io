@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
   height: 100vh;
   width: 100vw;
   /* background-color: #f0f0f0; */
-  padding: 40px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
 
 
 .project-image {
-  width: 400px;
+  width: 450px;
   height: 300px;
   margin-bottom: 30px;
   border-radius: 8px;
@@ -58,7 +58,7 @@ body::-webkit-scrollbar {
 @media only screen and (max-width: 600px) {
 
 .project-image {
-  width: 200px;
+  width: 250px;
   height: 150px;
 }
 
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 
 
 .project-title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
 }
