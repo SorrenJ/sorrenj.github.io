@@ -97,24 +97,20 @@ scroll-behavior: smooth;
             margin: 30px 0;
         }
         
-       #section1 { background-color: #f7e9f5; }
-        #section2 { background-color: #fcdddd; }
-        #section3 { background-color: #f7e9f5; }
-         #sectionA { background-color: #fcdddd; }
-         #sectionB { background-color: #f7e9f5; }
-         #sectionC { background-color: #fcdddd; }
-      #project { background-color: #f7e9f5; }
-#projects2 { background-color: #fcdddd; }
-#projects3 { background-color: #f7e9f5;}
-         #section4 { background-color: #fcdddd; } 
-        
-
-
-
-#sectionD { background-color: #fcdddd;  }
-#sectionE { background-color: #f3c4ec;  }
- #socials { background-color: #fcd9ff; }
-  #contact { background-color: #fcdddd; }
+#section1 { background: radial-gradient(circle farthest-corner at center, #f8d7dc 0%, #f2b6c5 100%); }
+#section2 { background: radial-gradient(circle farthest-corner at center, #f9e3e9 0%, #f1afc4 100%); }
+#section3 { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #ed98ca 100%); }
+#sectionA { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionB { background: radial-gradient(circle farthest-corner at center, #fcf5fc 0%, #f7e9f5 100%); }
+#sectionC { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#project { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #e89ce5 100%); }
+#projects2 { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #f49ef1 100%); }
+#projects3 { background: radial-gradient(circle farthest-corner at center, #fcf5fc 0%, #ef8dab 100%); }
+#section4 { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionD { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionE { background: radial-gradient(circle farthest-corner at center, #fbf0f9 0%, #f3c4ec 100%); }
+#socials { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #f899bb 100%); }
+#contact { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #ffabc1 100%); }
 /* #contact { background-color: #f0fdff; } */
 .bouncing-arrow {
   display: block !important;
@@ -574,11 +570,12 @@ color:rgb(228, 44, 182);
         }
         
         .resume {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
         
         .chat {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+            background: linear-gradient(135deg, #f3819d 0%, #f64d82 100%);
         }
         
         .divider {
