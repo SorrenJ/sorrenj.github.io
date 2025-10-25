@@ -27,9 +27,11 @@ a {
 
 button {
   cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+
 }
 
 .button {
+
   cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
 }
 
@@ -39,7 +41,7 @@ li {
 
 body {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  background-color: #ececec;
+  background: radial-gradient(circle farthest-corner at center, #f9e3e9 0%, #f1afc4 100%);
   color: rgb(0, 0, 0);
 }
 
@@ -65,6 +67,7 @@ section {
   margin-right: 5%;
   line-height: 1.6em;
   z-index: 2;
+  
 }
 
 section h1 {
@@ -88,7 +91,7 @@ section .content {
 }
 
 .project_banner {
-  background: #e0e0e0;
+  background: radial-gradient(circle farthest-corner at center, #f8d7dc 0%, #f2b6c5 100%);
   color: rgb(0, 0, 0);
   text-align: center;
   margin-bottom: 5%;
@@ -133,7 +136,7 @@ section .content {
     word-wrap: break-word;
     margin-left: 5%;
     margin-right: 5%;
-    color: white;
+    /* color: white; */
   }
   
   code {
@@ -172,8 +175,7 @@ video {
 }
 
 .button {
-  background-color: #d5d5d5;
-  color: rgb(0, 0, 0);
+
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 15px;
@@ -531,8 +533,8 @@ button:hover {
 }
 
 .button {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+    background-color: #610034;
+  color: rgb(255, 255, 255);
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 15px;
@@ -565,7 +567,7 @@ button:hover {
 }
 
 .button:hover {
-  background-color: #DF62BC;
+  background-color: #000000;
   color: white;
 }
 

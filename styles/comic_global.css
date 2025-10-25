@@ -19,12 +19,16 @@
 html {
   scrollbar-width: thin; /* "auto" or "thin" */
   /* scrollbar-color: #000 #f1f1f1;  */
+
+  cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
 }
 
 /* For Edge (Chromium) & Safari (fallback) */
 body {
   scrollbar-face-color: #000; /* Deprecated but works in older Edge/Safari */
   scrollbar-track-color: #f1f1f1;
+  cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
+
 }
 /* Ensure SVG container is visible and properly sized */
 /* #robot-section {
@@ -34,6 +38,37 @@ body {
     align-items: center;
     margin: 20px 0;
 } */
+
+
+a {
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+
+.arrow-link {
+cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+
+}
+
+button {
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.button {
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+li {
+  list-style: none;
+}
+
+
+svg{
+  cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
+
+}
+
+
 
 #robot-svg {
     /* width: 413px;

@@ -27,13 +27,15 @@
 }
 
  .sidebar a.active {
-      border-left: 5px solid hotpink;
+      border-left: 5px solid #a01278;;
       /* background: #f88bc733; */
-      color: hotpink;
+      color: #a01278;;
+  
+    
     }
 
 .sidebar a:hover {
-   background: #f88bc77e; 
+   background: #a01278;; 
   color: white;
    animation: shake 0.3s;
 }
