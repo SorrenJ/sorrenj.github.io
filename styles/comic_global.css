@@ -25,11 +25,22 @@ html {
 
 /* For Edge (Chromium) & Safari (fallback) */
 body {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
   scrollbar-face-color: #000; /* Deprecated but works in older Edge/Safari */
   scrollbar-track-color: #f1f1f1;
   cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
 
 }
+
+
+
+
+
+
+
+
 /* Ensure SVG container is visible and properly sized */
 /* #robot-section {
     width: 100%;
