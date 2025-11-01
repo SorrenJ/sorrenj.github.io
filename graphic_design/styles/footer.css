@@ -1,0 +1,61 @@
+footer{
+    /* top:110%;  */
+    position: relative; 
+    width:100%;
+    background-color:transparent
+}
+
+@media only screen and (max-width:1080px){
+    footer{
+        top:100%; 
+        position: absolute; 
+        width:90%;
+        display:none;
+    }
+}
+.further_links{
+    width:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center
+}.button
+{
+    width:100%
+}.contact{
+    border-radius:100px;
+    padding-top:50px;
+    padding-bottom:50px
+}
+.contact_image{
+    width:80px
+}
+.further_item{
+    width:100%;
+    padding-top:5%;
+    margin-right:12%;
+    margin-left:12%;
+    -webkit-filter:brightness(50%)
+}
+.further_item:hover{
+   
+    -webkit-filter:brightness(100%);
+    color:#ffffff;
+    -webkit-transition:-webkit-transform 2s ease-in-out;
+    transition:-webkit-transform 2s ease-in-out;
+    transition:transform 2s ease-in-out;
+    transition:transform 2s ease-in-out,
+    -webkit-transform 2s ease-in-out
+}.further_item h3{
+    position:relative;
+    text-align:justify;
+    -webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:5%
+}@media only screen and (max-width:1250px)
+{.contact_image{width:55%}}
+@media only screen and (max-width:1000px){.further_item{width:33.33%}footer{margin-top:350px;padding-left:5%;padding-right:5%}.further_item h3{font-size:0.5em}}

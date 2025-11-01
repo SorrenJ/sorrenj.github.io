@@ -1,0 +1,674 @@
+html, body {
+          height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+  margin: 0;
+  height: 100%;
+  /* overflow: hidden;  */
+     overflow-x: hidden !important; /* This prevents horizontal scrolling */
+cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
+scroll-behavior: smooth;
+    }
+section {
+  position: relative;
+}
+
+embed{
+cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
+}
+
+svg{
+cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
+
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto; 
+  overflow-x: hidden !important;
+  cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
+}
+
+.snap-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+    /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+       .scroll-container {
+ scroll-behavior: auto;
+  scroll-snap-type: none;
+
+}
+       
+          .snap-section {
+ scroll-snap-type: none;
+}
+
+        }
+
+
+
+        section {
+              top:0px;   
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            /* position: sticky;  */
+            /* background: floralwhite; */
+            /* border-style: dotted; */
+            border-width: 5px;
+             /* scroll-snap-align: start; */
+   cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto;
+
+        }
+
+
+
+        /* @media (max-width: 768px) {
+  .scroll-container {
+    height: auto !important;                
+  }
+
+  .snap-section {
+    height: auto !important;              
+  }
+ section {
+     height: auto !important;   
+      min-height: auto !important;  
+ 
+
+        }
+
+
+
+} */
+
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .svg-container2 {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+        }
+        
+#section1 { background: radial-gradient(circle farthest-corner at center, #f8d7dc 0%, #f2b6c5 100%); }
+#section2 { background: radial-gradient(circle farthest-corner at center, #f9e3e9 0%, #f1afc4 100%); }
+#section3 { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #ed98ca 100%); }
+#sectionA { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionB { background: radial-gradient(circle farthest-corner at center, #fcf5fc 0%, #f7e9f5 100%); }
+#sectionC { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#project { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #e89ce5 100%); }
+#projects2 { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #f49ef1 100%); }
+#projects3 { background: radial-gradient(circle farthest-corner at center, #fcf5fc 0%, #ef8dab 100%); }
+#section4 { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionD { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #fcdddd 100%); }
+#sectionE { background: radial-gradient(circle farthest-corner at center, #fbf0f9 0%, #f3c4ec 100%); }
+#socials { background: radial-gradient(circle farthest-corner at center, #fbe6fa 0%, #f899bb 100%); }
+#contact { background: radial-gradient(circle farthest-corner at center, #fef0f0 0%, #ffabc1 100%); }
+/* #contact { background-color: #f0fdff; } */
+.bouncing-arrow {
+  display: block !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  animation: bounce-and-blink 2s infinite !important;
+margin-top: -50px;
+cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+@keyframes bounce-and-blink {
+  0%, 100% { 
+    /* opacity: 1 !important;  */
+    transform: translateY(0);
+  }
+  50% { 
+    /* opacity: 0.5 !important;  */
+    transform: translateY(-10px); /* Optional: Adds bounce */
+  }
+}
+
+/* #backToTop {
+  display:none !important;
+} */
+
+.back-to-top {
+  position: absolute;
+  /* bottom: 100px;  
+  right: 100px; */
+  /* margin-top: 45%; */
+  margin-left:80%;
+  /* float:right; */
+  opacity: 1; 
+  bottom: 10px; 
+  /* pointer-events: none; */
+  transition: opacity 0.3s ease;
+  /* z-index: 99; */
+  width:50%;
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.back-to-top path {
+  display: block !important;
+  fill: #010101 !important;
+  vector-effect: non-scaling-stroke !important;
+}
+
+
+
+ @media (max-width: 768px) {
+
+  .back-to-top {
+  /* position: fixed; */
+  /* bottom: 100px;  
+  right: 100px; */
+  /* margin-top: 100%;
+  margin-left:80%; */
+
+  }
+ }
+
+
+
+
+
+
+
+
+
+
+/* .back-to-top.show {
+  opacity: 1 !important;
+  pointer-events: auto;
+} */
+
+.arrow-link {
+  display: inline-block;
+  width: 200px; /* Increased from 250px */
+  height: 200px; /* Increased from 70px */
+  z-index: 99;
+  position: absolute;
+  bottom: -100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.arrow-link svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.arrow-link path {
+  display: block !important;
+  fill: #010101 !important;
+  vector-effect: non-scaling-stroke !important;
+}
+
+
+
+.arrow-link-projects {
+  display: inline-block;
+  width: 100px; /* Increased from 250px */
+  height: 100px; /* Increased from 70px */
+  z-index: 99;
+  position: absolute;
+  bottom: -80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.arrow-link-projects svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
+}
+
+.arrow-link-projects path {
+  display: block !important;
+  fill: #010101 !important;
+  vector-effect: non-scaling-stroke !important;
+}
+
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically in column direction */
+    align-items: center; /* Centers horizontally in column direction */
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Optional: set a max-width for better control */
+    margin: 0 auto; /* Centers the container itself horizontally */
+position:absolute;
+
+
+}
+        
+        .column {
+            flex: 1; /* Makes columns equal width */
+            padding: 15px;
+            /* border: 1px solid #ddd; */
+            border-radius: 5px;
+            /* background-color: #f9f9f9; */
+        }
+
+
+
+         .face-column {
+            flex: 1; /* Makes columns equal width */
+        /* Keep your existing styles */
+    text-align: center; /* Add this to center content */
+    margin-left: 0; /* Remove left margin if you want true center */
+        margin-top: -180px;  
+        
+
+}
+
+.central-tattle{
+padding:15%; 
+margin-top:20%;
+}
+
+ @media (max-width: 768px) {
+.central-tattle{
+font-size:0.75em;
+  padding:5%; 
+
+}
+ }
+
+.face-column-proj{
+
+}
+        .chat-column {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+/* padding-right: 405px; */
+        }
+
+
+.chat-column-proj {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+padding-right: 100px;
+}
+
+.background-section {
+    /* position: fixed;  */
+    /* top: 0;
+    left: 0;  */
+
+  
+    /* z-index: -1; */
+    /* overflow: hidden; */
+
+        /* width: 50%; */
+    height: 50%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#robot-svg {
+    margin-top: -80px;
+    /* object-fit: cover; */
+
+}
+
+
+ @media (max-width: 768px) {
+.section-background-svg{
+display:none;
+}
+ }
+#robot-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* #section2 {
+    position: relative; 
+    background-image: url('assets/svg_anime/robot-hand-shake.svg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+                      z-index: 9999;
+      background: rgba(83, 255, 44, 0.2); 
+
+} */
+
+
+
+    #market-animation-container {
+      width: 100%;
+      height: 400px;
+      background: #e0e0e0;
+      position: absolute;
+    }
+
+
+/* #market-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+      z-index: 9999;
+      background-image: url('assets/svg_anime/communications_lines_bg.svg') !important;
+} */
+
+#market-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#market-path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#sectionA {
+  position: relative;
+  background-image: url('assets/svg_anime/communications_lines_bg.svg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure it scrolls */
+}
+
+.flex-container {
+    position: relative;
+    z-index: 2; /* Ensure content stays above animation */
+}
+
+
+#react-section{
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    height: 2000px;
+    z-index: 0;
+}
+
+#react-svg {
+    width: 1800px;
+    height: 1800px;
+    /* object-fit: cover; */
+    margin-top: -440px;
+    margin-left: -5%;
+    /* object-fit: cover; */
+/* position:absolute; */
+ /* z-index: -1;
+object-fit: cover; */
+}
+
+.bg-two-column-container {
+  display: flex;
+  justify-content: space-between; /* Creates maximum space between columns */
+  width: 100%; /* Or set a specific width */
+ gap: 100px; /* Adjust this value for your desired gap size */
+}
+
+.bg-column {
+  /* Adjust width as needed - these values create a large gap */
+  width: 800px; /* Each column takes 30% of container width */
+  
+  /* Optional styling */
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* Optional: Add visual distinction between columns */
+.bg-left-column {
+  background-color: #fc0c0c;
+}
+
+.bg-right-column {
+  background-color: #0804ff;
+}
+           .column img {
+            max-width: 100%; /* Makes image responsive */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 5px;
+        }
+
+
+        .proj_tattle {
+            margin-top:100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:20pt;
+            text-align: center;
+           
+            /* width:100%; */
+            /* background-color: #333; */
+        }
+         
+
+
+        /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+
+        .bouncing-arrow {
+            opacity: 0.4; /* Initial low opacity */
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .bouncing-arrow:hover {
+            opacity: 1 !important; /* Force full opacity on hover */
+        }
+  
+/* Add to your existing CSS */
+        .blossom-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .blossom-anime {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+            transform-origin: center center;
+        }
+         
+
+.social-buttons a span{
+font-size:50px; filter:brightness(2); color:rgba(0, 0, 0, 0.5);
+ transition: color 0.3s ease;
+}
+
+.social-buttons a span:hover{
+color:rgb(228, 44, 182);
+}
+
+
+#section4 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure content stays above blossoms */
+.flex-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+   .social-column {
+            width: 100%;
+            max-width: 800px;
+            /* background: rgba(255, 255, 255, 0.575); */
+            border-radius: 20px;
+            /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); */
+            overflow: hidden;
+        }
+        
+        .central-tattle-social {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .central-tattle-social h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+        
+        .central-tattle-social h3 {
+            color: #555;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-buttons:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-buttons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-buttons a:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .github {
+            background: linear-gradient(135deg, #333 0%, #6e5494 100%);
+        }
+        
+        .linkedin {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+        }
+        
+        .resume {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .chat {
+
+            background: linear-gradient(135deg, #f3819d 0%, #f64d82 100%);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbcbcb39, transparent);
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .central-tattle-social {
+                padding: 25px;
+            }
+            
+            .central-tattle-social h2 {
+                font-size: 1.5rem;
+            }
+            
+            .social-container {
+                gap: 20px;
+            }
+            
+            .social-buttons a {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 180px) {
+            .central-tattle-social {
+                padding: 20px;
+            }
+            
+            .social-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+            
+            .social-buttons {
+                width: 100%;
+            }
+        }

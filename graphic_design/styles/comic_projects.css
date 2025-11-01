@@ -1,0 +1,182 @@
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .project-layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .project-image {
+            width: 550px;
+            height: 350px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #000000;
+            text-align: left;
+        }
+
+        .project-description {
+            font-size: 1.25rem;
+            color: #333333;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .tech-stack {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: left;
+            position: relative;
+        }
+
+        .chip {
+            background-color: #a01278;
+            color: #ffffff;
+            padding: 8px 14px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+
+        .chip:hover {
+            background-color: #700e55;
+            cursor: default;
+        }
+
+        .read-more-button {
+            margin-top: 25px;
+            padding: 12px 24px;
+            background-color: #610034;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-button:hover {
+            background-color: #000000;
+        }
+
+        /* Mobile view - FIXED STACKING */
+        @media only screen and (max-width: 1000px) {
+            .project-layout {
+                flex-direction: column; /* This makes elements stack vertically */
+            }
+            
+            .image-content {
+                order: -1; /* This moves image to top when stacked */
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .project-image {
+                width: 100%;
+                max-width: 550px;
+                height: 350px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .text-content {
+                width: 100%;
+                padding: 20px;
+                      margin-bottom: 5px;
+            margin-top: 5px;
+            }
+            
+            .project-title {
+                text-align: center;
+            }
+            
+            .project-description {
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .tech-stack {
+                justify-content: center;
+            }
+        }
+
+        /* Small mobile view */
+        @media only screen and (max-width: 600px) {
+            .project-container {
+                height: auto;
+                width: 100vw;
+                padding: 20px;
+            }
+            
+            .project-image {
+                height: 300px;
+            }
+            
+            .project-title {
+                font-size: 1.7rem;
+            }
+            
+            .project-description {
+                font-size: 1.1rem;
+                margin-top:1em;
+            }
+       
+           .read-more-button {
+  display: block;
+    margin: 25px auto 0 auto; /* Top margin + auto left/right for centering */
+        }
+
+       
+          }

@@ -1,0 +1,26 @@
+<svg id="svg3" width="300" height="400" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Speech bubble (adjusted to fit viewBox) -->
+  <path 
+    id="speech-bubble-path"
+    d="M636 400.141C636 417.784 629.494 434.704 617.912 447.18C606.331 459.655 590.624 466.664 574.245 466.664C574.245 466.664 249.673 456.487 230.167 456.487C225.842 456.487 203.309 450.054 190 466.664C177.731 481.975 173.5 485.033 173.5 534.543C173.5 584.054 182 578.842 182 578.842C182 578.842 155.072 570.947 128.29 462.941C124.623 448.154 97.9845 456.769 67.9343 456.487C55.6589 456.371 38.5939 460.175 23.9236 452.799C9.25333 445.422 10.155 439.572 9.25329 429.748C-5.21733 272.095 2.73312 100.58 7.66791 66.7608C7.66791 49.1177 12.0367 30.0659 23.618 17.5904C35.1993 5.11481 85.6606 1 102.039 1H574.245C590.624 1 606.331 8.0087 617.912 20.4843C629.494 32.9598 636 49.8803 636 67.5234V400.141Z" 
+    stroke="#1E1E1E" 
+    stroke-width="5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    fill="#ffffffff"
+    style="stroke-dasharray: 1000; stroke-dashoffset: 1000;" 
+     opacity = "0" 
+  />
+<text x="35%" y="20%" 
+      font-family="Arial, sans-serif" 
+      font-size="50" 
+      fill="#1E1E1E" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      opacity="0">
+    <tspan x="45%" dy="0">Alright,</tspan>
+    <tspan x="45%" dy="1.2em">let's see what </tspan>
+    <tspan x="45%" dy="1.2em">I've been working on!
+    </tspan>
+</text>
+</svg>

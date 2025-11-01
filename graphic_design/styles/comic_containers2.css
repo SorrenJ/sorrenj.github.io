@@ -1,0 +1,346 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* prevent default body scroll */
+     overflow-x: hidden !important; /* This prevents horizontal scrolling */
+}
+
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto; /* prevent conflict with GSAP */
+   overflow-x: hidden !important;
+}
+
+
+
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 3rem; */
+}
+        section {
+              top:0px;   
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            /* position: sticky;  */
+            /* background: floralwhite; */
+            border-style: dotted;
+            border-width: 5px;
+             scroll-snap-align: start;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .svg-container2 {
+            width: 200px;
+            height: 200px;
+            margin: 30px 0;
+        }
+        
+        /* #section1 { background-color: #f0f8ff; }
+        #section2 { background-color: #fff0f5; }
+        #section3 { background-color: #f0fff0; }
+        #section4 { background-color: #fff8f0; } */
+
+.bouncing-arrow {
+  display: block !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  animation: bounce-and-blink 2s infinite !important;
+margin-top: -50px;
+}
+
+@keyframes bounce-and-blink {
+  0%, 100% { 
+    /* opacity: 1 !important;  */
+    transform: translateY(0);
+  }
+  50% { 
+    /* opacity: 0.5 !important;  */
+    transform: translateY(-10px); /* Optional: Adds bounce */
+  }
+}
+
+.arrow-link path {
+  display: block !important;
+  fill: #010101 !important;
+  vector-effect: non-scaling-stroke !important;
+}
+
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically in column direction */
+    align-items: center; /* Centers horizontally in column direction */
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Optional: set a max-width for better control */
+    margin: 0 auto; /* Centers the container itself horizontally */
+position:absolute;
+
+
+}
+        
+        .column {
+            flex: 1; /* Makes columns equal width */
+            padding: 15px;
+            /* border: 1px solid #ddd; */
+            border-radius: 5px;
+            /* background-color: #f9f9f9; */
+        }
+
+
+
+         .face-column {
+            flex: 1; /* Makes columns equal width */
+        /* Keep your existing styles */
+    text-align: center; /* Add this to center content */
+    margin-left: 0; /* Remove left margin if you want true center */
+        margin-top: -180px;  
+        
+
+}
+
+.face-column-proj{
+
+}
+        .chat-column {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+/* padding-right: 405px; */
+        }
+
+
+.chat-column-proj {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This already centers items horizontally */
+padding-right: 100px;
+}
+
+.background-section {
+    /* position: fixed;  */
+    /* top: 0;
+    left: 0;  */
+
+  
+    /* z-index: -1; */
+    /* overflow: hidden; */
+
+        /* width: 50%; */
+    height: 50%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#robot-svg {
+    margin-top: -80px;
+    /* object-fit: cover; */
+
+}
+
+
+
+#robot-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+#section2 {
+    position: relative; /* Needed for absolute positioning of children */
+    background-image: url('assets/svg_anime/robot-hand-shake.svg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+
+#market-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+      z-index: 9999;
+      background: rgba(255, 0, 0, 0.2); /* temp debug */
+}
+
+#market-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#market-path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#sectionA {
+  position: relative;
+  background-image: url('assets/svg_anime/communications_lines_bg.svg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Make sure it scrolls */
+}
+
+.flex-container {
+    position: relative;
+    z-index: 2; /* Ensure content stays above animation */
+}
+
+
+#react-section{
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    height: 2000px;
+    z-index: 0;
+}
+
+#react-svg {
+    width: 1800px;
+    height: 1800px;
+    /* object-fit: cover; */
+    margin-top: -440px;
+    margin-left: -38%;
+    /* object-fit: cover; */
+/* position:absolute; */
+ /* z-index: -1;
+object-fit: cover; */
+}
+
+.bg-two-column-container {
+  display: flex;
+  justify-content: space-between; /* Creates maximum space between columns */
+  width: 100%; /* Or set a specific width */
+ gap: 100px; /* Adjust this value for your desired gap size */
+}
+
+.bg-column {
+  /* Adjust width as needed - these values create a large gap */
+  width: 800px; /* Each column takes 30% of container width */
+  
+  /* Optional styling */
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* Optional: Add visual distinction between columns */
+.bg-left-column {
+  background-color: #fc0c0c;
+}
+
+.bg-right-column {
+  background-color: #0804ff;
+}
+           .column img {
+            max-width: 100%; /* Makes image responsive */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 5px;
+        }
+
+
+        .proj_tattle {
+            margin-top:100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:20pt;
+            text-align: center;
+           
+            /* width:100%; */
+            /* background-color: #333; */
+        }
+         
+
+
+        /* Optional: Responsive behavior - stack columns on small screens */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+
+        .bouncing-arrow {
+            opacity: 0.4; /* Initial low opacity */
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .bouncing-arrow:hover {
+            opacity: 1 !important; /* Force full opacity on hover */
+        }
+  
+/* Add to your existing CSS */
+        .blossom-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .blossom-anime {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+            transform-origin: center center;
+        }
+        
+
+#section4 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure content stays above blossoms */
+.flex-container {
+    position: relative;
+    z-index: 2;
+}

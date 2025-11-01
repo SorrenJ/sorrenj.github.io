@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorren Jao - Chatbot</title>
+
+
+  <meta name="description" content="My personalized chatbot with prompts and responses related to myself.">
+<meta name="keywords" content="Simon Fraser University, SFU, School of Interactive Arts & Technology, SIAT, Front-end, Web developer, Graduate, Postdoctural">
+<meta name="author" content="Sorren Jao">
+
+
+
+
+
+
+  <link rel="icon" href="assets/logo.svg" sizes=96x96 />
+  <link href="styles/grid.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
+  <link href="styles/sorren_sdt.css" rel="stylesheet">
+
+
+  <link href="styles/comic_inputform.css" rel="stylesheet">
+  <link href="styles/containers.css" rel="stylesheet">
+  <link href="styles/project.css" rel="stylesheet">
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/typing.css" rel="stylesheet">
+  <link href="styles/fade-in-fade-out.css" rel="stylesheet">
+  <link href="styles/loading-screen.css" rel="stylesheet">
+  <!-- <link href="styles/loading-screen.css" rel="stylesheet"> -->
+  
+  <link href="styles/card.css" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://kit.fontawesome.com/0b0401bad6.js" crossorigin="anonymous"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33541X6RG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33541X6RG3');
+</script>
+<body>
+
+    
+  <div id="fade" class="fade fade-active">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+</div>
+  <!-- Navbar starts here -->
+  <header>
+
+    <!-- header -->
+    <div class="home_nav">
+      <div class="home_nav-item">
+        <div class="home_icon"><a href="index.html">
+            <img src="assets/logo.svg" alt="logo"></a>
+
+          <!-- <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size:24pt"></i>
+          </a> -->
+        </div>
+      </div>
+
+      <div class="home_nav-item">
+        <div id="myLinks" class="nav">
+          <div class="nav-item special-nav-item"><a href="./chatbot_info.html"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="javaScript/navbar.js"></script>
+  <!-- <div id="fade" class="fade"></div> -->
+
+  
+  <!-- page navigation -->
+  <br>
+  <br>
+
+  <div class="project_banner">
+    <h1>Sorren AI Chatbot</h1>
+
+    <h2>Stack:</h2>
+    <br>
+    <div class="tag">OpenAI</div>
+    <div class="tag">TypeScript</div>
+    <div class="tag">React</div>
+    <div class="tag">JavaScript</div>
+    <div class="tag">Express.js</div>
+    <div class="tag">MongoDB</div>
+
+    <br><br>
+    <a href="https://react-typescript-nlp-frontend.onrender.com/" target="_blank">
+      <div class="button" style="width:50%; margin-right:25%; margin-left:25%">Chat now! </div>
+    </a>
+   
+   
+
+
+  </div>
+
+  <section>
+
+    <!-- brand identity section, composed of header then container below that is flex for the image and paragraph -->
+
+    <div class="style_nav">
+
+
+      <a href="index.html#project">
+        <div class="button style-nav-item">← Back to projects</div>
+      </a>
+      <!-- <a href="#1">
+        <div class="button style-nav-item">Abstract</div>
+      </a>
+      <a href="#2">
+        <div class="button style-nav-item">Process</div>
+      </a>
+      <a href="#3">
+        <div class="button style-nav-item">Final Product</div>
+      </a>
+    
+      <a href="#4">
+        <div class="button style-nav-item">Reflection</div>
+      </a> -->
+
+    </div>
+
+    <!-- pop up message button -->
+    <button type="button" class="openReply" onclick="toggle_button()"><i class="fa-solid fa-bars"></i></button>
+
+    <!-- pop up content -->
+    <div class="chat-popup" id="myForm">
+
+      <div class="livechat">
+        <button class="button closetoggle" type="button" onclick="toggle_button()">Close</button>
+      </div>
+
+      <div class="inner">
+        <a href="index.html#project">
+          <div class="button style-nav-item">← Back to projects</div>
+        </a>
+        <a href="#1">
+          <div class="button style-nav-item">Abstract</div>
+        </a>
+        <a href="#2">
+          <div class="button style-nav-item">Process</div>
+        </a>
+        <a href="#3">
+          <div class="button style-nav-item">Final Product</div>
+        </a>
+        <a href="#4">
+          <div class="button style-nav-item">Reflection</div>
+        </a>
+      </div>
+
+    </div>
+    <!-- end of pop up content -->
+
+
+    <section class="content" id="1">
+
+      <a href="assets/Imgs/chatbotExample3.gif"><img style="width:100%; "
+        src="assets/Imgs/chatbotExample3.gif" alt="videogamePrompt"></a>
+
+
+      <h2>
+        Abstract
+      </h2>
+      <hr>
+      <div>
+
+
+        <p>This is a chatbot I made to practice my TypeScript, and MongoDB deployment. </p>
+       
+      
+      </br>
+
+    </section>
+
+
+
+    <section class="content" id="2">
+
+      <h2>Process</h2>
+      <hr>
+<p>I implementated the Open API model gpt-3.5-turbo for the chatbot. 
+  Then I fed JSON data of my personality and likeness to the bot. Thus, 
+  this chatbot uses data from both the gpt model JSON file as it's corpus. 
+  The logic to retrieve the response from the data is in the express.js file where it is constantly run in
+  the hosted cloud server: render.com. 
+  The UI and frontend is also being constantly run in another render.com server. 
+  The frontend has pre made prompts for the user to enter. </p>
+
+
+      
+    </section>
+
+    <br>
+
+    <br>
+    <section class="content">
+      <h2 id="4">Reflection</h2>
+      <hr>
+      <p> Unfortunately, the MongoDB database deployment was unable to capture the weighted scoring for the prompts 
+        and could not capture my customized data to full effect. So my data is currently localized in the 
+        backend server. I'm currently working on finding a solution and trying to find NoSQL alternatives.
+      </p>
+      <br>
+      <a href="https://github.com/SorrenJ/React-Typescript-NLP" target="_blank">
+        <div class="button" style="width:50%; margin-right:25%; margin-left:25%">See my repo! </div>
+      </a>
+      <br>
+      <br><br>
+
+    </section>
+  </section>
+  <!-- 2nd card -->
+  <!-- 2nd card -->
+  <div id="contact" class="start card">
+    <div class="card-container-inverse">
+      <div class="card-container-item-left-inverse contact_box">
+        <div class="wrapper-h1-banner">
+          <div class="typing-demo type_medium_size">
+            <h1>Contact Me</h1>
+          </div>
+        </div>
+        <div class="banner_heading">
+          <h1>Contact Me</h1>
+        </div>
+        <br>
+
+
+      </div>
+
+      <div class="card-container-item-right-inverse center_text">
+        <div class="formContainer">
+          <div class="order-flex-item">
+
+            <!-- order item 0 starts -->
+
+            <!-- <h2>Delivery Information</h2> -->
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvonpwkn"
+              method="post">
+              <fieldset id="fs-frm-inputs">
+
+                <div class="input-container name">
+                  <input type="text" id="full-name" name="name" placeholder=" " required="required">
+                  <label class="placeholder-text" for="full-name">
+                    <span class="placeholder-name">Full name</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <input type="email" id="email-address" name="_replyto" placeholder=" " required="required">
+                  <label class="placeholder-text" for="email-address">
+                    <span class="placeholder-name">Email</span>
+                  </label>
+                </div>
+                <br>
+
+                <div class="input-container name">
+                  <textarea rows="5" name="message" id="message" placeholder=" " required=""></textarea>
+                  <label class="placeholder-text" for="message">
+                    <span class="placeholder-name">Message</span>
+                  </label>
+                </div>
+              </fieldset>
+
+
+
+
+              <br>
+              <input class="button next" type="submit" value="Submit" style="margin:auto;">
+
+            </form>
+
+
+          </div>
+        </div>
+   
+      </div>
+      <div class="triangleTopRight-inverse"></div>
+    </div>
+  
+
+  
+  </div>
+  <!-- end of card 2 -->
+  <footer style="background:rgb(246, 44, 105)">
+    <!-- <h1 style="margin-left:-1%; text-align:center">Contact Me</h1> -->
+    <div id="contact" class="footerContainer" >
+  
+  
+  
+  
+  
+      <div class="grid">
+        <div class="column-xs-12">
+          <ul class="social">
+    <li><a href="https://github.com/SorrenJ/" target="_blank" rel="noopener noreferrer"><span style="font-size:50px; filter: brightness(3);" class="fa-brands fa-github"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/sorren-alex-jao/" target="_blank"><span style="font-size:50px ;filter: brightness(3); " class="fa-brands fa-linkedin"></span></a></li>
+            
+          </ul>
+      
+          <p class="copyright">This website was manually coded by Sorren</p>
+          <p class="copyright">&copy; Copyright 2025 Sorren Jao</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function open1() {
+      document.getElementById("code1").style.display = "block";
+      document.getElementById("openbutton1").style.display = "none";
+      document.getElementById("closebutton1").style.display = "block";
+    }
+
+    function close1() {
+      document.getElementById("code1").style.display = "none";
+      document.getElementById("openbutton1").style.display = "block";
+      document.getElementById("closebutton1").style.display = "none";
+    }
+    function open2() {
+      document.getElementById("code2").style.display = "block";
+      document.getElementById("openbutton2").style.display = "none";
+      document.getElementById("closebutton2").style.display = "block";
+    }
+
+    function close2() {
+      document.getElementById("code2").style.display = "none";
+      document.getElementById("openbutton2").style.display = "block";
+      document.getElementById("closebutton2").style.display = "none";
+    }
+    function open3() {
+      document.getElementById("code3").style.display = "block";
+      document.getElementById("openbutton3").style.display = "none";
+      document.getElementById("closebutton3").style.display = "block";
+
+    }
+
+    function close3() {
+      document.getElementById("code3").style.display = "none";
+      document.getElementById("openbutton3").style.display = "block";
+      document.getElementById("closebutton3").style.display = "none";
+    }
+
+
+
+
+
+    function bio1() {
+      document.getElementById("bio1").style.display = "block";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio2() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "block";
+      document.getElementById("bio3").style.display = "none";
+
+
+    }
+    function bio3() {
+      document.getElementById("bio1").style.display = "none";
+      document.getElementById("bio2").style.display = "none";
+      document.getElementById("bio3").style.display = "block";
+
+
+    }
+
+
+  </script>
+  <!-- scripts to toggle pop up content -->
+  <script>
+ 
+  </script>
+
+  <script src="JS/section_observer.js"></script>
+  <script src="javaScript/chat_button.js"></script>
+
+
+
+  <script src="javaScript/typing_observer.js"></script>
+  <script src="javaScript/typing_observer2.js"></script>
+
+  <script src="javaScript/fade-in-fade-out.js"></script>
+
+  <!-- <script src="javaScript/loading-screen.js"></script> -->
+</body>
+
+</html>

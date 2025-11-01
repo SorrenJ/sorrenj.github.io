@@ -1,0 +1,112 @@
+
+/* Fixed vertical nav */
+.sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100px;
+      /* background: #333; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+  z-index: 99;
+  transition: transform 0.3s ease;  /* smooth slide */
+}
+
+.sidebar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 25px;
+  padding-right:45px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+ .sidebar a.active {
+      border-left: 5px solid #a01278;;
+      /* background: #f88bc733; */
+      color: #a01278;;
+  
+    
+    }
+
+.sidebar a:hover {
+   background: #a01278;; 
+  color: white;
+   animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* Toggle button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  /* background: #111; */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+  /* Flip when active */
+    .menu-btn.active {
+      transform: rotate(180deg);
+	  font-size: 5px;
+    }
+
+    .sidebar-text{
+      display:none;
+    }
+
+/* Mobile styles */
+@media (max-width: 800px) {
+  .sidebar {
+    transform: translateX(-100%); /* hide by default */
+  background: #000000b4;   
+      width: 100%;  
+
+}
+
+.sidebar a {
+ color:white;   
+  text-align: center;
+font-size: 30px;
+ 
+}
+
+.sidebar a:hover {
+  background: #f88bc77e;  
+  color: white;
+}
+
+
+    .sidebar-text{
+      display:block;
+    }
+
+
+  .sidebar.active {
+    transform: translateX(0);     /* show when active */
+  }
+  .menu-btn {
+    display: block;
+  }
+}
