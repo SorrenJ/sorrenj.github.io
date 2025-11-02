@@ -115,12 +115,14 @@
         @media only screen and (max-width: 1000px) {
             .project-layout {
                 flex-direction: column; /* This makes elements stack vertically */
+                    gap: 0.25rem;
             }
             
             .image-content {
                 order: -1; /* This moves image to top when stacked */
                 width: 100%;
                 padding: 20px;
+           
             }
             
             .project-image {
@@ -145,6 +147,7 @@
             .project-description {
                 text-align: center;
                 margin: 0 auto;
+                font-size:0.5em
             }
             
             .tech-stack {
