@@ -550,10 +550,10 @@ M305.500000,188.000000
       dominant-baseline="left"
 	
       opacity="0.2">
-    <tspan x="-10%" dy="0">node.js</tspan>
-    <tspan x="-15%" dy="2.2em">express</tspan>
-     <tspan x="-10%" dy="2.2em">crud</tspan>
-	 <tspan x="-15%" dy="2.2em">sql</tspan>
+    <tspan x="-10%" dy="0">figma</tspan>
+    <tspan x="-15%" dy="2.2em">photoshop</tspan>
+     <tspan x="-10%" dy="2.2em">illustrator</tspan>
+	 <tspan x="-15%" dy="2.2em">indesign</tspan>
 </text>
 
 <text style="transform:skewY(-5deg)" x="35%" y="30%" 
@@ -564,10 +564,10 @@ M305.500000,188.000000
       text-anchor="left" 
       dominant-baseline="left"
       opacity="0.2">
-    <tspan x="25%" dy="0">ec2</tspan>
-	<tspan x="35%" dy="1.2em">rds</tspan>
-	<tspan x="25%" dy="1.2em">supabase</tspan>
-    <tspan x="35%" dy="1.2em">azure</tspan>
+    <tspan x="25%" dy="0">html</tspan>
+	<tspan x="35%" dy="1.2em">css</tspan>
+	<tspan x="25%" dy="1.2em">javascript</tspan>
+    <tspan x="35%" dy="1.2em">joomla!</tspan>
 
 </text>
 
@@ -834,36 +834,66 @@ M305.500000,188.000000
 </a>
 </section>
 
-<section class="snap-section" id="projects3">
-  <div class="project-container">
-        <div class="project-layout">
-            <div class="text-content">
-                <h1 class="project-title">Pet AI Simulator</h1>
-                <p class="project-description">
-                   A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.
-                </p>
-                
-                <div class="tech-stack">
-                    <span class="chip">JavaScript</span>
-                    <span class="chip">Express</span>
-                    <span class="chip">React</span>
-                    <span class="chip">PostgreSQL</span>
-                    <span class="chip">AWS RDS</span>
-                    <span class="chip">Supabase</span>
-                    <span class="chip">Render</span>
-                </div>
 
-                <a href="beast_info.html">
-                    <button class="read-more-button">Read more</button>
-                </a>
-            </div>
-            
-            <div class="image-content">
-                <!-- Placeholder for the project image -->
-              <img src="assets/beast_assets/chat_cheer.gif" alt="Financial Assistant Interface" class="project-image">
+
+
+
+ <section class="snap-section" id="projects3">
+  <div class="project-container">
+            <div class="project-layout">
+                <div class="text-content">
+                    <h1 class="project-title">Prototypes and User Journeys</h1>
+                    <p class="project-description">
+                         A gallery of figma prototypes, storyboards, and persona graphics to communicate findings to stakeholders.
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <!-- <span class="chip">JavaScript</span>
+                        <span class="chip">Express</span>
+                        <span class="chip">Ollama</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">MSSQL</span>
+                        <span class="chip">Azure</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">Amazon EC2</span> -->
+                    </div>
+
+                    <a href="user_maps.html">
+                        <button class="read-more-button">See my work</button>
+                    </a>
+                </div>
+                
+                <div class="image-content">
+                    <!-- Gallery for multiple images -->
+                    <div class="project-gallery">
+                        <div class="gallery-item" onclick="openLightbox(0)">
+                            <img src="assets/school_projects/algoUserJourney.png" alt="Financial Dashboard">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(1)">
+                            <img src="assets/school_projects/souloUserJourney.png" alt="Budget Analytics">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(2)">
+                            <img src="assets/school_projects/toogoodtogoPersona.png" alt="Expense Tracking">
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox(3)">
+                            <img src="assets/Backend_Joomla_4_en.png" alt="Financial Reports">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightboxModal" class="lightbox-modal">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-nav">
+                <button onclick="changeImage(-1)">&#10094;</button>
+                <button onclick="changeImage(1)">&#10095;</button>
+            </div>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="">
+            </div>
+        </div>
 <br>
     	<!-- arrow link -->
 	 <a href="#socials" class="arrow-link-projects">
@@ -881,41 +911,7 @@ M305.500000,188.000000
           fill="#F8A6E6"/>
   </svg>
 </a>
-
-<a href="#section1" id="backToTop" class="back-to-top bouncing-arrow">
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 220 80"   
-       width="160" height="64"
-       role="img" aria-labelledby="titleDesc">
-    <title id="titleDesc">Back to top</title>
-
-    <!-- Arrow -->
-    <g transform="translate(16,12)" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-      <line x1="40" y1="40" x2="40" y2="10"/>
-      <polyline points="10,30 40,4 70,30"/>
-    </g>
-
-    <!-- Text below arrow -->
-    <text x="55" y="65"  
-          font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-          font-size="18"
-          font-weight="600"
-          fill="#010101"
-          text-anchor="middle"
-          dominant-baseline="hanging">  <!-- aligns from top -->
-      Go to top
-    </text>
-  </svg>
-</a>
-
 </section>
-
-
-
-
-
-
-
 
 
 
