@@ -3,7 +3,7 @@
 .sidebar {
       position: fixed;
       top: 0;
-      left: 0;
+      left: 20px;
       height: 100%;
       width: 100px;
       /* background: #333; */
@@ -79,7 +79,7 @@
 /* Mobile styles */
 @media (max-width: 800px) {
   .sidebar {
-    transform: translateX(-100%); /* hide by default */
+    transform: translateX(-110%); /* hide by default */
   background: #000000b4;   
       width: 100%;  
 

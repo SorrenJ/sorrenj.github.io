@@ -6,7 +6,7 @@ form {
   margin:auto;
   width:100%;
   text-align:left;
-  padding:20px;
+  /* padding:20px; */
 }
 
 input[type=email], input[type=text] {
