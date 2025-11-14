@@ -9,7 +9,7 @@ html, body {
 cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 scroll-behavior: smooth;
 font-family: Arial, sans-serif;
-background: linear-gradient(135deg, #E0B7B6 0%,  #E0B6CC 50%,  #D0B6E0 100%);
+background: linear-gradient(135deg, #dac4c8a8 0%,  #cc78878a 25%,  #b6667577 50%,  #da94c0a9 75%, #e479ff77 100%);
     }
 section {
   position: relative;
@@ -152,10 +152,10 @@ height: auto; /* Let section grow with content */
         }
 
          .section-title {
-            text-align: center;
+            text-align: left;
             font-size: 2.5rem;
             margin-bottom: 50px;
-            color: #333;
+            color: #414040;
             font-weight: normal;
         }
 
@@ -217,7 +217,7 @@ cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
   bottom: 10px; 
   /* pointer-events: none; */
   transition: opacity 0.3s ease;
-  /* z-index: 99; */
+  z-index: 99;
   width:50%;
   cursor: url('../assets/cursor/cursor-pointer.svg') 20 20, pointer !important;
 }

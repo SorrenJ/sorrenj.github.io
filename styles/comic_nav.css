@@ -27,7 +27,7 @@
 }
 
  .sidebar a.active {
-      border-left: 5px solid #a01278;;
+      border-left: 5px solid #a012782d;;
       /* background: #f88bc733; */
       color: #a01278;;
   
@@ -35,7 +35,7 @@
     }
 
 .sidebar a:hover {
-   background: #a01278;; 
+   background: #a0127839;; 
   color: white;
    animation: shake 0.3s;
 }
@@ -93,7 +93,7 @@ font-size: 30px;
 }
 
 .sidebar a:hover {
-  background: #f88bc77e;  
+  background: #f88bc728;  
   color: white;
 }
 

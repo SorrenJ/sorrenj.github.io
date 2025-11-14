@@ -27,15 +27,15 @@
 }
 
  .sidebar a.active {
-      border-left: 5px solid #a01278;;
+      border-left: 5px solid #a012783e;;
       /* background: #f88bc733; */
-      color: #a01278;;
+      color: #ed5197;;
   
     
     }
 
 .sidebar a:hover {
-   background: #a01278;; 
+   background: #a012784d;; 
   color: white;
    animation: shake 0.3s;
 }
