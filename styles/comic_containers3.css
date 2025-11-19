@@ -367,7 +367,9 @@ font-size: 1.25em;
 margin-left: -35px;
 margin-top:55%;
 
-
+  background: none;
+   box-shadow:none;
+   border:none;
 }
  
 }
