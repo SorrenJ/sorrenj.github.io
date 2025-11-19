@@ -41,7 +41,7 @@ li {
 
 body {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  background: radial-gradient(circle farthest-corner at center, #f9e3e9 0%, #f1afc4 100%);
+ background: linear-gradient(135deg, #dac4c8a8 0%,  #cc78878a 25%,  #b6667577 50%,  #da94c0a9 75%, #e479ff77 100%);
   color: rgb(0, 0, 0);
 }
 
