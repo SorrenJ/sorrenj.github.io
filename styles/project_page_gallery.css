@@ -114,6 +114,7 @@ body {
 .text-container h2 {
     font-size: 2.2rem;
     margin-bottom: 15px;
+    line-height: normal;
 }
 
 .text-container hr {
@@ -126,9 +127,15 @@ body {
 .text-container p {
     margin-bottom: 15px;
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.5;
 }
-
+@media (max-width: 480px) {
+.text-container p {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+}
 .subtitle {
     font-size: 1.2rem;
     color: #7f8c8d;
@@ -329,7 +336,8 @@ body {
 }
 
 .lightbox-image {
-    max-width: 70%;
+   max-width: 110%;
+        padding: 2px;
     max-height: 80vh;
     object-fit: contain;
     border-radius: 8px;
@@ -486,11 +494,12 @@ footer {
     
     .lightbox-text {
         font-size: 0.9rem;
+        line-height: normal;
     }
     
     .lightbox-image {
-        max-width: 85%;
-        padding: 15px;
+max-width: 110%;
+        padding: 2px;
     }
     
     .nav-btn {

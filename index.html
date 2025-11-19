@@ -11,10 +11,22 @@
  <link href="styles/petals2.css" rel="stylesheet">
       <link href="styles/comic_global.css" rel="stylesheet">
     <link href="styles/comic_containers3.css" rel="stylesheet">
-	<link href="styles/comic_projects.css" rel="stylesheet">
-	<link href="styles/comic_nav.css" rel="stylesheet">
+
+	
+  	<!-- <link href="styles/comic_projects.css" rel="stylesheet"> -->
+
+    	<!-- <link href="styles/project_gallery.css" rel="stylesheet"> -->
+
+  <link href="styles/comic_nav.css" rel="stylesheet">
+
+
+<link href="styles/comic_contactform_container.css" rel="stylesheet">
+    <link href="styles/comic_project_section.css" rel="stylesheet">
 
 	  <script src="javaScript/comic/comic_sidebar_detection.js"></script>
+
+  <!-- <link href="styles/loading-screen.css" rel="stylesheet"> -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -52,7 +64,10 @@
         <i></i>
     </div>
 
-
+  <!-- <div id="fade" class="fade fade-active">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading...</div>
+</div> -->
 
 	  <!-- Toggle button -->
 <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
@@ -61,7 +76,9 @@
 <div class="sidebar" id="sidebar">
     <a href="#section1"><i class="fa-solid fa-circle-user" style="font-size: 2.5em; margin-left: 4px;"></i><div class="sidebar-text">About</div></a>
     <a href="#project"><i class="fa-solid fa-laptop-code" style="font-size: 2.5em;"></i> <div class="sidebar-text">Projects</div></a>
-    <a href="#socials"><i class="fa-brands fa-github" style="font-size: 2.5em;"></i><div class="sidebar-text">Github</div></a>
+  <a href="#achievement"><i class="fa fa-trophy" style="font-size: 2.5em;"></i> <div class="sidebar-text">Achievements</div></a>
+	
+	<a href="#socials"><i class="fa-brands fa-github" style="font-size: 2.5em;"></i><div class="sidebar-text">Github</div></a>
 	<a href="#contact"><i class="fa-solid fa-envelope" style="font-size: 2.5em;"></i><div class="sidebar-text">Contact</div></a>
   </div>
 
@@ -79,7 +96,7 @@
      
         <div class="face-column">
    
-             <img width="400px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
+             <img width="300px" src="assets/sjao_faces/sjao-anime-2.gif" alt="Sample Image">
         </div>
     </div>
 
@@ -108,9 +125,9 @@
 
 
 
-<svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left;" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left; opacity:0.25" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-<path id="robot-svg" class="draw-path" fill="none" opacity="0.25" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000"
+<path id="robot-svg" class="draw-path" fill="none" opacity="0.15" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000"
 	d="
 M117.500000,98.000000 
 	C106.064774,104.687447 93.613350,104.610298 80.998482,103.517517 
@@ -544,11 +561,11 @@ M305.500000,188.000000
       text-anchor="left" 
       dominant-baseline="left"
 	
-      opacity="0.2">
-    <tspan x="-10%" dy="0">node.js</tspan>
+      opacity="0.25">
+    <tspan x="-10%" dy="0">sql</tspan>
     <tspan x="-15%" dy="2.2em">express</tspan>
-     <tspan x="-10%" dy="2.2em">crud</tspan>
-	 <tspan x="-15%" dy="2.2em">sql</tspan>
+     <tspan x="-10%" dy="2.2em">restful apis</tspan>
+	 <tspan x="-15%" dy="2.2em">java</tspan>
 </text>
 
 <text style="transform:skewY(-5deg)" x="35%" y="30%" 
@@ -558,11 +575,11 @@ M305.500000,188.000000
       fill="#1E1E1E" 
       text-anchor="left" 
       dominant-baseline="left"
-      opacity="0.2">
-    <tspan x="25%" dy="0">ec2</tspan>
-	<tspan x="35%" dy="1.2em">rds</tspan>
-	<tspan x="25%" dy="1.2em">supabase</tspan>
-    <tspan x="35%" dy="1.2em">azure</tspan>
+      opacity="0.25">
+    <tspan x="25%" dy="0">html</tspan>
+	<tspan x="35%" dy="1.2em">css</tspan>
+	<tspan x="25%" dy="1.2em">javascript</tspan>
+    <tspan x="35%" dy="1.2em">react</tspan>
 
 </text>
 
@@ -579,11 +596,11 @@ M305.500000,188.000000
         <div class="face-column">
            
 <div class="central-tattle">
-                <h2>I’m a Full-stack AI developer with a background in AI & LLM technologies and UX design / UI principles. </h2>
-      <br>
-      <h2>I also have experience in graphic design and marketing!</h2>
-      <br>
-                    <h2>Alright, let's see what I've been working on!</h2>
+      <p>I’m a Fullstack AI developer with a background in cloud integration and UX design . </p>
+    
+      <p>I also have past experience working on FinTech projects! </p>
+   
+                    <p>See what I've been working on below!</p>
 </div>
 
 
@@ -615,155 +632,58 @@ M305.500000,188.000000
 
     </section>
 
+ <section class="snap-section" id="project">
 
-    <!-- <section class="snap-section" id="sectionB">
- 
-<svg class="section-background-svg" width="1576" height="1200" viewBox="0 0 1576 1200">
-       
-     <text  x="5%" y="5%" 
-      font-family='Courier New, monospace'
-      font-size="50" 
-		font-style="italic"
-      fill="#1E1E1E" 
-      text-anchor="left" 
-      dominant-baseline="left"
-	
-      opacity="0.55">
-	   
-    <tspan  x="65%" dy="5.2em">AI developer </tspan>
-	<tspan  x="65%" dy="1em">@ Expense Trend</tspan>
-    <tspan  x="-15%" dy="5.2em">Web developer </tspan>
-	<tspan  x="-15%" dy="1em">@ Cybersalt Ltd.</tspan>
-
-     <tspan  x="65%" dy="5.2em">Web designer </tspan>
-	  <tspan  x="65%" dy="1em">@ Simon Fraser University</tspan>
-
-</text>
-	
-     
-      </svg>
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgB" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part6.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
- 
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-3.gif" 
-        alt="Sample Image">
-    </div>
-
-
-	 <a href="#project" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section> -->
+	<svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left; opacity:0.65" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 
 
+<i class="fa-solid fa-laptop-code" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.15; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
 
-
-
-
-<section class="snap-section" id="project">
-  <div class="project-container">
-        <div class="project-layout">
-            <div class="text-content">
-                <h1 class="project-title">Financial Assistant</h1>
-                <p class="project-description">
-                    Uses creative prompt engineering to transform user data into budgeting insights.
-                </p>
-                
-                <div class="tech-stack">
-                    <span class="chip">JavaScript</span>
-                    <span class="chip">Express</span>
-                    <span class="chip">Ollama</span>
-                    <span class="chip">MySQL</span>
-                    <span class="chip">MSSQL</span>
-                    <span class="chip">Azure</span>
-                    <span class="chip">Docker</span>
-                    <span class="chip">Amazon EC2</span>
+	</svg>
+ <div class="container" style="z-index:2">
+            <h2 class="section-title" style="z-index:2">Here are my full-stack projects...</h2>
+            <div class="projects-grid" style="z-index:2">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="assets/Imgs/expensetrendChat1.png" alt="Brand Identity Project" class="project-img">
+                    <div class="project-info" >
+                        <h3>Financial Assistant</h3>
+                        <p>Uses creative prompt engineering to transform user data into budgeting insights.</p>
+                       
+                     <a target="_blank" href="https://www.expensetrend.com/"><button class="read-more-button">Read More</button>  </a>
+                       
+                       
+                       
+                    </div>
                 </div>
-
-                <a target="_blank" href="https://www.expensetrend.com/">
-                    <button class="read-more-button">See Expense Trend</button>
-                </a>
-            </div>
-            
-            <div class="image-content">
-                <!-- Placeholder for the project image -->
-              <img src="assets/Imgs/expensetrendChat1.png" alt="Financial Assistant Interface" class="project-image">
-            </div>
-        </div>
-    </div>
-<br>
-  	<!-- arrow link -->
-	 <a href="#projects2" class="arrow-link-projects">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-  </section>
-
- <section class="snap-section" id="projects2">
-  <div class="project-container">
-        <div class="project-layout">
-            <div class="text-content">
-                <h1 class="project-title">Personalized AI Agent</h1>
-                <p class="project-description">
-                    A custom chatbot with a personality fine-tuned through creative prompt engineering to simulate my digital persona.
-                </p>
                 
-                <div class="tech-stack">
-                    <span class="chip">React</span>
-                    <span class="chip">Express</span>
-                    <span class="chip">TypeScript</span>
-                    <span class="chip">OpenAI</span>
-                    <span class="chip">MongoDB</span>
-                    <span class="chip">Render</span>
-                    <span class="chip">JSON</span>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="assets/Imgs/chatbotExample3.gif" alt="UI/UX Design Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Personalized AI Agent</h3>
+                        <p>A custom chatbot with a personality fine-tuned through creative prompt engineering to simulate my digital persona.
+                 </p>
+                        <a href="./chatbot_info.html"><button class="read-more-button">Read More</button>  </a>
+                    </div>
                 </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="assets/beast_assets/chat_cheer.gif" alt="Print Design Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Pet AI Simulator</h3>
+                        <p>A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.</p>
+                        <a href="./beast_info.html"><button class="read-more-button">Read More</button>  </a>                     
 
-                <a href="chatbot_info.html">
-                    <button class="read-more-button">Read more</button>
-                </a>
-            </div>
-            
-            <div class="image-content">
-                <!-- Placeholder for the project image -->
-              <img src="assets/Imgs/chatbotExample3.gif" alt="Financial Assistant Interface" class="project-image">
-            </div>
-        </div>
-    </div>
-<br>
+                    </div>
+                </div>
+                
+       
+
     	<!-- arrow link -->
-	 <a href="#projects3" class="arrow-link-projects">
+	 <a href="#achievement" class="arrow-link-projects">
   <svg class="bouncing-arrow" 
        width="80" height="80" 
        viewBox="0 0 164 164" 
@@ -780,37 +700,38 @@ M305.500000,188.000000
 </a>
 </section>
 
-<section class="snap-section" id="projects3">
-  <div class="project-container">
-        <div class="project-layout">
-            <div class="text-content">
-                <h1 class="project-title">Pet AI Simulator</h1>
-                <p class="project-description">
-                   A deployed virtual pet game where you can feed, clean, play, train, and chat with the pet.
-                </p>
-                
-                <div class="tech-stack">
-                    <span class="chip">JavaScript</span>
-                    <span class="chip">Express</span>
-                    <span class="chip">React</span>
-                    <span class="chip">PostgreSQL</span>
-                    <span class="chip">AWS RDS</span>
-                    <span class="chip">Supabase</span>
-                    <span class="chip">Render</span>
-                </div>
 
-                <a href="beast_info.html">
-                    <button class="read-more-button">Read more</button>
-                </a>
-            </div>
-            
-            <div class="image-content">
-                <!-- Placeholder for the project image -->
-              <img src="assets/beast_assets/chat_cheer.gif" alt="Financial Assistant Interface" class="project-image">
-            </div>
-        </div>
-    </div>
-<br>
+
+
+ <section class="snap-section" id="achievement">
+
+		<svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left; opacity:0.65" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+
+<i class="fa fa-trophy" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.15; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
+
+	</svg>
+ <div class="container">
+            <h2 class="section-title">Here is an achievement I'm proud of ... </h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="assets/Sorren-Jao-Lighthouse-Prize.jpg" alt="Brand Identity Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Meet Sorren Jao, 2023 Lighthouse Lab Prize Recipient</h3>
+                        <p>The award winner for the Lighthouse Labs prize funding.</p>
+                       
+                     <a target="_blank" href="https://www.sfu.ca/fcat/news/news/news-archive/spring-2024/Meet-Sorren-Jao-2023-Lighthouse-Lab-Prize-Recipient.html"><button class="read-more-button">Read More</button>  </a>
+                       
+                       
+                       
+                    </div>
+                </div>
+    
+                
+       
+
     	<!-- arrow link -->
 	 <a href="#socials" class="arrow-link-projects">
   <svg class="bouncing-arrow" 
@@ -827,392 +748,7 @@ M305.500000,188.000000
           fill="#F8A6E6"/>
   </svg>
 </a>
-
-<a href="#section1" id="backToTop" class="back-to-top bouncing-arrow">
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 220 80"   
-       width="160" height="64"
-       role="img" aria-labelledby="titleDesc">
-    <title id="titleDesc">Back to top</title>
-
-    <!-- Arrow -->
-    <g transform="translate(16,12)" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-      <line x1="40" y1="40" x2="40" y2="10"/>
-      <polyline points="10,30 40,4 70,30"/>
-    </g>
-
-    <!-- Text below arrow -->
-    <text x="55" y="65"  
-          font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-          font-size="18"
-          font-weight="600"
-          fill="#010101"
-          text-anchor="middle"
-          dominant-baseline="hanging">  <!-- aligns from top -->
-      Go to top
-    </text>
-  </svg>
-</a>
-
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Section 3 -->
-    <!-- <section class="snap-section" id="section3">
-      <svg class="section-background-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	id="react-svg" width="200%" viewBox="0 0 400 400"  xml:space="preserve" style="margin-left:auto">
-<text style="transform:skewY(20deg)" x="5%" y="20%" 
-      font-family='Courier New, monospace'
-      font-size="10" 
-      fill="#1E1E1E" 
-      text-anchor="left" 
-      dominant-baseline="left"
-      opacity="0.25">
-    <tspan x="15%" dy="1em">react</tspan>
-   
-     <tspan x="20%" dy="5.2em">javascript</tspan>
-	
-	 <tspan x="15%" dy="6.2em">css</tspan>
-</text>
-	  <text style="transform:skewY(-20deg)" x="25%" y="50%" 
-      font-family='Courier New, monospace'
-      font-size="10" 
-      fill="#1E1E1E" 
-      text-anchor="right" 
-      dominant-baseline="right"
-      opacity="0.25">
- <tspan x="70%" dy="3.2em">typescript</tspan>
-  <tspan x="65%" dy="5.2em">scss</tspan>
-  	  <tspan x="75%" dy="6.2em">html</tspan>
-</text>
-
-	<path class="draw-path" fill="none" opacity="0.25" stroke="#00000060" stroke-dasharray="1000" stroke-dashoffset="1000"   stroke-width="0.25"
-  stroke-linecap="round" 
-	d="
-M223.091400,284.016632 
-	C216.210999,279.796173 210.164917,275.045685 204.965103,269.406311 
-	C201.855530,266.033875 199.936646,266.428589 197.012436,269.551147 
-	C191.645752,275.281830 185.361496,279.987396 178.682663,284.132263 
-	C174.410690,286.783417 169.904526,288.883911 164.945786,289.920593 
-	C153.980637,292.212921 145.837555,287.679901 142.298050,277.022430 
-	C138.817749,266.543182 140.062103,255.951965 142.278809,245.465515 
-	C144.733139,233.855087 144.885757,233.836487 133.837891,230.094284 
-	C126.079552,227.466309 118.535515,224.431992 111.788445,219.677475 
-	C96.708870,209.051315 96.758072,192.789566 111.903931,182.296448 
-	C120.522118,176.325729 130.279968,172.932022 140.215057,170.071075 
-	C143.916779,169.005112 144.815414,167.558044 143.841171,163.707138 
-	C141.147858,153.061432 139.094177,142.369522 140.583237,131.164490 
-	C142.602158,115.972389 153.105011,108.507294 167.860001,112.826256 
-	C178.895370,116.056435 187.361588,123.436760 195.586395,131.036667 
-	C201.596649,136.590302 200.022949,137.140640 206.687454,130.832855 
-	C213.485077,124.399055 220.765228,118.584625 229.413956,114.759064 
-	C233.232620,113.069962 237.159256,111.742287 241.427673,111.702637 
-	C250.130875,111.621811 256.428986,115.892311 259.362732,124.103310 
-	C263.583893,135.917603 261.762024,147.755112 259.236053,159.542130 
-	C257.305603,168.550323 257.202148,168.545456 266.140137,171.398514 
-	C275.701965,174.450714 285.070038,177.946976 292.853210,184.538315 
-	C297.527588,188.496902 301.013977,193.182419 301.390320,199.739502 
-	C301.900146,208.621490 297.208862,214.527267 290.633911,219.370483 
-	C282.043030,225.698624 272.097137,229.148148 261.972717,231.952209 
-	C257.932892,233.071075 257.164062,234.645706 258.176025,238.628342 
-	C260.674103,248.459900 262.620758,258.370544 261.476898,268.700348 
-	C259.326050,288.123657 246.844803,295.408020 229.136078,287.247986 
-	C227.174362,286.344086 225.309113,285.230804 223.091400,284.016632 
-M202.491196,229.886444 
-	C206.157089,229.832489 209.824936,229.682678 213.488235,229.756973 
-	C216.098160,229.809906 217.850067,228.798645 219.249146,226.597504 
-	C223.898758,219.282440 228.463242,211.929565 232.365524,204.172806 
-	C233.542191,201.833893 233.524033,199.841934 232.217148,197.616837 
-	C228.000351,190.437302 223.846695,183.220184 219.727112,175.984314 
-	C218.263062,173.412796 216.234741,172.207169 213.217514,172.263931 
-	C208.220963,172.357971 203.216827,172.076660 198.221252,172.189941 
-	C181.777649,172.562729 185.771286,169.720093 177.428940,184.202759 
-	C165.494110,204.922165 165.987610,197.277206 177.254944,217.760620 
-	C184.010422,230.041718 184.387741,229.834366 198.495895,229.886520 
-	C199.495804,229.890213 200.495743,229.887939 202.491196,229.886444 
-M153.174332,210.785324 
-	C154.378052,206.771713 158.377136,203.428238 156.600266,198.725128 
-	C154.368073,192.816879 151.740875,187.058655 149.331055,181.216324 
-	C148.458359,179.100571 147.235199,177.985016 144.741257,178.627136 
-	C134.853256,181.172897 125.263786,184.436813 116.915405,190.514420 
-	C107.272400,197.534485 107.429802,205.139603 117.292625,211.904678 
-	C124.080147,216.560349 131.584671,219.696335 139.443939,222.040390 
-	C147.856949,224.549606 147.850052,224.558868 150.876129,216.603149 
-	C151.526901,214.892242 152.215179,213.195633 153.174332,210.785324 
-M272.734558,183.816147 
-	C268.201874,181.655075 263.339325,180.462387 258.597137,178.902908 
-	C255.389969,177.848236 253.636215,178.644714 252.435043,181.793167 
-	C250.299362,187.391159 247.921326,192.897400 245.603577,198.424789 
-	C244.935989,200.016830 244.598907,201.534882 245.318832,203.230865 
-	C247.855179,209.205933 250.347488,215.200012 252.807190,221.207062 
-	C253.514465,222.934311 254.505783,224.160538 256.539062,223.626999 
-	C268.209290,220.564590 279.682251,216.957077 288.699707,208.409348 
-	C293.579010,203.784195 293.434753,198.323196 288.619659,193.549927 
-	C284.299133,189.266922 279.036407,186.389755 272.734558,183.816147 
-M211.159943,139.676865 
-	C208.036499,142.073059 207.504517,144.593521 210.660141,147.438812 
-	C211.512085,148.206970 212.226944,149.185638 212.813766,150.180328 
-	C218.326935,159.525284 225.466614,165.246948 237.301025,165.415802 
-	C249.417542,165.588684 247.359497,168.909714 250.400146,156.201736 
-	C252.368027,147.977341 253.424744,139.548950 251.764221,130.994568 
-	C250.146957,122.663094 245.009796,119.256989 236.974670,121.860710 
-	C234.152420,122.775223 231.421982,124.122803 228.842773,125.608040 
-	C222.463577,129.281494 216.868423,133.996597 211.159943,139.676865 
-M163.009674,280.734741 
-	C176.024323,277.041992 185.237595,268.078308 194.370361,258.890747 
-	C189.551712,252.401962 185.098724,246.423019 180.668442,240.427307 
-	C179.587250,238.964050 178.113724,238.499771 176.376770,238.280716 
-	C170.282730,237.512131 164.180923,236.760010 158.128311,235.729935 
-	C155.703766,235.317291 154.177689,235.827560 153.546524,238.187027 
-	C150.616089,249.141953 148.151505,260.162292 150.382721,271.594269 
-	C151.744278,278.570435 154.948990,281.004486 163.009674,280.734741 
-M226.766251,238.225769 
-	C224.792786,238.384766 222.849121,238.310989 221.428482,240.262665 
-	C217.607193,245.512405 213.646225,250.661102 209.702881,255.821014 
-	C208.471054,257.432861 207.830246,258.938385 209.514557,260.667816 
-	C217.473480,268.839966 225.868668,276.463257 236.923706,280.204285 
-	C244.718048,282.841858 250.026886,279.620758 251.634445,271.507294 
-	C253.870392,260.222443 251.371063,249.335388 248.539627,238.502213 
-	C247.901932,236.062256 246.316620,235.622421 243.958603,235.995483 
-	C238.535645,236.853455 233.073898,237.466309 226.766251,238.225769 
-M150.267151,130.882919 
-	C148.199417,142.165878 150.729706,152.990906 153.560852,163.781906 
-	C154.196289,166.203918 155.728699,166.585999 158.121704,166.191040 
-	C164.178818,165.191299 170.283218,164.460800 176.383728,163.751984 
-	C178.166901,163.544815 179.505997,162.926895 180.591400,161.492981 
-	C184.502975,156.325516 188.427582,151.166626 192.438431,146.076340 
-	C193.799011,144.349579 193.955383,142.940170 192.342361,141.294891 
-	C184.851074,133.653809 176.933914,126.564812 166.854340,122.485085 
-	C158.051682,118.922218 153.455261,121.137459 150.267151,130.882919 
-M196.480179,155.975006 
-	C195.219330,157.962708 193.113022,159.513336 192.874023,162.614319 
-	C198.533173,162.620544 203.822205,163.168350 209.914215,162.139725 
-	C206.815231,157.870590 204.710556,154.012100 200.970108,151.482346 
-	C199.027954,152.478897 197.980942,153.964890 196.480179,155.975006 
-M203.332901,248.680344 
-	C205.123840,245.702316 208.627670,243.756210 209.032257,239.887604 
-	C203.408829,239.887604 198.118759,239.887604 192.507187,239.887604 
-	C194.058273,244.033478 197.018753,246.351807 199.167007,249.245407 
-	C200.334244,250.817627 201.664185,250.599762 203.332901,248.680344 
-M165.531830,185.807770 
-	C167.681091,181.972656 169.830353,178.137527 172.323135,173.689407 
-	C167.024963,174.490250 162.399261,174.266876 157.733582,176.363052 
-	C159.117218,180.884186 160.288162,185.203201 163.295258,189.277634 
-	C164.130325,188.005905 164.664032,187.193100 165.531830,185.807770 
-M158.160919,224.004807 
-	C157.843994,225.280090 157.987457,226.393997 159.524521,226.616974 
-	C163.370270,227.174850 167.172546,228.330170 171.874298,227.720093 
-	C168.998337,222.518692 166.356873,217.741379 163.048874,211.758606 
-	C161.137009,216.442719 159.732956,219.882675 158.160919,224.004807 
-M242.701385,181.378891 
-	C243.312103,179.695206 244.403107,178.101303 243.549973,175.669632 
-	C239.573639,175.390869 235.594299,173.413559 230.543823,174.836502 
-	C233.020065,179.980728 235.584976,184.599640 238.734634,189.194855 
-	C240.901505,186.799545 241.360962,184.274216 242.701385,181.378891 
-M234.102371,227.860641 
-	C236.543686,227.491516 238.986053,227.129333 241.425949,226.751007 
-	C243.262833,226.466171 244.087479,225.323624 243.546097,223.595993 
-	C242.400894,219.941452 241.462860,216.155167 238.524368,212.711136 
-	C235.627167,217.821747 232.983932,222.484375 230.431152,226.987427 
-	C231.399521,228.414062 232.459930,227.851471 234.102371,227.860641 
-z"/>
-<path fill="none" opacity="0.25" stroke="#0000009c" stroke-dasharray="1000" stroke-dashoffset="1000"   stroke-width="1"
-  stroke-linecap="round" 
-	d="
-M216.513702,193.867523 
-	C219.860458,203.760132 216.760818,212.491837 208.836258,216.321838 
-	C200.533295,220.334717 191.374878,217.819046 186.549896,210.200134 
-	C181.852783,202.783066 183.626190,192.489517 190.483322,187.369232 
-	C198.077927,181.698212 208.129944,182.885056 214.146851,190.205612 
-	C214.982742,191.222595 215.618820,192.403839 216.513702,193.867523 
-M204.185928,194.204834 
-	C199.116806,192.815475 195.175476,194.451233 193.759872,198.776505 
-	C192.436859,202.818817 193.881470,205.970383 197.580902,207.940979 
-	C201.121399,209.826889 205.841965,208.221451 207.785538,204.468201 
-	C209.943497,200.300980 208.160263,197.170746 204.185928,194.204834 
-z"/>
-
-
-
-
-</svg>
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svg3" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part3.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-  
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-1.gif" 
-        alt="Sample Image">
-    </div>
-
-	 <a href="#sectionA" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section> -->
-
-
-
-
-
-
- <!-- Section 3 -->
-    <!-- <section class="snap-section" id="sectionA">
-      <svg class="section-background-svg" width="1576" height="1200" viewBox="0 0 1576 1200">
-       
-     
-	<path class="draw-path"  fill="none" opacity="0.25" d="M170.256 812.613L90.9896 876.026C90.9896 876.026 101.889 933.494 124.182 933.494C146.476 933.494 258 896 290.5 904.5C290.5 904.5 370.504 921.675 425 940.5C401.5 900 415.229 922.099 386 876.026C386 876.026 348.731 820.524 335.732 802.333C322.734 784.141 310.73 763.684 310.73 763.684C273.694 716.634 250.513 645.5 250.513 645.5C238.813 637.914 234.231 728.694 215 763.684C203.303 784.966 186.931 797.996 170.256 812.613Z M245.636 587C221.636 571.5 220.313 651.498 187.136 737.5L5.63555 878.5C-0.543619 879.693 11.3261 1076.85 32.1356 1087C52.9451 1097.15 71.1356 1080.5 83.1356 1080C95.1356 1079.5 167.636 1150.5 167.636 1150.5L242.901 1095.5C242.901 1095.5 175.636 1057.5 167.636 1050.5C159.636 1043.5 156.462 991.66 167.636 974C178.809 956.34 232.174 952.739 288.136 957C288.136 957 411.636 971 479.636 967M245.636 587C245.636 587 282.136 658.5 337.636 713M245.636 587L398.636 4M337.636 713C337.636 713 381.813 714 398.636 737.5C415.458 761 411.136 822.5 411.136 822.5M337.636 713L1181.64 4M411.136 822.5C442.636 887.5 422.636 889 479.636 967M411.136 822.5L1571.14 587M479.636 967L1422.14 1195.5M487.136 364.5C487.136 376.5 479.636 252.5 479.636 252.5L522.636 209.5L539.136 160.5L544.636 143L617.136 164L610.136 183.5L593.136 228V287.5C561.308 321.085 554.463 338.415 522.636 372L504.886 368.25M487.136 364.5C483.791 354.715 386.916 417.553 378.636 424C370.355 430.447 365.568 441.725 369.136 442.5C372.703 443.275 378.636 442.5 378.636 442.5C378.636 442.5 471.55 415.15 479.636 412.5C487.721 409.85 495.93 404.151 531.636 403C567.342 401.849 586.276 449.994 539.136 465.5C539.136 465.5 447.636 473 422.636 478C397.636 483 381.136 521 381.136 521M487.136 364.5L504.886 368.25M504.886 368.25L531.636 287.5M531.636 287.5C523.824 284.308 521.729 280.901 522.636 271.5C528.078 258.711 531.797 256.44 539.136 259C548.083 257.982 551.45 261.494 551.636 279.5C548.482 288.653 543.516 289.642 531.636 287.5ZM1043.14 553L1075.14 508.5L1055.14 487.5L1043.14 457.5C1043.14 457.5 1033.14 405.5 1075.14 370.5C1117.14 335.5 1156.64 341 1174.64 341C1192.64 341 1224.64 347 1263.64 381.5L1277.64 403L1287.64 428.5C1287.64 428.5 1285.92 459.526 1277.64 477C1271.11 490.763 1254.64 508.5 1254.64 508.5L1215.64 534L1181.64 541.5H1153.14L1108.64 534L1059.64 553H1043.14ZM1295.64 835.5C1354.64 825 1426.53 901.047 1422.14 973C1417.74 1044.95 1306.11 1086.31 1289.14 1079C1218.1 1067.1 1190.98 1041.32 1170.14 954C1170.14 954 1184.64 882 1210.14 860.5C1235.64 839 1295.64 835.5 1295.64 835.5ZM1283.64 860.5H1295.64L1306.14 870.5L1311.64 878L1300.64 889V892.5L1306.14 898L1300.64 905L1295.64 910L1289.14 905L1283.64 910V914.5L1289.14 932V936L1283.64 940L1276.14 936L1271.64 932L1251.64 936L1247.64 940V945.5L1251.64 949.5L1267.64 954H1276.14L1283.64 967L1330.14 973L1341.64 983.5L1345.64 997L1333.64 1013L1320.64 1045L1300.64 1050.5L1295.64 1026.5L1286.14 1011L1283.64 1004.5L1280.14 983.5L1276.14 973L1261.14 967L1237.64 954L1210.14 914.5L1220.14 892.5L1244.14 870.5L1257.64 866.5L1271.64 870.5L1276.14 874L1280.14 866.5L1283.64 860.5ZM1384.64 914.5L1376.14 919.5L1363.14 932V945.5L1370.64 949.5L1374.64 957L1393.14 967L1398.14 954V940L1393.14 928L1384.64 914.5ZM1105.14 420C1116.39 422.421 1120.58 425.803 1121.64 438C1116.39 451.89 1112.59 454.038 1105.14 453.5C1092.72 451.803 1088.89 448.161 1088.14 436.5C1089 425.81 1093.33 422.641 1105.14 420ZM1163.64 420C1163.64 420 1179.56 421.024 1181.64 436.5C1178.02 448.414 1174.07 452.159 1163.64 453.5C1151.35 450.758 1146.54 447.624 1145.14 436.5C1147.39 422.329 1163.64 420 1163.64 420ZM1221.14 420C1225.14 420 1236.57 422.066 1239.14 438C1236.81 446.64 1234.06 450.296 1225.14 453.5C1213.42 452.13 1208.49 449.493 1205.64 438C1206.03 427.141 1217.14 420 1221.14 420Z" stroke="#B4B4B4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-     
-
-     
-      </svg>
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgA" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part4.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-  
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-3.gif" 
-        alt="Sample Image">
-    </div>
-
-
-	 <a href="#sectionD" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section> -->
-
-
-
-  <!-- <section class="snap-section" id="sectionC">
- 
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgC" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part6.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-     
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-2.gif" 
-        alt="Sample Image">
-    </div>
-
-	
-	 <a href="#project" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section> -->
-
-
-  <!-- <section class="snap-section" id="sectionD">
- 
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgD" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part7.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-   
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-3.gif" 
-        alt="Sample Image">
-    </div>
-
-
-
-<div>
-
-
-
-  
-	 <a href="#socials" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-    </section> -->
-
-
-
 
 <section class="snap-section" id="socials">
  <svg class="section-background-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -1418,7 +954,7 @@ z"/>
             </div>
         </div>
         
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
         
         <div class="central-tattle-social">
             <h2>Want to learn more?</h2>
@@ -1436,7 +972,15 @@ z"/>
                     </a>
                     <h3>Chat with Sorren's AI</h3>
                 </div>
-            </div>
+           
+           
+                  <div class="social-buttons">
+                    <a href="https://sorrenj.github.io/graphic_design/" target="_blank" rel="noopener noreferrer" class="graphic">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </a>
+                    <h3>Graphic Design Portfolio</h3>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -1444,7 +988,7 @@ z"/>
 
 
     	<!-- arrow link -->
-	 <a href="#sectionE" class="arrow-link">
+	 <a href="#contact" class="arrow-link">
   <svg class="bouncing-arrow" 
        width="80" height="80" 
        viewBox="0 0 164 164" 
@@ -1493,124 +1037,25 @@ z"/>
 
 
 
-  <section class="snap-section" id="sectionE">
- 
-<svg class="section-background-svg" width="1576" height="1200" viewBox="0 0 1576 1200">
-       
-     <text  x="5%" y="5%" 
-      font-family='Courier New, monospace'
-      font-size="50" 
-		font-style="italic"
-      fill="#1E1E1E" 
-      text-anchor="left" 
-      dominant-baseline="left"
-	
-      opacity="0.55">
-	   
-    <tspan  x="65%" dy="5.2em">AI developer </tspan>
-	<tspan  x="65%" dy="1em">@ Expense Trend</tspan>
-    <tspan  x="-15%" dy="5.2em">Web developer </tspan>
-	<tspan  x="-15%" dy="1em">@ Cybersalt Ltd.</tspan>
-
-     <tspan  x="65%" dy="5.2em">Web designer </tspan>
-	  <tspan  x="65%" dy="1em">@ Simon Fraser University</tspan>
-
-</text>
-	
-     
-      </svg>
-
-
- <div class="flex-container">
-    <div class="chat-column">
-      <object id="svgE" type="image/svg+xml" data="assets/svg_anime/speech_bubble_part8.svg" width="300" height="400"></object>
-    </div>
-    
-    <div class="face-column">
-      <!-- Image stays above the background -->
-      <img 
-        style="z-index: 2; position: relative; width: 400px;" 
-        src="assets/sjao_faces/sjao-anime-3.gif" 
-        alt="Sample Image">
-    </div>
-
-
-
-<div>
-
-
-    	<!-- arrow link -->
-	 <a href="#contact" class="arrow-link">
-  <svg class="bouncing-arrow" 
-       width="80" height="80" 
-       viewBox="0 0 164 164" 
-       fill="none" 
-       xmlns="http://www.w3.org/2000/svg"
-       style="display: block;">
-       
-   
-    <rect width="164" height="164" fill="transparent" />
-    
-    <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
-          fill="#F8A6E6"/>
-  </svg>
-</a>
-
-<a href="#section1" id="backToTop" class="back-to-top bouncing-arrow">
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 220 80"   
-       width="160" height="64"
-       role="img" aria-labelledby="titleDesc">
-    <title id="titleDesc">Back to top</title>
-
-    <!-- Arrow -->
-    <g transform="translate(16,12)" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-      <line x1="40" y1="40" x2="40" y2="10"/>
-      <polyline points="10,30 40,4 70,30"/>
-    </g>
-
-    <!-- Text below arrow -->
-    <text x="55" y="65"  
-          font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-          font-size="18"
-          font-weight="600"
-          fill="#010101"
-          text-anchor="middle"
-          dominant-baseline="hanging">  <!-- aligns from top -->
-      Go to top
-    </text>
-  </svg>
-</a>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
 	<section class="snap-section" id="contact">
 
 		  <!-- end of card 2 -->
 
+	<svg  class="section-background-svg" style=" transform: scale(2); transform-origin: top left; opacity:0.65" width="100%" height="1200" viewBox="0 0 1576 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-  <div class="start card">
+
+
+<i class="fa-solid fa-envelope" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.15; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
+
+	</svg>
+  <div class="contact">
     <div class="card-container-inverse">
       <div class="card-container-item-left-inverse contact_box">
     
-        <div class="banner_heading">
-          <h1>Contact Me</h1>
+       
+          <h1 class="section-title">Interested in working together?</h1>
 		
-        </div>
-		
+
 
       </div>
 

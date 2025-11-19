@@ -1,110 +1,50 @@
-  
-        .container {
-            max-width: 2200px;
+   .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #610034;
+            margin-bottom: 10px;
+        }
+
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
             margin: 0 auto;
         }
-  
-  
-  .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #ff6b6b;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        /* About Section */
-        #about {
-            background: #f8f9fa;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        .skills {
+        /* Flexbox Grid */
+        .projects-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .skill {
-            background: #ff6b6b;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Projects Section */
-        #projects {
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #333;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            justify-content: center;
         }
 
         .project-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.244);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 300px;
+            max-width: 350px;
+            z-index:2;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .project-img {
@@ -143,4 +83,48 @@
 
         .project-link:hover i {
             transform: translateX(5px);
+        }
+
+        .read-more-button {
+            margin-top: 25px;
+            padding: 12px 24px;
+            background-color: #610034;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 40px auto 0;
+        }
+
+        .read-more-button:hover {
+            background-color: #8a0049;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 800px) {
+            .project-card {
+                flex: 1 1 250px;
+            }
+            
+            .project-img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-card {
+                flex: 1 1 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
         }

@@ -3,7 +3,7 @@
 .sidebar {
       position: fixed;
       top: 0;
-      left: 0;
+      left: 20px;
       height: 100%;
       width: 100px;
       /* background: #333; */
@@ -27,15 +27,15 @@
 }
 
  .sidebar a.active {
-      border-left: 5px solid #a012782d;;
+      border-left: 5px solid #a012783e;;
       /* background: #f88bc733; */
-      color: #a01278;;
+      color: #ed5197;;
   
     
     }
 
 .sidebar a:hover {
-   background: #a0127839;; 
+   background: #a012784d;; 
   color: white;
    animation: shake 0.3s;
 }
@@ -79,7 +79,7 @@
 /* Mobile styles */
 @media (max-width: 800px) {
   .sidebar {
-    transform: translateX(-100%); /* hide by default */
+    transform: translateX(-110%); /* hide by default */
   background: #000000b4;   
       width: 100%;  
 
@@ -93,7 +93,7 @@ font-size: 30px;
 }
 
 .sidebar a:hover {
-  background: #f88bc728;  
+  background: #f88bc77e;  
   color: white;
 }
 
