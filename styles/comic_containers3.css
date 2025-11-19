@@ -349,9 +349,14 @@ position:absolute;
 
 
 .central-tattle{
-padding:5%; 
-margin-top:33%;
-font-size: 1.75em;
+       background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            transition: all 0.5s ease;
 }
 
  @media (max-width: 768px) {
@@ -364,8 +369,80 @@ margin-top:55%;
 
 
 }
- }
+ 
+}
 
+
+      .central-tattle p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        .central-tattle p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tattle-title{
+         line-height: 1.1;
+           font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #414040;
+            font-weight: normal;
+        }
+        .toggle-button {
+              background: linear-gradient(135deg, #610034, #8a0049);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(248, 166, 230, 0.4);
+        }
+        
+        .toggle-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(248, 166, 230, 0.6);
+        }
+        
+        .toggle-button:active {
+            transform: translateY(1px);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+  .tattle-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+             background: linear-gradient(135deg, #610034, #8a0049);
+            transform: scale(1.2);
+        }
 .face-column-proj{
 
 }

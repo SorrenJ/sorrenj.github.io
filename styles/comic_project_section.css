@@ -85,25 +85,26 @@
             transform: translateX(5px);
         }
 
-        .read-more-button {
-            margin-top: 25px;
-            padding: 12px 24px;
-            background-color: #610034;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: block;
-            margin: 40px auto 0;
-        }
+ .read-more-button {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #610034, #8a0049);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 40px auto 0;
+}
 
-        .read-more-button:hover {
-            background-color: #8a0049;
-        }
-
+.read-more-button:hover {
+    background: linear-gradient(135deg, #8a0049, #a8005c);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 0, 73, 0.3);
+}
         /* Responsive adjustments */
         @media (max-width: 800px) {
             .project-card {
