@@ -61,7 +61,7 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 .snap-section {
 height: auto; /* Let section grow with content */
     align-items: flex-start; /* Align content naturally */
@@ -359,7 +359,7 @@ position:absolute;
             transition: all 0.5s ease;
 }
 
- @media (max-width: 768px) {
+ @media (max-width: 1000px) {
 .central-tattle{
 font-size: 1.25em;
 /* padding:5%;  */
