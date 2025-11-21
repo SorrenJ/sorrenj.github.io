@@ -61,7 +61,7 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
 .snap-section {
 height: auto; /* Let section grow with content */
     align-items: flex-start; /* Align content naturally */
