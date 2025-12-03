@@ -158,7 +158,7 @@ height: auto; /* Let section grow with content */
         }
 
          .section-title {
-            text-align: left;
+            text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
             color: #414040;
