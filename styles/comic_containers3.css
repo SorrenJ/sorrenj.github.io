@@ -34,11 +34,17 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 }
 
 .snap-section {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  /* justify-content: center;
+  scroll-snap-align: start; */
+
+
+  height: auto; /* Let section grow with content */
+    align-items: flex-start; /* Align content naturally */
+    justify-content: flex-start;
+  scroll-snap-align: none !important;
 }
 
 /* SVG wrapper (optional) */
