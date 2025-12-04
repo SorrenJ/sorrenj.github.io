@@ -13,17 +13,17 @@
   />
   
   <!-- Text (no native SVG animation) -->
-  <text x="0" y="110" 
-       font-family="Arial, sans-serif" 
-       font-size="82" 
-       fill="#1E1E1E" 
-       text-anchor="center" 
-       opacity="0">
-    <tspan x="45"  dy="0.5em">I'm Sorren Jao,</tspan>  
-  <tspan x="45"  dy="1.2em">Full-stack </tspan>
-    <tspan x="45"  dy="1.2em">AI Developer</tspan>
-    
-
-    
+  <text 
+    x="450" 
+    y="150" 
+    font-family="Arial, sans-serif" 
+    font-size="72" 
+    fill="#1E1E1E" 
+    text-anchor="middle"
+    opacity="0">
+    <tspan x="330" dy="0">I'm Sorren Jao,</tspan>  
+    <tspan x="330" dy="1.2em">Full-stack </tspan>
+    <tspan x="330" dy="1.2em">AI Developer</tspan>
   </text>
+
 </svg>

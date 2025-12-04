@@ -150,8 +150,7 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
          .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #414040;
+            color: #232323;
             font-weight: normal;
         }
 
@@ -333,7 +332,7 @@ position:absolute;
          .face-column {
             flex: 1; /* Makes columns equal width */
         /* Keep your existing styles */
-    text-align: center; /* Add this to center content */
+    /* text-align: center;  */
     margin-left: 0; /* Remove left margin if you want true center */
         margin-top: -180px;  
         
@@ -354,15 +353,27 @@ position:absolute;
 
 
 .central-tattle {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    /* background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); */
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2); */
     max-width: 400px;
     transition: all 0.5s ease;
-    text-align: center; /* Center text inside */
+    text-align:left; 
+    margin-top:-105px;
+    height: 300px;
+
+            /* background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+
+.central-tattle p {
+text-align:left; 
 }
 
 .image-container {
@@ -372,6 +383,7 @@ position:absolute;
     justify-content: center;
     overflow: hidden;
     border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .about-image {
@@ -397,20 +409,17 @@ position:absolute;
 /* Responsive adjustments */
 @media (max-width: 1000px) {
     .about-flex-container {
-      margin-top:100px;  
-      flex-direction: column;
+        margin-top: 100px;
+        flex-direction: column;
         align-items: center;
-        /* margin: 0 5%; */
+        padding: 0 15px;
     }
     
     .image-container {
         order: 2;
-        height: 200px;
-        width: 200px; /* Make it square */
-        margin: 0 auto 20px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 250px;
+        width: 250px;
+        margin: 0 auto 30px auto;
     }
     
     .about-image {
@@ -418,27 +427,55 @@ position:absolute;
         height: 100%;
         object-fit: cover;
     }
+    
+    .tattle-section {
+        min-height: 350px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .central-tattle {
+        font-size: 0.9em;
+        max-width: 100%;
+        margin-top: 0;
+        height: auto;
+        min-height: 250px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tattle-controls {
+        position: relative;
+        margin-top: 20px;
+        padding: 15px 20px;
+        max-width: 100%;
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .toggle-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .tattle-indicators {
+        margin-top: 0;
+    }
 }
- @media (max-width: 1000px) {
-.central-tattle{
-font-size: 0.5em;
-/* padding:5%;  */
-/* position: absolute; */
-/* margin-left: -55px; */
-/* margin-top:55%; */
- max-width: 300px;
-  background: none;
-   box-shadow:none;
-   border:none;
-}
- 
-}
+
 
 
       .central-tattle p {
             margin-bottom: 15px;
             line-height: 1.6;
             font-size: 18px;
+            text-align:left;
         }
         
         .central-tattle p:last-child {
@@ -447,10 +484,11 @@ font-size: 0.5em;
         
         .tattle-title{
          line-height: 1.1;
-           font-size: 1.5em;
+           /* font-size: 1.5em; */
             margin-bottom: 25px;
-            color: #414040;
+            color: #222222;
             font-weight: normal;
+            margin-top:2px;
         }
         .toggle-button {
               background: linear-gradient(135deg, #610034, #8a0049);
@@ -487,10 +525,23 @@ font-size: 0.5em;
             to { opacity: 1; transform: translateY(0); }
         }
 
+
+.tattle-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
   .tattle-indicators {
             display: flex;
             gap: 10px;
             margin-top: 10px;
+ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+
         }
         
         .indicator {
@@ -505,6 +556,19 @@ font-size: 0.5em;
              background: linear-gradient(135deg, #610034, #8a0049);
             transform: scale(1.2);
         }
+
+
+ @media (max-width: 1000px) {
+.tattle-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+ }
+
 .face-column-proj{
 
 }
