@@ -1,7 +1,7 @@
 html, body {
           height: 100%;
             width: 100%;
-            overflow-y: hidden;
+            /* overflow-y: hidden; */
   margin: 0;
   height: 100%;
   /* overflow: hidden;  */
@@ -32,19 +32,16 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
   overflow-x: hidden !important;
   cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 }
-
 .snap-section {
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
-  /* justify-content: center;
-  scroll-snap-align: start; */
-
-
-  height: auto; /* Let section grow with content */
-    align-items: flex-start; /* Align content naturally */
-    justify-content: flex-start;
-  scroll-snap-align: none !important;
+    height: auto; /* Let section grow with content */
+    align-items: center; /* Changed from flex-start to center */
+    justify-content: center; /* Changed from flex-start to center */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    scroll-snap-align: none !important;
+    padding: 20px; /* Add padding for mobile */
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
 }
 /* SVG wrapper (optional) */
 .section-background-svg {
@@ -66,13 +63,7 @@ cursor: url('../assets/cursor/cursor-default.svg') 20 20, auto !important;
 
 
 
-@media (max-width: 1200px) {
-.snap-section {
-height: auto; /* Let section grow with content */
-    align-items: flex-start; /* Align content naturally */
-    justify-content: flex-start;
-  scroll-snap-align: none !important;
-}
+@media (max-width: 768px) {
 
 
 .snap-section-project {
@@ -159,8 +150,7 @@ height: auto; /* Let section grow with content */
          .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #414040;
+            color: #232323;
             font-weight: normal;
         }
 
@@ -342,33 +332,241 @@ position:absolute;
          .face-column {
             flex: 1; /* Makes columns equal width */
         /* Keep your existing styles */
-    text-align: center; /* Add this to center content */
+    /* text-align: center;  */
     margin-left: 0; /* Remove left margin if you want true center */
         margin-top: -180px;  
         
 
 }
 
-   
-
-
-
-.central-tattle{
-padding:5%; 
-margin-top:33%;
-font-size: 1.75em;
+.about-flex-container {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Changed from stretch to center */
+    justify-content: center; /* Add this to center contents */
+    width: 100%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 200px auto 0; /* Center horizontally with auto margins */
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
- @media (max-width: 768px) {
-.central-tattle{
-font-size: 1.25em;
-/* padding:5%;  */
-/* position: absolute; */
-margin-left: -35px;
-margin-top:55%;
 
+.central-tattle {
+    /* background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); */
+    border-radius: 20px;
+    padding: 30px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2); */
+    max-width: 400px;
+    transition: all 0.5s ease;
+    text-align:left; 
+    margin-top:-105px;
+    height: 300px;
 
+            /* background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
 }
+
+
+.central-tattle p {
+text-align:left; 
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: inherit;
+    max-width: 100%; /* Ensure image doesn't overflow */
+}
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+    border: 2px dashed #ccc;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .about-flex-container {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+    
+    .image-container {
+        order: 2;
+        height: 250px;
+        width: 250px;
+        margin: 0 auto 30px auto;
+    }
+    
+    .about-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .tattle-section {
+        min-height: 350px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .central-tattle {
+        font-size: 0.9em;
+        max-width: 100%;
+        margin-top: 0;
+        height: auto;
+        min-height: 250px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tattle-controls {
+        position: relative;
+        margin-top: 20px;
+        padding: 15px 20px;
+        max-width: 100%;
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .toggle-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .tattle-indicators {
+        margin-top: 0;
+    }
+}
+
+
+
+      .central-tattle p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 18px;
+            text-align:left;
+        }
+        
+        .central-tattle p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tattle-title{
+         line-height: 1.1;
+           /* font-size: 1.5em; */
+            margin-bottom: 25px;
+            color: #222222;
+            font-weight: normal;
+            margin-top:2px;
+        }
+        .toggle-button {
+              background: linear-gradient(135deg, #610034, #8a0049);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(248, 166, 230, 0.4);
+        }
+        
+        .toggle-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(248, 166, 230, 0.6);
+        }
+        
+        .toggle-button:active {
+            transform: translateY(1px);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+.tattle-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+  .tattle-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+             background: linear-gradient(135deg, #610034, #8a0049);
+            transform: scale(1.2);
+        }
+
+
+ @media (max-width: 1000px) {
+.tattle-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
  }
 
 .face-column-proj{
@@ -699,6 +897,12 @@ color:rgb(228, 44, 182);
             background: linear-gradient(135deg, #f3819d 0%, #f64d82 100%);
         }
         
+     .graphic {
+
+            background:  linear-gradient(135deg, #dac4c8 0%,  #cc7887 25%,  #b66675 50%,  #da94c0 75%, #e479ff 100%);
+        }
+        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, #cbcbcb39, transparent);

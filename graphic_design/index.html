@@ -49,7 +49,7 @@
   </script>
 
 <body>
-    <div id="petals">
+    <!-- <div id="petals">
         <i></i>
         <i></i>
         <i></i>
@@ -62,7 +62,7 @@
         <i></i>
         <i></i>
         <i></i>
-    </div>
+    </div> -->
 
   <!-- <div id="fade" class="fade fade-active">
     <div class="loading-spinner"></div>
@@ -101,7 +101,7 @@
     </div>
 
 	<!-- arrow link -->
-	 <a href="#section2" class="arrow-link-projects">
+	 <!-- <a href="#section2" class="arrow-link-projects">
   <svg class="bouncing-arrow" 
        width="80" height="80" 
        viewBox="0 0 164 164" 
@@ -115,7 +115,7 @@
     <path d="M82 105.233L41 64.2334L50.5667 54.6667L82 86.1001L113.433 54.6667L123 64.2334L82 105.233Z" 
           fill="#F8A6E6"/>
   </svg>
-</a>
+</a> -->
 
 
     </section>
@@ -125,24 +125,57 @@
 
 
 
- 
- 
-        <div class="about-flex-container">
-           
-<div class="central-tattle">
-      <p>I’m a graphic designer with a background in UX design / UI principles and marketing. </p>
+<div class="face-column">
+    <div class="about-flex-container">
+        <!-- Left side: Tattle containers -->
+        <!-- Right side: Image container -->
+        <div class="image-container">
+            <!-- Add your image here -->
+            <img src="assets/linkedin_lesscontrast.PNG" alt="About me image" class="about-image">
+            <!-- Or for placeholder: -->
+            <!-- <div class="image-placeholder">Image Here</div> -->
+        </div>
+
+
+        <div class="tattle-section">
+            <!-- Original Tattle and additional tattles -->
+            <div class="central-tattle fade-in" id="tattle-1">
+                <h1 class="tattle-title">A little bit about me ... </h1>
+                <p>As an AI Developer and Graphic Designer, I fuse technical innovation with visual artistry. My work involves developing full-stack AI applications, engineering creative prompts, and designing marketing assets. This hybrid skill set is focused on a single goal: creating intelligent, visually stunning, and user-centered digital experiences.
+</p>
+            </div>
+            
+            <!-- Additional Tattle 1 -->
+            <div class="central-tattle hidden" id="tattle-2">
+                <h1 class="tattle-title">Tech Stack Masteries</h1>
+<h2>Coming Soon!</h2>
+            </div>
+            
+            <!-- Additional Tattle 2 -->
+            <div class="central-tattle hidden" id="tattle-3">
+                <h1 class="tattle-title">Most Used Languages</h1>
+                <div style="text-align: center;">
+                <h2>Coming Soon!</h2>
+                </div>
+            </div>
+            
+<div class="tattle-controls">
+    <div class="tattle-indicators">
+        <div class="indicator active" data-tattle="1"></div>
+        <div class="indicator" data-tattle="2"></div>
+        <div class="indicator" data-tattle="3"></div>
+    </div>
     
-      <p>I also have experience in web design</p>
-   
-                    <p>See what I've been working on below!</p>
+    <button class="toggle-button" id="toggle-button">
+        <span>Next</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
 </div>
 
-
-
-          
-          <!-- <img style="z-index: 2; position: relative; width: 400px;" src="assets/sjao_faces/sjao-smile-anime.gif" alt="Sample Image"> -->
-        </div>
-    
+    </div>
+</div>
  
 
 
@@ -241,7 +274,7 @@
 
 
 
-<i class="fa fa-trophy" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.15; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
+<i class="fa fa-trophy" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.05; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
 
 	</svg>
  <div class="container">
@@ -295,7 +328,7 @@
 
 
 
-<i class="fa-solid fa-envelope" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.15; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
+<i class="fa-solid fa-envelope" aria-hidden="true" style="font-size: 50em; position:absolute; z-index:1; opacity:0.05; transform: rotateX(45deg) rotateZ(-45deg) skew(15deg, 15deg) translateZ(20px);"></i>
 
 	</svg>
   <div class="contact">
@@ -424,7 +457,69 @@
  <!-- <script src="javaScript/comic/comic_back_to_top.js"></script> -->
     <script>
 
-
+document.addEventListener('DOMContentLoaded', function() {
+            const tattles = [
+                document.getElementById('tattle-1'),
+                document.getElementById('tattle-2'),
+                document.getElementById('tattle-3')
+            ];
+            
+            const indicators = document.querySelectorAll('.indicator');
+            const toggleButton = document.getElementById('toggle-button');
+            
+            let currentTattle = 0;
+            
+            // Function to update the displayed tattle
+            function updateTattle(index) {
+                // Hide all tattles
+                tattles.forEach(tattle => {
+                    tattle.classList.remove('fade-in');
+                    setTimeout(() => {
+                        tattle.classList.add('hidden');
+                    }, 300);
+                });
+                
+                // Show the selected tattle
+                setTimeout(() => {
+                    tattles[index].classList.remove('hidden');
+                    setTimeout(() => {
+                        tattles[index].classList.add('fade-in');
+                    }, 50);
+                }, 300);
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+                
+                // Update button text
+                if (index === tattles.length - 1) {
+                    toggleButton.innerHTML = '<span>Back to Start</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                } else {
+                    toggleButton.innerHTML = '<span>Next</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                }
+                
+                currentTattle = index;
+            }
+            
+            // Button click event
+            toggleButton.addEventListener('click', function() {
+                let nextIndex = (currentTattle + 1) % tattles.length;
+                updateTattle(nextIndex);
+            });
+            
+            // Indicator click events
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const tattleIndex = parseInt(this.getAttribute('data-tattle')) - 1;
+                    updateTattle(tattleIndex);
+                });
+            });
+        });
 
     function toggleMenu() {
       const sidebar = document.getElementById("sidebar");
